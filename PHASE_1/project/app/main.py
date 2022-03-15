@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from sqlalchemy.future import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.db import get_session
+from app.db import get_session, init_db
 from app.models import Article, ArticleCreate, Report, ReportCreate, Disease, DiseaseCreate, Location, LocationCreate, Syndrome, SyndromeCreate
 
 app = FastAPI(
@@ -14,6 +14,10 @@ app = FastAPI(
     description="SENG3011 Deliverable 2 API",
     version="0.0.1"
 )
+
+@app.on_event("startup")
+async def on_startup():
+    await init_db()
 
 # Articles
 @app.get("/articles", summary="Get all articles", response_model=list[Article])
