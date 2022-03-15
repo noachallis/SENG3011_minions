@@ -13,8 +13,7 @@ class Scraper:
         Constructor
     '''
 
-    def __init__(self, url, file) -> None:
-        self.source_url = url
+    def __init__(self) -> None:
         self.headers = {
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'GET',
@@ -23,7 +22,8 @@ class Scraper:
             'User-Agent': '''Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0)
                                 Gecko/20100101 Firefox/52.0'''
         }
-        self.file = file
+        # self.source_url = "http://outbreaks.globalincidentmap.com/"
+        self.file = "index.html"
         self.get_raw_html()
         self.filter()
     '''
@@ -31,14 +31,15 @@ class Scraper:
     '''
 
     def filter(self):
-        # test = self.soup.find_all(lambda tag: tag.name == 'table' and tag.get('class') == ['product'])
-        # test = self.soup.find("table" , {"cellpadding" : "0",  "cellspacing" : "0"})
-        # table = self.soup.findAll(lambda tag: tag.name=='table' and tag.has_attr('cellpadding') and tag['cellpadding']=="0" and tag.has_attr('cellspacing') and tag['cellspacing']=="0") 
         table = self.soup.findAll('td', {"colspan" : "3", "width" : "100%"})
-        # children = table.findChildren("table" , recursive=True)
-
+        test = table[4].findAll(lambda tag: tag.name=='table' and tag.has_attr('cellpadding') and tag['cellpadding']=="0" and tag.has_attr('cellspacing') and tag['cellspacing']=="0" and tag.has_attr('border') and tag['border']=="0") 
+        tags = []
+        for t in test:
+            if len(t.attrs) == 3:
+                tags.append(t)
         # t = test.findChildren('img')
-        print(table)
+        # prettify
+        print(tags[0].prettify())
 
 
     def get_raw_html(self):
@@ -51,11 +52,11 @@ class Scraper:
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='SENG3011 WebScraper')
-    parser.add_argument('--file', metavar='f', help='HTML file for scraping')
-    parser.add_argument('--url', metavar='u', help='URL to scrape')
-    args = parser.parse_args()
-    if not args.file and not args.url:
-        parser.print_help()
-        sys.exit(1)
-    scraper = Scraper(args.url, args.file)
+    # parser = argparse.ArgumentParser(description='SENG3011 WebScraper')
+    # parser.add_argument('--file', metavar='f', help='HTML file for scraping')
+    # parser.add_argument('--url', metavar='u', help='URL to scrape')
+    # args = parser.parse_args()
+    # if not args.file and not args.url:
+    #     parser.print_help()
+    #     sys.exit(1)
+    scraper = Scraper()
