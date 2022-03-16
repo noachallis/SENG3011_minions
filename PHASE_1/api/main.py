@@ -1,12 +1,17 @@
 from fastapi import FastAPI, Query, HTTPException
 from typing import Optional
 from datetime import datetime
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel
 
 app = FastAPI(
     title="SENG3011-Minions",
     description="SENG3011 Deliverable 2 API",
     version="0.0.1"
 )
+
+class Message(BaseModel):
+    message: str
 
 # Articles
 @app.get("/articles", summary="Get articles.")
@@ -22,7 +27,8 @@ async def articles(
     ):
     return articles
 
-@app.get("/articles/{article_id}", summary="Get an article record by article_id.")
+@app.get("/articles/{article_id}", summary="Get an article record by article_id.", responses={
+        404: {"model": Message, "description": "Article not found"}})
 async def article_id(article_id: int):
     for article in articles:
         try:
@@ -36,7 +42,30 @@ async def article_id(article_id: int):
             }
         except:
             pass
-    raise HTTPException(status_code=404, detail="Article not found.")
+    return JSONResponse(status_code=404, content={"message": "Article not found"})
+
+@app.post("/articles", summary="Add article.")
+async def add_article(url: str, pub_date: str, headline: str, main_text: str, notes: str):
+    return {
+        "id": "xxx",
+        "url": url,
+        "pub_date": pub_date,
+        "headline": headline,
+        "main_text": main_text,
+        "notes": notes
+    }
+
+@app.delete("/articles/{article_id}", summary="Delete an article record by article_id.", responses={
+        404: {"model": Message, "description": "Article not found"}})
+async def delete_article(article_id: int):
+    for i in range(len(articles)):
+        try:
+            if(articles[i]['id']  == article_id): 
+                del articles[i]
+                return {"Article deleted."}
+        except:
+            pass
+    return JSONResponse(status_code=404, content={"message": "Article not found"})
 
 # @app.get("/articles/{article_id}/reports", summary="Get reports related to a specific article.")
 # async def articles_id_reports(
@@ -61,7 +90,8 @@ async def reports(
     ):
     return reports
 
-@app.get("/reports/{report_id}", summary="Get a report record by report_id.")
+@app.get("/reports/{report_id}", summary="Get a report record by report_id.", responses={
+        404: {"model": Message, "description": "Report not found"}})
 async def report_id(report_id: int):
     for report in reports:
         try:
@@ -75,11 +105,35 @@ async def report_id(report_id: int):
                 }
         except:
             pass
-    raise HTTPException(status_code=404, detail="Report not found.")
+    return JSONResponse(status_code=404, content={"message": "Report not found"})
+
+@app.post("/reports", summary="Add report.")
+async def add_report(disease_id: int, event_date: str, location_id: int, article_id: int, notes: str):
+    return {
+        "id": "xxx",
+        "disease_id": disease_id, 
+        "event_date": event_date, 
+        "location_id": location_id, 
+        "article_id": article_id, 
+        "notes": notes
+    }
+
+@app.delete("/reports/{report_id}", summary="Delete a report record by report_id.", responses={
+        404: {"model": Message, "description": "Report not found"}})
+async def delete_report(report_id: int):
+    for i in range(len(reports)):
+        try:
+            if(reports[i]['id'] == report_id): 
+                del reports[i]
+                return {"Report deleted."}
+        except:
+            pass
+    return JSONResponse(status_code=404, content={"message": "Report not found"})
 
 
 # Diseases
-@app.get("/diseases", summary="Get diseases.")
+@app.get("/diseases", summary="Get diseases.", responses={
+        404: {"model": Message, "description": "Disease not found"}})
 async def diseases(
     name: Optional[str] = None,
     offset: int = 0, 
@@ -92,21 +146,35 @@ async def diseases(
                 if(disease['name'] == name): return {"disease_id" : disease_id, "name" : disease['name']}
             except:
                 pass
-        raise HTTPException(status_code=404, detail="Disease not found.")
+        return JSONResponse(status_code=404, content={"message": "Disease not found"})
     return diseases
 
-@app.get("/diseases/{disease_id}", summary="Get a disease record by disease_id.")
+@app.get("/diseases/{disease_id}", summary="Get a disease record by disease_id.", responses={
+        404: {"model": Message, "description": "Disease not found"}})
 async def disease_id(disease_id: int):
     for disease in diseases:
         try:
             if(disease['id'] == disease_id): return {"disease_id" : disease_id, "name" : disease['name']}
         except:
             pass
-    raise HTTPException(status_code=404, detail="Disease not found.")
+    return JSONResponse(status_code=404, content={"message": "Disease not found"})
 
 @app.post("/diseases",  summary="Add disease.")
 async def add_disease(name: str):
     return {"disease_id" : "xx", "name" : "xx"}
+
+@app.delete("/diseases/{disease_id}", summary="Delete a disease record by disease_id.", responses={
+        404: {"model": Message, "description": "Disease not found"}})
+async def delete_disease(disease_id: int):
+    for i in range(len(diseases)):
+        try:
+            if(diseases[i]['id']  == disease_id): 
+                del diseases[i]
+                return {"Disease deleted."}
+        except:
+            pass
+    return JSONResponse(status_code=404, content={"message": "Disease not found"})
+
 
 # Locations
 @app.get("/locations", summary="Get locations.")
@@ -122,14 +190,15 @@ async def locations(
     ):
     return locations
 
-@app.get("/locations/{location_id}", summary="Get a location record by location_id.")
+@app.get("/locations/{location_id}", summary="Get a location record by location_id.", responses={
+        404: {"model": Message, "description": "Location not found"}})
 async def location_id(location_id: int):
     for location in locations:
         try:
             if(location['id'] == location_id): return {"location_id" : location_id, "name" : location['name']}
         except:
             pass
-    raise HTTPException(status_code=404, detail="Location not found.")
+    return JSONResponse(status_code=404, content={"message": "Location not found"})
 
 @app.post("/locations",  summary="Add location.")
 async def add_location(
@@ -140,8 +209,22 @@ async def add_location(
     longitude: float):
     return {"id": xx, "country": "xx", "city": "xx", "region": "", "latitude": 0, "longitude": 0}
 
+@app.delete("/locations/{location_id}", summary="Delete a location record by location_id.", responses={
+        404: {"model": Message, "description": "Location not found"}})
+async def delete_location(location_id: int):
+    for i in range(len(locations)):
+        try:
+            if(locations[i]['id']  == location_id): 
+                del locations[i]
+                return {"Location deleted."}
+        except:
+            pass
+    return JSONResponse(status_code=404, content={"message": "Location not found"})
+
+
 # Syndromes
-@app.get("/syndromes", summary="Get syndromes.")
+@app.get("/syndromes", summary="Get syndromes.", responses={
+        404: {"model": Message, "description": "Syndrome not found"}})
 async def syndromes(
     name: Optional[str] = None,
     offset: int = 0, 
@@ -154,23 +237,35 @@ async def syndromes(
                 if(syndrome['name'] == name): return {"syndrome_id" : syndrome_id, "name" : syndrome['name']}
             except:
                 pass
-        raise HTTPException(status_code=404, detail="Syndrome not found.")
+        return JSONResponse(status_code=404, content={"message": "Syndrome not found"})
     return syndromes
 
-@app.get("/syndromes/{syndrome_id}", summary="Get a syndrome record by syndrome_id.")
+@app.get("/syndromes/{syndrome_id}", summary="Get a syndrome record by syndrome_id.", responses={
+        404: {"model": Message, "description": "Syndrome not found"}})
 async def syndrome_id(syndrome_id: int):
     for syndrome in syndromes:
         try:
             if(syndrome['id'] == syndrome_id): return {"syndrome_id" : syndrome_id, "name" : syndrome['name']}
         except:
             pass
-    raise HTTPException(status_code=404, detail="Syndrome not found.")
+    return JSONResponse(status_code=404, content={"message": "Syndrome not found"})
 
 
 @app.post("/syndromes",  summary="Add syndrome.")
 async def add_syndrome(name: str):
     return {"syndrome_id" : "xx", "name" : "xx"}
 
+@app.delete("/syndromes/{syndrome_id}", summary="Delete a syndrome record by syndrome_id.", responses={
+        404: {"model": Message, "description": "Syndrome not found"}})
+async def delete_syndrome(syndrome_id: int):
+    for i in range(len(syndromes)):
+        try:
+            if(syndromes[i]['id']  == syndrome_id): 
+                del syndromes[i]
+                return {"Syndrome deleted."}
+        except:
+            pass
+    return JSONResponse(status_code=404, content={"message": "Syndrome not found"})
 
 #data
 articles = [
