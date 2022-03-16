@@ -67,14 +67,31 @@ async def delete_article(article_id: int):
             pass
     return JSONResponse(status_code=404, content={"message": "Article not found"})
 
-# @app.get("/articles/{article_id}/reports", summary="Get reports related to a specific article.")
-# async def articles_id_reports(
-#     article_id: int,
-#     offset: int = 0, 
-#     limit: int = Query(default=100, lte=100),
-#     sort_by: Optional[str] = None,
-#     ):
-#     return {"article_id": article_id}
+@app.get("/articles/{article_id}/reports", summary="Get reports related to a specific article.", 
+    responses={ 404: {"model": Message, "description": "Article not found"}, 404: {"model": Message, "description": "No Reports found for article"}})
+async def articles_id_reports(
+    article_id: int,
+    offset: int = 0, 
+    limit: int = Query(default=100, lte=100),
+    sort_by: Optional[str] = None,
+    ):
+    for article in articles:
+        try:
+            if(article['id'] == article_id): 
+                articleReports = []
+                for report in reports:
+                    try:
+                        if(report['article_id'] == article_id): 
+                            articleReports.append(report)
+                    except:
+                        pass
+                if articleReports == []:
+                    return JSONResponse(status_code=404, content={"message": "No Reports found for article"})
+                else:
+                    return articleReports
+        except:
+            pass
+    return JSONResponse(status_code=404, content={"message": "Article not found"})
 
 # Reports
 @app.get("/reports", summary="Get reports.")
