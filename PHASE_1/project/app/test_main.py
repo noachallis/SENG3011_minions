@@ -5,6 +5,19 @@ from .main import app
 
 client = TestClient(app)
 
-def test_read_main():
+## articles
+def test_get_all_articles():
     response = client.get("/articles")
     assert response.status_code == 200
+
+
+## reports
+
+
+
+## diseases
+
+
+## locations
+
+## syndromes
