@@ -71,7 +71,7 @@ async def articles(key_term : Optional[str] = "", location : Optional[str] = "",
     { "$or" : 
         [ 
             { "name" : key_term }, 
-            { "description": key_word }, 
+            { "description": key_term }, 
             { "city" : location}, 
             { "country" : location}
         ]
