@@ -4,3 +4,7 @@ scrapy
 argparse
 pylint
 autopep8
+fastapi
+pymongo
+Scrapy
+uvicorn
