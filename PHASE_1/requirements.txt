@@ -5,6 +5,6 @@ argparse
 pylint
 autopep8
 fastapi
-pymongo
+pymongo==3.12.3
 Scrapy
 uvicorn
