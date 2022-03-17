@@ -6,8 +6,6 @@ class Seeder:
     def __init__(self) -> None:
         self.client = MongoClient()
         self.db = self.client.seng
-        self.db.articles.insert({ "_id": 1, "category": "café", "status": "A" })
-        self.db.articles.remove({ "category": "cafe", "status": "A" })
 
     # only run this once
     def insert_all_data(self):
