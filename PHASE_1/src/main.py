@@ -19,7 +19,7 @@ async def articles(key_term : Optional[str] = "", location : Optional[str] = "",
     
     # query = {"name" : /.*son.*/}
     # articles = db.articles.find_one({"username" : /.*son.*/})
-    print(articles)
+    #print(articles)
     return [{"name": "Foo"}]
 
 
