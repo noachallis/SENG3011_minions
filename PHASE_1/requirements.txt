@@ -1,0 +1,10 @@
+beautifulsoup4==4.10.0
+pytest==7.0.1
+scrapy
+argparse
+pylint
+autopep8
+fastapi
+pymongo==3.12.3
+Scrapy
+uvicorn
