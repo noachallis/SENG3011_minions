@@ -1,9 +1,11 @@
-from fastapi import FastAPI, Response, status
+from fastapi import FastAPI, Response, status, Request
 from typing import Optional
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 import datetime
 import re
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
 
 class Validator:    
     def get_error(self, status, message):
@@ -41,6 +43,11 @@ total = db.articles.count()
 string_total = str(total)
 error_handler = Validator()
 current_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+# Rate limiting
+limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter
+app.add_exception_handler(500, _rate_limit_exceeded_handler)
 
 def query_articles(key_term, location, start_date, end_date, limit):
     data = []
@@ -150,7 +157,8 @@ async def root(id : int = 0 ):
     return "Welcome"
 
 @app.get("/articles")
-async def articles(response: Response, key_term : Optional[str] = "", location : Optional[str] = "", 
+@limiter.limit("5/minute")
+async def articles(request: Request, response: Response, key_term : Optional[str] = "", location : Optional[str] = "", 
                     start_date : Optional[str] = current_date, end_date : Optional[str] = "2014-01-01 00:00:00", 
                     limit : int = 25, offset : int = 0):
     
@@ -186,7 +194,8 @@ async def articles(response: Response, key_term : Optional[str] = "", location :
 
 
 @app.get("/reports")
-async def reports(response: Response,  key_term : Optional[str] = "", location : Optional[str] = "", 
+@limiter.limit("5/minute")
+async def reports(request: Request, response: Response,  key_term : Optional[str] = "", location : Optional[str] = "", 
                     start_date : Optional[str] = current_date, end_date : Optional[str] = "2014-01-01 00:00:00", 
                     limit : int = 25, offset : int = 0):
     # Error checking
@@ -223,7 +232,8 @@ async def reports(response: Response,  key_term : Optional[str] = "", location :
 
 
 @app.get("/articles/{id}/reports")
-async def reports_by_article_id(response: Response, id : Optional[str] = None):
+@limiter.limit("5/minute")
+async def reports_by_article_id(request: Request, response: Response, id : Optional[str] = None):
     if not isinstance(id, str):
         response.status_code = status.HTTP_400_BAD_REQUEST
         return error_handler.get_error(400, "id has to be type string")
@@ -248,7 +258,8 @@ async def reports_by_article_id(response: Response, id : Optional[str] = None):
 
 
 @app.get("/articles/{id}")
-async def articles_by_id(response: Response, id : Optional[str] = None):
+@limiter.limit("5/minute")
+async def articles_by_id(request: Request, response: Response, id : Optional[str] = None):
     if not isinstance(id, str):
         response.status_code = status.HTTP_400_BAD_REQUEST
         return error_handler.get_error(400, "id has to be type string")
@@ -270,7 +281,8 @@ async def articles_by_id(response: Response, id : Optional[str] = None):
     return return_data
 
 @app.get("/reports/{id}")
-async def reports_by_id(response: Response, id : Optional[str] = None):
+@limiter.limit("5/minute")
+async def reports_by_id(request: Request, response: Response, id : Optional[str] = None):
     if not isinstance(id, str):
         response.status_code = status.HTTP_400_BAD_REQUEST
         return error_handler.get_error(400, "id has to be type string")
