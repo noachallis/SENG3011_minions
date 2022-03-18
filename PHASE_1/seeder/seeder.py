@@ -104,7 +104,7 @@ class Seeder:
             reports = []
             for x in article["reports"]:
                 _id = reports_curr.insert_one({"report" : x})
-                reports.append({str(_id.inserted_id) : x})
+                reports.append({"id" : str(_id.inserted_id), "report" : x})
             article["reports"] = reports
             articles.insert_one(article)
 
