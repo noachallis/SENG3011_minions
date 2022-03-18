@@ -106,6 +106,7 @@ class Seeder:
                 _id = reports_curr.insert_one({"report" : x})
                 reports.append({"id" : str(_id.inserted_id), "report" : x})
             article["reports"] = reports
+            
             articles.insert_one(article)
 
     def test(self):

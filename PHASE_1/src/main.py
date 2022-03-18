@@ -1,11 +1,13 @@
-from fastapi import FastAPI, Response, status, Request
-from typing import Optional
+from fastapi import Depends, FastAPI, Response, status, Request, Query
+from typing import Optional, List
 from pymongo import MongoClient
 from bson.objectid import ObjectId
 import datetime
 import re
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
+from pydantic import BaseModel
+
 
 class Validator:    
     def get_error(self, status, message):
@@ -37,7 +39,18 @@ class Validator:
 
         return True
 
-app = FastAPI()
+tags_metadata = [
+    {
+        "name": "articles",
+        "description": "Get disease articles by key word, time and location",
+    },
+    {
+        "name": "reports",
+        "description": "Get reports of diseases by key word, time and location",
+    }
+]
+
+app = FastAPI(openapi_tags=tags_metadata)
 db = MongoClient().seng
 total = db.articles.count()
 string_total = str(total)
@@ -45,9 +58,11 @@ error_handler = Validator()
 current_date = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # Rate limiting
-limiter = Limiter(key_func=get_remote_address)
-app.state.limiter = limiter
-app.add_exception_handler(500, _rate_limit_exceeded_handler)
+# limiter = Limiter(key_func=get_remote_address)
+# app.state.limiter = limiter
+# app.add_exception_handler(500, _rate_limit_exceeded_handler)
+
+
 
 def query_articles(key_term, location, start_date, end_date, limit):
     data = []
@@ -62,8 +77,8 @@ def query_articles(key_term, location, start_date, end_date, limit):
                 ],
                 "$and" : 
                 [
-                    { "time" : {"$gte" : end_date} }, 
-                    { "time" : {"$lte" : start_date} }, 
+                    { "time" : {"$lte" : end_date} }, 
+                    { "time" : {"$gte" : start_date} }, 
                 ]
             }
         ).limit(limit)
@@ -79,8 +94,8 @@ def query_articles(key_term, location, start_date, end_date, limit):
                 ],
                 "$and" : 
                 [
-                    { "time" : {"$gte" : end_date} }, 
-                    { "time" : {"$lte" : start_date} }, 
+                    { "time" : {"$lte" : end_date} }, 
+                    { "time" : {"$gte" : start_date} }, 
                 ]
             }
         ).limit(limit)
@@ -94,8 +109,8 @@ def query_articles(key_term, location, start_date, end_date, limit):
                 ],
                 "$and" : 
                 [
-                    { "time" : {"$gte" : end_date} }, 
-                    { "time" : {"$lte" : start_date} }, 
+                    { "time" : {"$lte" : end_date} }, 
+                    { "time" : {"$gte" : start_date} }, 
                 ]
             }
         ).limit(limit)
@@ -116,8 +131,8 @@ def query_reports(key_term, location, start_date, end_date, limit):
                 ],
                 "$and" : 
                 [
-                    { "time" : {"$gte" : end_date} }, 
-                    { "time" : {"$lte" : start_date} }, 
+                    { "time" : {"$lte" : end_date} }, 
+                    { "time" : {"$gte" : start_date} }, 
                 ]
             }
         ).limit(limit)
@@ -128,8 +143,8 @@ def query_reports(key_term, location, start_date, end_date, limit):
                 "$and" : 
                 [
                     { "reports": {"$elemMatch" : { "report" : key_term}} },
-                    { "time" : {"$gte" : end_date} }, 
-                    { "time" : {"$lte" : start_date} }, 
+                    { "time" : {"$lte" : end_date} }, 
+                    { "time" : {"$gte" : start_date} }, 
                 ]
             }
         ).limit(limit)
@@ -143,8 +158,8 @@ def query_reports(key_term, location, start_date, end_date, limit):
                 ],
                 "$and" : 
                 [
-                    { "time" : {"$gte" : end_date} }, 
-                    { "time" : {"$lte" : start_date} }, 
+                    { "time" : {"$lte" : end_date} }, 
+                    { "time" : {"$gte" : start_date} }, 
                 ]
             }
         ).limit(limit)
@@ -156,11 +171,75 @@ def query_reports(key_term, location, start_date, end_date, limit):
 async def root(id : int = 0 ):
     return "Welcome"
 
-@app.get("/articles")
-@limiter.limit("5/minute")
-async def articles(request: Request, response: Response, key_term : Optional[str] = "", location : Optional[str] = "", 
-                    start_date : Optional[str] = current_date, end_date : Optional[str] = "2014-01-01 00:00:00", 
-                    limit : int = 25, offset : int = 0):
+class Report(BaseModel):
+    id : str
+    report: str
+    class Config:
+        validation = False
+
+class Article(BaseModel):
+    class Config:
+        validation = False
+    _id: Optional[str]
+    name: Optional[str]
+    links: Optional[List[str]]
+    time: Optional[str]
+    region_code : Optional[str]
+    country : Optional[str]
+    description : Optional[str]
+    latitude : Optional[str]
+    longitude : Optional[str]
+    reports : Optional[List[Report]]
+    syndromes : Optional[List[str]]
+    
+ 
+class error_message400(BaseModel):
+    status : int = 400
+    message : str
+
+class rahul400(BaseModel):
+    class Config:
+        validation = False
+    error : error_message400
+
+class error_message404(BaseModel):
+    status : int = 404
+    message : str
+
+class rahul404(BaseModel):
+    class Config:
+        validation = False
+    error : error_message404
+
+class CustomQueryParams:
+    def __init__(
+        self,
+        key_term: Optional[str] = Query(None, description="Key term can be used to query title, description or report metadata"),
+        location: Optional[str] = Query(None, description="Location can be used to query country and cities"),
+        start_date: Optional[str] = Query(None, description="The start date in the format yyyy-MM-dd hh:mm:ss"),
+        end_date: Optional[str] = Query(None, description="The end date in the format yyyy-MM-dd hh:mm:ss"),
+        limit: Optional[str] = Query(None, description="The total number of documents you want to retrieve"),
+
+    ):
+        self.key_term = key_term
+        self.location = location
+        self.start_date = start_date
+        self.end_date = end_date
+        self.limit = limit
+
+class identifier:
+    def __init__(
+        self,
+        id: str = Query(None, description="Id in the format of mongo ID. See more information "),
+    ):
+        self.id = id
+
+
+@app.get("/articles",tags=["articles"] , responses={200: {"model": List[Article]}, 400 : {"model" : rahul400}, 404 : {"model" : rahul404}, 422: {"model": rahul404}})
+# @limiter.limit("5/minute")
+async def articles(request: Request, response: Response, params: CustomQueryParams = Depends(), key_term : Optional[str] = "", location : Optional[str] = "", 
+                    start_date : Optional[str] = "2014-01-01 00:00:00", end_date : Optional[str] = current_date, 
+                    limit : int = 25):
     
     # Error checking
     now = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
@@ -169,10 +248,6 @@ async def articles(request: Request, response: Response, key_term : Optional[str
         response.status_code = status.HTTP_400_BAD_REQUEST
         return error_handler.get_error(400, "Limit has to be between 0 and " + string_total)
 
-    if not isinstance(offset, int) or offset * limit > total or offset < 0:
-        max_offset = str(total // limit)
-        response.status_code = status.HTTP_400_BAD_REQUEST
-        return error_handler.get_error(400, "Offset has to be between 0 and " + max_offset)
 
     if not error_handler.validate_datetime(start_date):
         response.status_code = status.HTTP_400_BAD_REQUEST
@@ -185,30 +260,46 @@ async def articles(request: Request, response: Response, key_term : Optional[str
     start_date = datetime.datetime.strptime(start_date, "%Y-%m-%d %H:%M:%S").isoformat()
     end_date = datetime.datetime.strptime(end_date, "%Y-%m-%d %H:%M:%S").isoformat()
 
+    if start_date > end_date:
+        response.status_code = status.HTTP_400_BAD_REQUEST
+        return error_handler.get_error(400, "End date has to be larger than start date")
+
     data = query_articles(key_term, location,start_date, end_date, limit)
     return_data = []
     for x in data:
         x["_id"] = str(x["_id"])
+        reports = []
+        for y in x["reports"]:
+            if y["report"] and not y["report"].isspace():
+                reports.append(y)
+        x["reports"] = reports
         return_data.append(x)
+
+    if not return_data:
+        response.status_code = status.HTTP_404_BAD_REQUEST
+        return error_handler.get_error(404, "Not Found")
     return return_data
 
 
-@app.get("/reports")
-@limiter.limit("5/minute")
-async def reports(request: Request, response: Response,  key_term : Optional[str] = "", location : Optional[str] = "", 
-                    start_date : Optional[str] = current_date, end_date : Optional[str] = "2014-01-01 00:00:00", 
-                    limit : int = 25, offset : int = 0):
+class report(BaseModel):
+    class Config:
+        validation = False
+    id : Optional[str]
+    report : Optional[str]
+
+
+
+@app.get("/reports", tags=["reports"] ,responses={200: {"model": List[report]}, 400 : {"model" : rahul400}, 404 : {"model" : rahul404}, 422: {"model": rahul404}})
+# @limiter.limit("5/minute")
+async def reports(request: Request, response: Response, params: CustomQueryParams = Depends(), key_term : Optional[str] = "", location : Optional[str] = "", 
+                    start_date : Optional[str] = "2014-01-01 00:00:00", end_date : Optional[str] = current_date, 
+                    limit : int = 25):
     # Error checking
     now = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
     if not isinstance(limit, int) or limit <= 0 or limit > total:
         response.status_code = status.HTTP_400_BAD_REQUEST
         return error_handler.get_error(400, "Limit has to be between 0 and " + string_total)
-
-    if not isinstance(offset, int) or offset * limit > total or offset < 0:
-        max_offset = str(total // limit)
-        response.status_code = status.HTTP_400_BAD_REQUEST
-        return error_handler.get_error(400, "Offset has to be between 0 and " + max_offset)
 
     if not error_handler.validate_datetime(start_date):
         response.status_code = status.HTTP_400_BAD_REQUEST
@@ -219,26 +310,31 @@ async def reports(request: Request, response: Response,  key_term : Optional[str
         return error_handler.get_error(400, "End date has to be in the following format yyyy-MM-dd hh:mm:ss and less than " + now)
     
     data = query_reports(key_term, location, start_date, end_date, limit)
-
-
+    start_date = datetime.datetime.strptime(start_date, "%Y-%m-%d %H:%M:%S").isoformat()
+    end_date = datetime.datetime.strptime(end_date, "%Y-%m-%d %H:%M:%S").isoformat()
+    if start_date > end_date:
+        response.status_code = status.HTTP_400_BAD_REQUEST
+        return error_handler.get_error(400, "End date has to be larger than start date")
     return_data = []
     for x in data:
         for y in x["reports"]:
             if y["report"] and key_term.lower() in y["report"].lower():
                 return_data.append(y)
 
-    print(len(return_data))
+    if not return_data:
+        response.status_code = status.HTTP_404_BAD_REQUEST
+        return error_handler.get_error(404, "Not Found")    
+        
     return return_data
 
 
-@app.get("/articles/{id}/reports")
-@limiter.limit("5/minute")
-async def reports_by_article_id(request: Request, response: Response, id : Optional[str] = None):
+@app.get("/articles/{id}/reports", responses={200: {"model": List[report]}, 400 : {"model" : rahul400}, 404 : {"model" : rahul404}, 422: {"model": rahul404}})
+# @limiter.limit("5/minute")
+async def reports_by_article_id(request: Request, response: Response, params: identifier = Depends(), id : Optional[str] = None):
     if not isinstance(id, str):
         response.status_code = status.HTTP_400_BAD_REQUEST
         return error_handler.get_error(400, "id has to be type string")
-    
-    reports = {}
+    reports = []
 
     if not error_handler.validate_id(id):
         response.status_code = status.HTTP_404_NOT_FOUND
@@ -248,18 +344,16 @@ async def reports_by_article_id(request: Request, response: Response, id : Optio
 
     data = db.articles.find({"_id" : ObjectId(id)})
     for x in data:
+        print(x)
         reports = x["reports"]
-        
-    if len(reports) == 0:
-        response.status_code = status.HTTP_404_NOT_FOUND
-        return error_handler.get_error(404, "Not found")
+    
     
     return reports
 
 
-@app.get("/articles/{id}")
-@limiter.limit("5/minute")
-async def articles_by_id(request: Request, response: Response, id : Optional[str] = None):
+@app.get("/articles/{id}", responses={200: {"model": Article}, 400 : {"model" : rahul400}, 404 : {"model" : rahul404}, 422: {"model": rahul404}})
+# @limiter.limit("5/minute")
+async def articles_by_id(request: Request, response: Response, params: identifier = Depends(), id : Optional[str] = None):
     if not isinstance(id, str):
         response.status_code = status.HTTP_400_BAD_REQUEST
         return error_handler.get_error(400, "id has to be type string")
@@ -280,9 +374,9 @@ async def articles_by_id(request: Request, response: Response, id : Optional[str
 
     return return_data
 
-@app.get("/reports/{id}")
-@limiter.limit("5/minute")
-async def reports_by_id(request: Request, response: Response, id : Optional[str] = None):
+@app.get("/reports/{id}", responses={200: {"model": report}, 400 : {"model" : rahul400}, 404 : {"model" : rahul404}, 422: {"model": rahul404}})
+# @limiter.limit("5/minute")
+async def reports_by_id(request: Request, response: Response, id : Optional[str] = None, params: identifier = Depends(),):
     if not isinstance(id, str):
         response.status_code = status.HTTP_400_BAD_REQUEST
         return error_handler.get_error(400, "id has to be type string")
