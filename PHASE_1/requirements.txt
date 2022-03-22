@@ -4,8 +4,7 @@ scrapy
 argparse
 pylint
 autopep8
-fastapi
+fastapi==0.75.0
 pymongo==3.12.3
-Scrapy
-uvicorn
+uvicorn==0.17.5
 slowapi
