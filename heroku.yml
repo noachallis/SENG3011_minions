@@ -1,3 +1,0 @@
-build:
-  docker:
-    web: PHASE_1/project/Dockerfile
