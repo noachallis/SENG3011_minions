@@ -8,14 +8,9 @@ from src.open_api.docs import *
     Core Application
 """
 app = FastAPI(openapi_tags=tags_metadata)
-
-
 """
-    Rate Limiting Config
+    Include additional Router
 """
-limiter = Limiter(key_func=get_remote_address)
-app.state.limiter = limiter
-app.add_exception_handler(500, _rate_limit_exceeded_handler)
 app.include_router(global_outbreak_router.router)
 """
     Rate Limiting Config
