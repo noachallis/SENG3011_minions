@@ -19,6 +19,21 @@ class Validator:
 
         return True
 
+
+    def validate_date(self, date):
+        if not date:
+            return True
+        try:
+            date = datetime.datetime.strptime(date, "%Y-%m-%d")
+        except Exception:
+            return False
+
+        if date > datetime.datetime.now():
+            return False
+
+        return True
+
+
     def validate_id(self, id):
         try:
             ObjectId(id)

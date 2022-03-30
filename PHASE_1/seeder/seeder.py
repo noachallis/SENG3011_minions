@@ -2,6 +2,9 @@ from pymongo import MongoClient
 import json
 import datetime
 import random
+import csv
+import pandas as pd
+import os
 
 diseases = {
     "African Swine Fever / Swine Fever": [
@@ -482,7 +485,9 @@ diseases = {
     ],
     "zika": ["fever", "rash", "headache", "joint pain", "red eyes", "muscle pain"],
 }
-
+def csv_to_json(filename, header=None):
+    data = pd.read_csv(filename, header=header)
+    return data.to_dict('records')
 
 class Seeder:
     def __init__(self) -> None:
@@ -534,6 +539,28 @@ class Seeder:
 
             articles.insert_one(article)
 
+    # run this once
+    def insert_all_data_covid(self):
+        self.db.covidReports.drop()
+        try:
+            self.db.create_collection("covidReports")
+        except Exception:
+            pass
+        covidReports = self.db.covidReports
+        data_file_path = os.path.join(os.path.dirname(__file__), "all.csv")
+        covidReports.insert_many(csv_to_json(data_file_path, header=0))
+
+    # run this daily
+    def insert_latest_data_covid(self):
+        try:
+            self.db.create_collection("covidReports")
+        except Exception:
+            pass
+        covidReports = self.db.covidReports
+        data_file_path = os.path.join(os.path.dirname(__file__), "latest.csv")
+        covidReports.insert_many(csv_to_json(data_file_path, header=0))
+
+
     def test(self):
         test = self.db.reports.count()
         print(test)
@@ -542,7 +569,7 @@ class Seeder:
         self.db.articles.drop()
         self.db.reports.drop()
 
-
 if __name__ == "__main__":
     seeder = Seeder()
     seeder.insert_all_data()
+    seeder.insert_all_data_covid()
