@@ -1,0 +1,25 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+.Popup {
+  width: 200px;
+  height: 70px;
+  background: #212121;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.Popup__title {
+  font-size: 20px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.Popup__content {
+  padding-top: 5px;
+  color: #fff;
+}
