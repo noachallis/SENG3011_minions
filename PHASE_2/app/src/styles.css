@@ -23,3 +23,12 @@
   padding-top: 5px;
   color: #fff;
 }
+
+.Time_Slider {
+  position: fixed;
+  bottom: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform: scale(1.5);
+}

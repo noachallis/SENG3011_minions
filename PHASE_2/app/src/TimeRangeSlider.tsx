@@ -15,25 +15,30 @@ function TimeRangeSlider() {
 
   const [arrayIndex, setArrayIndex] = React.useState<number>(date_array.length - 1);
 
-  const handleChange = (event: Event, newValue: number | number[]) => {
-    setArrayIndex(newValue as number);
+  const handleChange = (event: Event, newIndex: number | number[]) => {
+    if (newIndex != arrayIndex){
+      setArrayIndex(newIndex as number);
+      const date = date_array[arrayIndex];
+      console.log(date)
+    }
     // use this handle change to update globe data
-    const date = date_array[arrayIndex];
-    console.log(date_array[arrayIndex])
+   
   };
 
   return (
-    <Box sx={{ width: 500 }}>
-      <Slider 
-        aria-label="Time-Range-Slider"
-        valueLabelDisplay="off"
-        value={arrayIndex}
-        onChange={handleChange}
-        marks
-        min={0}
-        max={date_array.length-1}
-      />
-    </Box>
+    <div className="Time_Slider">
+       <Box sx={{ width: 1000 }}>
+        <Slider 
+          sx={{ color: "green" }}
+          aria-label="Time-Range-Slider"
+          valueLabelDisplay="off"
+          value={arrayIndex}
+          onChange={handleChange}
+          min={0}
+          max={date_array.length-1}
+        />
+      </Box>
+    </div>
   );
 }
 export default TimeRangeSlider
