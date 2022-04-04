@@ -35,13 +35,24 @@ def getOneDate(covid_data, geojson_data, date):
     for country_data in geojson_data["features"]:
         country_dict = country_data["properties"]
         iso_code = country_dict['ISO_A3']
+        country_data["properties"]['total_cases'] = 0
+        country_data["properties"]['people_fully_vaccinated'] = 0
+        country_data["properties"]['total_vaccinations_per_hundred'] = 0
         for d in covid_data:
             if (iso_code == d['iso_code'] and date == d['date']):
-                country_data["properties"]['date'] = d['date']
                 country_data["properties"]['iso_code'] = d['iso_code']
-                country_data["properties"]['total_cases'] = d['total_cases']
-                country_data["properties"]['people_fully_vaccinated'] = d['people_fully_vaccinated']
-                country_data["properties"]['total_vaccinations_per_hundred'] = d['total_vaccinations_per_hundred']
+                try :
+                    country_data["properties"]['total_cases'] = float(d['total_cases'])
+                except Exception:
+                    country_data["properties"]['total_cases'] = 0
+                try :
+                    country_data["properties"]['people_fully_vaccinated'] = float(d['people_fully_vaccinated'])
+                except Exception:
+                    country_data["properties"]['people_fully_vaccinated'] = 0
+                try :
+                    country_data["properties"]['total_vaccinations_per_hundred'] = float(d['total_vaccinations_per_hundred'])
+                except Exception:
+                    country_data["properties"]['total_vaccinations_per_hundred'] = 0
     return geojson_data
 
 #Convert csv data into json
@@ -62,8 +73,7 @@ dates.sort(key=lambda date: datetime.strptime(date, "%Y-%m-%d"))
 filtered_dates = []
 # ouput maps
 for date in dates:
-    #result = re.match('....-..-01', date)
-    result = re.match('2020-05-01', date)
+    result = re.match('20..-03-01', date)
     if result:
         filtered_dates.append(date)
         filename = 'maps/' + date + '_map.json'
