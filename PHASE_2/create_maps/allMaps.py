@@ -5,7 +5,6 @@ from datetime import datetime
 
 covid_data_csv = 'all.csv'
 geodata_json = 'countries.geojson'
-output_file = 'output_all_maps.json'
 
 #Read CSV File
 def read_CSV(covid_data_csv):
@@ -56,10 +55,10 @@ geojson_data = read_JSON(geodata_json)
 # get dates
 dates = get_dates(covid_data)
 dates.sort(key=lambda date: datetime.strptime(date, "%Y-%m-%d"))
+convert_write_json(dates, 'maps/dates.json')
 
-# ouput maps
-merged_data = {}
-for date in dates:
-    merged_data_one_date = getOneDate(covid_data, geojson_data, date)
-    merged_data[date] = merged_data_one_date
-convert_write_json(merged_data, output_file)
+# # ouput maps
+# for date in dates:
+#     filename = 'maps/' + date + '_map.json'
+#     merged_data_one_date = getOneDate(covid_data, geojson_data, date)
+#     convert_write_json(merged_data_one_date, filename)
