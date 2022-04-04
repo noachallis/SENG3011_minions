@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from "react";
 import ReactGlobe from "react-globe.gl";
-// import data from "./data/map"
+import data from "./data/pretty.json"
 function Globe() {
   const [places, setPlaces] = useState([]);
+  // useEffect(() => {
+  //   let test = JSON.parse(data)
+  //   setPlaces(test)
+  //   // setPlaces(JSON.parse(data))
+  // }, []);
   useEffect(() => {
     // load data
-    fetch('./data/map.geojson')
-      .then(res => res.json())
-      .then(({ features }) => {
-        setPlaces(features)
-        console.log(features)
-      })
-      .catch((e) => console.log(e));
-    }, []);
-
+    fetch('pretty.json').then(res => res.json())
+      .then(({ features }) => setPlaces(features));
+  }, []);
   return (
     <div className="Globe">
     <ReactGlobe
       globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
       backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
-
       labelsData={places}
       labelLat={(d : any) => d.properties.latitude}
       labelLng={(d : any) => d.properties.longitude}
