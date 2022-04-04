@@ -23,7 +23,7 @@ function TimeRangeSlider() {
   };
 
   return (
-    <Box sx={{ width: 300 }}>
+    <Box sx={{ width: 500 }}>
       <Slider 
         aria-label="Time-Range-Slider"
         valueLabelDisplay="off"
@@ -32,7 +32,6 @@ function TimeRangeSlider() {
         marks
         min={0}
         max={date_array.length-1}
-        step={null}
       />
     </Box>
   );
