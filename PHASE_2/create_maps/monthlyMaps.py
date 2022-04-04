@@ -37,10 +37,13 @@ def getOneDate(covid_data, geojson_data, date):
         iso_code = country_dict['ISO_A3']
         for d in covid_data:
             if (iso_code == d['iso_code'] and date == d['date']):
-                for key in d:
-                    country_data["properties"][key] = d[key]
+                country_data["properties"]['date'] = d['date']
+                country_data["properties"]['iso_code'] = d['iso_code']
+                country_data["properties"]['total_cases'] = d['total_cases']
+                country_data["properties"]['people_fully_vaccinated'] = d['people_fully_vaccinated']
+                country_data["properties"]['total_vaccinations_per_hundred'] = d['total_vaccinations_per_hundred']
     return geojson_data
-    
+
 #Convert csv data into json
 def convert_write_json(data, output_file):
     with open(output_file, "w") as f:
@@ -56,10 +59,15 @@ geojson_data = read_JSON(geodata_json)
 dates = get_dates(covid_data)
 dates.sort(key=lambda date: datetime.strptime(date, "%Y-%m-%d"))
 
+filtered_dates = []
 # ouput maps
 for date in dates:
-    result = re.match('....-..-01', date)
+    #result = re.match('....-..-01', date)
+    result = re.match('2020-05-01', date)
     if result:
+        filtered_dates.append(date)
         filename = 'maps/' + date + '_map.json'
         merged_data_one_date = getOneDate(covid_data, geojson_data, date)
         convert_write_json(merged_data_one_date, filename)
+
+convert_write_json(filtered_dates, 'maps/dates.json')
