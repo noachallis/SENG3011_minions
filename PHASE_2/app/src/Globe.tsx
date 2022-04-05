@@ -87,17 +87,18 @@ function valueLabelFormat(value: number) {
         hexPolygonMargin={0.5}
         hexPolygonAltitude={0.14}
         hexPolygonColor={d => d === hoverD ? 'steelblue' : colorScaleBlue(getValVacs(d))}
-        hexPolygonLabel={({ properties: d } : any) => `
-          <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
-          Total Cases: <i>${d.total_cases}</i><br/>
-          Total Vaccinated: <i>${d.people_fully_vaccinated}</i>
-        `}
+        
         
         polygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
         polygonAltitude={0.1}
         polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(getVal(d))}
         polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
         polygonStrokeColor={() => '#111'}
+        polygonLabel={({ properties: d } : any) => `
+        <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
+        Total Cases: <i>${d.total_cases}</i><br/>
+        Total Vaccinated: <i>${(d.people_fully_vaccinated/d.POP_EST).toFixed(2)}%</i>
+      `}
 
         // onPolygonHover={(setHoverD)}
         polygonsTransitionDuration={300}
