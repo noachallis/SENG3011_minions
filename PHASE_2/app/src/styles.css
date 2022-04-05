@@ -30,12 +30,22 @@
 }
 
 .Slider {
-  position: absolute;
+  position: fixed;
   z-index: 3;
-  left: 35%;
   bottom: 5%;
+  transform: scale(1.5);
 }
 
 .Wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
+
+div .scene-tooltip {
+  background: rgba(232, 124, 0, 0.8);
+  font-size: 40px;
+  color: white;
+  font-family: "Verdana", sans-serif;
+}
+

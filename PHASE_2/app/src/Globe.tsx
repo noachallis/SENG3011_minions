@@ -14,7 +14,7 @@ const dates = [
 function Globe() {
   const [countries, setCountries] = useState({ features: []});
   const [hoverD, setHoverD] = useState();  
-  const [currentIndex, setCurrentDate] = useState(2);
+  const [currentIndex, setCurrentDate] = useState(dates.length-1);
   useEffect(() => {
     // load data
     fetch('maps/2022-03-01_map.json')
@@ -38,17 +38,25 @@ function Globe() {
   }
 
   function valuetext(index: number) {
-    index -= 1
     if (currentIndex == index) {
       return ""
     }
-    console.log(index)
-    const newDate = dates[index]
-    setCurrentDate(index)
-    wrapper(newDate)
-    return `${index}°C`;
+    return `${dates[index]}`;
   }
-  
+
+  const handleChange = (event: Event, newIndex: number | number[]) => {
+    if (newIndex != currentIndex) {
+      setCurrentDate(newIndex as number);
+      const newDate = dates[newIndex as number];
+      console.log(newDate)
+      wrapper(newDate)
+    }
+  }
+
+function valueLabelFormat(value: number) {
+  const dateString = dates[value].split('_')[0];
+  return `${dateString}`;
+}
 
   const colorScale = d3.scaleSequentialSqrt(d3.interpolateYlOrRd);
 
@@ -60,9 +68,11 @@ function Globe() {
     [countries]
   );
   colorScale.domain([0, maxVal]);
+
+
   
   return (
-    <div className="wrapper">
+    <div className="Wrapper">
       <div className="Globe">
         <ReactGlobe
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
@@ -83,17 +93,21 @@ function Globe() {
         polygonsTransitionDuration={300}
       />
       </div>
-      <Box className="Slider" sx={{ width: 300 }}>
+      <Box className="Slider" sx={{ width: 500 }}>
         <Slider
+          aria-label="Time Selection Slider"
           className="Slider"
-          aria-label="Temperature"
-          defaultValue={30}
+          sx = {{ color: "orange"}}
           getAriaValueText={valuetext}
-          valueLabelDisplay="auto"
-          step={1}
+          defaultValue={dates.length-1}
           marks
-          min={1}
-          max={3}
+          min={0}
+          max={dates.length - 1}
+          onChange={handleChange}
+          step={1}
+          value={currentIndex}
+          valueLabelFormat={valueLabelFormat}
+          valueLabelDisplay="auto"
         />
       </Box>
     </div>
