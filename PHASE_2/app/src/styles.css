@@ -32,13 +32,17 @@
 .Slider {
   position: fixed;
   z-index: 3;
-  bottom: 5%;
+  bottom: 10%;
 }
 
 .toggle {
-  bottom: 10%;
+  bottom: 3%;
   position: fixed;
   z-index: 3;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "Verdana", sans-serif;
 }
 
 .statsOverview {

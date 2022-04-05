@@ -228,12 +228,14 @@ function Globe() {
           valueLabelDisplay="auto"
         />
       </Box>
+      <Box className="toggle">
         <FormControlLabel
           className="toggle"
-          control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-          label="Vaccine Toggle"
+          control={<Switch sx={{ m: 1 }} defaultChecked color="primary"/>}
+          label="Show Vaccination Rates"
           onChange={vaccineHandle}
         />
+      </Box>  
     </div>
 
   );
