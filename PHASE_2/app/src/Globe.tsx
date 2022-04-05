@@ -103,7 +103,7 @@ function valueLabelFormat(value: number) {
         polygonsTransitionDuration={300}
       />
       </div>
-      <Box className="Slider" sx={{ width: 500 }}>
+      <Box className="Slider" sx={{ width: 300 }}>
         <Slider
           aria-label="Time Selection Slider"
           className="Slider"

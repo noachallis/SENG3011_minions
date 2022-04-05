@@ -33,7 +33,6 @@
   position: fixed;
   z-index: 3;
   bottom: 5%;
-  transform: scale(1.5);
 }
 
 .Wrapper {
