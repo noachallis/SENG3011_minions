@@ -33,7 +33,6 @@
   position: fixed;
   z-index: 3;
   bottom: 5%;
-  transform: scale(1.5);
 }
 
 .Wrapper {
@@ -44,7 +43,7 @@
 
 div .scene-tooltip {
   background: rgba(232, 124, 0, 0.8);
-  font-size: 40px;
+  font-size: 15px;
   color: white;
   font-family: "Verdana", sans-serif;
 }
