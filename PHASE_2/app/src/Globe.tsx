@@ -7,7 +7,13 @@ import Slider from '@mui/material/Slider';
 
 const dates = [
   "2020-03-01_map.json",
+  "2020-06-01_map.json",
+  "2020-09-01_map.json",
+  "2020-12-01_map.json",
   "2021-03-01_map.json",
+  "2021-06-01_map.json",
+  "2021-09-01_map.json",
+  "2021-12-01_map.json",
   "2022-03-01_map.json"
 ]
 
@@ -97,7 +103,7 @@ function valueLabelFormat(value: number) {
         polygonLabel={({ properties: d } : any) => `
         <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
         Total Cases: <i>${d.total_cases}</i><br/>
-        Total Vaccinated: <i>${(d.people_fully_vaccinated/d.POP_EST).toFixed(2)}%</i>
+        Total Vaccinated: <i>${((d.people_fully_vaccinated/d.POP_EST) * 100).toFixed(0)}%</i>
       `}
 
         // onPolygonHover={(setHoverD)}

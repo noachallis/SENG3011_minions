@@ -75,7 +75,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 158107.0,
+                "total_cases": 46498.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "AFG"
@@ -444,7 +444,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 82398.0,
+                "total_cases": 15251.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "AGO"
@@ -843,7 +843,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 210224.0,
+                "total_cases": 39014.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "ALB"
@@ -1032,7 +1032,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 764493.0,
+                "total_cases": 170149.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "ARE"
@@ -1213,9 +1213,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 7,
-                "total_cases": 5674428.0,
-                "people_fully_vaccinated": 33385895.0,
-                "total_vaccinations_per_hundred": 171.25,
+                "total_cases": 1432570.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "ARG"
             },
             "bbox": [
@@ -1796,7 +1796,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 344980.0,
+                "total_cases": 135967.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "ARM"
@@ -4863,9 +4863,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 5.7,
-                "total_cases": 462955.0,
-                "people_fully_vaccinated": 19755837.0,
-                "total_vaccinations_per_hundred": 165.12,
+                "total_cases": 27923.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "AUS"
             },
             "bbox": [
@@ -5926,7 +5926,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 1282227.0,
+                "total_cases": 285489.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "AUT"
@@ -6167,9 +6167,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 617311.0,
-                "people_fully_vaccinated": 4676580.0,
-                "total_vaccinations_per_hundred": 110.98,
+                "total_cases": 125602.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "AZE"
             },
             "bbox": [
@@ -6442,7 +6442,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 27366.0,
+                "total_cases": 689.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "BDI"
@@ -6587,9 +6587,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 2105343.0,
-                "people_fully_vaccinated": 8821627.0,
-                "total_vaccinations_per_hundred": 186.63,
+                "total_cases": 579212.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "BEL"
             },
             "bbox": [
@@ -6748,7 +6748,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 24935.0,
+                "total_cases": 3015.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "BEN"
@@ -6941,7 +6941,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 17632.0,
+                "total_cases": 2931.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "BFA"
@@ -7190,7 +7190,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 1585909.0,
+                "total_cases": 467225.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "BGD"
@@ -7427,9 +7427,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 748184.0,
-                "people_fully_vaccinated": 1914966.0,
-                "total_vaccinations_per_hundred": 53.67,
+                "total_cases": 148775.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "BGR"
             },
             "bbox": [
@@ -7632,7 +7632,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 24476.0,
+                "total_cases": 7543.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "BHS"
@@ -7819,7 +7819,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4.5,
                 "MAX_LABEL": 9.5,
-                "total_cases": 291313.0,
+                "total_cases": 89085.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "BIH"
@@ -8004,7 +8004,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 700421.0,
+                "total_cases": 138219.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "BLR"
@@ -8277,7 +8277,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 32840.0,
+                "total_cases": 5854.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "BLZ"
@@ -8450,9 +8450,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7.5,
-                "total_cases": 599753.0,
-                "people_fully_vaccinated": 4602185.0,
-                "total_vaccinations_per_hundred": 83.06,
+                "total_cases": 144810.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "BOL"
             },
             "bbox": [
@@ -8783,9 +8783,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 5.7,
-                "total_cases": 22295621.0,
-                "people_fully_vaccinated": 143441284.0,
-                "total_vaccinations_per_hundred": 154.81,
+                "total_cases": 6393950.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "BRA"
             },
             "bbox": [
@@ -9688,7 +9688,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 15470.0,
+                "total_cases": 151.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "BRN"
@@ -9813,7 +9813,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 2660.0,
+                "total_cases": 414.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "BTN"
@@ -9958,7 +9958,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 219509.0,
+                "total_cases": 10742.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "BWA"
@@ -10211,7 +10211,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 12163.0,
+                "total_cases": 4918.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "CAF"
@@ -10552,9 +10552,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 5.7,
-                "total_cases": 2256747.0,
-                "people_fully_vaccinated": 29419071.0,
-                "total_vaccinations_per_hundred": 180.88,
+                "total_cases": 389268.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "CAN"
             },
             "bbox": [
@@ -13939,9 +13939,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 1332615.0,
-                "people_fully_vaccinated": 5833553.0,
-                "total_vaccinations_per_hundred": 158.92,
+                "total_cases": 330874.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "CHE"
             },
             "bbox": [
@@ -14128,9 +14128,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 6.7,
-                "total_cases": 1808398.0,
-                "people_fully_vaccinated": 16543389.0,
-                "total_vaccinations_per_hundred": 230.65,
+                "total_cases": 552864.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "CHL"
             },
             "bbox": [
@@ -14683,9 +14683,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 5.7,
-                "total_cases": 115431.0,
+                "total_cases": 92896.0,
                 "people_fully_vaccinated": 0,
-                "total_vaccinations_per_hundred": 196.73,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "CHN"
             },
             "bbox": [
@@ -15742,9 +15742,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 71815.0,
+                "total_cases": 21334.0,
                 "people_fully_vaccinated": 0,
-                "total_vaccinations_per_hundred": 26.69,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "CIV"
             },
             "bbox": [
@@ -16019,7 +16019,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 109367.0,
+                "total_cases": 24487.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "CMR"
@@ -16356,7 +16356,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 7,
-                "total_cases": 74793.0,
+                "total_cases": 12859.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "COD"
@@ -16945,7 +16945,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 20089.0,
+                "total_cases": 5774.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "COG"
@@ -17234,7 +17234,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 7,
-                "total_cases": 5169855.0,
+                "total_cases": 1324792.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "COL"
@@ -17727,7 +17727,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 570556.0,
+                "total_cases": 140172.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "CRI"
@@ -17964,9 +17964,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 966473.0,
-                "people_fully_vaccinated": 9672873.0,
-                "total_vaccinations_per_hundred": 272.93,
+                "total_cases": 8381.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "CUB"
             },
             "bbox": [
@@ -18381,7 +18381,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4.5,
                 "MAX_LABEL": 9.5,
-                "total_cases": 169159.0,
+                "total_cases": 10565.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "CYP"
@@ -18534,9 +18534,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 2480736.0,
-                "people_fully_vaccinated": 6659121.0,
-                "total_vaccinations_per_hundred": 144.48,
+                "total_cases": 528474.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "CZE"
             },
             "bbox": [
@@ -18767,9 +18767,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 6.7,
-                "total_cases": 7176814.0,
-                "people_fully_vaccinated": 59282055.0,
-                "total_vaccinations_per_hundred": 179.16,
+                "total_cases": 1067473.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "DEU"
             },
             "bbox": [
@@ -19092,7 +19092,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 13668.0,
+                "total_cases": 5680.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "DJI"
@@ -19245,9 +19245,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 823282.0,
-                "people_fully_vaccinated": 4601053.0,
-                "total_vaccinations_per_hundred": 208.42,
+                "total_cases": 81949.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "DNK"
             },
             "bbox": [
@@ -19440,9 +19440,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4.5,
                 "MAX_LABEL": 9.5,
-                "total_cases": 419927.0,
-                "people_fully_vaccinated": 5699664.0,
-                "total_vaccinations_per_hundred": 128.61,
+                "total_cases": 144302.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "DOM"
             },
             "bbox": [
@@ -19637,7 +19637,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 218818.0,
+                "total_cases": 84152.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "DZA"
@@ -19978,9 +19978,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 551620.0,
-                "people_fully_vaccinated": 12690811.0,
-                "total_vaccinations_per_hundred": 154.11,
+                "total_cases": 193673.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "ECU"
             },
             "bbox": [
@@ -20203,7 +20203,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 6.7,
-                "total_cases": 386358.0,
+                "total_cases": 116303.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "EGY"
@@ -20472,7 +20472,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 8026.0,
+                "total_cases": 577.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "ERI"
@@ -20677,7 +20677,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 7,
-                "total_cases": 6294745.0,
+                "total_cases": 1656444.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "ESP"
@@ -20974,9 +20974,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 242123.0,
-                "people_fully_vaccinated": 818657.0,
-                "total_vaccinations_per_hundred": 136.52,
+                "total_cases": 12497.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "EST"
             },
             "bbox": [
@@ -21143,9 +21143,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 7,
-                "total_cases": 424340.0,
+                "total_cases": 110554.0,
                 "people_fully_vaccinated": 0,
-                "total_vaccinations_per_hundred": 9.26,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "ETH"
             },
             "bbox": [
@@ -21472,9 +21472,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 277700.0,
+                "total_cases": 26117.0,
                 "people_fully_vaccinated": 0,
-                "total_vaccinations_per_hundred": 174.93,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "FIN"
             },
             "bbox": [
@@ -21725,7 +21725,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 54147.0,
+                "total_cases": 42.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "FJI"
@@ -21916,7 +21916,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4.5,
                 "MAX_LABEL": 9,
-                "total_cases": 83.0,
+                "total_cases": 16.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "FLK"
@@ -22447,7 +22447,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 41798.0,
+                "total_cases": 9214.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "GAB"
@@ -22664,9 +22664,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 6.7,
-                "total_cases": 13127967.0,
-                "people_fully_vaccinated": 47437009.0,
-                "total_vaccinations_per_hundred": 195.49,
+                "total_cases": 1644359.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "GBR"
             },
             "bbox": [
@@ -22987,7 +22987,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 936844.0,
+                "total_cases": 139343.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "GEO"
@@ -23176,7 +23176,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 143997.0,
+                "total_cases": 51667.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "GHA"
@@ -23369,9 +23369,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 32448.0,
-                "people_fully_vaccinated": 1224426.0,
-                "total_vaccinations_per_hundred": 24.09,
+                "total_cases": 13119.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "GIN"
             },
             "bbox": [
@@ -23742,7 +23742,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 10170.0,
+                "total_cases": 3743.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "GMB"
@@ -23899,9 +23899,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 6484.0,
-                "people_fully_vaccinated": 23145.0,
-                "total_vaccinations_per_hundred": 20.55,
+                "total_cases": 2441.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "GNB"
             },
             "bbox": [
@@ -24068,7 +24068,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 13710.0,
+                "total_cases": 5156.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "GNQ"
@@ -24189,9 +24189,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 1240862.0,
-                "people_fully_vaccinated": 7041308.0,
-                "total_vaccinations_per_hundred": 168.45,
+                "total_cases": 107470.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "GRC"
             },
             "bbox": [
@@ -24504,7 +24504,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 6.7,
-                "total_cases": 2611.0,
+                "total_cases": 18.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "GRL"
@@ -25125,9 +25125,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 628589.0,
-                "people_fully_vaccinated": 4687453.0,
-                "total_vaccinations_per_hundred": 61.98,
+                "total_cases": 122774.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "GTM"
             },
             "bbox": [
@@ -25358,9 +25358,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 39779.0,
-                "people_fully_vaccinated": 295325.0,
-                "total_vaccinations_per_hundred": 90.88,
+                "total_cases": 5423.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "GUY"
             },
             "bbox": [
@@ -25611,7 +25611,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4.5,
                 "MAX_LABEL": 9.5,
-                "total_cases": 379402.0,
+                "total_cases": 108253.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "HND"
@@ -25932,9 +25932,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 720538.0,
-                "people_fully_vaccinated": 1953549.0,
-                "total_vaccinations_per_hundred": 115.88,
+                "total_cases": 131342.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "HRV"
             },
             "bbox": [
@@ -26197,9 +26197,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 25985.0,
-                "people_fully_vaccinated": 75028.0,
-                "total_vaccinations_per_hundred": 1.73,
+                "total_cases": 9294.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "HTI"
             },
             "bbox": [
@@ -26374,7 +26374,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 1256415.0,
+                "total_cases": 221073.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "HUN"
@@ -26595,8 +26595,8 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 6.7,
-                "total_cases": 4262994.0,
-                "people_fully_vaccinated": 114030438.0,
+                "total_cases": 543975.0,
+                "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "IDN"
             },
@@ -27738,9 +27738,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 6.7,
-                "total_cases": 34889132.0,
-                "people_fully_vaccinated": 607094031.0,
-                "total_vaccinations_per_hundred": 104.35,
+                "total_cases": 9499413.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "IND"
             },
             "bbox": [
@@ -28375,9 +28375,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 811840.0,
-                "people_fully_vaccinated": 3866407.0,
-                "total_vaccinations_per_hundred": 197.19,
+                "total_cases": 72798.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "IRL"
             },
             "bbox": [
@@ -28520,7 +28520,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2.5,
                 "MAX_LABEL": 6.7,
-                "total_cases": 6195403.0,
+                "total_cases": 975951.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "IRN"
@@ -28917,7 +28917,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7.5,
-                "total_cases": 2093891.0,
+                "total_cases": 554767.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "IRQ"
@@ -29130,7 +29130,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 7,
-                "total_cases": 27059.0,
+                "total_cases": 5413.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "ISL"
@@ -29303,9 +29303,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 1390053.0,
-                "people_fully_vaccinated": 5935200.0,
-                "total_vaccinations_per_hundred": 180.49,
+                "total_cases": 338389.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "ISR"
             },
             "bbox": [
@@ -29500,9 +29500,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 7,
-                "total_cases": 6266939.0,
-                "people_fully_vaccinated": 44758338.0,
-                "total_vaccinations_per_hundred": 184.55,
+                "total_cases": 1620901.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "ITA"
             },
             "bbox": [
@@ -29951,9 +29951,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 94649.0,
-                "people_fully_vaccinated": 566889.0,
-                "total_vaccinations_per_hundred": 40.65,
+                "total_cases": 10810.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "JAM"
             },
             "bbox": [
@@ -30088,7 +30088,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 1064277.0,
+                "total_cases": 223617.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "JOR"
@@ -30257,7 +30257,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 7,
-                "total_cases": 1732752.0,
+                "total_cases": 150857.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "JPN"
@@ -30620,9 +30620,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 1072999.0,
-                "people_fully_vaccinated": 8521029.0,
-                "total_vaccinations_per_hundred": 92.19,
+                "total_cases": 175565.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "KAZ"
             },
             "bbox": [
@@ -31161,9 +31161,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 6.7,
-                "total_cases": 297155.0,
-                "people_fully_vaccinated": 4215806.0,
-                "total_vaccinations_per_hundred": 18.41,
+                "total_cases": 84169.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "KEN"
             },
             "bbox": [
@@ -31402,9 +31402,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 184748.0,
+                "total_cases": 73178.0,
                 "people_fully_vaccinated": 0,
-                "total_vaccinations_per_hundred": 34.04,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "KGZ"
             },
             "bbox": [
@@ -31635,9 +31635,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 120507.0,
-                "people_fully_vaccinated": 13660387.0,
-                "total_vaccinations_per_hundred": 179.77,
+                "total_cases": 329.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "KHM"
             },
             "bbox": [
@@ -31796,9 +31796,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 639083.0,
-                "people_fully_vaccinated": 42636471.0,
-                "total_vaccinations_per_hundred": 202.57,
+                "total_cases": 35163.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "KOR"
             },
             "bbox": [
@@ -32141,7 +32141,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 417723.0,
+                "total_cases": 142992.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "KWT"
@@ -32270,7 +32270,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 112083.0,
+                "total_cases": 39.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "LAO"
@@ -32511,9 +32511,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 731288.0,
-                "people_fully_vaccinated": 1831440.0,
-                "total_vaccinations_per_hundred": 64.71,
+                "total_cases": 129455.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "LBN"
             },
             "bbox": [
@@ -32648,7 +32648,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 6278.0,
+                "total_cases": 1598.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "LBR"
@@ -32849,7 +32849,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 388734.0,
+                "total_cases": 83417.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "LBY"
@@ -33166,9 +33166,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 587596.0,
-                "people_fully_vaccinated": 13845347.0,
-                "total_vaccinations_per_hundred": 157.65,
+                "total_cases": 24532.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "LKA"
             },
             "bbox": [
@@ -33299,7 +33299,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 29652.0,
+                "total_cases": 2137.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "LSO"
@@ -33440,9 +33440,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 521692.0,
-                "people_fully_vaccinated": 1832160.0,
-                "total_vaccinations_per_hundred": 153.6,
+                "total_cases": 62511.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "LTU"
             },
             "bbox": [
@@ -33609,7 +33609,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5.7,
                 "MAX_LABEL": 10,
-                "total_cases": 103766.0,
+                "total_cases": 35129.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "LUX"
@@ -33730,9 +33730,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 276841.0,
-                "people_fully_vaccinated": 1262529.0,
-                "total_vaccinations_per_hundred": 136.92,
+                "total_cases": 17687.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "LVA"
             },
             "bbox": [
@@ -33911,7 +33911,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 965420.0,
+                "total_cases": 359844.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "MAR"
@@ -34256,9 +34256,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 376434.0,
-                "people_fully_vaccinated": 982174.0,
-                "total_vaccinations_per_hundred": 44.15,
+                "total_cases": 108863.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "MDA"
             },
             "bbox": [
@@ -34457,7 +34457,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 50279.0,
+                "total_cases": 17341.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "MDG"
@@ -34746,9 +34746,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 6.7,
-                "total_cases": 3988916.0,
-                "people_fully_vaccinated": 72846741.0,
-                "total_vaccinations_per_hundred": 114.34,
+                "total_cases": 1122362.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "MEX"
             },
             "bbox": [
@@ -35519,7 +35519,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 225484.0,
+                "total_cases": 62945.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "MKD"
@@ -35684,7 +35684,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 21378.0,
+                "total_cases": 4762.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "MLI"
@@ -36081,9 +36081,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 530946.0,
-                "people_fully_vaccinated": 15571917.0,
-                "total_vaccinations_per_hundred": 66.39,
+                "total_cases": 92189.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "MMR"
             },
             "bbox": [
@@ -36454,9 +36454,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 171873.0,
-                "people_fully_vaccinated": 273120.0,
-                "total_vaccinations_per_hundred": 101.2,
+                "total_cases": 35849.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "MNE"
             },
             "bbox": [
@@ -36619,9 +36619,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 693119.0,
-                "people_fully_vaccinated": 2164097.0,
-                "total_vaccinations_per_hundred": 160.59,
+                "total_cases": 791.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "MNG"
             },
             "bbox": [
@@ -37012,7 +37012,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 191722.0,
+                "total_cases": 15770.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "MOZ"
@@ -37421,7 +37421,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 41867.0,
+                "total_cases": 8710.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "MRT"
@@ -37670,9 +37670,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 75828.0,
-                "people_fully_vaccinated": 712743.0,
-                "total_vaccinations_per_hundred": 9.21,
+                "total_cases": 6028.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "MWI"
             },
             "bbox": [
@@ -37875,9 +37875,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 2761472.0,
-                "people_fully_vaccinated": 25636433.0,
-                "total_vaccinations_per_hundred": 176.4,
+                "total_cases": 67169.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "MYS"
             },
             "bbox": [
@@ -38222,7 +38222,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7.5,
-                "total_cases": 148839.0,
+                "total_cases": 14416.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "NAM"
@@ -38491,7 +38491,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4.6,
                 "MAX_LABEL": 8,
-                "total_cases": 12826.0,
+                "total_cases": 33.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "NCL"
@@ -38636,7 +38636,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 7438.0,
+                "total_cases": 1586.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "NER"
@@ -38961,7 +38961,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 6.7,
-                "total_cases": 242877.0,
+                "total_cases": 67838.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "NGA"
@@ -39286,7 +39286,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 17487.0,
+                "total_cases": 5838.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "NIC"
@@ -39587,9 +39587,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 3171094.0,
-                "people_fully_vaccinated": 12250361.0,
-                "total_vaccinations_per_hundred": 172.47,
+                "total_cases": 533513.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "NLD"
             },
             "bbox": [
@@ -40198,7 +40198,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 828773.0,
+                "total_cases": 233452.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "NPL"
@@ -40383,9 +40383,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 6.7,
-                "total_cases": 14255.0,
-                "people_fully_vaccinated": 3856405.0,
-                "total_vaccinations_per_hundred": 159.71,
+                "total_cases": 2060.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "NZL"
             },
             "bbox": [
@@ -40746,7 +40746,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 305489.0,
+                "total_cases": 123908.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "OMN"
@@ -41033,7 +41033,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 1296527.0,
+                "total_cases": 403311.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "PAK"
@@ -41390,7 +41390,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 497808.0,
+                "total_cases": 167311.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "PAN"
@@ -41691,9 +41691,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 7,
-                "total_cases": 2301177.0,
-                "people_fully_vaccinated": 21679439.0,
-                "total_vaccinations_per_hundred": 150.87,
+                "total_cases": 963605.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "PER"
             },
             "bbox": [
@@ -42088,7 +42088,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 2847486.0,
+                "total_cases": 432925.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "PHL"
@@ -42647,7 +42647,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2.5,
                 "MAX_LABEL": 7.5,
-                "total_cases": 36158.0,
+                "total_cases": 669.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "PNG"
@@ -43078,9 +43078,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 4120248.0,
-                "people_fully_vaccinated": 21046692.0,
-                "total_vaccinations_per_hundred": 124.32,
+                "total_cases": 999924.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "POL"
             },
             "bbox": [
@@ -43770,9 +43770,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 1412936.0,
-                "people_fully_vaccinated": 9103550.0,
-                "total_vaccinations_per_hundred": 190.09,
+                "total_cases": 300462.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "PRT"
             },
             "bbox": [
@@ -43995,7 +43995,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 466101.0,
+                "total_cases": 83479.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "PRY"
@@ -44220,7 +44220,7 @@
                 "MIN_ZOOM": 7,
                 "MIN_LABEL": 4.5,
                 "MAX_LABEL": 9.5,
-                "total_cases": 469748.0,
+                "total_cases": 88004.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "PSE"
@@ -44349,9 +44349,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 251361.0,
+                "total_cases": 139001.0,
                 "people_fully_vaccinated": 0,
-                "total_vaccinations_per_hundred": 177.77,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "QAT"
             },
             "bbox": [
@@ -44478,9 +44478,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 1810342.0,
-                "people_fully_vaccinated": 7817575.0,
-                "total_vaccinations_per_hundred": 82.74,
+                "total_cases": 479634.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "ROU"
             },
             "bbox": [
@@ -44747,9 +44747,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 5.2,
-                "total_cases": 10340011.0,
-                "people_fully_vaccinated": 67008180.0,
-                "total_vaccinations_per_hundred": 100.56,
+                "total_cases": 2302062.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "RUS"
             },
             "bbox": [
@@ -47394,7 +47394,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 112654.0,
+                "total_cases": 5948.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "RWA"
@@ -47747,9 +47747,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2.7,
                 "MAX_LABEL": 7,
-                "total_cases": 557082.0,
-                "people_fully_vaccinated": 23191521.0,
-                "total_vaccinations_per_hundred": 144.4,
+                "total_cases": 357623.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "SAU"
             },
             "bbox": [
@@ -48144,7 +48144,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 46518.0,
+                "total_cases": 18254.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SDN"
@@ -48561,7 +48561,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 15242.0,
+                "total_cases": 3111.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SSD"
@@ -48906,7 +48906,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 75337.0,
+                "total_cases": 16107.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SEN"
@@ -49175,7 +49175,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 24.0,
+                "total_cases": 17.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SLB"
@@ -49434,7 +49434,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 7114.0,
+                "total_cases": 2413.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SLE"
@@ -49615,7 +49615,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 121945.0,
+                "total_cases": 39130.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SLV"
@@ -49984,7 +49984,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 23532.0,
+                "total_cases": 4451.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SOM"
@@ -50225,9 +50225,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 7,
-                "total_cases": 1300949.0,
-                "people_fully_vaccinated": 3220977.0,
-                "total_vaccinations_per_hundred": 120.65,
+                "total_cases": 183437.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "SRB"
             },
             "bbox": [
@@ -50510,7 +50510,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 52612.0,
+                "total_cases": 5319.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SUR"
@@ -50707,7 +50707,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 1374354.0,
+                "total_cases": 124318.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SVK"
@@ -50932,9 +50932,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 465711.0,
-                "people_fully_vaccinated": 1189254.0,
-                "total_vaccinations_per_hundred": 132.88,
+                "total_cases": 77135.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "SVN"
             },
             "bbox": [
@@ -51097,7 +51097,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 1314784.0,
+                "total_cases": 260758.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SWE"
@@ -51350,7 +51350,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 66241.0,
+                "total_cases": 6442.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SWZ"
@@ -51487,7 +51487,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 50310.0,
+                "total_cases": 7973.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "SYR"
@@ -51688,7 +51688,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 6183.0,
+                "total_cases": 1700.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "TCD"
@@ -52013,7 +52013,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 5,
                 "MAX_LABEL": 10,
-                "total_cases": 30163.0,
+                "total_cases": 2997.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "TGO"
@@ -52182,9 +52182,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 2226446.0,
-                "people_fully_vaccinated": 46320706.0,
-                "total_vaccinations_per_hundred": 150.35,
+                "total_cases": 4008.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "THA"
             },
             "bbox": [
@@ -52531,7 +52531,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 17493.0,
+                "total_cases": 12194.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "TJK"
@@ -53096,7 +53096,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 19839.0,
+                "total_cases": 30.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "TLS"
@@ -53233,9 +53233,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4.5,
                 "MAX_LABEL": 9.5,
-                "total_cases": 92201.0,
-                "people_fully_vaccinated": 668982.0,
-                "total_vaccinations_per_hundred": 100.42,
+                "total_cases": 6685.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "TTO"
             },
             "bbox": [
@@ -53358,9 +53358,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 727843.0,
-                "people_fully_vaccinated": 5933117.0,
-                "total_vaccinations_per_hundred": 102.07,
+                "total_cases": 96769.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "TUN"
             },
             "bbox": [
@@ -53575,9 +53575,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 7,
-                "total_cases": 9519281.0,
-                "people_fully_vaccinated": 51621727.0,
-                "total_vaccinations_per_hundred": 155.13,
+                "total_cases": 668957.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "TUR"
             },
             "bbox": [
@@ -53946,7 +53946,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 17050.0,
+                "total_cases": 679.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "TWN"
@@ -54075,7 +54075,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 29306.0,
+                "total_cases": 509.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "TZA"
@@ -54376,7 +54376,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 142604.0,
+                "total_cases": 21035.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "UGA"
@@ -54581,9 +54581,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 3852397.0,
-                "people_fully_vaccinated": 13755421.0,
-                "total_vaccinations_per_hundred": 65.47,
+                "total_cases": 765117.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "UKR"
             },
             "bbox": [
@@ -55046,9 +55046,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 414294.0,
-                "people_fully_vaccinated": 2678145.0,
-                "total_vaccinations_per_hundred": 200.06,
+                "total_cases": 6024.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "URY"
             },
             "bbox": [
@@ -55223,9 +55223,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 5.7,
-                "total_cases": 55024304.0,
-                "people_fully_vaccinated": 208591278.0,
-                "total_vaccinations_per_hundred": 155.75,
+                "total_cases": 13823600.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "USA"
             },
             "bbox": [
@@ -57142,7 +57142,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 199030.0,
+                "total_cases": 73276.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "UZB"
@@ -57451,7 +57451,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7.5,
-                "total_cases": 444828.0,
+                "total_cases": 102621.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "VEN"
@@ -57912,7 +57912,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 2,
                 "MAX_LABEL": 7,
-                "total_cases": 1746092.0,
+                "total_cases": 1351.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "VNM"
@@ -58181,7 +58181,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 4,
                 "MAX_LABEL": 9,
-                "total_cases": 7.0,
+                "total_cases": 1.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "VUT"
@@ -58328,7 +58328,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 10127.0,
+                "total_cases": 2077.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "YEM"
@@ -58597,9 +58597,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 6.7,
-                "total_cases": 3468079.0,
-                "people_fully_vaccinated": 15871913.0,
-                "total_vaccinations_per_hundred": 46.58,
+                "total_cases": 792299.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "ZAF"
             },
             "bbox": [
@@ -59068,7 +59068,7 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 257948.0,
+                "total_cases": 17665.0,
                 "people_fully_vaccinated": 0,
                 "total_vaccinations_per_hundred": 0,
                 "iso_code": "ZMB"
@@ -59405,9 +59405,9 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 8,
-                "total_cases": 214214.0,
-                "people_fully_vaccinated": 3140338.0,
-                "total_vaccinations_per_hundred": 48.21,
+                "total_cases": 10129.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
                 "iso_code": "ZWE"
             },
             "bbox": [
