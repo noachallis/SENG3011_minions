@@ -32,6 +32,9 @@ def get_dates(covid_data):
 
 # add covid data into map
 def getOneDate(covid_data, geojson_data, date):
+    total_cases = 0
+    people_fully_vaccinated = 0
+    world_population = 0
     for country_data in geojson_data["features"]:
         country_dict = country_data["properties"]
         iso_code = country_dict['ISO_A3']
@@ -39,6 +42,7 @@ def getOneDate(covid_data, geojson_data, date):
         country_data["properties"]['people_fully_vaccinated'] = 0
         country_data["properties"]['total_vaccinations_per_hundred'] = 0
         for d in covid_data:
+
             if (iso_code == d['iso_code'] and date == d['date']):
                 country_data["properties"]['iso_code'] = d['iso_code']
                 try :
@@ -53,6 +57,21 @@ def getOneDate(covid_data, geojson_data, date):
                     country_data["properties"]['total_vaccinations_per_hundred'] = float(d['total_vaccinations_per_hundred'])
                 except Exception:
                     country_data["properties"]['total_vaccinations_per_hundred'] = 0
+                try :
+                    total_cases = total_cases + float(d['total_cases'])
+                except Exception:
+                    pass
+                try :
+                    people_fully_vaccinated = people_fully_vaccinated + float(d['people_fully_vaccinated'])
+                except Exception:
+                    pass
+                try : 
+                    world_population = world_population + country_dict['POP_EST']
+                except Exception:
+                    pass
+    geojson_data["total_cases"] = total_cases
+    geojson_data["people_fully_vaccinated"] = people_fully_vaccinated
+    geojson_data["world_population"] = world_population
     return geojson_data
 
 #Convert csv data into json
@@ -73,7 +92,7 @@ dates.sort(key=lambda date: datetime.strptime(date, "%Y-%m-%d"))
 filtered_dates = []
 # ouput maps
 for date in dates:
-    result = re.match('20..-03-01', date)
+    result = re.match('20..-12-01', date)
     if result:
         filtered_dates.append(date)
         filename = 'maps/' + date + '_map.json'
