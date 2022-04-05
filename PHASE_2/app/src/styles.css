@@ -35,6 +35,16 @@
   bottom: 5%;
 }
 
+.statsOverview {
+  position: fixed;
+  font-weight: 600;
+  z-index: 1;
+  top: 5%;
+  font-size: 15px;
+  color: white;
+  font-family: "Verdana", sans-serif;
+}
+
 .Wrapper {
   position: relative;
   display: flex;
@@ -43,7 +53,7 @@
 
 div .scene-tooltip {
   background: rgba(209, 13, 13, 0.8);
-  font-size: 25px;
+  font-size: 15px;
   color: white;
   font-family: "Verdana", sans-serif;
 }

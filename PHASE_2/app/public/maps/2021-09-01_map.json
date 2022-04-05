@@ -59579,5 +59579,8 @@
         -90,
         180,
         83.64513
-    ]
+    ],
+    "total_cases": 211176901.0,
+    "people_fully_vaccinated": 1114602966.0,
+    "world_population": 7279147323
 }

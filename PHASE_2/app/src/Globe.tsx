@@ -18,7 +18,12 @@ const dates = [
 ]
 
 function Globe() {
-  const [countries, setCountries] = useState({ features: []});
+  const [countries, setCountries] = useState({ 
+    features: [], 
+    total_cases: 0,
+    people_fully_vaccinated: 0,
+    world_population: 0,
+  });
   const [hoverD, setHoverD] = useState();  
   const [currentIndex, setCurrentDate] = useState(dates.length-1);
   useEffect(() => {
@@ -79,6 +84,8 @@ function valueLabelFormat(value: number) {
   );
   colorScale.domain([0, maxVal]);
 
+  const totalCases = countries.total_cases
+  const percentVaccinated = (countries.people_fully_vaccinated / countries.world_population * 100).toFixed(0)
 
   return (
     <div className="Wrapper">
@@ -103,13 +110,14 @@ function valueLabelFormat(value: number) {
         polygonLabel={({ properties: d } : any) => `
         <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
         Total Cases: <i>${d.total_cases}</i><br/>
-        Total Vaccinated: <i>${((d.people_fully_vaccinated/d.POP_EST) * 100).toFixed(0)}%</i>
+        Total Vaccinated: <i>${(d.people_fully_vaccinated/d.POP_EST * 100).toFixed(0)}%</i>
       `}
 
         // onPolygonHover={(setHoverD)}
         polygonsTransitionDuration={300}
       />
       </div>
+      <p className="statsOverview">Total Cases: {totalCases} &emsp;&emsp; Population Vaccinated: {percentVaccinated}%</p>
       <Box className="Slider" sx={{ width: 300 }}>
         <Slider
           aria-label="Time Selection Slider"
@@ -127,6 +135,7 @@ function valueLabelFormat(value: number) {
           valueLabelDisplay="auto"
         />
       </Box>
+  
     </div>
 
   );
