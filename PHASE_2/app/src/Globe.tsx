@@ -58,11 +58,15 @@ function valueLabelFormat(value: number) {
   return `${dateString}`;
 }
 
-  const colorScale = d3.scaleSequentialSqrt(d3.interpolateYlOrRd);
+  const colorScale = d3.scaleSequentialSqrt(d3.interpolateReds);
+  const colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateBlues);
 
-  // Calculate Global Population Density
+  // Calculate Covid Cases Density
   const getVal = (feat : any) => feat.properties.total_cases / Math.max(1, feat.properties.POP_EST);
 
+  // Get Vac Rates
+  const getValVacs = (feat : any) => feat.properties.people_fully_vaccinated / Math.max(1, feat.properties.POP_EST);
+  
   const maxVal = useMemo(
     () => Math.max(...countries.features.map(getVal)),
     [countries]
@@ -70,7 +74,6 @@ function valueLabelFormat(value: number) {
   colorScale.domain([0, maxVal]);
 
 
-  
   return (
     <div className="Wrapper">
       <div className="Globe">
@@ -79,16 +82,23 @@ function valueLabelFormat(value: number) {
         backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
         // lineHoverPrecision={0}
 
-        polygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
-        polygonAltitude={d => d === hoverD ? 0.12 : 0.06}
-        polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(getVal(d))}
-        polygonSideColor={() => 'rgba(0, 100, 0, 0.15)'}
-        polygonStrokeColor={() => '#111'}
-        polygonLabel={({ properties: d } : any) => `
+        hexPolygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
+        hexPolygonResolution={3}
+        hexPolygonMargin={0.5}
+        hexPolygonAltitude={0.18}
+        hexPolygonColor={d => d === hoverD ? 'steelblue' : colorScaleBlue(getValVacs(d))}
+        hexPolygonLabel={({ properties: d } : any) => `
           <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
           Total Cases: <i>${d.total_cases}</i><br/>
           Total Vaccinated: <i>${d.people_fully_vaccinated}</i>
         `}
+        
+        polygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
+        polygonAltitude={0.1}
+        polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(getVal(d))}
+        polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
+        polygonStrokeColor={() => '#111'}
+
         // onPolygonHover={(setHoverD)}
         polygonsTransitionDuration={300}
       />
@@ -97,7 +107,7 @@ function valueLabelFormat(value: number) {
         <Slider
           aria-label="Time Selection Slider"
           className="Slider"
-          sx = {{ color: "orange"}}
+          sx = {{ color: "rgba(209, 13, 13, 0.8)"}}
           getAriaValueText={valuetext}
           defaultValue={dates.length-1}
           marks

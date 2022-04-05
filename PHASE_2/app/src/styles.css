@@ -43,8 +43,8 @@
 }
 
 div .scene-tooltip {
-  background: rgba(232, 124, 0, 0.8);
-  font-size: 40px;
+  background: rgba(209, 13, 13, 0.8);
+  font-size: 25px;
   color: white;
   font-family: "Verdana", sans-serif;
 }
