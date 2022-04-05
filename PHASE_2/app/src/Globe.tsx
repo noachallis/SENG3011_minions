@@ -6,6 +6,7 @@ import Slider from '@mui/material/Slider';
 
 
 const dates = [
+  "2020-01-01_map.json",
   "2020-03-01_map.json",
   "2020-06-01_map.json",
   "2020-09-01_map.json",
@@ -82,7 +83,10 @@ function valueLabelFormat(value: number) {
     () => Math.max(...countries.features.map(getVal)),
     [countries]
   );
-  colorScale.domain([0, maxVal]);
+
+  if (maxVal > 0) {
+    colorScale.domain([0, maxVal]);
+  }
 
   const totalCases = countries.total_cases
   const percentVaccinated = (countries.people_fully_vaccinated / countries.world_population * 100).toFixed(0)
