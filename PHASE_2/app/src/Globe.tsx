@@ -231,7 +231,7 @@ function Globe() {
       <Box className="toggle">
         <FormControlLabel
           className="toggle"
-          control={<Switch sx={{ m: 1 }} defaultChecked color="primary"/>}
+          control={<Switch sx={{ m: 1 }} defaultChecked color="error"/>}
           label="Show Vaccination Rates"
           onChange={vaccineHandle}
         />
