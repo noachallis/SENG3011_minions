@@ -35,6 +35,12 @@
   bottom: 5%;
 }
 
+.toggle {
+  top: 5%;
+  position: fixed;
+  z-index: 3;
+}
+
 .Wrapper {
   position: relative;
   display: flex;

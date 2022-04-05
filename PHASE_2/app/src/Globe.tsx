@@ -3,7 +3,10 @@ import ReactGlobe from "react-globe.gl";
 import * as d3 from "d3";
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-
+import Switch, { SwitchProps } from '@mui/material/Switch';
+import { styled } from '@mui/material/styles';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 const dates = [
   "2020-03-01_map.json",
@@ -17,10 +20,60 @@ const dates = [
   "2022-03-01_map.json"
 ]
 
+const MaterialUISwitch = styled(Switch)(({ theme }  : any) => ({
+  width: 62,
+  height: 34,
+  padding: 7,
+  '& .MuiSwitch-switchBase': {
+    margin: 1,
+    padding: 0,
+    transform: 'translateX(6px)',
+    '&.Mui-checked': {
+      color: '#fff',
+      transform: 'translateX(22px)',
+      '& .MuiSwitch-thumb:before': {
+        backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
+          '#fff',
+        )}" d="M4.2 2.5l-.7 1.8-1.8.7 1.8.7.7 1.8.6-1.8L6.7 5l-1.9-.7-.6-1.8zm15 8.3a6.7 6.7 0 11-6.6-6.6 5.8 5.8 0 006.6 6.6z"/></svg>')`,
+      },
+      '& + .MuiSwitch-track': {
+        opacity: 1,
+        backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+      },
+    },
+  },
+  '& .MuiSwitch-thumb': {
+    backgroundColor: theme.palette.mode === 'dark' ? '#003892' : '#001e3c',
+    width: 32,
+    height: 32,
+    '&:before': {
+      content: "''",
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      left: 0,
+      top: 0,
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
+        '#fff',
+      )}" d="M9.305 1.667V3.75h1.389V1.667h-1.39zm-4.707 1.95l-.982.982L5.09 6.072l.982-.982-1.473-1.473zm10.802 0L13.927 5.09l.982.982 1.473-1.473-.982-.982zM10 5.139a4.872 4.872 0 00-4.862 4.86A4.872 4.872 0 0010 14.862 4.872 4.872 0 0014.86 10 4.872 4.872 0 0010 5.139zm0 1.389A3.462 3.462 0 0113.471 10a3.462 3.462 0 01-3.473 3.472A3.462 3.462 0 016.527 10 3.462 3.462 0 0110 6.528zM1.665 9.305v1.39h2.083v-1.39H1.666zm14.583 0v1.39h2.084v-1.39h-2.084zM5.09 13.928L3.616 15.4l.982.982 1.473-1.473-.982-.982zm9.82 0l-.982.982 1.473 1.473.982-.982-1.473-1.473zM9.305 16.25v2.083h1.389V16.25h-1.39z"/></svg>')`,
+    },
+  },
+  '& .MuiSwitch-track': {
+    opacity: 1,
+    backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+    borderRadius: 20 / 2,
+  },
+}));
+
 function Globe() {
   const [countries, setCountries] = useState({ features: []});
   const [hoverD, setHoverD] = useState();  
   const [currentIndex, setCurrentDate] = useState(dates.length-1);
+  const [vaccineEnabled, setVaccine] = useState(true);
+  const [globe, setGlobe] = useState();
+
   useEffect(() => {
     // load data
     fetch('maps/2022-03-01_map.json')
@@ -59,10 +112,17 @@ function Globe() {
     }
   }
 
-function valueLabelFormat(value: number) {
-  const dateString = dates[value].split('_')[0];
-  return `${dateString}`;
-}
+  function valueLabelFormat(value: number) {
+    const dateString = dates[value].split('_')[0];
+    return `${dateString}`;
+  }
+
+  const vaccineHandle = () => {
+    const state = !vaccineEnabled;
+    console.log(vaccineEnabled, state)
+    console.log(state, "here")
+    setVaccine(state)
+  }
 
   const colorScale = d3.scaleSequentialSqrt(d3.interpolateReds);
   const colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateBlues);
@@ -83,32 +143,61 @@ function valueLabelFormat(value: number) {
   return (
     <div className="Wrapper">
       <div className="Globe">
+        
+      {vaccineEnabled ? 
         <ReactGlobe
-        globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-        backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
-        // lineHoverPrecision={0}
+          globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+          backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
+          // lineHoverPrecision={0}
 
-        hexPolygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
-        hexPolygonResolution={3}
-        hexPolygonMargin={0.5}
-        hexPolygonAltitude={0.14}
-        hexPolygonColor={d => d === hoverD ? 'steelblue' : colorScaleBlue(getValVacs(d))}
-        
-        
-        polygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
-        polygonAltitude={0.1}
-        polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(getVal(d))}
-        polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
-        polygonStrokeColor={() => '#111'}
-        polygonLabel={({ properties: d } : any) => `
-        <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
-        Total Cases: <i>${d.total_cases}</i><br/>
-        Total Vaccinated: <i>${((d.people_fully_vaccinated/d.POP_EST) * 100).toFixed(0)}%</i>
-      `}
+          hexPolygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
+          hexPolygonResolution={3}
+          hexPolygonMargin={0.5}
+          hexPolygonAltitude={0.14}
+          hexPolygonColor={d => d === hoverD ? 'steelblue' : colorScaleBlue(getValVacs(d))}
+          
+          
+          polygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
+          polygonAltitude={0.1}
+          polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(getVal(d))}
+          polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
+          polygonStrokeColor={() => '#111'}
+          polygonLabel={({ properties: d } : any) => `
+          <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
+          Total Cases: <i>${d.total_cases}</i><br/>
+          Total Vaccinated: <i>${((d.people_fully_vaccinated/d.POP_EST) * 100).toFixed(0)}%</i>
+        `}
+          // onPolygonHover={(setHoverD)}
+          polygonsTransitionDuration={300}
+        />
+        :
+        <ReactGlobe
+          globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
+          backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
+          // lineHoverPrecision={0}
+          
+          hexPolygonsData={undefined}
+          hexPolygonResolution={undefined}
+          hexPolygonMargin={undefined}
+          hexPolygonAltitude={undefined}
+          hexPolygonColor={undefined}
 
-        // onPolygonHover={(setHoverD)}
-        polygonsTransitionDuration={300}
-      />
+          polygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
+          polygonAltitude={0.1}
+          polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(getVal(d))}
+          polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
+          polygonStrokeColor={() => '#111'}
+          polygonLabel={({ properties: d } : any) => `
+          <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
+          Total Cases: <i>${d.total_cases}</i><br/>
+          Total Vaccinated: <i>${((d.people_fully_vaccinated/d.POP_EST) * 100).toFixed(0)}%</i>
+          `}
+          
+
+          onPolygonHover={(setHoverD)}
+          polygonsTransitionDuration={300}
+        />
+      }
       </div>
       <Box className="Slider" sx={{ width: 300 }}>
         <Slider
@@ -127,9 +216,16 @@ function valueLabelFormat(value: number) {
           valueLabelDisplay="auto"
         />
       </Box>
+        <FormControlLabel
+          className="toggle"
+          control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+          label="Vaccine Toggle"
+          onChange={vaccineHandle}
+        />
     </div>
 
   );
 }
 
 export default Globe;
+
