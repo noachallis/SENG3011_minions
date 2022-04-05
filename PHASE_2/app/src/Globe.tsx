@@ -85,7 +85,7 @@ function valueLabelFormat(value: number) {
         hexPolygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
         hexPolygonResolution={3}
         hexPolygonMargin={0.5}
-        hexPolygonAltitude={0.18}
+        hexPolygonAltitude={0.14}
         hexPolygonColor={d => d === hoverD ? 'steelblue' : colorScaleBlue(getValVacs(d))}
         hexPolygonLabel={({ properties: d } : any) => `
           <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
