@@ -112,7 +112,7 @@ function valueLabelFormat(value: number) {
         polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
         polygonStrokeColor={() => '#111'}
         polygonLabel={({ properties: d } : any) => `
-        <b>${d.ADMIN} (${d.ISO_A2}):</b> <br />
+        <b>${d.ADMIN} (${d.ISO_A3}):</b> <br />
         Total Cases: <i>${d.total_cases}</i><br/>
         Total Vaccinated: <i>${(d.people_fully_vaccinated/d.POP_EST * 100).toFixed(0)}%</i>
       `}

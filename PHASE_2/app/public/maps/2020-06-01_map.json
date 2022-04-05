@@ -18200,7 +18200,7 @@
                 "WIKIPEDIA": -99,
                 "FIPS_10_": "-99",
                 "ISO_A2": "-99",
-                "ISO_A3": "-99",
+                "ISO_A3": "CYN",
                 "ISO_A3_EH": "-99",
                 "ISO_N3": "-99",
                 "UN_A3": "-099",
@@ -22024,7 +22024,7 @@
                 "WIKIPEDIA": -99,
                 "FIPS_10_": "FR",
                 "ISO_A2": "-99",
-                "ISO_A3": "-99",
+                "ISO_A3": "FRA",
                 "ISO_A3_EH": "-99",
                 "ISO_N3": "250",
                 "UN_A3": "250",
@@ -22049,9 +22049,10 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 1.7,
                 "MAX_LABEL": 6.7,
-                "total_cases": 0,
+                "total_cases": 191301.0,
                 "people_fully_vaccinated": 0,
-                "total_vaccinations_per_hundred": 0
+                "total_vaccinations_per_hundred": 0,
+                "iso_code": "FRA"
             },
             "bbox": [
                 -54.524754,
@@ -31940,7 +31941,7 @@
                 "WIKIPEDIA": -99,
                 "FIPS_10_": "KV",
                 "ISO_A2": "XK",
-                "ISO_A3": "-99",
+                "ISO_A3": "KOS",
                 "ISO_A3_EH": "-99",
                 "ISO_N3": "-99",
                 "UN_A3": "-099",
@@ -39715,7 +39716,7 @@
                 "WIKIPEDIA": -99,
                 "FIPS_10_": "-99",
                 "ISO_A2": "-99",
-                "ISO_A3": "-99",
+                "ISO_A3": "NOR",
                 "ISO_A3_EH": "-99",
                 "ISO_N3": "-99",
                 "UN_A3": "-99",
@@ -39740,9 +39741,10 @@
                 "MIN_ZOOM": 0,
                 "MIN_LABEL": 3,
                 "MAX_LABEL": 7,
-                "total_cases": 0,
+                "total_cases": 8446.0,
                 "people_fully_vaccinated": 0,
-                "total_vaccinations_per_hundred": 0
+                "total_vaccinations_per_hundred": 0,
+                "iso_code": "NOR"
             },
             "bbox": [
                 4.992078,
@@ -49762,7 +49764,7 @@
                 "WIKIPEDIA": -99,
                 "FIPS_10_": "-99",
                 "ISO_A2": "-99",
-                "ISO_A3": "-99",
+                "ISO_A3": "SOL",
                 "ISO_A3_EH": "-99",
                 "ISO_N3": "-99",
                 "UN_A3": "-099",
@@ -59577,7 +59579,7 @@
         180,
         83.64513
     ],
-    "total_cases": 6023526.0,
+    "total_cases": 6223273.0,
     "people_fully_vaccinated": 0,
-    "world_population": 7272865651
+    "world_population": 7345291857
 }
