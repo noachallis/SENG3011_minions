@@ -84,10 +84,11 @@ dates.sort(key=lambda date: datetime.strptime(date, "%Y-%m-%d"))
 filtered_dates = []
 # ouput maps
 for date in dates:
-    result = re.match('20..-0[1369]-01', date)
+    result = re.match('20..-..-01', date)
     if result:
-        filtered_dates.append(date)
         filename = 'maps/' + date + '_map.json'
+        filenameWoMaps = date + '_map.json'
+        filtered_dates.append(filenameWoMaps)
         merged_data_one_date = getOneDate(covid_data, date)
         convert_write_json(merged_data_one_date, filename)
 

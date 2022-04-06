@@ -11,15 +11,33 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 const dates = [
   "2020-01-01_map.json",
+  "2020-02-01_map.json",
   "2020-03-01_map.json",
-  "2020-06-01_map.json",  
+  "2020-04-01_map.json",
+  "2020-05-01_map.json",
+  "2020-06-01_map.json",
+  "2020-07-01_map.json",
+  "2020-08-01_map.json",
   "2020-09-01_map.json",
+  "2020-10-01_map.json",
+  "2020-11-01_map.json",
+  "2020-12-01_map.json",
   "2021-01-01_map.json",
+  "2021-02-01_map.json",
   "2021-03-01_map.json",
+  "2021-04-01_map.json",
+  "2021-05-01_map.json",
   "2021-06-01_map.json",
+  "2021-07-01_map.json",
+  "2021-08-01_map.json",
   "2021-09-01_map.json",
+  "2021-10-01_map.json",
+  "2021-11-01_map.json",
+  "2021-12-01_map.json",
   "2022-01-01_map.json",
-  "2022-03-01_map.json"
+  "2022-02-01_map.json",
+  "2022-03-01_map.json",
+  "2022-04-01_map.json"
 ]
 
 const MaterialUISwitch = styled(Switch)(({ theme }  : any) => ({
@@ -166,7 +184,7 @@ useEffect(() => {
     intervalIdRef.current = window.setInterval(() => {
       handleChangeAuto(index);
       index = (index + 1) % dates.length
-    }, 500);
+    }, 250);
 
   }
   return () => clearInterval(intervalIdRef.current);
