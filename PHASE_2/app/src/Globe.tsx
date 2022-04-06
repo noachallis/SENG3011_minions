@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, useRef } from "react";
 import ReactGlobe from "react-globe.gl";
 import * as d3 from "d3";
 import Box from '@mui/material/Box';
@@ -12,7 +12,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 const dates = [
   "2020-01-01_map.json",
   "2020-03-01_map.json",
-  "2020-06-01_map.json",
+  "2020-06-01_map.json",  
   "2020-09-01_map.json",
   "2021-01-01_map.json",
   "2021-03-01_map.json",
@@ -93,6 +93,7 @@ function Globe() {
   const [vaccineEnabled, setVaccine] = useState(true);
   const [sliderPlaying, setsliderPlaying] = useState(false);
   const [globe, setGlobe] = useState();
+  const intervalIdRef = useRef(0);
 
   useEffect(() => {
     // load map
@@ -109,6 +110,7 @@ function Globe() {
     .then(setDateData)
     .catch((e) => console.error(e));
   }, []);
+  
 
   async function getDateData(date : string) {
     const path = "datasets/" + date 
@@ -137,6 +139,13 @@ function Globe() {
     }
   }
 
+  const handleChangeAuto = (index: number) => {
+    let newIndex = (index + 1) % dates.length
+    setCurrentDate(newIndex as number);
+    const newDate = dates[newIndex as number];
+    wrapper(newDate)  
+  }
+
   function valueLabelFormat(value: number) {
     const dateString = dates[value].split('_')[0];
     return `${dateString}`;
@@ -147,41 +156,21 @@ function Globe() {
     setVaccine(state)
   }
 
-  const sliderPlayHandle = () => {
-    const state = !sliderPlaying;
-    setsliderPlaying(state)
-    playSlider()
+const handlePlay = () => {
+  setsliderPlaying(!sliderPlaying);
+};
+
+useEffect(() => {
+  let index = currentIndex
+  if (sliderPlaying) {
+    intervalIdRef.current = window.setInterval(() => {
+      handleChangeAuto(index);
+      index = (index + 1) % dates.length
+    }, 500);
+
   }
-
-  // function timeout(delay: number) {
-  //   return new Promise( res => setTimeout(res, delay) );
-  // }
-
-  const playSlider = () => {
-    setTimeout(function() {  
-      let newIndex = (currentIndex + 1) % dates.length
-      // setCurrentDate(newIndex as number);
-      const newDate = dates[newIndex as number];
-      // wrapper(newDate)  
-      console.log(newDate)
-      if (sliderPlaying) {          
-        playSlider();             
-      }                      
-    }, 100)
-
-    // setTimeout(() => {
-    //   console.log("here")
-    //   // let newIndex = (currentIndex + 1) % dates.length
-    //   // console.log(newIndex)
-    //   // setCurrentDate(newIndex as number);
-    //   // const newDate = dates[newIndex as number];
-    //   // wrapper(newDate)
-    //   // if (sliderPlaying){
-    //   //   playSlider()
-    //   // }
-    // }, 100000)
-  
-  }
+  return () => clearInterval(intervalIdRef.current);
+}, [sliderPlaying]);
 
   const colorScale = d3.scaleSequentialSqrt(d3.interpolateReds);
   const colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateBlues);
@@ -307,10 +296,9 @@ function Globe() {
         
       </Box>
       <Box className="playButton">
-      <Button 
-        color="warning"
-          onClick={sliderPlayHandle}
-        >
+        <Button 
+        color="error"
+        onClick={handlePlay}>
           PLAY
         </Button>
       </Box>
