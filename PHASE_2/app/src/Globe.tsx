@@ -2,9 +2,10 @@ import React, { useEffect, useState, useMemo } from "react";
 import ReactGlobe from "react-globe.gl";
 import * as d3 from "d3";
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Slider from '@mui/material/Slider';
 import Switch, { SwitchProps } from '@mui/material/Switch';
-import { styled } from '@mui/material/styles';
+import { styled, } from '@mui/material/styles';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
@@ -78,6 +79,7 @@ function Globe() {
   const [hoverD, setHoverD] = useState();  
   const [currentIndex, setCurrentDate] = useState(dates.length-1);
   const [vaccineEnabled, setVaccine] = useState(true);
+  const [sliderPlaying, setsliderPlaying] = useState(false);
   const [globe, setGlobe] = useState();
 
   useEffect(() => {
@@ -125,9 +127,43 @@ function Globe() {
 
   const vaccineHandle = () => {
     const state = !vaccineEnabled;
-    console.log(vaccineEnabled, state)
-    console.log(state, "here")
     setVaccine(state)
+  }
+
+  const sliderPlayHandle = () => {
+    const state = !sliderPlaying;
+    setsliderPlaying(state)
+    playSlider()
+  }
+
+  // function timeout(delay: number) {
+  //   return new Promise( res => setTimeout(res, delay) );
+  // }
+
+  const playSlider = () => {
+    setTimeout(function() {  
+      let newIndex = (currentIndex + 1) % dates.length
+      // setCurrentDate(newIndex as number);
+      const newDate = dates[newIndex as number];
+      // wrapper(newDate)  
+      console.log(newDate)
+      if (sliderPlaying) {          
+        playSlider();             
+      }                      
+    }, 100)
+
+    // setTimeout(() => {
+    //   console.log("here")
+    //   // let newIndex = (currentIndex + 1) % dates.length
+    //   // console.log(newIndex)
+    //   // setCurrentDate(newIndex as number);
+    //   // const newDate = dates[newIndex as number];
+    //   // wrapper(newDate)
+    //   // if (sliderPlaying){
+    //   //   playSlider()
+    //   // }
+    // }, 100000)
+  
   }
 
   const colorScale = d3.scaleSequentialSqrt(d3.interpolateReds);
@@ -227,6 +263,15 @@ function Globe() {
           valueLabelFormat={valueLabelFormat}
           valueLabelDisplay="auto"
         />
+        
+      </Box>
+      <Box className="playButton">
+      <Button 
+        color="warning"
+          onClick={sliderPlayHandle}
+        >
+          PLAY
+        </Button>
       </Box>
       <Box className="toggle">
         <FormControlLabel

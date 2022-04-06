@@ -45,6 +45,12 @@
   font-family: "Verdana", sans-serif;
 }
 
+.playButton {
+  position: fixed;
+  z-index: 3;
+  bottom: 8%;
+}
+
 .statsOverview {
   position: fixed;
   font-weight: 600;
