@@ -14,11 +14,11 @@ const dates = [
   "2020-03-01_map.json",
   "2020-06-01_map.json",
   "2020-09-01_map.json",
-  "2020-12-01_map.json",
+  "2021-01-01_map.json",
   "2021-03-01_map.json",
   "2021-06-01_map.json",
   "2021-09-01_map.json",
-  "2021-12-01_map.json",
+  "2022-01-01_map.json",
   "2022-03-01_map.json"
 ]
 
@@ -71,11 +71,23 @@ const MaterialUISwitch = styled(Switch)(({ theme }  : any) => ({
 
 function Globe() {
   const [countries, setCountries] = useState({ 
-    features: [], 
+    features: []
+  });
+  const [dateData, setDateData] = useState({ 
     total_cases: 0,
     people_fully_vaccinated: 0,
     world_population: 0,
+    country_stats: [{
+      iso_code: '',
+      properties: {
+        total_cases: 0,
+        people_fully_vaccinated: 0,
+        total_vaccinations_per_hundred: 0,
+        population: 0
+      }
+    }]
   });
+
   const [hoverD, setHoverD] = useState();  
   const [currentIndex, setCurrentDate] = useState(dates.length-1);
   const [vaccineEnabled, setVaccine] = useState(true);
@@ -83,25 +95,31 @@ function Globe() {
   const [globe, setGlobe] = useState();
 
   useEffect(() => {
-    // load data
-    fetch('maps/2022-03-01_map.json')
+    // load map
+    fetch('datasets/countries.geojson')
     .then(res => res.json())
     .then(setCountries)
     .catch((e) => console.error(e));
   }, []);
 
-  async function getMap(map : string) {
-    console.log("here")
-    const path = "maps/" + map 
-    console.log(path)
+  useEffect(() => {
+    // load data
+    fetch('datasets/2022-03-01_map.json')
+    .then(res => res.json())
+    .then(setDateData)
+    .catch((e) => console.error(e));
+  }, []);
+
+  async function getDateData(date : string) {
+    const path = "datasets/" + date 
     fetch(path)
     .then(res => res.json())
-    .then(setCountries)
+    .then(setDateData)
     .catch((e) => console.error(e));
   }
 
-  async function wrapper(map : string) {
-    await getMap(map)
+  async function wrapper(date : string) {
+    await getDateData(date)
   }
 
   function valuetext(index: number) {
@@ -115,7 +133,6 @@ function Globe() {
     if (newIndex != currentIndex) {
       setCurrentDate(newIndex as number);
       const newDate = dates[newIndex as number];
-      console.log(newDate)
       wrapper(newDate)
     }
   }
@@ -169,11 +186,43 @@ function Globe() {
   const colorScale = d3.scaleSequentialSqrt(d3.interpolateReds);
   const colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateBlues);
 
+  const getPolygonLabel = (d : any) => {
+    let iso_code = d.ISO_A3
+    let country = dateData.country_stats.find((c : any) => c.iso_code === iso_code);
+    if (country){
+      return (`
+      <b>${d.ADMIN} (${d.ISO_A3}):</b> <br />
+      Total Cases: <i>${country.properties.total_cases}</i><br/>
+      Total Vaccinated: <i>${(country.properties.people_fully_vaccinated/country.properties.population * 100).toFixed(0)}%</i>
+      `)
+    } else {
+      return (`
+      <b>${d.ADMIN} (${d.ISO_A3}):</b> <br />
+      Total Cases: <i>0</i><br/>
+      Total Vaccinated: <i>0%</i>
+      `)
+    }
+  }
   // Calculate Covid Cases Density
-  const getVal = (feat : any) => feat.properties.total_cases / Math.max(1, feat.properties.POP_EST);
-
+  const getVal = (d : any) => {
+    let iso_code = d.properties.ISO_A3
+    let country = dateData.country_stats.find((c : any) => c.iso_code === iso_code);
+    if (country){
+      return country.properties.total_cases / Math.max(1, country.properties.population);
+    } else {
+      return 0
+    }
+  }
   // Get Vac Rates
-  const getValVacs = (feat : any) => feat.properties.people_fully_vaccinated / Math.max(1, feat.properties.POP_EST);
+  const getValVacs = (d : any) => {
+    let iso_code = d.properties.ISO_A3
+    let country = dateData.country_stats.find((c : any) => c.iso_code === iso_code);
+    if (country){
+      return country.properties.people_fully_vaccinated / Math.max(1, country.properties.population);
+    } else {
+      return 0
+    }
+  }
   
   const maxVal = useMemo(
     () => Math.max(...countries.features.map(getVal)),
@@ -184,8 +233,8 @@ function Globe() {
     colorScale.domain([0, maxVal]);
   }
 
-  const totalCases = countries.total_cases
-  const percentVaccinated = (countries.people_fully_vaccinated / countries.world_population * 100).toFixed(0)
+  const totalCases = dateData.total_cases
+  const percentVaccinated = (dateData.people_fully_vaccinated / dateData.world_population * 100).toFixed(0)
 
   return (
     <div className="Wrapper">
@@ -209,11 +258,7 @@ function Globe() {
           polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(getVal(d))}
           polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
           polygonStrokeColor={() => '#111'}
-          polygonLabel={({ properties: d } : any) => `
-          <b>${d.ADMIN} (${d.ISO_A3}):</b> <br />
-          Total Cases: <i>${d.total_cases}</i><br/>
-          Total Vaccinated: <i>${(d.people_fully_vaccinated/d.POP_EST * 100).toFixed(0)}%</i>
-        `}
+          polygonLabel={({ properties: d } : any) => getPolygonLabel(d)}
   
           // onPolygonHover={(setHoverD)}
           polygonsTransitionDuration={300}
@@ -235,12 +280,8 @@ function Globe() {
           polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(getVal(d))}
           polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
           polygonStrokeColor={() => '#111'}
-          polygonLabel={({ properties: d } : any) => `
-          <b>${d.ADMIN} (${d.ISO_A3}):</b> <br />
-          Total Cases: <i>${d.total_cases}</i><br/>
-          Total Vaccinated: <i>${(d.people_fully_vaccinated/d.POP_EST * 100).toFixed(0)}%</i>
-        `}
-  
+          polygonLabel={({ properties: d } : any) => getPolygonLabel(d)}
+
           // onPolygonHover={(setHoverD)}
           polygonsTransitionDuration={300}
         />
