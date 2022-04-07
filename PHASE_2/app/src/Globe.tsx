@@ -178,6 +178,10 @@ function Globe() {
   }
 
   const handleChange = (event: Event, newIndex: number | number[]) => {
+    // check if slider is in motion
+    if (sliderPlaying){
+      setsliderPlaying(false)
+    }
     if (newIndex != currentIndex) {
       setCurrentDate(newIndex as number);
       const newDate = dates[newIndex as number];
