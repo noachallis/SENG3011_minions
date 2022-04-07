@@ -10,63 +10,8 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { FaPlay, FaPause } from 'react-icons/fa';
 
-const dates = [
-  "2020-01-01_map.json",
-  "2020-01-15_map.json",
-  "2020-02-01_map.json",
-  "2020-02-15_map.json",
-  "2020-03-01_map.json",
-  "2020-03-15_map.json",
-  "2020-04-01_map.json",
-  "2020-04-15_map.json",
-  "2020-05-01_map.json",
-  "2020-05-15_map.json",
-  "2020-06-01_map.json",
-  "2020-06-15_map.json",
-  "2020-07-01_map.json",
-  "2020-07-15_map.json",
-  "2020-08-01_map.json",
-  "2020-08-15_map.json",
-  "2020-09-01_map.json",
-  "2020-09-15_map.json",
-  "2020-10-01_map.json",
-  "2020-10-15_map.json",
-  "2020-11-01_map.json",
-  "2020-11-15_map.json",
-  "2020-12-01_map.json",
-  "2020-12-15_map.json",
-  "2021-01-01_map.json",
-  "2021-01-15_map.json",
-  "2021-02-01_map.json",
-  "2021-02-15_map.json",
-  "2021-03-01_map.json",
-  "2021-03-15_map.json",
-  "2021-04-01_map.json",
-  "2021-04-15_map.json",
-  "2021-05-01_map.json",
-  "2021-05-15_map.json",
-  "2021-06-01_map.json",
-  "2021-06-15_map.json",
-  "2021-07-01_map.json",
-  "2021-07-15_map.json",
-  "2021-08-01_map.json",
-  "2021-08-15_map.json",
-  "2021-09-01_map.json",
-  "2021-09-15_map.json",
-  "2021-10-01_map.json",
-  "2021-10-15_map.json",
-  "2021-11-01_map.json",
-  "2021-11-15_map.json",
-  "2021-12-01_map.json",
-  "2021-12-15_map.json",
-  "2022-01-01_map.json",
-  "2022-01-15_map.json",
-  "2022-02-01_map.json",
-  "2022-02-15_map.json",
-  "2022-03-01_map.json",
-  "2022-03-15_map.json",
-  "2022-04-01_map.json"
-]
+import { translator } from './translator';
+import { dates } from './dates';
 
 const MaterialUISwitch = styled(Switch)(({ theme }  : any) => ({
   width: 62,
@@ -140,6 +85,8 @@ function Globe() {
   const [sliderPlaying, setsliderPlaying] = useState(false);
   const [globe, setGlobe] = useState();
   const intervalIdRef = useRef(0);
+  const [language, setLanguage] = useState('en');
+
 
   useEffect(() => {
     // load map
@@ -208,6 +155,18 @@ function Globe() {
 
 const handlePlay = () => {
   setsliderPlaying(!sliderPlaying);
+};
+
+const getWord = (word : string) => {
+  let phrases = translator.find((c : any) => c.lan === language)?.phrases;
+  switch(word){
+    case 'total_cases':
+    return phrases?.total_cases
+    break;
+  case 'pop_vacced':
+    return phrases?.pop_vacced
+    break;
+  }
 };
 
 useEffect(() => {
@@ -327,7 +286,7 @@ useEffect(() => {
       }
       </div>
       {/* <p className="statsOverview">Current Date: {currentIndex}</p> */}
-      <p className="statsOverview">Total Cases: {totalCases} &emsp;&emsp; Population Vaccinated: {percentVaccinated}%</p>
+      <p className="statsOverview">{getWord('total_cases')}: {totalCases} &emsp;&emsp; {getWord('pop_vacced')}: {percentVaccinated}%</p>
       <Box className="Slider" sx={{ width: 500 }}>
         <Box className="SliderLeft">
           <Slider
@@ -357,12 +316,24 @@ useEffect(() => {
         <FormControlLabel
           className="toggle"
           control={<Switch sx={{ m: 1 }} defaultChecked color="error"/>}
-          label="Show Vaccination Rates"
+          label=""
           onChange={vaccineHandle}
         />
       </Box>  
+      <Box className="flags">
+        <div>
+          <span className="flagEmoji" onClick={() => setLanguage("en")} aria-label="auFlag">🇬🇧</span>
+          <span className="flagEmoji" onClick={() => setLanguage("cn")} aria-label="auFlag">🇨🇳</span>
+          <span className="flagEmoji" onClick={() => setLanguage("es")} aria-label="auFlag">🇪🇸</span>
+          <span className="flagEmoji" onClick={() => setLanguage("fr")} aria-label="frFlag">🇫🇷</span>
+          <span className="flagEmoji" onClick={() => setLanguage("de")} aria-label="deFlag">🇩🇪</span>
+          <span className="flagEmoji" onClick={() => setLanguage("kr")} aria-label="auFlag">🇰🇷</span>
+          <span className="flagEmoji" onClick={() => setLanguage("jp")} aria-label="auFlag">🇯🇵</span>
+          <span className="flagEmoji" onClick={() => setLanguage("hn")} aria-label="auFlag">🇮🇳</span>
+        </div>
+      </Box>
     </div>
-
+  
   );
 }
 

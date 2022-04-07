@@ -80,3 +80,15 @@ div .scene-tooltip {
   font-family: "Verdana", sans-serif;
 }
 
+
+.flags {
+  width: 40px;
+  position: fixed;
+  top: 3%;
+  right: 1%;
+  z-index: 1;
+}
+
+.flagEmoji{
+  font-size: 35px;
+}
