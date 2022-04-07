@@ -1,0 +1,2140 @@
+{
+    "total_cases": 1096302405.0,
+    "people_fully_vaccinated": 13664959229.0,
+    "world_population": 31763517656.0,
+    "country_stats": [
+        {
+            "iso_code": "AFG",
+            "properties": {
+                "total_cases": 157260.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 39835428.0
+            }
+        },
+        {
+            "iso_code": "OWID_AFR",
+            "properties": {
+                "total_cases": 8678979.0,
+                "people_fully_vaccinated": 98731465.0,
+                "total_vaccinations_per_hundred": 17.47,
+                "population": 1373486472.0
+            }
+        },
+        {
+            "iso_code": "ALB",
+            "properties": {
+                "total_cases": 199750.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 2872934.0
+            }
+        },
+        {
+            "iso_code": "DZA",
+            "properties": {
+                "total_cases": 210344.0,
+                "people_fully_vaccinated": 5380385.0,
+                "total_vaccinations_per_hundred": 27.22,
+                "population": 44616626.0
+            }
+        },
+        {
+            "iso_code": "AND",
+            "properties": {
+                "total_cases": 16712.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 77354.0
+            }
+        },
+        {
+            "iso_code": "AGO",
+            "properties": {
+                "total_cases": 65155.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 33933611.0
+            }
+        },
+        {
+            "iso_code": "AIA",
+            "properties": {
+                "total_cases": 1386.0,
+                "people_fully_vaccinated": 9156.0,
+                "total_vaccinations_per_hundred": 130.45,
+                "population": 15125.0
+            }
+        },
+        {
+            "iso_code": "ATG",
+            "properties": {
+                "total_cases": 4141.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 98728.0
+            }
+        },
+        {
+            "iso_code": "ARG",
+            "properties": {
+                "total_cases": 5328416.0,
+                "people_fully_vaccinated": 30313931.0,
+                "total_vaccinations_per_hundred": 152.45,
+                "population": 45605823.0
+            }
+        },
+        {
+            "iso_code": "ARM",
+            "properties": {
+                "total_cases": 338120.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 2968128.0
+            }
+        },
+        {
+            "iso_code": "ABW",
+            "properties": {
+                "total_cases": 16335.0,
+                "people_fully_vaccinated": 78001.0,
+                "total_vaccinations_per_hundred": 150.79,
+                "population": 107195.0
+            }
+        },
+        {
+            "iso_code": "OWID_ASI",
+            "properties": {
+                "total_cases": 82317109.0,
+                "people_fully_vaccinated": 2255890348.0,
+                "total_vaccinations_per_hundred": 115.91,
+                "population": 4678444992.0
+            }
+        },
+        {
+            "iso_code": "AUS",
+            "properties": {
+                "total_cases": 210238.0,
+                "people_fully_vaccinated": 18759075.0,
+                "total_vaccinations_per_hundred": 151.97,
+                "population": 25788217.0
+            }
+        },
+        {
+            "iso_code": "AUT",
+            "properties": {
+                "total_cases": 1151809.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 9043072.0
+            }
+        },
+        {
+            "iso_code": "AZE",
+            "properties": {
+                "total_cases": 586640.0,
+                "people_fully_vaccinated": 4559877.0,
+                "total_vaccinations_per_hundred": 102.58,
+                "population": 10223344.0
+            }
+        },
+        {
+            "iso_code": "BHS",
+            "properties": {
+                "total_cases": 22763.0,
+                "people_fully_vaccinated": 138266.0,
+                "total_vaccinations_per_hundred": 70.59,
+                "population": 396914.0
+            }
+        },
+        {
+            "iso_code": "BHR",
+            "properties": {
+                "total_cases": 277628.0,
+                "people_fully_vaccinated": 1159016.0,
+                "total_vaccinations_per_hundred": 166.97,
+                "population": 1748295.0
+            }
+        },
+        {
+            "iso_code": "BGD",
+            "properties": {
+                "total_cases": 1576011.0,
+                "people_fully_vaccinated": 36420699.0,
+                "total_vaccinations_per_hundred": 57.55,
+                "population": 166303494.0
+            }
+        },
+        {
+            "iso_code": "BRB",
+            "properties": {
+                "total_cases": 25152.0,
+                "people_fully_vaccinated": 136754.0,
+                "total_vaccinations_per_hundred": 100.91,
+                "population": 287708.0
+            }
+        },
+        {
+            "iso_code": "BLR",
+            "properties": {
+                "total_cases": 653323.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 9442867.0
+            }
+        },
+        {
+            "iso_code": "BEL",
+            "properties": {
+                "total_cases": 1749469.0,
+                "people_fully_vaccinated": 8727103.0,
+                "total_vaccinations_per_hundred": 161.92,
+                "population": 11632334.0
+            }
+        },
+        {
+            "iso_code": "BLZ",
+            "properties": {
+                "total_cases": 30338.0,
+                "people_fully_vaccinated": 193188.0,
+                "total_vaccinations_per_hundred": 100.7,
+                "population": 404915.0
+            }
+        },
+        {
+            "iso_code": "BEN",
+            "properties": {
+                "total_cases": 24850.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 12451031.0
+            }
+        },
+        {
+            "iso_code": "BMU",
+            "properties": {
+                "total_cases": 5748.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 62092.0
+            }
+        },
+        {
+            "iso_code": "BTN",
+            "properties": {
+                "total_cases": 2640.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 779900.0
+            }
+        },
+        {
+            "iso_code": "BOL",
+            "properties": {
+                "total_cases": 536472.0,
+                "people_fully_vaccinated": 4136979.0,
+                "total_vaccinations_per_hundred": 72.44,
+                "population": 11832936.0
+            }
+        },
+        {
+            "iso_code": "BES",
+            "properties": {
+                "total_cases": 2905.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 26445.0
+            }
+        },
+        {
+            "iso_code": "BIH",
+            "properties": {
+                "total_cases": 274219.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 3263459.0
+            }
+        },
+        {
+            "iso_code": "BWA",
+            "properties": {
+                "total_cases": 195068.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 2397240.0
+            }
+        },
+        {
+            "iso_code": "BRA",
+            "properties": {
+                "total_cases": 22089858.0,
+                "people_fully_vaccinated": 133029594.0,
+                "total_vaccinations_per_hundred": 143.84,
+                "population": 213993441.0
+            }
+        },
+        {
+            "iso_code": "VGB",
+            "properties": {
+                "total_cases": 2773.0,
+                "people_fully_vaccinated": 16650.0,
+                "total_vaccinations_per_hundred": 114.75,
+                "population": 30423.0
+            }
+        },
+        {
+            "iso_code": "BRN",
+            "properties": {
+                "total_cases": 15058.0,
+                "people_fully_vaccinated": 344914.0,
+                "total_vaccinations_per_hundred": 169.41,
+                "population": 441532.0
+            }
+        },
+        {
+            "iso_code": "BGR",
+            "properties": {
+                "total_cases": 692376.0,
+                "people_fully_vaccinated": 1762938.0,
+                "total_vaccinations_per_hundred": 48.01,
+                "population": 6896655.0
+            }
+        },
+        {
+            "iso_code": "BFA",
+            "properties": {
+                "total_cases": 15711.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 21497097.0
+            }
+        },
+        {
+            "iso_code": "BDI",
+            "properties": {
+                "total_cases": 20415.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 12255429.0
+            }
+        },
+        {
+            "iso_code": "KHM",
+            "properties": {
+                "total_cases": 120112.0,
+                "people_fully_vaccinated": 13320478.0,
+                "total_vaccinations_per_hundred": 169.11,
+                "population": 16946446.0
+            }
+        },
+        {
+            "iso_code": "CMR",
+            "properties": {
+                "total_cases": 106794.0,
+                "people_fully_vaccinated": 595316.0,
+                "total_vaccinations_per_hundred": 3.5,
+                "population": 27224262.0
+            }
+        },
+        {
+            "iso_code": "CAN",
+            "properties": {
+                "total_cases": 1795577.0,
+                "people_fully_vaccinated": 29010587.0,
+                "total_vaccinations_per_hundred": 159.18,
+                "population": 38067913.0
+            }
+        },
+        {
+            "iso_code": "CPV",
+            "properties": {
+                "total_cases": 38367.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 561901.0
+            }
+        },
+        {
+            "iso_code": "CYM",
+            "properties": {
+                "total_cases": 6738.0,
+                "people_fully_vaccinated": 55829.0,
+                "total_vaccinations_per_hundred": 186.29,
+                "population": 66498.0
+            }
+        },
+        {
+            "iso_code": "CAF",
+            "properties": {
+                "total_cases": 11708.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 4919987.0
+            }
+        },
+        {
+            "iso_code": "TCD",
+            "properties": {
+                "total_cases": 5107.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 16914985.0
+            }
+        },
+        {
+            "iso_code": "CHL",
+            "properties": {
+                "total_cases": 1761365.0,
+                "people_fully_vaccinated": 16130289.0,
+                "total_vaccinations_per_hundred": 212.87,
+                "population": 19212362.0
+            }
+        },
+        {
+            "iso_code": "CHN",
+            "properties": {
+                "total_cases": 111012.0,
+                "people_fully_vaccinated": 1110506000.0,
+                "total_vaccinations_per_hundred": 173.09,
+                "population": 1444216102.0
+            }
+        },
+        {
+            "iso_code": "COL",
+            "properties": {
+                "total_cases": 5067348.0,
+                "people_fully_vaccinated": 24597537.0,
+                "total_vaccinations_per_hundred": 111.36,
+                "population": 51265841.0
+            }
+        },
+        {
+            "iso_code": "COM",
+            "properties": {
+                "total_cases": 4498.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 888456.0
+            }
+        },
+        {
+            "iso_code": "COG",
+            "properties": {
+                "total_cases": 18905.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 5657017.0
+            }
+        },
+        {
+            "iso_code": "COK",
+            "properties": {
+                "total_cases": 1.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 17572.0
+            }
+        },
+        {
+            "iso_code": "CRI",
+            "properties": {
+                "total_cases": 566560.0,
+                "people_fully_vaccinated": 3215091.0,
+                "total_vaccinations_per_hundred": 138.9,
+                "population": 5139053.0
+            }
+        },
+        {
+            "iso_code": "CIV",
+            "properties": {
+                "total_cases": 61712.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 27053629.0
+            }
+        },
+        {
+            "iso_code": "HRV",
+            "properties": {
+                "total_cases": 604347.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 101.23,
+                "population": 4081657.0
+            }
+        },
+        {
+            "iso_code": "CUB",
+            "properties": {
+                "total_cases": 962350.0,
+                "people_fully_vaccinated": 9217347.0,
+                "total_vaccinations_per_hundred": 251.24,
+                "population": 11317498.0
+            }
+        },
+        {
+            "iso_code": "CUW",
+            "properties": {
+                "total_cases": 17401.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 164796.0
+            }
+        },
+        {
+            "iso_code": "CYP",
+            "properties": {
+                "total_cases": 133860.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 896005.0
+            }
+        },
+        {
+            "iso_code": "CZE",
+            "properties": {
+                "total_cases": 2133098.0,
+                "people_fully_vaccinated": 6373293.0,
+                "total_vaccinations_per_hundred": 125.68,
+                "population": 10724553.0
+            }
+        },
+        {
+            "iso_code": "COD",
+            "properties": {
+                "total_cases": 58234.0,
+                "people_fully_vaccinated": 56167.0,
+                "total_vaccinations_per_hundred": 0.21,
+                "population": 92377986.0
+            }
+        },
+        {
+            "iso_code": "DNK",
+            "properties": {
+                "total_cases": 483253.0,
+                "people_fully_vaccinated": 4464727.0,
+                "total_vaccinations_per_hundred": 167.73,
+                "population": 5813302.0
+            }
+        },
+        {
+            "iso_code": "DJI",
+            "properties": {
+                "total_cases": 13504.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 1002197.0
+            }
+        },
+        {
+            "iso_code": "DMA",
+            "properties": {
+                "total_cases": 5955.0,
+                "people_fully_vaccinated": 26760.0,
+                "total_vaccinations_per_hundred": 76.93,
+                "population": 72172.0
+            }
+        },
+        {
+            "iso_code": "DOM",
+            "properties": {
+                "total_cases": 407113.0,
+                "people_fully_vaccinated": 5592459.0,
+                "total_vaccinations_per_hundred": 125.97,
+                "population": 10953714.0
+            }
+        },
+        {
+            "iso_code": "ECU",
+            "properties": {
+                "total_cases": 526870.0,
+                "people_fully_vaccinated": 11398382.0,
+                "total_vaccinations_per_hundred": 140.28,
+                "population": 17888474.0
+            }
+        },
+        {
+            "iso_code": "EGY",
+            "properties": {
+                "total_cases": 357629.0,
+                "people_fully_vaccinated": 15515855.0,
+                "total_vaccinations_per_hundred": 38.98,
+                "population": 104258327.0
+            }
+        },
+        {
+            "iso_code": "SLV",
+            "properties": {
+                "total_cases": 119803.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 6518500.0
+            }
+        },
+        {
+            "iso_code": "GNQ",
+            "properties": {
+                "total_cases": 13579.0,
+                "people_fully_vaccinated": 198169.0,
+                "total_vaccinations_per_hundred": 30.74,
+                "population": 1449891.0
+            }
+        },
+        {
+            "iso_code": "ERI",
+            "properties": {
+                "total_cases": 7341.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 3601462.0
+            }
+        },
+        {
+            "iso_code": "EST",
+            "properties": {
+                "total_cases": 221860.0,
+                "people_fully_vaccinated": 787526.0,
+                "total_vaccinations_per_hundred": 124.77,
+                "population": 1325188.0
+            }
+        },
+        {
+            "iso_code": "SWZ",
+            "properties": {
+                "total_cases": 46582.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 1172369.0
+            }
+        },
+        {
+            "iso_code": "ETH",
+            "properties": {
+                "total_cases": 371346.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 7.65,
+                "population": 117876226.0
+            }
+        },
+        {
+            "iso_code": "OWID_EUR",
+            "properties": {
+                "total_cases": 74156741.0,
+                "people_fully_vaccinated": 434123533.0,
+                "total_vaccinations_per_hundred": 127.6,
+                "population": 748962983.0
+            }
+        },
+        {
+            "iso_code": "OWID_EUN",
+            "properties": {
+                "total_cases": 46300870.0,
+                "people_fully_vaccinated": 299817591.0,
+                "total_vaccinations_per_hundred": 144.09,
+                "population": 447189915.0
+            }
+        },
+        {
+            "iso_code": "FRO",
+            "properties": {
+                "total_cases": 3553.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 49053.0
+            }
+        },
+        {
+            "iso_code": "FLK",
+            "properties": {
+                "total_cases": 79.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 3528.0
+            }
+        },
+        {
+            "iso_code": "FJI",
+            "properties": {
+                "total_cases": 52506.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 902899.0
+            }
+        },
+        {
+            "iso_code": "FIN",
+            "properties": {
+                "total_cases": 186688.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 5548361.0
+            }
+        },
+        {
+            "iso_code": "FRA",
+            "properties": {
+                "total_cases": 7673082.0,
+                "people_fully_vaccinated": 47121661.0,
+                "total_vaccinations_per_hundred": 156.98,
+                "population": 67422000.0
+            }
+        },
+        {
+            "iso_code": "PYF",
+            "properties": {
+                "total_cases": 45609.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 282534.0
+            }
+        },
+        {
+            "iso_code": "GAB",
+            "properties": {
+                "total_cases": 37342.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 2278829.0
+            }
+        },
+        {
+            "iso_code": "GMB",
+            "properties": {
+                "total_cases": 9989.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 2486937.0
+            }
+        },
+        {
+            "iso_code": "GEO",
+            "properties": {
+                "total_cases": 840593.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 3979773.0
+            }
+        },
+        {
+            "iso_code": "DEU",
+            "properties": {
+                "total_cases": 5791060.0,
+                "people_fully_vaccinated": 57093314.0,
+                "total_vaccinations_per_hundred": 146.79,
+                "population": 83900471.0
+            }
+        },
+        {
+            "iso_code": "GHA",
+            "properties": {
+                "total_cases": 130920.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 31732128.0
+            }
+        },
+        {
+            "iso_code": "GIB",
+            "properties": {
+                "total_cases": 7203.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 33691.0
+            }
+        },
+        {
+            "iso_code": "GRC",
+            "properties": {
+                "total_cases": 931183.0,
+                "people_fully_vaccinated": 6601084.0,
+                "total_vaccinations_per_hundred": 139.15,
+                "population": 10370747.0
+            }
+        },
+        {
+            "iso_code": "GRL",
+            "properties": {
+                "total_cases": 1456.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 56868.0
+            }
+        },
+        {
+            "iso_code": "GRD",
+            "properties": {
+                "total_cases": 5888.0,
+                "people_fully_vaccinated": 34355.0,
+                "total_vaccinations_per_hundred": 66.1,
+                "population": 113015.0
+            }
+        },
+        {
+            "iso_code": "GUM",
+            "properties": {
+                "total_cases": 0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 170184.0
+            }
+        },
+        {
+            "iso_code": "GTM",
+            "properties": {
+                "total_cases": 617621.0,
+                "people_fully_vaccinated": 4043359.0,
+                "total_vaccinations_per_hundred": 54.8,
+                "population": 18249868.0
+            }
+        },
+        {
+            "iso_code": "GGY",
+            "properties": {
+                "total_cases": 0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 63385.0
+            }
+        },
+        {
+            "iso_code": "GIN",
+            "properties": {
+                "total_cases": 30770.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 13497237.0
+            }
+        },
+        {
+            "iso_code": "GNB",
+            "properties": {
+                "total_cases": 6440.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 2015490.0
+            }
+        },
+        {
+            "iso_code": "GUY",
+            "properties": {
+                "total_cases": 37825.0,
+                "people_fully_vaccinated": 276888.0,
+                "total_vaccinations_per_hundred": 85.62,
+                "population": 790329.0
+            }
+        },
+        {
+            "iso_code": "HTI",
+            "properties": {
+                "total_cases": 25175.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 11541683.0
+            }
+        },
+        {
+            "iso_code": "OWID_HIC",
+            "properties": {
+                "total_cases": 114637581.0,
+                "people_fully_vaccinated": 825502130.0,
+                "total_vaccinations_per_hundred": 150.63,
+                "population": 1214930230.0
+            }
+        },
+        {
+            "iso_code": "HND",
+            "properties": {
+                "total_cases": 377859.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 79.11,
+                "population": 10062994.0
+            }
+        },
+        {
+            "iso_code": "HKG",
+            "properties": {
+                "total_cases": 12430.0,
+                "people_fully_vaccinated": 4530775.0,
+                "total_vaccinations_per_hundred": 124.94,
+                "population": 7552800.0
+            }
+        },
+        {
+            "iso_code": "HUN",
+            "properties": {
+                "total_cases": 1096718.0,
+                "people_fully_vaccinated": 5842885.0,
+                "total_vaccinations_per_hundred": 148.25,
+                "population": 9634162.0
+            }
+        },
+        {
+            "iso_code": "ISL",
+            "properties": {
+                "total_cases": 17770.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 368792.0
+            }
+        },
+        {
+            "iso_code": "IND",
+            "properties": {
+                "total_cases": 34587822.0,
+                "people_fully_vaccinated": 442136609.0,
+                "total_vaccinations_per_hundred": 88.16,
+                "population": 1393409033.0
+            }
+        },
+        {
+            "iso_code": "IDN",
+            "properties": {
+                "total_cases": 4256112.0,
+                "people_fully_vaccinated": 94755660.0,
+                "total_vaccinations_per_hundred": 84.55,
+                "population": 276361788.0
+            }
+        },
+        {
+            "iso_code": "OWID_INT",
+            "properties": {
+                "total_cases": 721.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 0
+            }
+        },
+        {
+            "iso_code": "IRN",
+            "properties": {
+                "total_cases": 6113192.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 85028760.0
+            }
+        },
+        {
+            "iso_code": "IRQ",
+            "properties": {
+                "total_cases": 2080448.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 41179351.0
+            }
+        },
+        {
+            "iso_code": "IRL",
+            "properties": {
+                "total_cases": 564657.0,
+                "people_fully_vaccinated": 3828717.0,
+                "total_vaccinations_per_hundred": 166.84,
+                "population": 4982904.0
+            }
+        },
+        {
+            "iso_code": "IMN",
+            "properties": {
+                "total_cases": 11230.0,
+                "people_fully_vaccinated": 64825.0,
+                "total_vaccinations_per_hundred": 155.86,
+                "population": 85410.0
+            }
+        },
+        {
+            "iso_code": "ISR",
+            "properties": {
+                "total_cases": 1342976.0,
+                "people_fully_vaccinated": 5795591.0,
+                "total_vaccinations_per_hundred": 174.66,
+                "population": 9291000.0
+            }
+        },
+        {
+            "iso_code": "ITA",
+            "properties": {
+                "total_cases": 5015790.0,
+                "people_fully_vaccinated": 44078926.0,
+                "total_vaccinations_per_hundred": 159.46,
+                "population": 60367471.0
+            }
+        },
+        {
+            "iso_code": "JAM",
+            "properties": {
+                "total_cases": 91222.0,
+                "people_fully_vaccinated": 508031.0,
+                "total_vaccinations_per_hundred": 37.18,
+                "population": 2973462.0
+            }
+        },
+        {
+            "iso_code": "JPN",
+            "properties": {
+                "total_cases": 1726555.0,
+                "people_fully_vaccinated": 97330657.0,
+                "total_vaccinations_per_hundred": 156.37,
+                "population": 126050796.0
+            }
+        },
+        {
+            "iso_code": "JEY",
+            "properties": {
+                "total_cases": 0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 101073.0
+            }
+        },
+        {
+            "iso_code": "JOR",
+            "properties": {
+                "total_cases": 948966.0,
+                "people_fully_vaccinated": 3739571.0,
+                "total_vaccinations_per_hundred": 76.64,
+                "population": 10269022.0
+            }
+        },
+        {
+            "iso_code": "KAZ",
+            "properties": {
+                "total_cases": 1054091.0,
+                "people_fully_vaccinated": 8058293.0,
+                "total_vaccinations_per_hundred": 88.32,
+                "population": 18994958.0
+            }
+        },
+        {
+            "iso_code": "KEN",
+            "properties": {
+                "total_cases": 254979.0,
+                "people_fully_vaccinated": 2709473.0,
+                "total_vaccinations_per_hundred": 12.85,
+                "population": 54985702.0
+            }
+        },
+        {
+            "iso_code": "KIR",
+            "properties": {
+                "total_cases": 2.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 121388.0
+            }
+        },
+        {
+            "iso_code": "OWID_KOS",
+            "properties": {
+                "total_cases": 161083.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 1782115.0
+            }
+        },
+        {
+            "iso_code": "KWT",
+            "properties": {
+                "total_cases": 413327.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 4328553.0
+            }
+        },
+        {
+            "iso_code": "KGZ",
+            "properties": {
+                "total_cases": 183285.0,
+                "people_fully_vaccinated": 891186.0,
+                "total_vaccinations_per_hundred": 30.35,
+                "population": 6628347.0
+            }
+        },
+        {
+            "iso_code": "LAO",
+            "properties": {
+                "total_cases": 72447.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 7379358.0
+            }
+        },
+        {
+            "iso_code": "LVA",
+            "properties": {
+                "total_cases": 252728.0,
+                "people_fully_vaccinated": 1187104.0,
+                "total_vaccinations_per_hundred": 121.23,
+                "population": 1866934.0
+            }
+        },
+        {
+            "iso_code": "LBN",
+            "properties": {
+                "total_cases": 668605.0,
+                "people_fully_vaccinated": 1679868.0,
+                "total_vaccinations_per_hundred": 52.99,
+                "population": 6769151.0
+            }
+        },
+        {
+            "iso_code": "LSO",
+            "properties": {
+                "total_cases": 21768.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 2159067.0
+            }
+        },
+        {
+            "iso_code": "LBR",
+            "properties": {
+                "total_cases": 5823.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 5180208.0
+            }
+        },
+        {
+            "iso_code": "LBY",
+            "properties": {
+                "total_cases": 372209.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 6958538.0
+            }
+        },
+        {
+            "iso_code": "LIE",
+            "properties": {
+                "total_cases": 4562.0,
+                "people_fully_vaccinated": 25033.0,
+                "total_vaccinations_per_hundred": 133.43,
+                "population": 38254.0
+            }
+        },
+        {
+            "iso_code": "LTU",
+            "properties": {
+                "total_cases": 468494.0,
+                "people_fully_vaccinated": 1780307.0,
+                "total_vaccinations_per_hundred": 137.17,
+                "population": 2689862.0
+            }
+        },
+        {
+            "iso_code": "OWID_LIC",
+            "properties": {
+                "total_cases": 1379435.0,
+                "people_fully_vaccinated": 17652977.0,
+                "total_vaccinations_per_hundred": 7.73,
+                "population": 665149040.0
+            }
+        },
+        {
+            "iso_code": "OWID_LMC",
+            "properties": {
+                "total_cases": 63979172.0,
+                "people_fully_vaccinated": 884861812.0,
+                "total_vaccinations_per_hundred": 71.17,
+                "population": 3330652550.0
+            }
+        },
+        {
+            "iso_code": "LUX",
+            "properties": {
+                "total_cases": 89010.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 142.93,
+                "population": 634814.0
+            }
+        },
+        {
+            "iso_code": "MAC",
+            "properties": {
+                "total_cases": 77.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 658391.0
+            }
+        },
+        {
+            "iso_code": "MDG",
+            "properties": {
+                "total_cases": 44330.0,
+                "people_fully_vaccinated": 484570.0,
+                "total_vaccinations_per_hundred": 2.41,
+                "population": 28427333.0
+            }
+        },
+        {
+            "iso_code": "MWI",
+            "properties": {
+                "total_cases": 61901.0,
+                "people_fully_vaccinated": 599981.0,
+                "total_vaccinations_per_hundred": 7.16,
+                "population": 19647681.0
+            }
+        },
+        {
+            "iso_code": "MYS",
+            "properties": {
+                "total_cases": 2627903.0,
+                "people_fully_vaccinated": 25464214.0,
+                "total_vaccinations_per_hundred": 163.31,
+                "population": 32776195.0
+            }
+        },
+        {
+            "iso_code": "MDV",
+            "properties": {
+                "total_cases": 91543.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 543620.0
+            }
+        },
+        {
+            "iso_code": "MLI",
+            "properties": {
+                "total_cases": 17364.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 20855724.0
+            }
+        },
+        {
+            "iso_code": "MLT",
+            "properties": {
+                "total_cases": 39329.0,
+                "people_fully_vaccinated": 432253.0,
+                "total_vaccinations_per_hundred": 185.3,
+                "population": 516100.0
+            }
+        },
+        {
+            "iso_code": "MHL",
+            "properties": {
+                "total_cases": 4.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 59618.0
+            }
+        },
+        {
+            "iso_code": "MRT",
+            "properties": {
+                "total_cases": 39213.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 4775110.0
+            }
+        },
+        {
+            "iso_code": "MUS",
+            "properties": {
+                "total_cases": 55634.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 1273428.0
+            }
+        },
+        {
+            "iso_code": "MEX",
+            "properties": {
+                "total_cases": 3884566.0,
+                "people_fully_vaccinated": 64971111.0,
+                "total_vaccinations_per_hundred": 101.66,
+                "population": 130262220.0
+            }
+        },
+        {
+            "iso_code": "FSM",
+            "properties": {
+                "total_cases": 1.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 116255.0
+            }
+        },
+        {
+            "iso_code": "MDA",
+            "properties": {
+                "total_cases": 363110.0,
+                "people_fully_vaccinated": 934281.0,
+                "total_vaccinations_per_hundred": 40.24,
+                "population": 4024025.0
+            }
+        },
+        {
+            "iso_code": "MCO",
+            "properties": {
+                "total_cases": 3738.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 39520.0
+            }
+        },
+        {
+            "iso_code": "MNG",
+            "properties": {
+                "total_cases": 667361.0,
+                "people_fully_vaccinated": 2150479.0,
+                "total_vaccinations_per_hundred": 132.48,
+                "population": 3329282.0
+            }
+        },
+        {
+            "iso_code": "MNE",
+            "properties": {
+                "total_cases": 157085.0,
+                "people_fully_vaccinated": 254909.0,
+                "total_vaccinations_per_hundred": 84.17,
+                "population": 628051.0
+            }
+        },
+        {
+            "iso_code": "MSR",
+            "properties": {
+                "total_cases": 44.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 4981.0
+            }
+        },
+        {
+            "iso_code": "MAR",
+            "properties": {
+                "total_cases": 949785.0,
+                "people_fully_vaccinated": 22764566.0,
+                "total_vaccinations_per_hundred": 130.81,
+                "population": 37344787.0
+            }
+        },
+        {
+            "iso_code": "MOZ",
+            "properties": {
+                "total_cases": 151528.0,
+                "people_fully_vaccinated": 3723693.0,
+                "total_vaccinations_per_hundred": 31.55,
+                "population": 32163045.0
+            }
+        },
+        {
+            "iso_code": "MMR",
+            "properties": {
+                "total_cases": 521931.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 54806014.0
+            }
+        },
+        {
+            "iso_code": "NAM",
+            "properties": {
+                "total_cases": 129180.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 2587344.0
+            }
+        },
+        {
+            "iso_code": "NRU",
+            "properties": {
+                "total_cases": 0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 10873.0
+            }
+        },
+        {
+            "iso_code": "NPL",
+            "properties": {
+                "total_cases": 821121.0,
+                "people_fully_vaccinated": 8437860.0,
+                "total_vaccinations_per_hundred": 61.73,
+                "population": 29674920.0
+            }
+        },
+        {
+            "iso_code": "NLD",
+            "properties": {
+                "total_cases": 2647760.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 17173094.0
+            }
+        },
+        {
+            "iso_code": "NCL",
+            "properties": {
+                "total_cases": 12139.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 288217.0
+            }
+        },
+        {
+            "iso_code": "NZL",
+            "properties": {
+                "total_cases": 11576.0,
+                "people_fully_vaccinated": 3609555.0,
+                "total_vaccinations_per_hundred": 147.12,
+                "population": 5126300.0
+            }
+        },
+        {
+            "iso_code": "NIC",
+            "properties": {
+                "total_cases": 17152.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 6702379.0
+            }
+        },
+        {
+            "iso_code": "NER",
+            "properties": {
+                "total_cases": 6989.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 25130810.0
+            }
+        },
+        {
+            "iso_code": "NGA",
+            "properties": {
+                "total_cases": 214113.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 211400704.0
+            }
+        },
+        {
+            "iso_code": "NIU",
+            "properties": {
+                "total_cases": 0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 1614.0
+            }
+        },
+        {
+            "iso_code": "OWID_NAM",
+            "properties": {
+                "total_cases": 58052951.0,
+                "people_fully_vaccinated": 331452857.0,
+                "total_vaccinations_per_hundred": 126.7,
+                "population": 596581283.0
+            }
+        },
+        {
+            "iso_code": "MKD",
+            "properties": {
+                "total_cases": 215125.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 2082661.0
+            }
+        },
+        {
+            "iso_code": "MNP",
+            "properties": {
+                "total_cases": 0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 57910.0
+            }
+        },
+        {
+            "iso_code": "NOR",
+            "properties": {
+                "total_cases": 263798.0,
+                "people_fully_vaccinated": 3837873.0,
+                "total_vaccinations_per_hundred": 158.48,
+                "population": 5465629.0
+            }
+        },
+        {
+            "iso_code": "OWID_OCE",
+            "properties": {
+                "total_cases": 367658.0,
+                "people_fully_vaccinated": 23712359.0,
+                "total_vaccinations_per_hundred": 115.34,
+                "population": 43219954.0
+            }
+        },
+        {
+            "iso_code": "OMN",
+            "properties": {
+                "total_cases": 304519.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 5223376.0
+            }
+        },
+        {
+            "iso_code": "PAK",
+            "properties": {
+                "total_cases": 1284840.0,
+                "people_fully_vaccinated": 50184100.0,
+                "total_vaccinations_per_hundred": 54.63,
+                "population": 225199929.0
+            }
+        },
+        {
+            "iso_code": "PLW",
+            "properties": {
+                "total_cases": 8.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 18174.0
+            }
+        },
+        {
+            "iso_code": "PSE",
+            "properties": {
+                "total_cases": 460053.0,
+                "people_fully_vaccinated": 1386990.0,
+                "total_vaccinations_per_hundred": 59.76,
+                "population": 5222756.0
+            }
+        },
+        {
+            "iso_code": "PAN",
+            "properties": {
+                "total_cases": 477514.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 4381583.0
+            }
+        },
+        {
+            "iso_code": "PNG",
+            "properties": {
+                "total_cases": 35090.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 9119005.0
+            }
+        },
+        {
+            "iso_code": "PRY",
+            "properties": {
+                "total_cases": 463001.0,
+                "people_fully_vaccinated": 2612265.0,
+                "total_vaccinations_per_hundred": 83.94,
+                "population": 7219641.0
+            }
+        },
+        {
+            "iso_code": "PER",
+            "properties": {
+                "total_cases": 2234970.0,
+                "people_fully_vaccinated": 18737331.0,
+                "total_vaccinations_per_hundred": 126.85,
+                "population": 33359415.0
+            }
+        },
+        {
+            "iso_code": "PHL",
+            "properties": {
+                "total_cases": 2832375.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 111046910.0
+            }
+        },
+        {
+            "iso_code": "POL",
+            "properties": {
+                "total_cases": 3520961.0,
+                "people_fully_vaccinated": 20418316.0,
+                "total_vaccinations_per_hundred": 110.26,
+                "population": 37797000.0
+            }
+        },
+        {
+            "iso_code": "PRT",
+            "properties": {
+                "total_cases": 1144342.0,
+                "people_fully_vaccinated": 8982887.0,
+                "total_vaccinations_per_hundred": 171.52,
+                "population": 10167923.0
+            }
+        },
+        {
+            "iso_code": "PRI",
+            "properties": {
+                "total_cases": 0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 2828246.0
+            }
+        },
+        {
+            "iso_code": "QAT",
+            "properties": {
+                "total_cases": 243290.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 169.64,
+                "population": 2930524.0
+            }
+        },
+        {
+            "iso_code": "ROU",
+            "properties": {
+                "total_cases": 1778045.0,
+                "people_fully_vaccinated": 7415357.0,
+                "total_vaccinations_per_hundred": 77.73,
+                "population": 19127772.0
+            }
+        },
+        {
+            "iso_code": "RUS",
+            "properties": {
+                "total_cases": 9436650.0,
+                "people_fully_vaccinated": 56353454.0,
+                "total_vaccinations_per_hundred": 86.28,
+                "population": 145912022.0
+            }
+        },
+        {
+            "iso_code": "RWA",
+            "properties": {
+                "total_cases": 100344.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 13276517.0
+            }
+        },
+        {
+            "iso_code": "SHN",
+            "properties": {
+                "total_cases": 4.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 6095.0
+            }
+        },
+        {
+            "iso_code": "KNA",
+            "properties": {
+                "total_cases": 2782.0,
+                "people_fully_vaccinated": 24875.0,
+                "total_vaccinations_per_hundred": 97.83,
+                "population": 53546.0
+            }
+        },
+        {
+            "iso_code": "LCA",
+            "properties": {
+                "total_cases": 12989.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 184401.0
+            }
+        },
+        {
+            "iso_code": "SPM",
+            "properties": {
+                "total_cases": 67.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 5771.0
+            }
+        },
+        {
+            "iso_code": "VCT",
+            "properties": {
+                "total_cases": 5525.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 111269.0
+            }
+        },
+        {
+            "iso_code": "WSM",
+            "properties": {
+                "total_cases": 3.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 200144.0
+            }
+        },
+        {
+            "iso_code": "SMR",
+            "properties": {
+                "total_cases": 5979.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 34010.0
+            }
+        },
+        {
+            "iso_code": "STP",
+            "properties": {
+                "total_cases": 3731.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 223364.0
+            }
+        },
+        {
+            "iso_code": "SAU",
+            "properties": {
+                "total_cases": 549720.0,
+                "people_fully_vaccinated": 22432544.0,
+                "total_vaccinations_per_hundred": 134.1,
+                "population": 35340680.0
+            }
+        },
+        {
+            "iso_code": "SEN",
+            "properties": {
+                "total_cases": 73987.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 17196308.0
+            }
+        },
+        {
+            "iso_code": "SRB",
+            "properties": {
+                "total_cases": 1252573.0,
+                "people_fully_vaccinated": 3118088.0,
+                "total_vaccinations_per_hundred": 114.64,
+                "population": 6871547.0
+            }
+        },
+        {
+            "iso_code": "SYC",
+            "properties": {
+                "total_cases": 23390.0,
+                "people_fully_vaccinated": 77951.0,
+                "total_vaccinations_per_hundred": 181.44,
+                "population": 98910.0
+            }
+        },
+        {
+            "iso_code": "SLE",
+            "properties": {
+                "total_cases": 6402.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 8141343.0
+            }
+        },
+        {
+            "iso_code": "SGP",
+            "properties": {
+                "total_cases": 263486.0,
+                "people_fully_vaccinated": 4534294.0,
+                "total_vaccinations_per_hundred": 195.7,
+                "population": 5453600.0
+            }
+        },
+        {
+            "iso_code": "SXM",
+            "properties": {
+                "total_cases": 0,
+                "people_fully_vaccinated": 24824.0,
+                "total_vaccinations_per_hundred": 119.06,
+                "population": 43421.0
+            }
+        },
+        {
+            "iso_code": "SVK",
+            "properties": {
+                "total_cases": 1159767.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 5449270.0
+            }
+        },
+        {
+            "iso_code": "SVN",
+            "properties": {
+                "total_cases": 418413.0,
+                "people_fully_vaccinated": 1146557.0,
+                "total_vaccinations_per_hundred": 121.5,
+                "population": 2078723.0
+            }
+        },
+        {
+            "iso_code": "SLB",
+            "properties": {
+                "total_cases": 20.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 703995.0
+            }
+        },
+        {
+            "iso_code": "SOM",
+            "properties": {
+                "total_cases": 23016.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 16359500.0
+            }
+        },
+        {
+            "iso_code": "ZAF",
+            "properties": {
+                "total_cases": 2963679.0,
+                "people_fully_vaccinated": 14384276.0,
+                "total_vaccinations_per_hundred": 42.38,
+                "population": 60041996.0
+            }
+        },
+        {
+            "iso_code": "OWID_SAM",
+            "properties": {
+                "total_cases": 38927827.0,
+                "people_fully_vaccinated": 253974245.0,
+                "total_vaccinations_per_hundred": 136.24,
+                "population": 434260137.0
+            }
+        },
+        {
+            "iso_code": "KOR",
+            "properties": {
+                "total_cases": 447230.0,
+                "people_fully_vaccinated": 41147276.0,
+                "total_vaccinations_per_hundred": 166.37,
+                "population": 51305184.0
+            }
+        },
+        {
+            "iso_code": "SSD",
+            "properties": {
+                "total_cases": 12755.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 11381377.0
+            }
+        },
+        {
+            "iso_code": "ESP",
+            "properties": {
+                "total_cases": 5153923.0,
+                "people_fully_vaccinated": 37615143.0,
+                "total_vaccinations_per_hundred": 163.62,
+                "population": 46745211.0
+            }
+        },
+        {
+            "iso_code": "LKA",
+            "properties": {
+                "total_cases": 563267.0,
+                "people_fully_vaccinated": 13741194.0,
+                "total_vaccinations_per_hundred": 138.01,
+                "population": 21497306.0
+            }
+        },
+        {
+            "iso_code": "SDN",
+            "properties": {
+                "total_cases": 42826.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 44909351.0
+            }
+        },
+        {
+            "iso_code": "SUR",
+            "properties": {
+                "total_cases": 50823.0,
+                "people_fully_vaccinated": 219012.0,
+                "total_vaccinations_per_hundred": 80.51,
+                "population": 591798.0
+            }
+        },
+        {
+            "iso_code": "SWE",
+            "properties": {
+                "total_cases": 1198848.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 10160159.0
+            }
+        },
+        {
+            "iso_code": "CHE",
+            "properties": {
+                "total_cases": 1006239.0,
+                "people_fully_vaccinated": 5716839.0,
+                "total_vaccinations_per_hundred": 136.62,
+                "population": 8715494.0
+            }
+        },
+        {
+            "iso_code": "SYR",
+            "properties": {
+                "total_cases": 48068.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 18275704.0
+            }
+        },
+        {
+            "iso_code": "TWN",
+            "properties": {
+                "total_cases": 16596.0,
+                "people_fully_vaccinated": 13039602.0,
+                "total_vaccinations_per_hundred": 131.02,
+                "population": 23855008.0
+            }
+        },
+        {
+            "iso_code": "TJK",
+            "properties": {
+                "total_cases": 17493.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 9749625.0
+            }
+        },
+        {
+            "iso_code": "TZA",
+            "properties": {
+                "total_cases": 26261.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 61498438.0
+            }
+        },
+        {
+            "iso_code": "THA",
+            "properties": {
+                "total_cases": 2111566.0,
+                "people_fully_vaccinated": 41053644.0,
+                "total_vaccinations_per_hundred": 132.04,
+                "population": 69950844.0
+            }
+        },
+        {
+            "iso_code": "TLS",
+            "properties": {
+                "total_cases": 19822.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 1343875.0
+            }
+        },
+        {
+            "iso_code": "TGO",
+            "properties": {
+                "total_cases": 26250.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 8478242.0
+            }
+        },
+        {
+            "iso_code": "TON",
+            "properties": {
+                "total_cases": 1.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 106759.0
+            }
+        },
+        {
+            "iso_code": "TTO",
+            "properties": {
+                "total_cases": 70598.0,
+                "people_fully_vaccinated": 642105.0,
+                "total_vaccinations_per_hundred": 93.21,
+                "population": 1403374.0
+            }
+        },
+        {
+            "iso_code": "TUN",
+            "properties": {
+                "total_cases": 717309.0,
+                "people_fully_vaccinated": 5129211.0,
+                "total_vaccinations_per_hundred": 87.99,
+                "population": 11935764.0
+            }
+        },
+        {
+            "iso_code": "TUR",
+            "properties": {
+                "total_cases": 8770372.0,
+                "people_fully_vaccinated": 50409060.0,
+                "total_vaccinations_per_hundred": 141.41,
+                "population": 85042736.0
+            }
+        },
+        {
+            "iso_code": "TCA",
+            "properties": {
+                "total_cases": 3096.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 39226.0
+            }
+        },
+        {
+            "iso_code": "UGA",
+            "properties": {
+                "total_cases": 127523.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 47123533.0
+            }
+        },
+        {
+            "iso_code": "UKR",
+            "properties": {
+                "total_cases": 3595410.0,
+                "people_fully_vaccinated": 11143315.0,
+                "total_vaccinations_per_hundred": 56.4,
+                "population": 43466822.0
+            }
+        },
+        {
+            "iso_code": "ARE",
+            "properties": {
+                "total_cases": 741976.0,
+                "people_fully_vaccinated": 8933959.0,
+                "total_vaccinations_per_hundred": 218.39,
+                "population": 9991083.0
+            }
+        },
+        {
+            "iso_code": "GBR",
+            "properties": {
+                "total_cases": 10206732.0,
+                "people_fully_vaccinated": 46367149.0,
+                "total_vaccinations_per_hundred": 169.41,
+                "population": 68207114.0
+            }
+        },
+        {
+            "iso_code": "USA",
+            "properties": {
+                "total_cases": 48466359.0,
+                "people_fully_vaccinated": 200502047.0,
+                "total_vaccinations_per_hundred": 141.41,
+                "population": 332915074.0
+            }
+        },
+        {
+            "iso_code": "VIR",
+            "properties": {
+                "total_cases": 0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 104218.0
+            }
+        },
+        {
+            "iso_code": "OWID_UMC",
+            "properties": {
+                "total_cases": 82500110.0,
+                "people_fully_vaccinated": 1669837123.0,
+                "total_vaccinations_per_hundred": 149.74,
+                "population": 2513672790.0
+            }
+        },
+        {
+            "iso_code": "URY",
+            "properties": {
+                "total_cases": 399504.0,
+                "people_fully_vaccinated": 2661681.0,
+                "total_vaccinations_per_hundred": 195.07,
+                "population": 3485152.0
+            }
+        },
+        {
+            "iso_code": "UZB",
+            "properties": {
+                "total_cases": 193065.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 33935765.0
+            }
+        },
+        {
+            "iso_code": "VUT",
+            "properties": {
+                "total_cases": 6.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 314464.0
+            }
+        },
+        {
+            "iso_code": "VAT",
+            "properties": {
+                "total_cases": 27.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 812.0
+            }
+        },
+        {
+            "iso_code": "VEN",
+            "properties": {
+                "total_cases": 431296.0,
+                "people_fully_vaccinated": 9858581.0,
+                "total_vaccinations_per_hundred": 91.67,
+                "population": 28704947.0
+            }
+        },
+        {
+            "iso_code": "VNM",
+            "properties": {
+                "total_cases": 1224110.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 124.36,
+                "population": 98168829.0
+            }
+        },
+        {
+            "iso_code": "WLF",
+            "properties": {
+                "total_cases": 454.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 11094.0
+            }
+        },
+        {
+            "iso_code": "OWID_WRL",
+            "properties": {
+                "total_cases": 262501986.0,
+                "people_fully_vaccinated": 3397884807.0,
+                "total_vaccinations_per_hundred": 101.79,
+                "population": 7874965730.0
+            }
+        },
+        {
+            "iso_code": "YEM",
+            "properties": {
+                "total_cases": 9995.0,
+                "people_fully_vaccinated": 0,
+                "total_vaccinations_per_hundred": 0,
+                "population": 30490639.0
+            }
+        },
+        {
+            "iso_code": "ZMB",
+            "properties": {
+                "total_cases": 210150.0,
+                "people_fully_vaccinated": 691735.0,
+                "total_vaccinations_per_hundred": 5.74,
+                "population": 18920657.0
+            }
+        },
+        {
+            "iso_code": "ZWE",
+            "properties": {
+                "total_cases": 134226.0,
+                "people_fully_vaccinated": 2804465.0,
+                "total_vaccinations_per_hundred": 43.64,
+                "population": 15092171.0
+            }
+        }
+    ]
+}

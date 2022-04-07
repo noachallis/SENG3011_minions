@@ -33,6 +33,18 @@
   position: fixed;
   z-index: 3;
   bottom: 10%;
+  display: flex;
+}
+
+.SliderLeft {
+  display: inline-block;
+  width: 87%;
+}
+
+.SliderRight {
+  display: inline-block;
+  margin: auto;
+  margin-top: 3px;
 }
 
 .toggle {
@@ -43,12 +55,6 @@
   justify-content: center;
   color: white;
   font-family: "Verdana", sans-serif;
-}
-
-.playButton {
-  position: fixed;
-  z-index: 3;
-  bottom: 8%;
 }
 
 .statsOverview {
