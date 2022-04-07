@@ -181,8 +181,8 @@ useEffect(() => {
   return () => clearInterval(intervalIdRef.current);
 }, [sliderPlaying]);
 
-  const colorScale = d3.scaleSequentialSqrt(d3.interpolateReds);
-  const colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateBlues);
+  const colorScaleCovid = d3.scaleSequentialSqrt(d3.interpolateReds);
+  const colorScaleVaccine = d3.scaleSequentialSqrt(d3.interpolateBlues);
 
   const getPolygonLabel = (d : any) => {
     let iso_code = d.ISO_A3
@@ -202,7 +202,7 @@ useEffect(() => {
     }
   }
   // Calculate Covid Cases Density
-  const getVal = (d : any) => {
+  const getValCovid = (d : any) => {
     let iso_code = d.properties.ISO_A3
     let country = dateData.country_stats.find((c : any) => c.iso_code === iso_code);
     if (country){
@@ -222,13 +222,14 @@ useEffect(() => {
     }
   }
   
+  //todo: fix this logic
   const maxVal = useMemo(
-    () => Math.max(...countries.features.map(getVal)),
+    () => Math.max(...countries.features.map(getValCovid)),
     [countries]
   );
 
   if (maxVal > 0) {
-    colorScale.domain([0, maxVal]);
+    colorScaleCovid.domain([0, 1]);
   }
 
   const totalCases = dateData.total_cases
@@ -246,14 +247,14 @@ useEffect(() => {
 
           hexPolygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
           hexPolygonResolution={3}
-          hexPolygonMargin={0.5}
+          hexPolygonMargin={0.3}
           hexPolygonAltitude={0.14}
-          hexPolygonColor={d => d === hoverD ? 'steelblue' : colorScaleBlue(getValVacs(d))}
+          hexPolygonColor={d => d === hoverD ? 'steelblue' : colorScaleCovid(getValCovid(d))}
           
           
           polygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
           polygonAltitude={0.1}
-          polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(getVal(d))}
+          polygonCapColor={d => d === hoverD ? 'steelblue' : colorScaleVaccine(getValVacs(d))}
           polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
           polygonStrokeColor={() => '#111'}
           polygonLabel={({ properties: d } : any) => getPolygonLabel(d)}
@@ -275,7 +276,7 @@ useEffect(() => {
 
           polygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
           polygonAltitude={0.1}
-          polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(getVal(d))}
+          polygonCapColor={d => d === hoverD ? 'steelblue' : colorScaleVaccine(getValVacs(d))}
           polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
           polygonStrokeColor={() => '#111'}
           polygonLabel={({ properties: d } : any) => getPolygonLabel(d)}
@@ -333,7 +334,7 @@ useEffect(() => {
         </div>
       </Box>
     </div>
-  
+    
   );
 }
 

@@ -52,7 +52,6 @@ export const dates = [
     "2022-02-01_map.json",
     "2022-02-15_map.json",
     "2022-03-01_map.json",
-    "2022-03-15_map.json",
-    "2022-04-01_map.json"
+    "2022-03-15_map.json"
   ]
   
