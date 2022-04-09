@@ -46,6 +46,17 @@
   margin: auto;
   margin-top: 3px;
 }
+.NavBar-Main {
+  top: 5%;
+  left: 2%;
+  display: flex;
+  position: fixed;
+  z-index: 5;
+}
+
+.NavBar-Inside {
+  color: black;
+}
 
 .toggle {
   bottom: 3%;
