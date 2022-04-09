@@ -55,8 +55,13 @@
 }
 
 .NavBar-Inside {
-  color: black;
+  color: white;
 }
+
+div .MuiPaper-root {
+  background-color: black;
+}
+
 
 .toggle {
   bottom: 3%;

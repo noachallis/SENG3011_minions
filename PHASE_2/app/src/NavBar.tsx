@@ -9,28 +9,22 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import Switch, { SwitchProps } from '@mui/material/Switch';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import { ChevronLeft } from '@mui/icons-material';
 
 export default function NavBar() {
+  // TODO:
+  //  items in drawer need to be: heading -> toggle -- done
+  //  persistent drawer to close on click of chevron?? -- done -> need to fix placement of chevron
+  //  icon click -- done
+  //  colour customisation -- done ->need consultation with team
+
+
   const [open, setOpen] = React.useState(false);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-
   const toggleDrawer =
-    (open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event.type === 'keydown' &&
-        ((event as React.KeyboardEvent).key === 'Tab' ||
-          (event as React.KeyboardEvent).key === 'Shift')
-      ) {
-        return;
-      }
+    (open: boolean) => (_event: React.MouseEvent) => {
       setOpen(open);
     };
 
@@ -38,33 +32,55 @@ export default function NavBar() {
     <Box
       sx={{ width: 300 }}
       role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
       className="NavBar-Inside"
     >
       <List>
-        {['Heading 1', 'Heading 2', 'Heading 3', 'Heading 4'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <ListItem>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={toggleDrawer(false)}
+          >
+            <ChevronLeft />
+          </IconButton>
+        </ListItem>
+        <ListItem>
+          <ListItemText id="vaccine" primary="Vaccine" />
+          <FormControlLabel
+            control={<Switch sx={{ m: 1 }} defaultChecked color="error"/>}
+            label=""
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemText id="hospitalisations" primary="hospitalisations" />
+          <FormControlLabel
+            control={<Switch sx={{ m: 1 }} defaultChecked color="warning"/>}
+            label=""
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemText id="deaths" primary="deaths" />
+          <FormControlLabel
+            control={<Switch sx={{ m: 1 }} defaultChecked color="primary"/>}
+            label=""
+          />
+        </ListItem>
       </List>
-      {/* add below code for a divider
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List> */}
     </Box>
   );
 
   return (
     <div className="NavBar-Main">
-    
-      <Button onClick={toggleDrawer(true)}>{'CLICK ME'}</Button>
+      <IconButton
+        color="primary"
+        style={ {color: 'white'}}
+        aria-label="open drawer"
+        onClick={toggleDrawer(true)}
+      >
+        <MenuIcon 
+          fontSize='large'
+        />
+      </IconButton>
       <Drawer
         anchor={'left'}
         open={open}
@@ -76,15 +92,4 @@ export default function NavBar() {
     </div>
   );
 
-
 }
-
-// <IconButton
-// color="inherit"
-// aria-label="open drawer"
-// onClick={handleDrawerOpen}
-// edge="start"
-// sx={{ mr: 2, ...(open && { display: 'none' }) }}
-// >
-// <MenuIcon />
-// </IconButton>
