@@ -1,4 +1,4 @@
-export const translator = [
+const translator = [
     { 
       lan: 'en',
       phrases: {
@@ -55,4 +55,14 @@ export const translator = [
         'pop_vacced': 'जनसंख्या टीकाकरण'
       }
     }
-  ]
+]
+
+export const getWord = (word : string, language : string) => {
+  let phrases = translator.find((c : any) => c.lan === language)?.phrases;
+  switch(word){
+    case 'total_cases':
+    return phrases?.total_cases
+  case 'pop_vacced':
+    return phrases?.pop_vacced
+  }
+};
