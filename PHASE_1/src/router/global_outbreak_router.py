@@ -93,7 +93,7 @@ async def articles(
         return_data.append(x)
 
     if not return_data:
-        response.status_code = status.HTTP_404_BAD_REQUEST
+        response.status_code = status.HTTP_404_NOT_FOUND
         return error_handler.get_error(404, "Not Found")
     return return_data
 
@@ -160,7 +160,7 @@ async def reports(
                 return_data.append(y)
 
     if not return_data:
-        response.status_code = status.HTTP_404_BAD_REQUEST
+        response.status_code = status.HTTP_404_NOT_FOUND
         return error_handler.get_error(404, "Not Found")
 
     return return_data
