@@ -572,4 +572,4 @@ class Seeder:
 if __name__ == "__main__":
     seeder = Seeder()
     seeder.insert_all_data()
-    seeder.insert_all_data_covid()
+    # seeder.insert_all_data_covid()
