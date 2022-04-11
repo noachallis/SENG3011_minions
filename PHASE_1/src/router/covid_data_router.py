@@ -140,7 +140,7 @@ def getMap(covid_data: dict):
         except Exception:
             properties['total_cases'] = 0
         
-        ## People Fully Vaccinated
+        ## Total People Fully Vaccinated
         try :
             if (is_nan(d['people_fully_vaccinated'])):
                 properties['people_fully_vaccinated'] = 0
@@ -170,6 +170,26 @@ def getMap(covid_data: dict):
         except Exception:
             properties['total_deaths'] = 0
         
+       
+
+        # Fortnight Cases
+
+
+        # Fortnight Vaccinated
+
+        
+        # Fortnight Deaths
+
+        
+        # Fortnight Hospitilisations
+        try :
+            if (is_nan(d['hosp_patients_per_million'])):
+                properties['hosp_patients_per_million'] = 0
+            else:
+                properties['hosp_patients_per_million'] = float(d['hosp_patients_per_million'])
+        except Exception:
+            properties['hosp_patients_per_million'] = 0
+
         country['properties'] = properties   
         country_stats.append(country)
 
