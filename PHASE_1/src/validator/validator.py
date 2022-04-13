@@ -1,3 +1,4 @@
+from datetime import timedelta
 import datetime
 from bson.objectid import ObjectId
 
@@ -18,6 +19,23 @@ class Validator:
             return False
 
         return True
+
+
+    def validate_date(self, date):
+        if not date:
+            return True
+        try:
+            date = datetime.strptime(date, "%Y-%m-%d")
+        except Exception:
+            return False
+
+        today = datetime.now()
+        yesterday = today - timedelta(days=1)     
+        if date > yesterday:
+            return False
+
+        return True
+
 
     def validate_id(self, id):
         try:
