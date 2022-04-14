@@ -5,6 +5,7 @@ import { dates } from '../toggles/slider/dates';
 import { SliderComponent } from "../toggles/slider/slider";
 import { GlobeFactory } from "./components/GlobeFactory"
 import { Toggle } from "../toggles/vaccineToggle/toggle"
+import NavBar from "../NavBar";
 
 
 function Globe() {
@@ -97,6 +98,7 @@ function Globe() {
 
   return (
     <div className="Wrapper">
+      <NavBar/>
       <div className="Globe">
         <GlobeFactory vaccineEnabled={vaccineEnabled} countries={countries} dateData={dateData}/>
       </div>
