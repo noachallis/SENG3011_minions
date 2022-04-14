@@ -46,7 +46,7 @@ export const SliderComponent : React.FC<props> = ({sliderPlaying, setSlider, len
         </Box>
         <Box className="SliderRight">
         {!sliderPlaying ?  
-          <FaPlay color="white" onClick={() => setSlider(!sliderPlaying)}> </FaPlay> :
+          <FaPlay color="white" onClick={() => {setSlider(!sliderPlaying)}}> </FaPlay> :
           <FaPause color="white" onClick={() => setSlider(!sliderPlaying)}> </FaPause>
         }
         </Box>

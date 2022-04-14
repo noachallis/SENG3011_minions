@@ -1031,13 +1031,6 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.14.5":
-  version "7.17.9"
-  resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.17.9.tgz"
-  integrity sha512-lSiBBvodq29uShpWGNbgFdKYNiFDo5/HIYsaCEY9ff4sb10x9jizo2+pRrSyF4jKZCXqgzuqBOQKbUm90gQwJg==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
 "@babel/template@^7.16.7", "@babel/template@^7.3.3":
   version "7.16.7"
   resolved "https://registry.npmjs.org/@babel/template/-/template-7.16.7.tgz"
@@ -2264,13 +2257,6 @@
   version "4.4.4"
   resolved "https://registry.npmjs.org/@types/react-transition-group/-/react-transition-group-4.4.4.tgz"
   integrity sha512-7gAPz7anVK5xzbeQW9wFBDg7G++aPLAFY0QaSMOou9rJZpbuI58WAuJrgu+qR92l61grlnCUe7AFX8KGahAgug==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react-world-flags@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.npmjs.org/@types/react-world-flags/-/react-world-flags-1.4.2.tgz"
-  integrity sha512-Fk4IVoLqDf/nWUlxjOaklF+ZBzZFSuS1G2L2+o+R3c+TWCkwW3H5rWEXIk5kLHONZuSzCSu8m4S/nuLgosSqKw==
   dependencies:
     "@types/react" "*"
 
@@ -5271,7 +5257,7 @@ html-entities@^2.1.0, html-entities@^2.3.2:
   resolved "https://registry.npmjs.org/html-entities/-/html-entities-2.3.3.tgz"
   integrity sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA==
 
-html-escaper@^2.0.0, html-escaper@^2.0.2:
+html-escaper@^2.0.0:
   version "2.0.2"
   resolved "https://registry.npmjs.org/html-escaper/-/html-escaper-2.0.2.tgz"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
@@ -5288,13 +5274,6 @@ html-minifier-terser@^6.0.2:
     param-case "^3.0.4"
     relateurl "^0.2.7"
     terser "^5.10.0"
-
-html-parse-stringify@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.npmjs.org/html-parse-stringify/-/html-parse-stringify-3.0.1.tgz"
-  integrity sha512-KknJ50kTInJ7qIScF3jeaFRpMpE8/lfiTdzf/twXyPBLAGrLRTmkz3AdTnKeh40X8k9L2fdYwEp/42WGXIRGcg==
-  dependencies:
-    void-elements "3.1.0"
 
 html-webpack-plugin@^5.5.0:
   version "5.5.0"
@@ -5389,20 +5368,6 @@ human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/human-signals/-/human-signals-2.1.0.tgz"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
-
-i18next-xhr-backend@^3.2.2:
-  version "3.2.2"
-  resolved "https://registry.npmjs.org/i18next-xhr-backend/-/i18next-xhr-backend-3.2.2.tgz"
-  integrity sha512-OtRf2Vo3IqAxsttQbpjYnmMML12IMB5e0fc5B7qKJFLScitYaXa1OhMX0n0X/3vrfFlpHL9Ro/H+ps4Ej2j7QQ==
-  dependencies:
-    "@babel/runtime" "^7.5.5"
-
-i18next@^21.6.14:
-  version "21.6.14"
-  resolved "https://registry.npmjs.org/i18next/-/i18next-21.6.14.tgz"
-  integrity sha512-XL6WyD+xlwQwbieXRlXhKWoLb/rkch50/rA+vl6untHnJ+aYnkQ0YDZciTWE78PPhOpbi2gR0LTJCJpiAhA+uQ==
-  dependencies:
-    "@babel/runtime" "^7.17.2"
 
 iconv-lite@0.4.24:
   version "0.4.24"
@@ -7792,11 +7757,6 @@ react-app-polyfill@^3.0.0:
     regenerator-runtime "^0.13.9"
     whatwg-fetch "^3.6.2"
 
-react-country-flag@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/react-country-flag/-/react-country-flag-3.0.2.tgz#54c37abe2c87251e95b0f40bb4c09b000f4669e7"
-  integrity sha512-JPaz+q3QD0/nZtHBKj5x3O7r/SgSG9kxbymdaIU0RqlDAcorJIe4KV0DFhWIdKh69q5cPVkIVERcMYGZdvXgAA==
-
 react-dev-utils@^12.0.0:
   version "12.0.0"
   resolved "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-12.0.0.tgz"
@@ -7849,15 +7809,6 @@ react-globe.gl@2.13.0:
     globe.gl "^2.15.1"
     prop-types "^15.7.2"
     react-kapsule "^2.2.1"
-
-react-i18next@^11.16.2:
-  version "11.16.2"
-  resolved "https://registry.npmjs.org/react-i18next/-/react-i18next-11.16.2.tgz"
-  integrity sha512-1iuZduvARUelL5ux663FvIoDZExwFO+9QtRAAt4uvs1/aun4cUZt8XBrVg7iiDgNls9cOSORAhE7Ri5KA9RMvg==
-  dependencies:
-    "@babel/runtime" "^7.14.5"
-    html-escaper "^2.0.2"
-    html-parse-stringify "^3.0.1"
 
 react-icons@^4.3.1:
   version "4.3.1"
@@ -7980,14 +7931,6 @@ react-transition-group@^4.4.2:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
-
-react-world-flags@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.npmjs.org/react-world-flags/-/react-world-flags-1.4.0.tgz"
-  integrity sha512-SkOzl/v6LYBphJNSeeQXTogAiLZN1Yy2HFx2Qjda/82MCWFimj9cenmOXASbfbKeqFbo/17M8HauY6mfzWmTDw==
-  dependencies:
-    svg-country-flags "^1.2.7"
-    world-countries "^4.0.0"
 
 react@17.0.0:
   version "17.0.0"
@@ -8754,11 +8697,6 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-svg-country-flags@^1.2.7:
-  version "1.2.10"
-  resolved "https://registry.npmjs.org/svg-country-flags/-/svg-country-flags-1.2.10.tgz"
-  integrity sha512-xrqwo0TYf/h2cfPvGpjdSuSguUbri4vNNizBnwzoZnX0xGo3O5nGJMlbYEp7NOYcnPGBm6LE2axqDWSB847bLw==
-
 svg-parser@^2.0.2:
   version "2.0.4"
   resolved "https://registry.npmjs.org/svg-parser/-/svg-parser-2.0.4.tgz"
@@ -9252,11 +9190,6 @@ vary@~1.1.2:
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-void-elements@3.1.0:
-  version "3.1.0"
-  resolved "https://registry.npmjs.org/void-elements/-/void-elements-3.1.0.tgz"
-  integrity sha1-YU9/v42AHwu18GYfWy9XhXUOTwk=
-
 w3c-hr-time@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/w3c-hr-time/-/w3c-hr-time-1.0.2.tgz"
@@ -9661,11 +9594,6 @@ workbox-window@6.5.2:
   dependencies:
     "@types/trusted-types" "^2.0.2"
     workbox-core "6.5.2"
-
-world-countries@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/world-countries/-/world-countries-4.0.0.tgz"
-  integrity sha512-LsFFYmggquj0U+i7VUaJOZYz5F4QNu+oceGw8odnyVHMT2LxYSdVncqdouOEnq1esr7yCakp9+3BZTztuSw1Pg==
 
 wrap-ansi@^7.0.0:
   version "7.0.0"
