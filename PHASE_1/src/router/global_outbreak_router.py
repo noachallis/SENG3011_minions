@@ -49,7 +49,7 @@ async def articles(
     now = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
     if not isinstance(limit, int) or limit <= 0 or limit > total:
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = 400
         return error_handler.get_error(
             400, "Limit has to be between 0 and " + string_total
         )
@@ -57,7 +57,7 @@ async def articles(
     print(start_date)
 
     if not error_handler.validate_datetime(start_date):
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = 400
         return error_handler.get_error(
             400,
             "Start date has to be in the following format yyyy-MM-dd hh:mm:ss and less than "
@@ -65,7 +65,7 @@ async def articles(
         )
 
     if not error_handler.validate_datetime(end_date):
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = 400
         return error_handler.get_error(
             400,
             "End date has to be in the following format yyyy-MM-dd hh:mm:ss and less than "
@@ -76,7 +76,7 @@ async def articles(
     end_date = datetime.datetime.strptime(end_date, "%Y-%m-%d %H:%M:%S").isoformat()
 
     if start_date > end_date:
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = 400
         return error_handler.get_error(400, "End date has to be larger than start date")
 
     data = query_articles.query_articles(
@@ -93,7 +93,7 @@ async def articles(
         return_data.append(x)
 
     if not return_data:
-        response.status_code = status.HTTP_404_BAD_REQUEST
+        response.status_code = 404
         return error_handler.get_error(404, "Not Found")
     return return_data
 
@@ -123,12 +123,12 @@ async def reports(
     now = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 
     if not isinstance(limit, int) or limit <= 0 or limit > total:
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = 400
         return error_handler.get_error(
             400, "Limit has to be between 0 and " + string_total
         )
     if not error_handler.validate_datetime(start_date):
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = 400
         return error_handler.get_error(
             400,
             "Start date has to be in the following format yyyy-MM-dd hh:mm:ss and less than "
@@ -136,7 +136,7 @@ async def reports(
         )
 
     if not error_handler.validate_datetime(end_date):
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = 400
         return error_handler.get_error(
             400,
             "End date has to be in the following format yyyy-MM-dd hh:mm:ss and less than "
@@ -147,7 +147,7 @@ async def reports(
     start_date = datetime.datetime.strptime(start_date, "%Y-%m-%d %H:%M:%S").isoformat()
     end_date = datetime.datetime.strptime(end_date, "%Y-%m-%d %H:%M:%S").isoformat()
     if start_date > end_date:
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = 400
         return error_handler.get_error(400, "End date has to be larger than start date")
     return_data = []
 
@@ -160,7 +160,7 @@ async def reports(
                 return_data.append(y)
 
     if not return_data:
-        response.status_code = status.HTTP_404_BAD_REQUEST
+        response.status_code = 404
         return error_handler.get_error(404, "Not Found")
 
     return return_data
@@ -182,12 +182,12 @@ async def reports_by_article_id(
     id: Optional[str] = None,
 ):
     if not isinstance(id, str):
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = 400
         return error_handler.get_error(400, "id has to be type string")
     reports = []
 
     if not error_handler.validate_id(id):
-        response.status_code = status.HTTP_404_NOT_FOUND
+        response.status_code = 400
         return error_handler.get_error(404, "Not found")
 
     data = db.articles.find({"_id": ObjectId(id)})
@@ -214,11 +214,11 @@ async def articles_by_id(
     id: Optional[str] = None,
 ):
     if not isinstance(id, str):
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = 400
         return error_handler.get_error(400, "id has to be type string")
 
     if not error_handler.validate_id(id):
-        response.status_code = status.HTTP_404_NOT_FOUND
+        response.status_code = 404
         return error_handler.get_error(404, "Not found")
 
     data = db.articles.find({"_id": ObjectId(id)})
@@ -228,7 +228,7 @@ async def articles_by_id(
         return_data.append(x)
 
     if len(return_data) == 0:
-        response.status_code = status.HTTP_404_NOT_FOUND
+        response.status_code = 404
         return error_handler.get_error(404, "Not found")
 
     return return_data
@@ -250,11 +250,11 @@ async def reports_by_id(
     params: identifier = Depends(),
 ):
     if not isinstance(id, str):
-        response.status_code = status.HTTP_400_BAD_REQUEST
+        response.status_code = 400
         return error_handler.get_error(400, "id has to be type string")
 
     if not error_handler.validate_id(id):
-        response.status_code = status.HTTP_404_NOT_FOUND
+        response.status_code = 404
         return error_handler.get_error(404, "Not found")
 
     data = db.reports.find({"_id": ObjectId(id)})
@@ -264,7 +264,7 @@ async def reports_by_id(
         return_data.append(x)
 
     if len(return_data) == 0:
-        response.status_code = status.HTTP_404_NOT_FOUND
+        response.status_code = 404
         return error_handler.get_error(404, "Not found")
 
     return return_data
