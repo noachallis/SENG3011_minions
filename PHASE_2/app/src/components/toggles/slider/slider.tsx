@@ -42,12 +42,13 @@ export const SliderComponent : React.FC<props> = ({sliderPlaying, setSlider, len
             value={currentIndex}
             valueLabelFormat={valueLabelFormat}
             valueLabelDisplay="auto"
+            data-cy="date-slider"
           />
         </Box>
         <Box className="SliderRight">
         {!sliderPlaying ?  
-          <FaPlay color="white" onClick={() => {setSlider(!sliderPlaying)}}> </FaPlay> :
-          <FaPause color="white" onClick={() => setSlider(!sliderPlaying)}> </FaPause>
+          <FaPlay data-cy="play-button" color="white" onClick={() => setSlider(!sliderPlaying)}> </FaPlay> :
+          <FaPause data-cy="pause-button" color="white" onClick={() => setSlider(!sliderPlaying)}> </FaPause>
         }
         </Box>
       </Box>

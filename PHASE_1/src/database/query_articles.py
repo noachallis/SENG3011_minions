@@ -39,7 +39,7 @@ class QueryArticles:
             ).limit(limit)
         else:
             location = re.compile(".*" + location + ".*", re.IGNORECASE)
-            data = self.bdb.articles.find(
+            data = self.db.articles.find(
                 {
                     "$or": [{"city": location}, {"country": location}],
                     "$and": [
