@@ -10,3 +10,5 @@ pandas
 uvicorn==0.17.5
 slowapi
 black
+pycountry
+wbdata
