@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import ReactGlobe from "react-globe.gl";
 import { getPolygonLabel, getValVacs } from "./GlobleFunctions"
 import * as d3 from "d3"
@@ -11,10 +11,12 @@ interface props {
 
 
 export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateData}) => {
+    console.log(countries)
+    const globeEl : any = useRef();
     const colorScale = d3.scaleSequentialSqrt(d3.interpolateReds);
     const colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateBlues);
     const [hoverD, setHoverD] = useState();  
-  
+    const [altitude, setAltitude] = useState(false);
     const getVal = (d : any) => {
       let iso_code = d.properties.ISO_A3
       let country = dateData.country_stats.find((c : any) => c.iso_code === iso_code);
@@ -23,7 +25,14 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
       } else {
         return 0
       }
-  }
+    }
+
+    useEffect(() => {
+        // Auto-rotate
+        globeEl.current.controls().autoRotate = true;
+        globeEl.current.controls().autoRotateSpeed = 1.0;
+        globeEl.current.pointOfView({ altitude: 3 }, 5000);
+    }, []);
 
     const maxVal = useMemo(
         () => Math.max(...countries.features.map(getVal)),
@@ -36,6 +45,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
     if (vaccineEnabled) {
         return (
         <ReactGlobe
+            ref={globeEl}
             globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
             backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
             // lineHoverPrecision={0}
@@ -46,7 +56,6 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
             hexPolygonAltitude={0.14}
             hexPolygonColor={d => d === hoverD ? 'steelblue' : colorScaleBlue(getValVacs(d, dateData))}
             
-            
             polygonsData={countries.features.filter((d : any) => d.properties.ISO_A2 !== 'AQ')}
             polygonAltitude={0.1}
             polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(getVal(d))}
@@ -54,11 +63,13 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
             polygonStrokeColor={() => '#111'}
             polygonLabel={({ properties: d } : any) => getPolygonLabel(d, dateData)}
             polygonsTransitionDuration={300}
+            onPolygonRightClick={(polygon: object, _event: MouseEvent) => {console.log(polygon)}}
           />
         )
     } else {
         return (
             <ReactGlobe
+                ref={globeEl}
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
                 // lineHoverPrecision={0}
