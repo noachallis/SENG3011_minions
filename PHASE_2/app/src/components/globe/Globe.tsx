@@ -6,7 +6,7 @@ import { SliderComponent } from "../toggles/slider/slider";
 import { GlobeFactory } from "./components/GlobeFactory"
 import { Toggle } from "../toggles/vaccineToggle/toggle"
 import {NavBar, finalState} from "../NavBar";
-
+import { InfoBar } from "./components/InfoBar"
 
 function Globe() {
   
@@ -34,6 +34,7 @@ function Globe() {
   const [sliderPlaying, setsliderPlaying] = useState(false);
   const intervalIdRef = useRef(0);
   const [language, setLanguage] = useState('en');
+  const [activeCountries, setActiveCountries] = useState<Array<string>>([]);
 
 
   useEffect(() => {
@@ -43,6 +44,7 @@ function Globe() {
     .then(setCountries)
     .catch((e) => console.error(e));
   }, []);
+
 
   useEffect(() => {
     // load data
@@ -105,17 +107,28 @@ function Globe() {
   const percentVaccinated = (dateData.people_fully_vaccinated / dateData.world_population * 100).toFixed(0)
 
   return (
-    <div className="Wrapper">
+    (
+      <>
       <NavBar updateGlobe={navBarLayerSelect}/>
-      <div className="Globe">
-        <GlobeFactory vaccineEnabled={vaccineEnabled} countries={countries} dateData={dateData}/>
+      <InfoBar/>
+      <div className="Wrapper">
+        <div className="Globe">
+          <GlobeFactory 
+            vaccineEnabled={vaccineEnabled} 
+            countries={countries} 
+            dateData={dateData}
+            activeCountries={activeCountries}
+            setActiveCountries={setActiveCountries}
+          />
+        </div>
+        <p className="statsOverview">{getWord('total_cases', language)}: {totalCases} &emsp;&emsp; {getWord('pop_vacced', language)}: {percentVaccinated}%</p>
+        <SliderComponent currentIndex={currentIndex} dates={dates} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={dates.length - 1} handleChange={handleChange}/>
+        <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/>
+        <LanguageToggle setLanguage={setLanguage}/>
       </div>
-      <p className="statsOverview">{getWord('total_cases', language)}: {totalCases} &emsp;&emsp; {getWord('pop_vacced', language)}: {percentVaccinated}%</p>
-      <SliderComponent currentIndex={currentIndex} dates={dates} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={dates.length - 1} handleChange={handleChange}/>
-      <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/>
-      <LanguageToggle setLanguage={setLanguage}/>
-    </div>
-  
+      </>
+    
+    )
   );
 }
 

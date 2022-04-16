@@ -1,0 +1,4047 @@
+{
+    "2019": {
+      "countryGDPGrowthRates": [
+        {
+          "iso_code": "AME",
+          "name": "Advanced economies",
+          "rate": 1.7
+        },
+        {
+          "iso_code": "EAS",
+          "name": "East Asia and Pacific",
+          "rate": 5.8
+        },
+        {
+          "iso_code": "EMD",
+          "name": "Emerging market and developing economies",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "EMU",
+          "name": "Euro Area",
+          "rate": 1.6
+        },
+        {
+          "iso_code": "ECS",
+          "name": "Europe and Central Asia",
+          "rate": 2.7
+        },
+        {
+          "iso_code": "LCN",
+          "name": "Latin America and the Caribbean",
+          "rate": 0.8
+        },
+        {
+          "iso_code": "MEA",
+          "name": "Middle East and North Africa",
+          "rate": 0.9
+        },
+        {
+          "iso_code": "SAS",
+          "name": "South Asia",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "SSF",
+          "name": "Sub-Saharan Africa",
+          "rate": 2.5
+        },
+        {
+          "iso_code": "WLT",
+          "name": "World (WBG members)",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "AFG",
+          "name": "Afghanistan",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "ALB",
+          "name": "Albania",
+          "rate": 2.1
+        },
+        {
+          "iso_code": "DZA",
+          "name": "Algeria",
+          "rate": 1
+        },
+        {
+          "iso_code": "AGO",
+          "name": "Angola",
+          "rate": -0.6
+        },
+        {
+          "iso_code": "ARG",
+          "name": "Argentina",
+          "rate": -2
+        },
+        {
+          "iso_code": "ARM",
+          "name": "Armenia",
+          "rate": 7.6
+        },
+        {
+          "iso_code": "AZE",
+          "name": "Azerbaijan",
+          "rate": 2.5
+        },
+        {
+          "iso_code": "BHS",
+          "name": "Bahamas, The",
+          "rate": 0.7
+        },
+        {
+          "iso_code": "BHR",
+          "name": "Bahrain",
+          "rate": 2.1
+        },
+        {
+          "iso_code": "BGD",
+          "name": "Bangladesh",
+          "rate": 8.2
+        },
+        {
+          "iso_code": "BRB",
+          "name": "Barbados",
+          "rate": -1.3
+        },
+        {
+          "iso_code": "BLR",
+          "name": "Belarus",
+          "rate": 1.4
+        },
+        {
+          "iso_code": "BLZ",
+          "name": "Belize",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "BEN",
+          "name": "Benin",
+          "rate": 6.9
+        },
+        {
+          "iso_code": "BTN",
+          "name": "Bhutan",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "BOL",
+          "name": "Bolivia",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "BIH",
+          "name": "Bosnia and Herzegovina",
+          "rate": 2.8
+        },
+        {
+          "iso_code": "BWA",
+          "name": "Botswana",
+          "rate": 3
+        },
+        {
+          "iso_code": "BRA",
+          "name": "Brazil",
+          "rate": 1.2
+        },
+        {
+          "iso_code": "BGR",
+          "name": "Bulgaria",
+          "rate": 3.7
+        },
+        {
+          "iso_code": "BFA",
+          "name": "Burkina Faso",
+          "rate": 5.7
+        },
+        {
+          "iso_code": "BDI",
+          "name": "Burundi",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "CPV",
+          "name": "Cabo Verde",
+          "rate": 5.7
+        },
+        {
+          "iso_code": "KHM",
+          "name": "Cambodia",
+          "rate": 7.1
+        },
+        {
+          "iso_code": "CMR",
+          "name": "Cameroon",
+          "rate": 3.7
+        },
+        {
+          "iso_code": "CAF",
+          "name": "Central African Republic",
+          "rate": 3.1
+        },
+        {
+          "iso_code": "TCD",
+          "name": "Chad",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "CHL",
+          "name": "Chile",
+          "rate": 0.9
+        },
+        {
+          "iso_code": "CHN",
+          "name": "China",
+          "rate": 6
+        },
+        {
+          "iso_code": "COL",
+          "name": "Colombia",
+          "rate": 3.3
+        },
+        {
+          "iso_code": "COM",
+          "name": "Comoros",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "COD",
+          "name": "Congo, Dem. Rep.",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "COG",
+          "name": "Congo, Rep.",
+          "rate": -0.1
+        },
+        {
+          "iso_code": "CRI",
+          "name": "Costa Rica",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "CIV",
+          "name": "Cote d'Ivoire",
+          "rate": 6.2
+        },
+        {
+          "iso_code": "HRV",
+          "name": "Croatia",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "DJI",
+          "name": "Djibouti",
+          "rate": 7.8
+        },
+        {
+          "iso_code": "DMA",
+          "name": "Dominica",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "DOM",
+          "name": "Dominican Republic",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "ECU",
+          "name": "Ecuador",
+          "rate": 0
+        },
+        {
+          "iso_code": "EGY",
+          "name": "Egypt, Arab Rep.",
+          "rate": 5.6
+        },
+        {
+          "iso_code": "SLV",
+          "name": "El Salvador",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "GNQ",
+          "name": "Equatorial Guinea",
+          "rate": -6
+        },
+        {
+          "iso_code": "ERI",
+          "name": "Eritrea",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "SWZ",
+          "name": "Eswatini",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "ETH",
+          "name": "Ethiopia",
+          "rate": 9
+        },
+        {
+          "iso_code": "FJI",
+          "name": "Fiji",
+          "rate": -0.4
+        },
+        {
+          "iso_code": "GAB",
+          "name": "Gabon",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "GMB",
+          "name": "Gambia, The",
+          "rate": 6.2
+        },
+        {
+          "iso_code": "GEO",
+          "name": "Georgia",
+          "rate": 5
+        },
+        {
+          "iso_code": "GHA",
+          "name": "Ghana",
+          "rate": 6.5
+        },
+        {
+          "iso_code": "GRD",
+          "name": "Grenada",
+          "rate": 0.7
+        },
+        {
+          "iso_code": "GTM",
+          "name": "Guatemala",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "GIN",
+          "name": "Guinea",
+          "rate": 5.6
+        },
+        {
+          "iso_code": "GNB",
+          "name": "Guinea-Bissau",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "GUY",
+          "name": "Guyana",
+          "rate": 5.4
+        },
+        {
+          "iso_code": "HTI",
+          "name": "Haiti",
+          "rate": -1.7
+        },
+        {
+          "iso_code": "HND",
+          "name": "Honduras",
+          "rate": 2.7
+        },
+        {
+          "iso_code": "HUN",
+          "name": "Hungary",
+          "rate": 4.6
+        },
+        {
+          "iso_code": "IND",
+          "name": "India",
+          "rate": 4
+        },
+        {
+          "iso_code": "IDN",
+          "name": "Indonesia",
+          "rate": 5
+        },
+        {
+          "iso_code": "IRN",
+          "name": "Iran, Islamic Rep.",
+          "rate": -6.8
+        },
+        {
+          "iso_code": "IRQ",
+          "name": "Iraq",
+          "rate": 6
+        },
+        {
+          "iso_code": "JAM",
+          "name": "Jamaica",
+          "rate": 0.9
+        },
+        {
+          "iso_code": "JOR",
+          "name": "Jordan",
+          "rate": 2
+        },
+        {
+          "iso_code": "JPN",
+          "name": "Jpan",
+          "rate": -0.2
+        },
+        {
+          "iso_code": "KAZ",
+          "name": "Kazakhstan",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "KEN",
+          "name": "Kenya",
+          "rate": 5
+        },
+        {
+          "iso_code": "KIR",
+          "name": "Kiribati",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "",
+          "name": "Kosovo",
+          "rate": 4.8
+        },
+        {
+          "iso_code": "KWT",
+          "name": "Kuwait",
+          "rate": -0.6
+        },
+        {
+          "iso_code": "KGZ",
+          "name": "Kyrgyz Republic",
+          "rate": 4.6
+        },
+        {
+          "iso_code": "LAO",
+          "name": "Lao PDR",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "LBN",
+          "name": "Lebanon",
+          "rate": -6.7
+        },
+        {
+          "iso_code": "LSO",
+          "name": "Lesotho",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "LBR",
+          "name": "Liberia",
+          "rate": -2.5
+        },
+        {
+          "iso_code": "LBY",
+          "name": "Libya",
+          "rate": 2.5
+        },
+        {
+          "iso_code": "MDG",
+          "name": "Madagascar",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "MWI",
+          "name": "Malawi",
+          "rate": 5.4
+        },
+        {
+          "iso_code": "MYS",
+          "name": "Malaysia",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "MDV",
+          "name": "Maldives",
+          "rate": 6.9
+        },
+        {
+          "iso_code": "MLI",
+          "name": "Mali",
+          "rate": 4.8
+        },
+        {
+          "iso_code": "MHL",
+          "name": "Marshall Islands",
+          "rate": 6.6
+        },
+        {
+          "iso_code": "MRT",
+          "name": "Mauritania",
+          "rate": 5.8
+        },
+        {
+          "iso_code": "MUS",
+          "name": "Mauritius",
+          "rate": 3
+        },
+        {
+          "iso_code": "MEX",
+          "name": "Mexico",
+          "rate": -0.2
+        },
+        {
+          "iso_code": "FSM",
+          "name": "Micronesia, Fed. Sts.",
+          "rate": 1.2
+        },
+        {
+          "iso_code": "MDA",
+          "name": "Moldova",
+          "rate": 3.7
+        },
+        {
+          "iso_code": "MNG",
+          "name": "Mongolia",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "MNE",
+          "name": "Montenegro",
+          "rate": 4.1
+        },
+        {
+          "iso_code": "MAR",
+          "name": "Morocco",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "MOZ",
+          "name": "Mozambique",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "MMR",
+          "name": "Myanmar",
+          "rate": 6.8
+        },
+        {
+          "iso_code": "NAM",
+          "name": "Namibia",
+          "rate": -0.9
+        },
+        {
+          "iso_code": "NRU",
+          "name": "Nauru",
+          "rate": 1
+        },
+        {
+          "iso_code": "NPL",
+          "name": "Nepal",
+          "rate": 6.7
+        },
+        {
+          "iso_code": "NIC",
+          "name": "Nicaragua",
+          "rate": -3.7
+        },
+        {
+          "iso_code": "NER",
+          "name": "Niger",
+          "rate": 5.9
+        },
+        {
+          "iso_code": "NGA",
+          "name": "Nigeria",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "MKD",
+          "name": "North Macedonia",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "OMN",
+          "name": "Oman",
+          "rate": -0.8
+        },
+        {
+          "iso_code": "PAK",
+          "name": "Pakistan",
+          "rate": 2.1
+        },
+        {
+          "iso_code": "PLW",
+          "name": "Palau",
+          "rate": -1.8
+        },
+        {
+          "iso_code": "PAN",
+          "name": "Panama",
+          "rate": 3
+        },
+        {
+          "iso_code": "PNG",
+          "name": "Papua New Guinea",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "PRY",
+          "name": "Paraguay",
+          "rate": -0.4
+        },
+        {
+          "iso_code": "PER",
+          "name": "Peru",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "PHL",
+          "name": "Philippines",
+          "rate": 6.1
+        },
+        {
+          "iso_code": "POL",
+          "name": "Poland",
+          "rate": 4.7
+        },
+        {
+          "iso_code": "QAT",
+          "name": "Qatar",
+          "rate": 0.8
+        },
+        {
+          "iso_code": "ROU",
+          "name": "Romania",
+          "rate": 4.2
+        },
+        {
+          "iso_code": "RUS",
+          "name": "Russia",
+          "rate": 2
+        },
+        {
+          "iso_code": "RWA",
+          "name": "Rwanda",
+          "rate": 9.5
+        },
+        {
+          "iso_code": "WSM",
+          "name": "Samoa",
+          "rate": 3.6
+        },
+        {
+          "iso_code": "STP",
+          "name": "Sao Tome and Principe",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "SAU",
+          "name": "Saudi Arabia",
+          "rate": 0.3
+        },
+        {
+          "iso_code": "SEN",
+          "name": "Senegal",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "",
+          "name": "Serbia",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "SYC",
+          "name": "Seychelles",
+          "rate": 2
+        },
+        {
+          "iso_code": "SLE",
+          "name": "Sierra Leone",
+          "rate": 5.3
+        },
+        {
+          "iso_code": "SLB",
+          "name": "Solomon Islands",
+          "rate": 1.2
+        },
+        {
+          "iso_code": "ZAF",
+          "name": "South Africa",
+          "rate": 0.1
+        },
+        {
+          "iso_code": "SSD",
+          "name": "South Sudan",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "LKA",
+          "name": "Sri Lanka",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "LCA",
+          "name": "St. Lucia",
+          "rate": -0.1
+        },
+        {
+          "iso_code": "VCT",
+          "name": "St. Vincent and the Grenadines",
+          "rate": 0.5
+        },
+        {
+          "iso_code": "SDN",
+          "name": "Sudan",
+          "rate": -2.2
+        },
+        {
+          "iso_code": "SUR",
+          "name": "Suriname",
+          "rate": 1.1
+        },
+        {
+          "iso_code": "TJK",
+          "name": "Tajikistan",
+          "rate": 7.4
+        },
+        {
+          "iso_code": "TZA",
+          "name": "Tanzania",
+          "rate": 5.8
+        },
+        {
+          "iso_code": "THA",
+          "name": "Thailand",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "",
+          "name": "Timor-Leste",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "TGO",
+          "name": "Togo",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "TON",
+          "name": "Tonga",
+          "rate": 0.7
+        },
+        {
+          "iso_code": "TTO",
+          "name": "Trinidad and Tobago",
+          "rate": 1.9
+        },
+        {
+          "iso_code": "TUN",
+          "name": "Tunisia",
+          "rate": 1.5
+        },
+        {
+          "iso_code": "TUR",
+          "name": "Turkey",
+          "rate": 0.9
+        },
+        {
+          "iso_code": "TKM",
+          "name": "Turkmenistan",
+          "rate": 6.3
+        },
+        {
+          "iso_code": "TUV",
+          "name": "Tuvalu",
+          "rate": 13.9
+        },
+        {
+          "iso_code": "UGA",
+          "name": "Uganda",
+          "rate": 6.4
+        },
+        {
+          "iso_code": "UKR",
+          "name": "Ukraine",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "ARE",
+          "name": "United Arab Emirates",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "USA",
+          "name": "United States",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "URY",
+          "name": "Uruguay",
+          "rate": 0.4
+        },
+        {
+          "iso_code": "UZB",
+          "name": "Uzbekistan",
+          "rate": 5.7
+        },
+        {
+          "iso_code": "VUT",
+          "name": "Vanuatu",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "VEN",
+          "name": "Venezuela, RB",
+          "rate": -7.00597036665
+        },
+        {
+          "iso_code": "VNM",
+          "name": "Vietnam",
+          "rate": 7
+        },
+        {
+          "iso_code": "",
+          "name": "West Bank and Gaza",
+          "rate": 1.4
+        },
+        {
+          "iso_code": "ZMB",
+          "name": "Zambia",
+          "rate": 1.4
+        },
+        {
+          "iso_code": "ZWE",
+          "name": "Zimbabwe",
+          "rate": -6.1
+        }
+      ]
+    },
+    "2020": {
+      "countryGDPGrowthRates": [
+        {
+          "iso_code": "AME",
+          "name": "Advanced economies",
+          "rate": -4.6
+        },
+        {
+          "iso_code": "EAS",
+          "name": "East Asia and Pacific",
+          "rate": 1.2
+        },
+        {
+          "iso_code": "EMD",
+          "name": "Emerging market and developing economies",
+          "rate": -1.7
+        },
+        {
+          "iso_code": "EMU",
+          "name": "Euro Area",
+          "rate": -6.4
+        },
+        {
+          "iso_code": "ECS",
+          "name": "Europe and Central Asia",
+          "rate": -2
+        },
+        {
+          "iso_code": "LCN",
+          "name": "Latin America and the Caribbean",
+          "rate": -6.4
+        },
+        {
+          "iso_code": "MEA",
+          "name": "Middle East and North Africa",
+          "rate": -4
+        },
+        {
+          "iso_code": "SAS",
+          "name": "South Asia",
+          "rate": -5.2
+        },
+        {
+          "iso_code": "SSF",
+          "name": "Sub-Saharan Africa",
+          "rate": -2.2
+        },
+        {
+          "iso_code": "WLT",
+          "name": "World (WBG members)",
+          "rate": -3.4
+        },
+        {
+          "iso_code": "AFG",
+          "name": "Afghanistan",
+          "rate": -1.9
+        },
+        {
+          "iso_code": "ALB",
+          "name": "Albania",
+          "rate": -4
+        },
+        {
+          "iso_code": "DZA",
+          "name": "Algeria",
+          "rate": -5.1
+        },
+        {
+          "iso_code": "AGO",
+          "name": "Angola",
+          "rate": -5.4
+        },
+        {
+          "iso_code": "ARG",
+          "name": "Argentina",
+          "rate": -9.9
+        },
+        {
+          "iso_code": "ARM",
+          "name": "Armenia",
+          "rate": -7.4
+        },
+        {
+          "iso_code": "AZE",
+          "name": "Azerbaijan",
+          "rate": -4.3
+        },
+        {
+          "iso_code": "BHS",
+          "name": "Bahamas, The",
+          "rate": -14.5
+        },
+        {
+          "iso_code": "BHR",
+          "name": "Bahrain",
+          "rate": -5.1
+        },
+        {
+          "iso_code": "BGD",
+          "name": "Bangladesh",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "BRB",
+          "name": "Barbados",
+          "rate": -18
+        },
+        {
+          "iso_code": "BLR",
+          "name": "Belarus",
+          "rate": -0.9
+        },
+        {
+          "iso_code": "BLZ",
+          "name": "Belize",
+          "rate": -16.8
+        },
+        {
+          "iso_code": "BEN",
+          "name": "Benin",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "BTN",
+          "name": "Bhutan",
+          "rate": -2.4
+        },
+        {
+          "iso_code": "BOL",
+          "name": "Bolivia",
+          "rate": -8.8
+        },
+        {
+          "iso_code": "BIH",
+          "name": "Bosnia and Herzegovina",
+          "rate": -3.2
+        },
+        {
+          "iso_code": "BWA",
+          "name": "Botswana",
+          "rate": -8.5
+        },
+        {
+          "iso_code": "BRA",
+          "name": "Brazil",
+          "rate": -3.9
+        },
+        {
+          "iso_code": "BGR",
+          "name": "Bulgaria",
+          "rate": -4.2
+        },
+        {
+          "iso_code": "BFA",
+          "name": "Burkina Faso",
+          "rate": 1.9
+        },
+        {
+          "iso_code": "BDI",
+          "name": "Burundi",
+          "rate": 0.3
+        },
+        {
+          "iso_code": "CPV",
+          "name": "Cabo Verde",
+          "rate": -14.8
+        },
+        {
+          "iso_code": "KHM",
+          "name": "Cambodia",
+          "rate": -3.1
+        },
+        {
+          "iso_code": "CMR",
+          "name": "Cameroon",
+          "rate": 0.7
+        },
+        {
+          "iso_code": "CAF",
+          "name": "Central African Republic",
+          "rate": 0.8
+        },
+        {
+          "iso_code": "TCD",
+          "name": "Chad",
+          "rate": -0.9
+        },
+        {
+          "iso_code": "CHL",
+          "name": "Chile",
+          "rate": -5.8
+        },
+        {
+          "iso_code": "CHN",
+          "name": "China",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "COL",
+          "name": "Colombia",
+          "rate": -6.8
+        },
+        {
+          "iso_code": "COM",
+          "name": "Comoros",
+          "rate": -0.1
+        },
+        {
+          "iso_code": "COD",
+          "name": "Congo, Dem. Rep.",
+          "rate": 1.7
+        },
+        {
+          "iso_code": "COG",
+          "name": "Congo, Rep.",
+          "rate": -7.9
+        },
+        {
+          "iso_code": "CRI",
+          "name": "Costa Rica",
+          "rate": -4.1
+        },
+        {
+          "iso_code": "CIV",
+          "name": "Cote d'Ivoire",
+          "rate": 2
+        },
+        {
+          "iso_code": "HRV",
+          "name": "Croatia",
+          "rate": -8.1
+        },
+        {
+          "iso_code": "DJI",
+          "name": "Djibouti",
+          "rate": 0.5
+        },
+        {
+          "iso_code": "DMA",
+          "name": "Dominica",
+          "rate": -11
+        },
+        {
+          "iso_code": "DOM",
+          "name": "Dominican Republic",
+          "rate": -6.8
+        },
+        {
+          "iso_code": "ECU",
+          "name": "Ecuador",
+          "rate": -7.8
+        },
+        {
+          "iso_code": "EGY",
+          "name": "Egypt, Arab Rep.",
+          "rate": 3.6
+        },
+        {
+          "iso_code": "SLV",
+          "name": "El Salvador",
+          "rate": -7.9
+        },
+        {
+          "iso_code": "GNQ",
+          "name": "Equatorial Guinea",
+          "rate": -4.9
+        },
+        {
+          "iso_code": "ERI",
+          "name": "Eritrea",
+          "rate": -0.6
+        },
+        {
+          "iso_code": "SWZ",
+          "name": "Eswatini",
+          "rate": -1.9
+        },
+        {
+          "iso_code": "ETH",
+          "name": "Ethiopia",
+          "rate": 6.1
+        },
+        {
+          "iso_code": "FJI",
+          "name": "Fiji",
+          "rate": -15.7
+        },
+        {
+          "iso_code": "GAB",
+          "name": "Gabon",
+          "rate": -1.8
+        },
+        {
+          "iso_code": "GMB",
+          "name": "Gambia, The",
+          "rate": -0.2
+        },
+        {
+          "iso_code": "GEO",
+          "name": "Georgia",
+          "rate": -6.8
+        },
+        {
+          "iso_code": "GHA",
+          "name": "Ghana",
+          "rate": 0.4
+        },
+        {
+          "iso_code": "GRD",
+          "name": "Grenada",
+          "rate": -13.7
+        },
+        {
+          "iso_code": "GTM",
+          "name": "Guatemala",
+          "rate": -1.5
+        },
+        {
+          "iso_code": "GIN",
+          "name": "Guinea",
+          "rate": 7.1
+        },
+        {
+          "iso_code": "GNB",
+          "name": "Guinea-Bissau",
+          "rate": -1.4
+        },
+        {
+          "iso_code": "GUY",
+          "name": "Guyana",
+          "rate": 43.5
+        },
+        {
+          "iso_code": "HTI",
+          "name": "Haiti",
+          "rate": -3.3
+        },
+        {
+          "iso_code": "HND",
+          "name": "Honduras",
+          "rate": -9
+        },
+        {
+          "iso_code": "HUN",
+          "name": "Hungary",
+          "rate": -4.7
+        },
+        {
+          "iso_code": "IND",
+          "name": "India",
+          "rate": -7.3
+        },
+        {
+          "iso_code": "IDN",
+          "name": "Indonesia",
+          "rate": -2.1
+        },
+        {
+          "iso_code": "IRN",
+          "name": "Iran, Islamic Rep.",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "IRQ",
+          "name": "Iraq",
+          "rate": -15.7
+        },
+        {
+          "iso_code": "JAM",
+          "name": "Jamaica",
+          "rate": -10
+        },
+        {
+          "iso_code": "JOR",
+          "name": "Jordan",
+          "rate": -1.6
+        },
+        {
+          "iso_code": "JPN",
+          "name": "Jpan",
+          "rate": -4.5
+        },
+        {
+          "iso_code": "KAZ",
+          "name": "Kazakhstan",
+          "rate": -2.5
+        },
+        {
+          "iso_code": "KEN",
+          "name": "Kenya",
+          "rate": -0.3
+        },
+        {
+          "iso_code": "KIR",
+          "name": "Kiribati",
+          "rate": -1.9
+        },
+        {
+          "iso_code": "",
+          "name": "Kosovo",
+          "rate": -5.3
+        },
+        {
+          "iso_code": "KWT",
+          "name": "Kuwait",
+          "rate": -8.9
+        },
+        {
+          "iso_code": "KGZ",
+          "name": "Kyrgyz Republic",
+          "rate": -8.6
+        },
+        {
+          "iso_code": "LAO",
+          "name": "Lao PDR",
+          "rate": 0.5
+        },
+        {
+          "iso_code": "LBN",
+          "name": "Lebanon",
+          "rate": -21.4
+        },
+        {
+          "iso_code": "LSO",
+          "name": "Lesotho",
+          "rate": -6.5
+        },
+        {
+          "iso_code": "LBR",
+          "name": "Liberia",
+          "rate": -3
+        },
+        {
+          "iso_code": "LBY",
+          "name": "Libya",
+          "rate": -31.3
+        },
+        {
+          "iso_code": "MDG",
+          "name": "Madagascar",
+          "rate": -6.2
+        },
+        {
+          "iso_code": "MWI",
+          "name": "Malawi",
+          "rate": 0.8
+        },
+        {
+          "iso_code": "MYS",
+          "name": "Malaysia",
+          "rate": -5.6
+        },
+        {
+          "iso_code": "MDV",
+          "name": "Maldives",
+          "rate": -33.5
+        },
+        {
+          "iso_code": "MLI",
+          "name": "Mali",
+          "rate": -1.6
+        },
+        {
+          "iso_code": "MHL",
+          "name": "Marshall Islands",
+          "rate": -2.2
+        },
+        {
+          "iso_code": "MRT",
+          "name": "Mauritania",
+          "rate": -1.8
+        },
+        {
+          "iso_code": "MUS",
+          "name": "Mauritius",
+          "rate": -14.9
+        },
+        {
+          "iso_code": "MEX",
+          "name": "Mexico",
+          "rate": -8.2
+        },
+        {
+          "iso_code": "FSM",
+          "name": "Micronesia, Fed. Sts.",
+          "rate": -1.8
+        },
+        {
+          "iso_code": "MDA",
+          "name": "Moldova",
+          "rate": -7
+        },
+        {
+          "iso_code": "MNG",
+          "name": "Mongolia",
+          "rate": -4.4
+        },
+        {
+          "iso_code": "MNE",
+          "name": "Montenegro",
+          "rate": -15.3
+        },
+        {
+          "iso_code": "MAR",
+          "name": "Morocco",
+          "rate": -6.3
+        },
+        {
+          "iso_code": "MOZ",
+          "name": "Mozambique",
+          "rate": -1.2
+        },
+        {
+          "iso_code": "MMR",
+          "name": "Myanmar",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "NAM",
+          "name": "Namibia",
+          "rate": -8.5
+        },
+        {
+          "iso_code": "NRU",
+          "name": "Nauru",
+          "rate": 0.7
+        },
+        {
+          "iso_code": "NPL",
+          "name": "Nepal",
+          "rate": -2.1
+        },
+        {
+          "iso_code": "NIC",
+          "name": "Nicaragua",
+          "rate": -2
+        },
+        {
+          "iso_code": "NER",
+          "name": "Niger",
+          "rate": 3.6
+        },
+        {
+          "iso_code": "NGA",
+          "name": "Nigeria",
+          "rate": -1.8
+        },
+        {
+          "iso_code": "MKD",
+          "name": "North Macedonia",
+          "rate": -6.1
+        },
+        {
+          "iso_code": "OMN",
+          "name": "Oman",
+          "rate": -2.8
+        },
+        {
+          "iso_code": "PAK",
+          "name": "Pakistan",
+          "rate": -0.5
+        },
+        {
+          "iso_code": "PLW",
+          "name": "Palau",
+          "rate": -9.7
+        },
+        {
+          "iso_code": "PAN",
+          "name": "Panama",
+          "rate": -17.9
+        },
+        {
+          "iso_code": "PNG",
+          "name": "Papua New Guinea",
+          "rate": -3.5
+        },
+        {
+          "iso_code": "PRY",
+          "name": "Paraguay",
+          "rate": -0.8
+        },
+        {
+          "iso_code": "PER",
+          "name": "Peru",
+          "rate": -11.1
+        },
+        {
+          "iso_code": "PHL",
+          "name": "Philippines",
+          "rate": -9.6
+        },
+        {
+          "iso_code": "POL",
+          "name": "Poland",
+          "rate": -2.5
+        },
+        {
+          "iso_code": "QAT",
+          "name": "Qatar",
+          "rate": -3.6
+        },
+        {
+          "iso_code": "ROU",
+          "name": "Romania",
+          "rate": -3.7
+        },
+        {
+          "iso_code": "RUS",
+          "name": "Russia",
+          "rate": -3
+        },
+        {
+          "iso_code": "RWA",
+          "name": "Rwanda",
+          "rate": -3.4
+        },
+        {
+          "iso_code": "WSM",
+          "name": "Samoa",
+          "rate": -2.7
+        },
+        {
+          "iso_code": "STP",
+          "name": "Sao Tome and Principe",
+          "rate": 3.1
+        },
+        {
+          "iso_code": "SAU",
+          "name": "Saudi Arabia",
+          "rate": -4.1
+        },
+        {
+          "iso_code": "SEN",
+          "name": "Senegal",
+          "rate": 1.5
+        },
+        {
+          "iso_code": "",
+          "name": "Serbia",
+          "rate": -0.9
+        },
+        {
+          "iso_code": "SYC",
+          "name": "Seychelles",
+          "rate": -13.3
+        },
+        {
+          "iso_code": "SLE",
+          "name": "Sierra Leone",
+          "rate": -2
+        },
+        {
+          "iso_code": "SLB",
+          "name": "Solomon Islands",
+          "rate": -4.3
+        },
+        {
+          "iso_code": "ZAF",
+          "name": "South Africa",
+          "rate": -6.4
+        },
+        {
+          "iso_code": "SSD",
+          "name": "South Sudan",
+          "rate": 9.5
+        },
+        {
+          "iso_code": "LKA",
+          "name": "Sri Lanka",
+          "rate": -3.6
+        },
+        {
+          "iso_code": "LCA",
+          "name": "St. Lucia",
+          "rate": -20.4
+        },
+        {
+          "iso_code": "VCT",
+          "name": "St. Vincent and the Grenadines",
+          "rate": -3
+        },
+        {
+          "iso_code": "SDN",
+          "name": "Sudan",
+          "rate": -3.6
+        },
+        {
+          "iso_code": "SUR",
+          "name": "Suriname",
+          "rate": -15.9
+        },
+        {
+          "iso_code": "TJK",
+          "name": "Tajikistan",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "TZA",
+          "name": "Tanzania",
+          "rate": 2
+        },
+        {
+          "iso_code": "THA",
+          "name": "Thailand",
+          "rate": -6.1
+        },
+        {
+          "iso_code": "",
+          "name": "Timor-Leste",
+          "rate": -8.5
+        },
+        {
+          "iso_code": "TGO",
+          "name": "Togo",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "TON",
+          "name": "Tonga",
+          "rate": 0.7
+        },
+        {
+          "iso_code": "TTO",
+          "name": "Trinidad and Tobago",
+          "rate": 1.2
+        },
+        {
+          "iso_code": "TUN",
+          "name": "Tunisia",
+          "rate": -9.2
+        },
+        {
+          "iso_code": "TUR",
+          "name": "Turkey",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "TKM",
+          "name": "Turkmenistan",
+          "rate": 6.3
+        },
+        {
+          "iso_code": "TUV",
+          "name": "Tuvalu",
+          "rate": 1
+        },
+        {
+          "iso_code": "UGA",
+          "name": "Uganda",
+          "rate": 3
+        },
+        {
+          "iso_code": "UKR",
+          "name": "Ukraine",
+          "rate": -4
+        },
+        {
+          "iso_code": "ARE",
+          "name": "United Arab Emirates",
+          "rate": -6.1
+        },
+        {
+          "iso_code": "USA",
+          "name": "United States",
+          "rate": -3.4
+        },
+        {
+          "iso_code": "URY",
+          "name": "Uruguay",
+          "rate": -5.9
+        },
+        {
+          "iso_code": "UZB",
+          "name": "Uzbekistan",
+          "rate": 1.7
+        },
+        {
+          "iso_code": "VUT",
+          "name": "Vanuatu",
+          "rate": -6.8
+        },
+        {
+          "iso_code": "VEN",
+          "name": "Venezuela, RB",
+          "rate": -3.99014378511
+        },
+        {
+          "iso_code": "VNM",
+          "name": "Vietnam",
+          "rate": 2.9
+        },
+        {
+          "iso_code": "",
+          "name": "West Bank and Gaza",
+          "rate": -11.3
+        },
+        {
+          "iso_code": "ZMB",
+          "name": "Zambia",
+          "rate": -3
+        },
+        {
+          "iso_code": "ZWE",
+          "name": "Zimbabwe",
+          "rate": -4.1
+        }
+      ]
+    },
+    "2021": {
+      "countryGDPGrowthRates": [
+        {
+          "iso_code": "AME",
+          "name": "Advanced economies",
+          "rate": 5
+        },
+        {
+          "iso_code": "EAS",
+          "name": "East Asia and Pacific",
+          "rate": 7.1
+        },
+        {
+          "iso_code": "EMD",
+          "name": "Emerging market and developing economies",
+          "rate": 6.3
+        },
+        {
+          "iso_code": "EMU",
+          "name": "Euro Area",
+          "rate": 5.2
+        },
+        {
+          "iso_code": "ECS",
+          "name": "Europe and Central Asia",
+          "rate": 5.8
+        },
+        {
+          "iso_code": "LCN",
+          "name": "Latin America and the Caribbean",
+          "rate": 6.7
+        },
+        {
+          "iso_code": "MEA",
+          "name": "Middle East and North Africa",
+          "rate": 3.1
+        },
+        {
+          "iso_code": "SAS",
+          "name": "South Asia",
+          "rate": 7
+        },
+        {
+          "iso_code": "SSF",
+          "name": "Sub-Saharan Africa",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "WLT",
+          "name": "World (WBG members)",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "AFG",
+          "name": "Afghanistan",
+          "rate": null
+        },
+        {
+          "iso_code": "ALB",
+          "name": "Albania",
+          "rate": 7.2
+        },
+        {
+          "iso_code": "DZA",
+          "name": "Algeria",
+          "rate": 4.1
+        },
+        {
+          "iso_code": "AGO",
+          "name": "Angola",
+          "rate": 0.4
+        },
+        {
+          "iso_code": "ARG",
+          "name": "Argentina",
+          "rate": 10
+        },
+        {
+          "iso_code": "ARM",
+          "name": "Armenia",
+          "rate": 6.1
+        },
+        {
+          "iso_code": "AZE",
+          "name": "Azerbaijan",
+          "rate": 5
+        },
+        {
+          "iso_code": "BHS",
+          "name": "Bahamas, The",
+          "rate": 2
+        },
+        {
+          "iso_code": "BHR",
+          "name": "Bahrain",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "BGD",
+          "name": "Bangladesh",
+          "rate": 5
+        },
+        {
+          "iso_code": "BRB",
+          "name": "Barbados",
+          "rate": 3.3
+        },
+        {
+          "iso_code": "BLR",
+          "name": "Belarus",
+          "rate": 1.9
+        },
+        {
+          "iso_code": "BLZ",
+          "name": "Belize",
+          "rate": 9
+        },
+        {
+          "iso_code": "BEN",
+          "name": "Benin",
+          "rate": 6
+        },
+        {
+          "iso_code": "BTN",
+          "name": "Bhutan",
+          "rate": -3.7
+        },
+        {
+          "iso_code": "BOL",
+          "name": "Bolivia",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "BIH",
+          "name": "Bosnia and Herzegovina",
+          "rate": 4
+        },
+        {
+          "iso_code": "BWA",
+          "name": "Botswana",
+          "rate": 8.5
+        },
+        {
+          "iso_code": "BRA",
+          "name": "Brazil",
+          "rate": 4.9
+        },
+        {
+          "iso_code": "BGR",
+          "name": "Bulgaria",
+          "rate": 3.3
+        },
+        {
+          "iso_code": "BFA",
+          "name": "Burkina Faso",
+          "rate": 6.7
+        },
+        {
+          "iso_code": "BDI",
+          "name": "Burundi",
+          "rate": 2
+        },
+        {
+          "iso_code": "CPV",
+          "name": "Cabo Verde",
+          "rate": 4
+        },
+        {
+          "iso_code": "KHM",
+          "name": "Cambodia",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "CMR",
+          "name": "Cameroon",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "CAF",
+          "name": "Central African Republic",
+          "rate": -0.8
+        },
+        {
+          "iso_code": "TCD",
+          "name": "Chad",
+          "rate": 0.9
+        },
+        {
+          "iso_code": "CHL",
+          "name": "Chile",
+          "rate": 11.8
+        },
+        {
+          "iso_code": "CHN",
+          "name": "China",
+          "rate": 8
+        },
+        {
+          "iso_code": "COL",
+          "name": "Colombia",
+          "rate": 9.9
+        },
+        {
+          "iso_code": "COM",
+          "name": "Comoros",
+          "rate": 1.3
+        },
+        {
+          "iso_code": "COD",
+          "name": "Congo, Dem. Rep.",
+          "rate": 3.6
+        },
+        {
+          "iso_code": "COG",
+          "name": "Congo, Rep.",
+          "rate": -1.2
+        },
+        {
+          "iso_code": "CRI",
+          "name": "Costa Rica",
+          "rate": 5
+        },
+        {
+          "iso_code": "CIV",
+          "name": "Cote d'Ivoire",
+          "rate": 6.2
+        },
+        {
+          "iso_code": "HRV",
+          "name": "Croatia",
+          "rate": 9.4
+        },
+        {
+          "iso_code": "DJI",
+          "name": "Djibouti",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "DMA",
+          "name": "Dominica",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "DOM",
+          "name": "Dominican Republic",
+          "rate": 10.8
+        },
+        {
+          "iso_code": "ECU",
+          "name": "Ecuador",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "EGY",
+          "name": "Egypt, Arab Rep.",
+          "rate": 3.3
+        },
+        {
+          "iso_code": "SLV",
+          "name": "El Salvador",
+          "rate": 8
+        },
+        {
+          "iso_code": "GNQ",
+          "name": "Equatorial Guinea",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "ERI",
+          "name": "Eritrea",
+          "rate": 2.9
+        },
+        {
+          "iso_code": "SWZ",
+          "name": "Eswatini",
+          "rate": 1.5
+        },
+        {
+          "iso_code": "ETH",
+          "name": "Ethiopia",
+          "rate": 2.4
+        },
+        {
+          "iso_code": "FJI",
+          "name": "Fiji",
+          "rate": -4.1
+        },
+        {
+          "iso_code": "GAB",
+          "name": "Gabon",
+          "rate": 1.5
+        },
+        {
+          "iso_code": "GMB",
+          "name": "Gambia, The",
+          "rate": 4
+        },
+        {
+          "iso_code": "GEO",
+          "name": "Georgia",
+          "rate": 10.5
+        },
+        {
+          "iso_code": "GHA",
+          "name": "Ghana",
+          "rate": 4.1
+        },
+        {
+          "iso_code": "GRD",
+          "name": "Grenada",
+          "rate": 3
+        },
+        {
+          "iso_code": "GTM",
+          "name": "Guatemala",
+          "rate": 7.6
+        },
+        {
+          "iso_code": "GIN",
+          "name": "Guinea",
+          "rate": 5.2
+        },
+        {
+          "iso_code": "GNB",
+          "name": "Guinea-Bissau",
+          "rate": 3.3
+        },
+        {
+          "iso_code": "GUY",
+          "name": "Guyana",
+          "rate": 21.2
+        },
+        {
+          "iso_code": "HTI",
+          "name": "Haiti",
+          "rate": -0.8
+        },
+        {
+          "iso_code": "HND",
+          "name": "Honduras",
+          "rate": 4.7
+        },
+        {
+          "iso_code": "HUN",
+          "name": "Hungary",
+          "rate": 6.8
+        },
+        {
+          "iso_code": "IND",
+          "name": "India",
+          "rate": 8.3
+        },
+        {
+          "iso_code": "IDN",
+          "name": "Indonesia",
+          "rate": 3.7
+        },
+        {
+          "iso_code": "IRN",
+          "name": "Iran, Islamic Rep.",
+          "rate": 3.1
+        },
+        {
+          "iso_code": "IRQ",
+          "name": "Iraq",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "JAM",
+          "name": "Jamaica",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "JOR",
+          "name": "Jordan",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "JPN",
+          "name": "Jpan",
+          "rate": 1.7
+        },
+        {
+          "iso_code": "KAZ",
+          "name": "Kazakhstan",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "KEN",
+          "name": "Kenya",
+          "rate": 5
+        },
+        {
+          "iso_code": "KIR",
+          "name": "Kiribati",
+          "rate": 3
+        },
+        {
+          "iso_code": "",
+          "name": "Kosovo",
+          "rate": 7.1
+        },
+        {
+          "iso_code": "KWT",
+          "name": "Kuwait",
+          "rate": 2
+        },
+        {
+          "iso_code": "KGZ",
+          "name": "Kyrgyz Republic",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "LAO",
+          "name": "Lao PDR",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "LBN",
+          "name": "Lebanon",
+          "rate": -10.5
+        },
+        {
+          "iso_code": "LSO",
+          "name": "Lesotho",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "LBR",
+          "name": "Liberia",
+          "rate": 3.6
+        },
+        {
+          "iso_code": "LBY",
+          "name": "Libya",
+          "rate": 78.2
+        },
+        {
+          "iso_code": "MDG",
+          "name": "Madagascar",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "MWI",
+          "name": "Malawi",
+          "rate": 2.4
+        },
+        {
+          "iso_code": "MYS",
+          "name": "Malaysia",
+          "rate": 3.3
+        },
+        {
+          "iso_code": "MDV",
+          "name": "Maldives",
+          "rate": 22.3
+        },
+        {
+          "iso_code": "MLI",
+          "name": "Mali",
+          "rate": 4
+        },
+        {
+          "iso_code": "MHL",
+          "name": "Marshall Islands",
+          "rate": -2.5
+        },
+        {
+          "iso_code": "MRT",
+          "name": "Mauritania",
+          "rate": 2.7
+        },
+        {
+          "iso_code": "MUS",
+          "name": "Mauritius",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "MEX",
+          "name": "Mexico",
+          "rate": 5.7
+        },
+        {
+          "iso_code": "FSM",
+          "name": "Micronesia, Fed. Sts.",
+          "rate": -3.2
+        },
+        {
+          "iso_code": "MDA",
+          "name": "Moldova",
+          "rate": 6.8
+        },
+        {
+          "iso_code": "MNG",
+          "name": "Mongolia",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "MNE",
+          "name": "Montenegro",
+          "rate": 10.8
+        },
+        {
+          "iso_code": "MAR",
+          "name": "Morocco",
+          "rate": 5.3
+        },
+        {
+          "iso_code": "MOZ",
+          "name": "Mozambique",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "MMR",
+          "name": "Myanmar",
+          "rate": -18
+        },
+        {
+          "iso_code": "NAM",
+          "name": "Namibia",
+          "rate": 1.2
+        },
+        {
+          "iso_code": "NRU",
+          "name": "Nauru",
+          "rate": 1.6
+        },
+        {
+          "iso_code": "NPL",
+          "name": "Nepal",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "NIC",
+          "name": "Nicaragua",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "NER",
+          "name": "Niger",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "NGA",
+          "name": "Nigeria",
+          "rate": 2.4
+        },
+        {
+          "iso_code": "MKD",
+          "name": "North Macedonia",
+          "rate": 4
+        },
+        {
+          "iso_code": "OMN",
+          "name": "Oman",
+          "rate": 3
+        },
+        {
+          "iso_code": "PAK",
+          "name": "Pakistan",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "PLW",
+          "name": "Palau",
+          "rate": -16
+        },
+        {
+          "iso_code": "PAN",
+          "name": "Panama",
+          "rate": 9.9
+        },
+        {
+          "iso_code": "PNG",
+          "name": "Papua New Guinea",
+          "rate": 1
+        },
+        {
+          "iso_code": "PRY",
+          "name": "Paraguay",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "PER",
+          "name": "Peru",
+          "rate": 13.2
+        },
+        {
+          "iso_code": "PHL",
+          "name": "Philippines",
+          "rate": 5.3
+        },
+        {
+          "iso_code": "POL",
+          "name": "Poland",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "QAT",
+          "name": "Qatar",
+          "rate": 3
+        },
+        {
+          "iso_code": "ROU",
+          "name": "Romania",
+          "rate": 6.3
+        },
+        {
+          "iso_code": "RUS",
+          "name": "Russia",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "RWA",
+          "name": "Rwanda",
+          "rate": 10.2
+        },
+        {
+          "iso_code": "WSM",
+          "name": "Samoa",
+          "rate": -8.1
+        },
+        {
+          "iso_code": "STP",
+          "name": "Sao Tome and Principe",
+          "rate": 2.1
+        },
+        {
+          "iso_code": "SAU",
+          "name": "Saudi Arabia",
+          "rate": 2.4
+        },
+        {
+          "iso_code": "SEN",
+          "name": "Senegal",
+          "rate": 4.7
+        },
+        {
+          "iso_code": "",
+          "name": "Serbia",
+          "rate": 6
+        },
+        {
+          "iso_code": "SYC",
+          "name": "Seychelles",
+          "rate": 6.9
+        },
+        {
+          "iso_code": "SLE",
+          "name": "Sierra Leone",
+          "rate": 4.2
+        },
+        {
+          "iso_code": "SLB",
+          "name": "Solomon Islands",
+          "rate": 2
+        },
+        {
+          "iso_code": "ZAF",
+          "name": "South Africa",
+          "rate": 4.6
+        },
+        {
+          "iso_code": "SSD",
+          "name": "South Sudan",
+          "rate": -5.4
+        },
+        {
+          "iso_code": "LKA",
+          "name": "Sri Lanka",
+          "rate": 3.3
+        },
+        {
+          "iso_code": "LCA",
+          "name": "St. Lucia",
+          "rate": 5.2
+        },
+        {
+          "iso_code": "VCT",
+          "name": "St. Vincent and the Grenadines",
+          "rate": -6.1
+        },
+        {
+          "iso_code": "SDN",
+          "name": "Sudan",
+          "rate": 0.1
+        },
+        {
+          "iso_code": "SUR",
+          "name": "Suriname",
+          "rate": -3.5
+        },
+        {
+          "iso_code": "TJK",
+          "name": "Tajikistan",
+          "rate": 7
+        },
+        {
+          "iso_code": "TZA",
+          "name": "Tanzania",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "THA",
+          "name": "Thailand",
+          "rate": 1
+        },
+        {
+          "iso_code": "",
+          "name": "Timor-Leste",
+          "rate": 1.9
+        },
+        {
+          "iso_code": "TGO",
+          "name": "Togo",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "TON",
+          "name": "Tonga",
+          "rate": -3.2
+        },
+        {
+          "iso_code": "TTO",
+          "name": "Trinidad and Tobago",
+          "rate": null
+        },
+        {
+          "iso_code": "TUN",
+          "name": "Tunisia",
+          "rate": 2.9
+        },
+        {
+          "iso_code": "TUR",
+          "name": "Turkey",
+          "rate": 9.5
+        },
+        {
+          "iso_code": "TKM",
+          "name": "Turkmenistan",
+          "rate": null
+        },
+        {
+          "iso_code": "TUV",
+          "name": "Tuvalu",
+          "rate": 2.5
+        },
+        {
+          "iso_code": "UGA",
+          "name": "Uganda",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "UKR",
+          "name": "Ukraine",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "ARE",
+          "name": "United Arab Emirates",
+          "rate": 2.7
+        },
+        {
+          "iso_code": "USA",
+          "name": "United States",
+          "rate": 5.6
+        },
+        {
+          "iso_code": "URY",
+          "name": "Uruguay",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "UZB",
+          "name": "Uzbekistan",
+          "rate": 6.2
+        },
+        {
+          "iso_code": "VUT",
+          "name": "Vanuatu",
+          "rate": 1.2
+        },
+        {
+          "iso_code": "VEN",
+          "name": "Venezuela, RB",
+          "rate": null
+        },
+        {
+          "iso_code": "VNM",
+          "name": "Vietnam",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "",
+          "name": "West Bank and Gaza",
+          "rate": 6
+        },
+        {
+          "iso_code": "ZMB",
+          "name": "Zambia",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "ZWE",
+          "name": "Zimbabwe",
+          "rate": 5.1
+        }
+      ]
+    },
+    "2022": {
+      "countryGDPGrowthRates": [
+        {
+          "iso_code": "AME",
+          "name": "Advanced economies",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "EAS",
+          "name": "East Asia and Pacific",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "EMD",
+          "name": "Emerging market and developing economies",
+          "rate": 4.6
+        },
+        {
+          "iso_code": "EMU",
+          "name": "Euro Area",
+          "rate": 4.2
+        },
+        {
+          "iso_code": "ECS",
+          "name": "Europe and Central Asia",
+          "rate": 3
+        },
+        {
+          "iso_code": "LCN",
+          "name": "Latin America and the Caribbean",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "MEA",
+          "name": "Middle East and North Africa",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "SAS",
+          "name": "South Asia",
+          "rate": 7.6
+        },
+        {
+          "iso_code": "SSF",
+          "name": "Sub-Saharan Africa",
+          "rate": 3.6
+        },
+        {
+          "iso_code": "WLT",
+          "name": "World (WBG members)",
+          "rate": 4.1
+        },
+        {
+          "iso_code": "AFG",
+          "name": "Afghanistan",
+          "rate": null
+        },
+        {
+          "iso_code": "ALB",
+          "name": "Albania",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "DZA",
+          "name": "Algeria",
+          "rate": 2
+        },
+        {
+          "iso_code": "AGO",
+          "name": "Angola",
+          "rate": 3.1
+        },
+        {
+          "iso_code": "ARG",
+          "name": "Argentina",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "ARM",
+          "name": "Armenia",
+          "rate": 4.8
+        },
+        {
+          "iso_code": "AZE",
+          "name": "Azerbaijan",
+          "rate": 3.1
+        },
+        {
+          "iso_code": "BHS",
+          "name": "Bahamas, The",
+          "rate": 8
+        },
+        {
+          "iso_code": "BHR",
+          "name": "Bahrain",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "BGD",
+          "name": "Bangladesh",
+          "rate": 6.4
+        },
+        {
+          "iso_code": "BRB",
+          "name": "Barbados",
+          "rate": 8.5
+        },
+        {
+          "iso_code": "BLR",
+          "name": "Belarus",
+          "rate": -2.8
+        },
+        {
+          "iso_code": "BLZ",
+          "name": "Belize",
+          "rate": 4
+        },
+        {
+          "iso_code": "BEN",
+          "name": "Benin",
+          "rate": 6.5
+        },
+        {
+          "iso_code": "BTN",
+          "name": "Bhutan",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "BOL",
+          "name": "Bolivia",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "BIH",
+          "name": "Bosnia and Herzegovina",
+          "rate": 3
+        },
+        {
+          "iso_code": "BWA",
+          "name": "Botswana",
+          "rate": 5.9
+        },
+        {
+          "iso_code": "BRA",
+          "name": "Brazil",
+          "rate": 1.4
+        },
+        {
+          "iso_code": "BGR",
+          "name": "Bulgaria",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "BFA",
+          "name": "Burkina Faso",
+          "rate": 5.6
+        },
+        {
+          "iso_code": "BDI",
+          "name": "Burundi",
+          "rate": 2.5
+        },
+        {
+          "iso_code": "CPV",
+          "name": "Cabo Verde",
+          "rate": 5.2
+        },
+        {
+          "iso_code": "KHM",
+          "name": "Cambodia",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "CMR",
+          "name": "Cameroon",
+          "rate": 4
+        },
+        {
+          "iso_code": "CAF",
+          "name": "Central African Republic",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "TCD",
+          "name": "Chad",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "CHL",
+          "name": "Chile",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "CHN",
+          "name": "China",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "COL",
+          "name": "Colombia",
+          "rate": 4.1
+        },
+        {
+          "iso_code": "COM",
+          "name": "Comoros",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "COD",
+          "name": "Congo, Dem. Rep.",
+          "rate": 4.8
+        },
+        {
+          "iso_code": "COG",
+          "name": "Congo, Rep.",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "CRI",
+          "name": "Costa Rica",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "CIV",
+          "name": "Cote d'Ivoire",
+          "rate": 6.5
+        },
+        {
+          "iso_code": "HRV",
+          "name": "Croatia",
+          "rate": 5.4
+        },
+        {
+          "iso_code": "DJI",
+          "name": "Djibouti",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "DMA",
+          "name": "Dominica",
+          "rate": 8.1
+        },
+        {
+          "iso_code": "DOM",
+          "name": "Dominican Republic",
+          "rate": 5
+        },
+        {
+          "iso_code": "ECU",
+          "name": "Ecuador",
+          "rate": 3.1
+        },
+        {
+          "iso_code": "EGY",
+          "name": "Egypt, Arab Rep.",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "SLV",
+          "name": "El Salvador",
+          "rate": 4
+        },
+        {
+          "iso_code": "GNQ",
+          "name": "Equatorial Guinea",
+          "rate": 1.5
+        },
+        {
+          "iso_code": "ERI",
+          "name": "Eritrea",
+          "rate": 4.8
+        },
+        {
+          "iso_code": "SWZ",
+          "name": "Eswatini",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "ETH",
+          "name": "Ethiopia",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "FJI",
+          "name": "Fiji",
+          "rate": 7.8
+        },
+        {
+          "iso_code": "GAB",
+          "name": "Gabon",
+          "rate": 2.8
+        },
+        {
+          "iso_code": "GMB",
+          "name": "Gambia, The",
+          "rate": 6
+        },
+        {
+          "iso_code": "GEO",
+          "name": "Georgia",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "GHA",
+          "name": "Ghana",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "GRD",
+          "name": "Grenada",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "GTM",
+          "name": "Guatemala",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "GIN",
+          "name": "Guinea",
+          "rate": 6.1
+        },
+        {
+          "iso_code": "GNB",
+          "name": "Guinea-Bissau",
+          "rate": 4
+        },
+        {
+          "iso_code": "GUY",
+          "name": "Guyana",
+          "rate": 49.7
+        },
+        {
+          "iso_code": "HTI",
+          "name": "Haiti",
+          "rate": 0
+        },
+        {
+          "iso_code": "HND",
+          "name": "Honduras",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "HUN",
+          "name": "Hungary",
+          "rate": 5
+        },
+        {
+          "iso_code": "IND",
+          "name": "India",
+          "rate": 8.7
+        },
+        {
+          "iso_code": "IDN",
+          "name": "Indonesia",
+          "rate": 5.2
+        },
+        {
+          "iso_code": "IRN",
+          "name": "Iran, Islamic Rep.",
+          "rate": 2.4
+        },
+        {
+          "iso_code": "IRQ",
+          "name": "Iraq",
+          "rate": 7.3
+        },
+        {
+          "iso_code": "JAM",
+          "name": "Jamaica",
+          "rate": 3
+        },
+        {
+          "iso_code": "JOR",
+          "name": "Jordan",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "JPN",
+          "name": "Jpan",
+          "rate": 2.9
+        },
+        {
+          "iso_code": "KAZ",
+          "name": "Kazakhstan",
+          "rate": 3.7
+        },
+        {
+          "iso_code": "KEN",
+          "name": "Kenya",
+          "rate": 4.7
+        },
+        {
+          "iso_code": "KIR",
+          "name": "Kiribati",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "",
+          "name": "Kosovo",
+          "rate": 4.1
+        },
+        {
+          "iso_code": "KWT",
+          "name": "Kuwait",
+          "rate": 5.3
+        },
+        {
+          "iso_code": "KGZ",
+          "name": "Kyrgyz Republic",
+          "rate": 4.7
+        },
+        {
+          "iso_code": "LAO",
+          "name": "Lao PDR",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "LBN",
+          "name": "Lebanon",
+          "rate": null
+        },
+        {
+          "iso_code": "LSO",
+          "name": "Lesotho",
+          "rate": 3
+        },
+        {
+          "iso_code": "LBR",
+          "name": "Liberia",
+          "rate": 4.7
+        },
+        {
+          "iso_code": "LBY",
+          "name": "Libya",
+          "rate": null
+        },
+        {
+          "iso_code": "MDG",
+          "name": "Madagascar",
+          "rate": 5.4
+        },
+        {
+          "iso_code": "MWI",
+          "name": "Malawi",
+          "rate": 3
+        },
+        {
+          "iso_code": "MYS",
+          "name": "Malaysia",
+          "rate": 5.8
+        },
+        {
+          "iso_code": "MDV",
+          "name": "Maldives",
+          "rate": 11
+        },
+        {
+          "iso_code": "MLI",
+          "name": "Mali",
+          "rate": 5.2
+        },
+        {
+          "iso_code": "MHL",
+          "name": "Marshall Islands",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "MRT",
+          "name": "Mauritania",
+          "rate": 4.1
+        },
+        {
+          "iso_code": "MUS",
+          "name": "Mauritius",
+          "rate": 6.6
+        },
+        {
+          "iso_code": "MEX",
+          "name": "Mexico",
+          "rate": 3
+        },
+        {
+          "iso_code": "FSM",
+          "name": "Micronesia, Fed. Sts.",
+          "rate": 1
+        },
+        {
+          "iso_code": "MDA",
+          "name": "Moldova",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "MNG",
+          "name": "Mongolia",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "MNE",
+          "name": "Montenegro",
+          "rate": 5.6
+        },
+        {
+          "iso_code": "MAR",
+          "name": "Morocco",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "MOZ",
+          "name": "Mozambique",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "MMR",
+          "name": "Myanmar",
+          "rate": null
+        },
+        {
+          "iso_code": "NAM",
+          "name": "Namibia",
+          "rate": 2.4
+        },
+        {
+          "iso_code": "NRU",
+          "name": "Nauru",
+          "rate": 0.9
+        },
+        {
+          "iso_code": "NPL",
+          "name": "Nepal",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "NIC",
+          "name": "Nicaragua",
+          "rate": 3
+        },
+        {
+          "iso_code": "NER",
+          "name": "Niger",
+          "rate": 6.2
+        },
+        {
+          "iso_code": "NGA",
+          "name": "Nigeria",
+          "rate": 2.5
+        },
+        {
+          "iso_code": "MKD",
+          "name": "North Macedonia",
+          "rate": 3.7
+        },
+        {
+          "iso_code": "OMN",
+          "name": "Oman",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "PAK",
+          "name": "Pakistan",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "PLW",
+          "name": "Palau",
+          "rate": 12
+        },
+        {
+          "iso_code": "PAN",
+          "name": "Panama",
+          "rate": 7.8
+        },
+        {
+          "iso_code": "PNG",
+          "name": "Papua New Guinea",
+          "rate": 4
+        },
+        {
+          "iso_code": "PRY",
+          "name": "Paraguay",
+          "rate": 4
+        },
+        {
+          "iso_code": "PER",
+          "name": "Peru",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "PHL",
+          "name": "Philippines",
+          "rate": 5.9
+        },
+        {
+          "iso_code": "POL",
+          "name": "Poland",
+          "rate": 4.7
+        },
+        {
+          "iso_code": "QAT",
+          "name": "Qatar",
+          "rate": 4.8
+        },
+        {
+          "iso_code": "ROU",
+          "name": "Romania",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "RUS",
+          "name": "Russia",
+          "rate": 2.4
+        },
+        {
+          "iso_code": "RWA",
+          "name": "Rwanda",
+          "rate": 7.1
+        },
+        {
+          "iso_code": "WSM",
+          "name": "Samoa",
+          "rate": 1.5
+        },
+        {
+          "iso_code": "STP",
+          "name": "Sao Tome and Principe",
+          "rate": 2.9
+        },
+        {
+          "iso_code": "SAU",
+          "name": "Saudi Arabia",
+          "rate": 4.9
+        },
+        {
+          "iso_code": "SEN",
+          "name": "Senegal",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "",
+          "name": "Serbia",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "SYC",
+          "name": "Seychelles",
+          "rate": 7.7
+        },
+        {
+          "iso_code": "SLE",
+          "name": "Sierra Leone",
+          "rate": 6
+        },
+        {
+          "iso_code": "SLB",
+          "name": "Solomon Islands",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "ZAF",
+          "name": "South Africa",
+          "rate": 2.1
+        },
+        {
+          "iso_code": "SSD",
+          "name": "South Sudan",
+          "rate": 1.2
+        },
+        {
+          "iso_code": "LKA",
+          "name": "Sri Lanka",
+          "rate": 2.1
+        },
+        {
+          "iso_code": "LCA",
+          "name": "St. Lucia",
+          "rate": 9.6
+        },
+        {
+          "iso_code": "VCT",
+          "name": "St. Vincent and the Grenadines",
+          "rate": 8.3
+        },
+        {
+          "iso_code": "SDN",
+          "name": "Sudan",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "SUR",
+          "name": "Suriname",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "TJK",
+          "name": "Tajikistan",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "TZA",
+          "name": "Tanzania",
+          "rate": 5.4
+        },
+        {
+          "iso_code": "THA",
+          "name": "Thailand",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "",
+          "name": "Timor-Leste",
+          "rate": 3.7
+        },
+        {
+          "iso_code": "TGO",
+          "name": "Togo",
+          "rate": 5.6
+        },
+        {
+          "iso_code": "TON",
+          "name": "Tonga",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "TTO",
+          "name": "Trinidad and Tobago",
+          "rate": null
+        },
+        {
+          "iso_code": "TUN",
+          "name": "Tunisia",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "TUR",
+          "name": "Turkey",
+          "rate": 2
+        },
+        {
+          "iso_code": "TKM",
+          "name": "Turkmenistan",
+          "rate": null
+        },
+        {
+          "iso_code": "TUV",
+          "name": "Tuvalu",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "UGA",
+          "name": "Uganda",
+          "rate": 3.7
+        },
+        {
+          "iso_code": "UKR",
+          "name": "Ukraine",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "ARE",
+          "name": "United Arab Emirates",
+          "rate": 4.6
+        },
+        {
+          "iso_code": "USA",
+          "name": "United States",
+          "rate": 3.7
+        },
+        {
+          "iso_code": "URY",
+          "name": "Uruguay",
+          "rate": 3.1
+        },
+        {
+          "iso_code": "UZB",
+          "name": "Uzbekistan",
+          "rate": 5.6
+        },
+        {
+          "iso_code": "VUT",
+          "name": "Vanuatu",
+          "rate": 3
+        },
+        {
+          "iso_code": "VEN",
+          "name": "Venezuela, RB",
+          "rate": null
+        },
+        {
+          "iso_code": "VNM",
+          "name": "Vietnam",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "",
+          "name": "West Bank and Gaza",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "ZMB",
+          "name": "Zambia",
+          "rate": 2.9
+        },
+        {
+          "iso_code": "ZWE",
+          "name": "Zimbabwe",
+          "rate": 4.3
+        }
+      ]
+    },
+    "2023": {
+      "countryGDPGrowthRates": [
+        {
+          "iso_code": "AME",
+          "name": "Advanced economies",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "EAS",
+          "name": "East Asia and Pacific",
+          "rate": 5.2
+        },
+        {
+          "iso_code": "EMD",
+          "name": "Emerging market and developing economies",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "EMU",
+          "name": "Euro Area",
+          "rate": 2.1
+        },
+        {
+          "iso_code": "ECS",
+          "name": "Europe and Central Asia",
+          "rate": 2.9
+        },
+        {
+          "iso_code": "LCN",
+          "name": "Latin America and the Caribbean",
+          "rate": 2.7
+        },
+        {
+          "iso_code": "MEA",
+          "name": "Middle East and North Africa",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "SAS",
+          "name": "South Asia",
+          "rate": 6
+        },
+        {
+          "iso_code": "SSF",
+          "name": "Sub-Saharan Africa",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "WLT",
+          "name": "World (WBG members)",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "AFG",
+          "name": "Afghanistan",
+          "rate": null
+        },
+        {
+          "iso_code": "ALB",
+          "name": "Albania",
+          "rate": 3.7
+        },
+        {
+          "iso_code": "DZA",
+          "name": "Algeria",
+          "rate": 1.5
+        },
+        {
+          "iso_code": "AGO",
+          "name": "Angola",
+          "rate": 2.8
+        },
+        {
+          "iso_code": "ARG",
+          "name": "Argentina",
+          "rate": 2.1
+        },
+        {
+          "iso_code": "ARM",
+          "name": "Armenia",
+          "rate": 5.4
+        },
+        {
+          "iso_code": "AZE",
+          "name": "Azerbaijan",
+          "rate": 2.7
+        },
+        {
+          "iso_code": "BHS",
+          "name": "Bahamas, The",
+          "rate": 4
+        },
+        {
+          "iso_code": "BHR",
+          "name": "Bahrain",
+          "rate": 2.9
+        },
+        {
+          "iso_code": "BGD",
+          "name": "Bangladesh",
+          "rate": 6.9
+        },
+        {
+          "iso_code": "BRB",
+          "name": "Barbados",
+          "rate": 4.8
+        },
+        {
+          "iso_code": "BLR",
+          "name": "Belarus",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "BLZ",
+          "name": "Belize",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "BEN",
+          "name": "Benin",
+          "rate": 6.5
+        },
+        {
+          "iso_code": "BTN",
+          "name": "Bhutan",
+          "rate": 4.8
+        },
+        {
+          "iso_code": "BOL",
+          "name": "Bolivia",
+          "rate": 2.7
+        },
+        {
+          "iso_code": "BIH",
+          "name": "Bosnia and Herzegovina",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "BWA",
+          "name": "Botswana",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "BRA",
+          "name": "Brazil",
+          "rate": 2.7
+        },
+        {
+          "iso_code": "BGR",
+          "name": "Bulgaria",
+          "rate": 3.6
+        },
+        {
+          "iso_code": "BFA",
+          "name": "Burkina Faso",
+          "rate": 5.3
+        },
+        {
+          "iso_code": "BDI",
+          "name": "Burundi",
+          "rate": 3
+        },
+        {
+          "iso_code": "CPV",
+          "name": "Cabo Verde",
+          "rate": 6.1
+        },
+        {
+          "iso_code": "KHM",
+          "name": "Cambodia",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "CMR",
+          "name": "Cameroon",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "CAF",
+          "name": "Central African Republic",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "TCD",
+          "name": "Chad",
+          "rate": 2.9
+        },
+        {
+          "iso_code": "CHL",
+          "name": "Chile",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "CHN",
+          "name": "China",
+          "rate": 5.3
+        },
+        {
+          "iso_code": "COL",
+          "name": "Colombia",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "COM",
+          "name": "Comoros",
+          "rate": 2.9
+        },
+        {
+          "iso_code": "COD",
+          "name": "Congo, Dem. Rep.",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "COG",
+          "name": "Congo, Rep.",
+          "rate": 3
+        },
+        {
+          "iso_code": "CRI",
+          "name": "Costa Rica",
+          "rate": 3.2
+        },
+        {
+          "iso_code": "CIV",
+          "name": "Cote d'Ivoire",
+          "rate": 6.4
+        },
+        {
+          "iso_code": "HRV",
+          "name": "Croatia",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "DJI",
+          "name": "Djibouti",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "DMA",
+          "name": "Dominica",
+          "rate": 5.9
+        },
+        {
+          "iso_code": "DOM",
+          "name": "Dominican Republic",
+          "rate": 5
+        },
+        {
+          "iso_code": "ECU",
+          "name": "Ecuador",
+          "rate": 2.5
+        },
+        {
+          "iso_code": "EGY",
+          "name": "Egypt, Arab Rep.",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "SLV",
+          "name": "El Salvador",
+          "rate": 2.5
+        },
+        {
+          "iso_code": "GNQ",
+          "name": "Equatorial Guinea",
+          "rate": -0.9
+        },
+        {
+          "iso_code": "ERI",
+          "name": "Eritrea",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "SWZ",
+          "name": "Eswatini",
+          "rate": 1.9
+        },
+        {
+          "iso_code": "ETH",
+          "name": "Ethiopia",
+          "rate": 6.5
+        },
+        {
+          "iso_code": "FJI",
+          "name": "Fiji",
+          "rate": 6.9
+        },
+        {
+          "iso_code": "GAB",
+          "name": "Gabon",
+          "rate": 3
+        },
+        {
+          "iso_code": "GMB",
+          "name": "Gambia, The",
+          "rate": 6.5
+        },
+        {
+          "iso_code": "GEO",
+          "name": "Georgia",
+          "rate": 5
+        },
+        {
+          "iso_code": "GHA",
+          "name": "Ghana",
+          "rate": 5
+        },
+        {
+          "iso_code": "GRD",
+          "name": "Grenada",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "GTM",
+          "name": "Guatemala",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "GIN",
+          "name": "Guinea",
+          "rate": 5.9
+        },
+        {
+          "iso_code": "GNB",
+          "name": "Guinea-Bissau",
+          "rate": 5
+        },
+        {
+          "iso_code": "GUY",
+          "name": "Guyana",
+          "rate": 25
+        },
+        {
+          "iso_code": "HTI",
+          "name": "Haiti",
+          "rate": 1.5
+        },
+        {
+          "iso_code": "HND",
+          "name": "Honduras",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "HUN",
+          "name": "Hungary",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "IND",
+          "name": "India",
+          "rate": 6.8
+        },
+        {
+          "iso_code": "IDN",
+          "name": "Indonesia",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "IRN",
+          "name": "Iran, Islamic Rep.",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "IRQ",
+          "name": "Iraq",
+          "rate": 6.3
+        },
+        {
+          "iso_code": "JAM",
+          "name": "Jamaica",
+          "rate": 2
+        },
+        {
+          "iso_code": "JOR",
+          "name": "Jordan",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "JPN",
+          "name": "Jpan",
+          "rate": 1.2
+        },
+        {
+          "iso_code": "KAZ",
+          "name": "Kazakhstan",
+          "rate": 4.8
+        },
+        {
+          "iso_code": "KEN",
+          "name": "Kenya",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "KIR",
+          "name": "Kiribati",
+          "rate": 2.4
+        },
+        {
+          "iso_code": "",
+          "name": "Kosovo",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "KWT",
+          "name": "Kuwait",
+          "rate": 3
+        },
+        {
+          "iso_code": "KGZ",
+          "name": "Kyrgyz Republic",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "LAO",
+          "name": "Lao PDR",
+          "rate": 4.8
+        },
+        {
+          "iso_code": "LBN",
+          "name": "Lebanon",
+          "rate": null
+        },
+        {
+          "iso_code": "LSO",
+          "name": "Lesotho",
+          "rate": 2.8
+        },
+        {
+          "iso_code": "LBR",
+          "name": "Liberia",
+          "rate": 5
+        },
+        {
+          "iso_code": "LBY",
+          "name": "Libya",
+          "rate": null
+        },
+        {
+          "iso_code": "MDG",
+          "name": "Madagascar",
+          "rate": 5.1
+        },
+        {
+          "iso_code": "MWI",
+          "name": "Malawi",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "MYS",
+          "name": "Malaysia",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "MDV",
+          "name": "Maldives",
+          "rate": 12
+        },
+        {
+          "iso_code": "MLI",
+          "name": "Mali",
+          "rate": 5
+        },
+        {
+          "iso_code": "MHL",
+          "name": "Marshall Islands",
+          "rate": 2.5
+        },
+        {
+          "iso_code": "MRT",
+          "name": "Mauritania",
+          "rate": 6.4
+        },
+        {
+          "iso_code": "MUS",
+          "name": "Mauritius",
+          "rate": 4.2
+        },
+        {
+          "iso_code": "MEX",
+          "name": "Mexico",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "FSM",
+          "name": "Micronesia, Fed. Sts.",
+          "rate": 3
+        },
+        {
+          "iso_code": "MDA",
+          "name": "Moldova",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "MNG",
+          "name": "Mongolia",
+          "rate": 6.2
+        },
+        {
+          "iso_code": "MNE",
+          "name": "Montenegro",
+          "rate": 4.8
+        },
+        {
+          "iso_code": "MAR",
+          "name": "Morocco",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "MOZ",
+          "name": "Mozambique",
+          "rate": 9.6
+        },
+        {
+          "iso_code": "MMR",
+          "name": "Myanmar",
+          "rate": null
+        },
+        {
+          "iso_code": "NAM",
+          "name": "Namibia",
+          "rate": 1.5
+        },
+        {
+          "iso_code": "NRU",
+          "name": "Nauru",
+          "rate": 0.8
+        },
+        {
+          "iso_code": "NPL",
+          "name": "Nepal",
+          "rate": 4.7
+        },
+        {
+          "iso_code": "NIC",
+          "name": "Nicaragua",
+          "rate": 2.5
+        },
+        {
+          "iso_code": "NER",
+          "name": "Niger",
+          "rate": 9.4
+        },
+        {
+          "iso_code": "NGA",
+          "name": "Nigeria",
+          "rate": 2.8
+        },
+        {
+          "iso_code": "MKD",
+          "name": "North Macedonia",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "OMN",
+          "name": "Oman",
+          "rate": 4.1
+        },
+        {
+          "iso_code": "PAK",
+          "name": "Pakistan",
+          "rate": 4
+        },
+        {
+          "iso_code": "PLW",
+          "name": "Palau",
+          "rate": 14
+        },
+        {
+          "iso_code": "PAN",
+          "name": "Panama",
+          "rate": 5
+        },
+        {
+          "iso_code": "PNG",
+          "name": "Papua New Guinea",
+          "rate": 3
+        },
+        {
+          "iso_code": "PRY",
+          "name": "Paraguay",
+          "rate": 3.9
+        },
+        {
+          "iso_code": "PER",
+          "name": "Peru",
+          "rate": 3
+        },
+        {
+          "iso_code": "PHL",
+          "name": "Philippines",
+          "rate": 5.7
+        },
+        {
+          "iso_code": "POL",
+          "name": "Poland",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "QAT",
+          "name": "Qatar",
+          "rate": 4.9
+        },
+        {
+          "iso_code": "ROU",
+          "name": "Romania",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "RUS",
+          "name": "Russia",
+          "rate": 1.8
+        },
+        {
+          "iso_code": "RWA",
+          "name": "Rwanda",
+          "rate": 7.8
+        },
+        {
+          "iso_code": "WSM",
+          "name": "Samoa",
+          "rate": 3
+        },
+        {
+          "iso_code": "STP",
+          "name": "Sao Tome and Principe",
+          "rate": 3.3
+        },
+        {
+          "iso_code": "SAU",
+          "name": "Saudi Arabia",
+          "rate": 2.3
+        },
+        {
+          "iso_code": "SEN",
+          "name": "Senegal",
+          "rate": 9.2
+        },
+        {
+          "iso_code": "",
+          "name": "Serbia",
+          "rate": 4
+        },
+        {
+          "iso_code": "SYC",
+          "name": "Seychelles",
+          "rate": 6.8
+        },
+        {
+          "iso_code": "SLE",
+          "name": "Sierra Leone",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "SLB",
+          "name": "Solomon Islands",
+          "rate": 4.4
+        },
+        {
+          "iso_code": "ZAF",
+          "name": "South Africa",
+          "rate": 1.5
+        },
+        {
+          "iso_code": "SSD",
+          "name": "South Sudan",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "LKA",
+          "name": "Sri Lanka",
+          "rate": 2.2
+        },
+        {
+          "iso_code": "LCA",
+          "name": "St. Lucia",
+          "rate": 7.1
+        },
+        {
+          "iso_code": "VCT",
+          "name": "St. Vincent and the Grenadines",
+          "rate": 6.1
+        },
+        {
+          "iso_code": "SDN",
+          "name": "Sudan",
+          "rate": 5
+        },
+        {
+          "iso_code": "SUR",
+          "name": "Suriname",
+          "rate": 2.1
+        },
+        {
+          "iso_code": "TJK",
+          "name": "Tajikistan",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "TZA",
+          "name": "Tanzania",
+          "rate": 5.9
+        },
+        {
+          "iso_code": "THA",
+          "name": "Thailand",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "",
+          "name": "Timor-Leste",
+          "rate": 4.3
+        },
+        {
+          "iso_code": "TGO",
+          "name": "Togo",
+          "rate": 6.2
+        },
+        {
+          "iso_code": "TON",
+          "name": "Tonga",
+          "rate": 3.3
+        },
+        {
+          "iso_code": "TTO",
+          "name": "Trinidad and Tobago",
+          "rate": null
+        },
+        {
+          "iso_code": "TUN",
+          "name": "Tunisia",
+          "rate": 3.3
+        },
+        {
+          "iso_code": "TUR",
+          "name": "Turkey",
+          "rate": 3
+        },
+        {
+          "iso_code": "TKM",
+          "name": "Turkmenistan",
+          "rate": null
+        },
+        {
+          "iso_code": "TUV",
+          "name": "Tuvalu",
+          "rate": 3.8
+        },
+        {
+          "iso_code": "UGA",
+          "name": "Uganda",
+          "rate": 5.5
+        },
+        {
+          "iso_code": "UKR",
+          "name": "Ukraine",
+          "rate": 3.5
+        },
+        {
+          "iso_code": "ARE",
+          "name": "United Arab Emirates",
+          "rate": 2.9
+        },
+        {
+          "iso_code": "USA",
+          "name": "United States",
+          "rate": 2.6
+        },
+        {
+          "iso_code": "URY",
+          "name": "Uruguay",
+          "rate": 2.5
+        },
+        {
+          "iso_code": "UZB",
+          "name": "Uzbekistan",
+          "rate": 5.8
+        },
+        {
+          "iso_code": "VUT",
+          "name": "Vanuatu",
+          "rate": 4.1
+        },
+        {
+          "iso_code": "VEN",
+          "name": "Venezuela, RB",
+          "rate": null
+        },
+        {
+          "iso_code": "VNM",
+          "name": "Vietnam",
+          "rate": 6.5
+        },
+        {
+          "iso_code": "",
+          "name": "West Bank and Gaza",
+          "rate": 3.4
+        },
+        {
+          "iso_code": "ZMB",
+          "name": "Zambia",
+          "rate": 4.5
+        },
+        {
+          "iso_code": "ZWE",
+          "name": "Zimbabwe",
+          "rate": 4.2
+        }
+      ]
+    }
+  }
