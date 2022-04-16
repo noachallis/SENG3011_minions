@@ -5,7 +5,7 @@ import { dates } from '../toggles/slider/dates';
 import { SliderComponent } from "../toggles/slider/slider";
 import { GlobeFactory } from "./components/GlobeFactory"
 import { Toggle } from "../toggles/vaccineToggle/toggle"
-import NavBar from "../NavBar";
+import {NavBar, finalState} from "../NavBar";
 
 
 function Globe() {
@@ -92,13 +92,21 @@ function Globe() {
     return () => clearInterval(intervalIdRef.current);
   }, [sliderPlaying]);
 
+  const navBarLayerSelect = (finalState : finalState) => {
+    console.log(finalState)
+    if (finalState["upper"] == "Vaccination Rates") {
+      setVaccine(true)
+    } else {
+      setVaccine(false)
+    }
+  }
 
   const totalCases = dateData.total_cases
   const percentVaccinated = (dateData.people_fully_vaccinated / dateData.world_population * 100).toFixed(0)
 
   return (
     <div className="Wrapper">
-      <NavBar/>
+      <NavBar updateGlobe={navBarLayerSelect}/>
       <div className="Globe">
         <GlobeFactory vaccineEnabled={vaccineEnabled} countries={countries} dateData={dateData}/>
       </div>
