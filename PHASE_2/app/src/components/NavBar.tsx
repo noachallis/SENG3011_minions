@@ -3,16 +3,11 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import Switch, { SwitchProps } from '@mui/material/Switch';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import { ChevronLeft } from '@mui/icons-material';
-import { FormControl, FormHelperText, Grid, InputLabel, MenuItem, Select, SelectChangeEvent, Typography } from '@mui/material';
+import { FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectChangeEvent} from '@mui/material';
 
 interface props {
   updateGlobe: (finalState:finalState) => void
@@ -20,12 +15,17 @@ interface props {
 export type finalState = {
   base: string,
   upper: string,
+  region: string,
   hasError: boolean
 };
 
 export const NavBar: React.FC<props> = ({updateGlobe}) => {
   // select dropdown options / can customise or change these
   const allSelectOptions = ["None", "COVID-19 Cases", "Vaccination Rates", "Hospitalisations", "Deaths"]
+  const defaultBaseSelectOptions = ["COVID-19 Cases", "Vaccination Rates", "Hospitalisations", "Deaths"]
+  
+  const whoRegionSelectOptions = ["None", "Africa (AFR)", "Americas (AMR)", "South-East Asia (SEAR)", "Europe (EUR)", "Eastern Mediterranean (EMR)", "Western Pacific (WPR)"]
+  const continentSelectOptions = ["None", "North and Central America", "South America", "Europe", "Africa", "Asia", "Oceania"]
 
   // nav bar outside settings
   const [open, setOpen] = React.useState(false);
@@ -38,7 +38,12 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
   const [upperLayerSelect, setUpperLayerSelect] = React.useState({value: "None", error: false});
   // final state select is what gets passed to the updateglobe so it can update layers of globe in Globe.tsx
   // TODO: update this with default values we want e.g. COVID-19 and vaccination
-  const [finalStateSelect, setFinalStateSelect] = React.useState({base: "COVID-19 Cases", upper: "", hasError:false})
+  const [finalStateSelect, setFinalStateSelect] = React.useState({base: "COVID-19 Cases", upper: "", region: "", hasError:false})
+
+  const [baseSelectOptions, setBaseSelectOptions] = React.useState(defaultBaseSelectOptions)
+  const [upperSelectOptions, setUpperSelectOptions] = React.useState(remove_element_from_array("COVID-19 Cases", allSelectOptions))
+
+  const [regionSelect, setRegionSelect] = React.useState("None")
 
   const handleBaseLayerChange = (event: SelectChangeEvent) => {
     // if base layer new value is same as other select value, then show error (can't select two options)
@@ -51,7 +56,9 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
     } else {
       // update both with new value and no error
       setBaseLayerSelect({value: newValue, error: false});
-      setFinalStateSelect({base: newValue, upper: upperLayerSelect["value"], hasError: false})
+      setFinalStateSelect({base: newValue, upper: upperLayerSelect["value"], region: regionSelect, hasError: false})
+      // update upper select options
+      setUpperSelectOptions(remove_element_from_array(newValue, allSelectOptions))
     }
   };
 
@@ -63,9 +70,16 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
       setFinalStateSelect({...finalStateSelect, hasError:true})
     } else {
       setUpperLayerSelect({value: newValue, error: false});
-      setFinalStateSelect({base: baseLayerSelect["value"], upper: newValue, hasError: false})
+      setFinalStateSelect({base: baseLayerSelect["value"], upper: newValue, region: regionSelect, hasError: false})
+      setBaseSelectOptions(remove_element_from_array(newValue, defaultBaseSelectOptions))
     }
   };
+
+  const handleRegionSelectChange = (event:SelectChangeEvent) => {
+    const newValue = event.target.value;
+    setRegionSelect(newValue);
+    setFinalStateSelect({...finalStateSelect, region: newValue})
+  }
 
   // handle click of save layer changes
   const handleSaveClick = () =>{
@@ -95,9 +109,8 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
         label="BaseLayer"
         onChange={handleBaseLayerChange}
         className='MuiSelect-select'
-        defaultValue='defaultSelect'
       >
-        {remove_element_from_array("None", allSelectOptions).map((selectOption) => (
+        {baseSelectOptions.map((selectOption) => (
             <MenuItem value={selectOption}>
               {selectOption}
             </MenuItem>
@@ -117,15 +130,34 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
         label="UpperLayer"
         onChange={handleUpperLayerChange}
         className='MuiSelect-select'
-        defaultValue='defaultSelect'
       >
-        {allSelectOptions.map((option) => (
+        {upperSelectOptions.map((option) => (
             <MenuItem value={option}>
               {option}
             </MenuItem>
           ))}
       </Select>
       {upperLayerSelect["error"] && <FormHelperText>Cannot have same dataset selected</FormHelperText>}
+    </FormControl>
+    )
+  }
+  const createRegionSelect = () => {
+    return (
+      <FormControl fullWidth>
+      <InputLabel id="region">Region Select</InputLabel>
+      <Select
+        id="RegionSelect"
+        value={regionSelect}
+        label="RegionSelect"
+        onChange={handleRegionSelectChange}
+        className='MuiSelect-select'
+      >
+        {continentSelectOptions.map((optionOne) => (
+            <MenuItem value={optionOne}>
+              {optionOne}
+            </MenuItem>
+          ))}
+      </Select>
     </FormControl>
     )
   }
@@ -142,6 +174,9 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
         </ListItem>
         <ListItem>
           {createUpperLayerSelect()}
+        </ListItem>
+        <ListItem>
+          {createRegionSelect()}
         </ListItem>
       </List>
     </Box>
