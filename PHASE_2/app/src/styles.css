@@ -110,9 +110,6 @@ div .scene-tooltip {
   display: flex;
   justify-content: center;
 }
-div .MuiPaper-root {
-  width:300px;
-}
 
 .infoBar {
   width:25%;
