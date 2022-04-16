@@ -80,7 +80,6 @@ div .scene-tooltip {
   font-family: "Verdana", sans-serif;
 }
 
-
 .flags {
   width: 40px;
   position: fixed;
@@ -91,6 +90,28 @@ div .scene-tooltip {
 
 .flagEmoji{
   font-size: 35px;
+}
+
+.navBarChevron {
+  display: flex;
+  justify-content: right;
+  padding-right: 1%;
+}
+
+.NavBar-Main {
+  top: 5%;
+  left: 2%;
+  display: flex;
+  position: fixed;
+  z-index: 5;
+}
+
+.saveButton {
+  display: flex;
+  justify-content: center;
+}
+div .MuiPaper-root {
+  width:300px;
 }
 
 .infoBar {
