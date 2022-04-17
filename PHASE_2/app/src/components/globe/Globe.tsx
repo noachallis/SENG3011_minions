@@ -126,7 +126,7 @@ function Globe() {
           <p className="statsOverview">{getWord('total_cases', language)}: {totalCases} &emsp;&emsp; {getWord('pop_vacced', language)}: {percentVaccinated}%</p>
           <SliderComponent currentIndex={currentIndex} dates={dates} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={dates.length - 1} handleChange={handleChange}/>
           <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/>
-          <LanguageToggle setLanguage={setLanguage}/>
+          <LanguageToggle setLanguage={setLanguage} language={language}/>
         </div>
         </>
       

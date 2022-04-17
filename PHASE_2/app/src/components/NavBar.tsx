@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { ChevronLeft } from '@mui/icons-material';
 import { FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectChangeEvent} from '@mui/material';
+import { makeStyles } from '@material-ui/core/styles';
 
 interface props {
   updateGlobe: (finalState:finalState) => void
@@ -20,6 +21,52 @@ export type finalState = {
 };
 
 export const NavBar: React.FC<props> = ({updateGlobe}) => {
+
+  // styling
+  const color = "white";
+  const useStyles = makeStyles({
+    text: {
+      color : "white"
+    },
+    customOutline: {
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "white"
+      },
+      "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+        borderColor: "white"
+      },
+      "& .MuiOutlinedInput-input": {
+        color: "white"
+      },
+      "& .MuiInputLabel-root": {
+        color: "white"
+      },
+      "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+        borderColor: "white"
+      },
+      "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input": {
+        color: "white"
+      },
+      "& .MuiInputLabel-root.Mui-focused": {
+        color: "white"
+      },
+      "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+        borderColor: "white"
+      },
+      "& .MuiSelect-icon": {
+        fill: "white"
+      }
+    },
+    paper: {
+      "& .MuiDrawer-paperAnchorLeft": {
+        background: 'black'
+      }
+    }
+  });
+
+  const classes = useStyles();
+
+
   // select dropdown options / can customise or change these
   const allSelectOptions = ["None", "COVID-19 Cases", "Vaccination Rates", "Hospitalisations", "Deaths"]
   const defaultBaseSelectOptions = ["COVID-19 Cases", "Vaccination Rates", "Hospitalisations", "Deaths"]
@@ -101,7 +148,7 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
 
   const createBaseLayerSelect = () => {
     return (
-      <FormControl fullWidth error={baseLayerSelect["error"]}>
+      <FormControl fullWidth error={baseLayerSelect["error"]} classes={{ root: classes.customOutline }}>
       <InputLabel id="BaseLayer">Base Layer</InputLabel>
       <Select
         id="BaseLayerSelect"
@@ -122,7 +169,7 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
   }
   const createUpperLayerSelect = () => {
     return (
-      <FormControl fullWidth error={upperLayerSelect["error"]}>
+      <FormControl fullWidth error={upperLayerSelect["error"]} classes={{ root: classes.customOutline }}>
       <InputLabel id="upperLayer">Upper Layer</InputLabel>
       <Select
         id="UpperLayerSelect"
@@ -143,7 +190,7 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
   }
   const createRegionSelect = () => {
     return (
-      <FormControl fullWidth>
+      <FormControl fullWidth classes={{ root: classes.customOutline }}>
       <InputLabel id="region">Region Select</InputLabel>
       <Select
         id="RegionSelect"
@@ -195,6 +242,7 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
         />
       </IconButton>
       <Drawer
+        classes={{ root: classes.paper }}
         anchor={'left'}
         open={open}
         onClose={toggleDrawer(false)}
