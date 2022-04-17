@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo, useRef } from "react";
 import { LanguageToggle } from "../toggles/languages/languages";
 import { getWord } from '../toggles/languages/translator';
-import { dates } from "../toggles/slider/AllDates";
+import { AllDates } from "../toggles/slider/AllDates";
 import { SliderComponent } from "../toggles/slider/slider";
 import { GlobeFactory } from "./components/GlobeFactory"
 import { Toggle } from "../toggles/vaccineToggle/toggle"
@@ -28,7 +28,7 @@ function Globe() {
       }
     }]
   });
-  const [date, setDates ] =  useState<Array<string>>(dates);
+  const [date, setDates ] =  useState<Array<string>>(AllDates);
   const [currentIndex, setCurrentDate] = useState(date.length-1);
   const [vaccineEnabled, setVaccine] = useState(true);
   const [sliderPlaying, setsliderPlaying] = useState(false);
@@ -124,7 +124,7 @@ function Globe() {
             />
           </div>
           <p className="statsOverview">{getWord('total_cases', language)}: {totalCases} &emsp;&emsp; {getWord('pop_vacced', language)}: {percentVaccinated}%</p>
-          <SliderComponent currentIndex={currentIndex} dates={dates} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={dates.length - 1} handleChange={handleChange}/>
+          <SliderComponent currentIndex={currentIndex} dates={date} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={date.length - 1} handleChange={handleChange}/>
           <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/>
           <LanguageToggle setLanguage={setLanguage} language={language}/>
         </div>
