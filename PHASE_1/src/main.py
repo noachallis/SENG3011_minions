@@ -4,6 +4,7 @@ from slowapi.util import get_remote_address
 from src.router import global_outbreak_router
 from src.router import covid_data_router
 from src.open_api.docs import *
+from fastapi.middleware.cors import CORSMiddleware
 
 """
     Core Application
@@ -20,7 +21,16 @@ app.include_router(covid_data_router.router)
 # limiter = Limiter(key_func=get_remote_address)
 # app.state.limiter = limiter
 # app.add_exception_handler(500, _rate_limit_exceeded_handler)
+origins = ["*"]
 
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 async def root():

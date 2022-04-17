@@ -4,16 +4,22 @@ import { Line } from "./graphs/lineGraph"
 import { DarkMode } from "./graphs/DarkMode"
 
 interface props {
-
+    countries : Array<string>
 }
 
-export const InfoBar : React.FC = () => {
+export const InfoBar : React.FC<props> = ({countries}) => {
 
-    return (
-        <div>
-            <Box className="infoBar" >
-                <DarkMode/>
-            </Box>
-        </div>
-    )
+    if (countries.length > 0 ){
+        return (
+            <div>
+                {countries.map((country) => {
+                    <p>{country}</p>
+                })}
+                <Box className="infoBar" >
+                    <DarkMode/>
+                </Box>
+            </div>
+        )
+    }
+    return (<></>)
 }

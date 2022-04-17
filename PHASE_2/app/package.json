@@ -10,6 +10,7 @@
     "@mui/icons-material": "^5.6.0",
     "@mui/material": "^5.5.3",
     "@types/react-router-dom": "5.1.7",
+    "axios": "^0.26.1",
     "cypress": "^9.5.3",
     "d3": "^7.4.2",
     "react": "17.0.0",

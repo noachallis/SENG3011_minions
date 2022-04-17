@@ -46,13 +46,13 @@ async def covid_date(
     date: str = Query(..., description="The date in the format yyyy-mm-dd", ),
 ):
     dates = db.covidReports.distinct('date') 
-    if not error_handler.validate_date(date):
-        response.status_code = status.HTTP_400_BAD_REQUEST
-        return error_handler.get_error(
-            400,
-            "Date has to be in the following format yyyy-MM-dd and less than or equal to "
-            + dates[len(dates)-1],
-        )
+    # if not error_handler.validate_date(date):
+    #     response.status_code = status.HTTP_400_BAD_REQUEST
+    #     return error_handler.get_error(
+    #         400,
+    #         "Date has to be in the following format yyyy-MM-dd and less than or equal to "
+    #         + dates[len(dates)-1],
+    #     )
     
     data = db.covidReports.find({ "date" : date}, {'_id': 0})
 
