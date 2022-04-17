@@ -15,16 +15,15 @@ export const LanguageToggle : React.FC<props> = ({setLanguage, language}) => {
     setLanguage(newValue)
   };
 
-  const color = "white";
   const useStyles = makeStyles({
     text: {
-      color : color
+      color : "white"
     },
     customOutline: {
       "& .MuiOutlinedInput-notchedOutline": {
         borderColor: "white"
       },
-      "& .hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
         borderColor: "white"
       },
       "& .MuiOutlinedInput-input": {
@@ -44,17 +43,11 @@ export const LanguageToggle : React.FC<props> = ({setLanguage, language}) => {
       },
       "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
         borderColor: "white"
+      },
+      "& .MuiSelect-icon": {
+        fill: "white"
       }
     },
-    inputLabelRoot: {
-      color: color,
-    },
-    icon: {
-      fill: color
-    },
-    input: {
-      color: color
-    }
   });
 
   const classes = useStyles();
@@ -65,19 +58,13 @@ export const LanguageToggle : React.FC<props> = ({setLanguage, language}) => {
           variant="outlined"
           classes={{ root: classes.customOutline }}
         >
-        <InputLabel classes={{root: classes.inputLabelRoot}} id="demo-simple-select-label">Language</InputLabel>
+        <InputLabel id="demo-simple-select-label">Language</InputLabel>
         <Select
           color="primary"
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={language}
           label="Language"
-          inputProps={{
-            classes: {
-              icon: classes.icon,
-              className: classes.input  
-            }
-          }}
           onChange={handleChange}
         >
           <MenuItem value={"en"}>English</MenuItem>

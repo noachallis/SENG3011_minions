@@ -92,6 +92,7 @@ div .scene-tooltip {
   display: flex;
   justify-content: right;
   padding-right: 1%;
+  color: white;
 }
 
 .NavBar-Main {
