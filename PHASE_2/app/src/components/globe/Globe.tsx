@@ -35,7 +35,7 @@ function Globe() {
   const intervalIdRef = useRef(0);
   const [language, setLanguage] = useState('en');
   const [activeCountries, setActiveCountries] = useState<Array<string>>([]);
-  const [dateCache, setDateCache] = useState({})
+  // const [dateCache, setDateCache] = useState({})
 
   useEffect(() => {
     // load map
