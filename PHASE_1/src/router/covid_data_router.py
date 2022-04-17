@@ -132,13 +132,12 @@ def getMap(covid_data: dict, date: str):
     year_month = date[0:7]
     unemploymentRates = getUnemployment(year_month)
 
+    world_data = {}
+
     for d in covid_data:
         country = {}
         country['iso_code'] = d['iso_code']
         properties = {}
-
-        if d['iso_code'] == "OWID_WRL":
-            world_data_collected = True
 
         ## Total Cases
         try :
@@ -176,36 +175,44 @@ def getMap(covid_data: dict, date: str):
         except Exception:
             properties['total_deaths'] = 0
         
-        # GDP
-        try :
-            countryGDP = next(item for item in GDPGrowthRates if item["iso_code"] == d['iso_code'])
-            properties['gdp_growth_rate'] = countryGDP["rate"]
-        except Exception:
-            properties['gdp_growth_rate'] = 0
-
-        # Unemployment 
-        if unemploymentRates != []:
+        if d['iso_code'] != "OWID_WRL":
+            # GDP
             try :
-                countryUnemployment = next(item for item in unemploymentRates if item["iso_code"] == d['iso_code'])
-                properties['unemployment_rate'] = countryUnemployment["rate"]
+                countryGDP = next(item for item in GDPGrowthRates if item["iso_code"] == d['iso_code'])
+                if countryGDP["rate"] == null:
+                    properties['gdp_growth_rate'] = 0
+                else:
+                    properties['gdp_growth_rate'] = countryGDP["rate"]
             except Exception:
-                properties['unemployment_rate'] = 0
-        else:
-            properties['unemployment_rate'] = 0
+                properties['gdp_growth_rate'] = 0
 
-        country['properties'] = properties   
-        country_stats.append(country)
+            # Unemployment 
+            if unemploymentRates != []:
+                try :
+                    countryUnemployment = next(item for item in unemploymentRates if item["iso_code"] == d['iso_code'])
+                    properties['unemployment_rate'] = countryUnemployment["rate"]
+                except Exception:
+                    properties['unemployment_rate'] = 0
+            else:
+                properties['unemployment_rate'] = 0
+
+        if d['iso_code'] == "OWID_WRL":
+            world_data_collected = True
+            world_data = properties
+        else:
+            country['properties'] = properties   
+            country_stats.append(country)
 
     if not world_data_collected:
-        country = {}
-        country['iso_code'] = "OWID_WRL"
-        properties = {}
-        properties['total_cases'] = 0
-        properties['people_fully_vaccinated'] = 0
-        properties['population'] = 0
-        properties['total_deaths'] = 0
-        country['properties'] = properties   
-        country_stats.append(country)
+        dateData['total_cases'] = 0
+        dateData['people_fully_vaccinated'] = 0
+        dateData['population'] = 0
+        dateData['total_deaths'] = 0
+    else: 
+        dateData['total_cases'] = world_data['total_cases']
+        dateData['people_fully_vaccinated'] = world_data['people_fully_vaccinated']
+        dateData['population'] = world_data['population']
+        dateData['total_deaths'] = world_data['total_deaths']
 
     dateData['country_stats'] = country_stats                    
     return dateData
