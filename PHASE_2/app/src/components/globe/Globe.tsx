@@ -2,29 +2,33 @@ import React, { useEffect, useState, useMemo, useRef } from "react";
 import { LanguageToggle } from "../toggles/languages/languages";
 import { getWord } from '../toggles/languages/translator';
 import { AllDates } from "../toggles/slider/AllDates";
+import { AllData } from "./data"
 import { SliderComponent } from "../toggles/slider/slider";
 import { GlobeFactory } from "./components/GlobeFactory"
 import { Toggle } from "../toggles/vaccineToggle/toggle"
 import {NavBar, finalState} from "../NavBar";
 import { InfoBar } from "./components/InfoBar"
 
+
 function Globe() {
   
   const [countries, setCountries] = useState({ 
     features: []
   });
-  
   const [dateData, setDateData] = useState({ 
     total_cases: 0,
     people_fully_vaccinated: 0,
-    world_population: 0,
+    population: 0,
+    total_deaths : 0,
     country_stats: [{
       iso_code: '',
       properties: {
         total_cases: 0,
         people_fully_vaccinated: 0,
-        total_vaccinations_per_hundred: 0,
-        population: 0
+        population: 0,
+        total_deaths : 0,
+        gdp_growth_rate : 0,
+        unemployment_rate : 0
       }
     }]
   });
@@ -35,11 +39,13 @@ function Globe() {
   const intervalIdRef = useRef(0);
   const [language, setLanguage] = useState('en');
   const [activeCountries, setActiveCountries] = useState<Array<string>>([]);
-  // const [dateCache, setDateCache] = useState({})
+  const [regions, setActiveRegions] = useState<Array<string>>([]);
+  const [allData, setAllData] = useState<any>(AllData)
+  const [layerOne, setLayerOne] = useState<string>("COVID-19 Cases")
+  const [layerTwo, setLayerTwo] = useState<string>("")
 
   useEffect(() => {
     // load map
-    console.warn("fetching2")
     fetch('datasets/countries.geojson')
     .then(res => res.json())
     .then(setCountries)
@@ -48,22 +54,31 @@ function Globe() {
 
 
   useEffect(() => {
-    console.warn("fetching3")
-
     // load data
-    fetch('datasets/2022-03-01_map.json')
-    .then(res => res.json())
-    .then(setDateData)
-    .catch((e) => console.error(e));
+    const first_date = "2022-04-15"
+    const data = allData[first_date]
+    setDateData(data)
+    // fetch('datasets/2022-03-01_map.json')
+    // .then(res => res.json())
+    // .then(setDateData)
+    // .catch((e) => console.error(e));
   }, []);
   
 
   const getDateData = (newDate : string) => {
-    const path = "http://127.0.0.1:8000/v1/covid/date?date=" + newDate 
-    fetch(path)
-    .then(async (res) => await res.json())
-    .then(setDateData)
-    .catch((e) => console.error(e));
+    const type = typeof allData
+    console.log(type)
+    // const str: keyof (typeof allData) = newDate;
+
+    if (allData[newDate]) {
+      const data = allData[newDate]
+      setDateData(data)
+    }
+    // const path = "http://127.0.0.1:8000/v1/covid/date?date=" + newDate 
+    // fetch(path)
+    // .then(async (res) => res.json())
+    // .then(setDateData)
+    // .catch((e) => console.error(e));
   }
 
   const handleChange = (event: Event, newIndex: number | number[]) => {
@@ -91,8 +106,7 @@ function Globe() {
       intervalIdRef.current = window.setInterval(() => {
         handleChangeAuto(index);
         index = (index + 1) % date.length
-      }, 500);
-
+      }, 250);
     }
     return () => clearInterval(intervalIdRef.current);
   }, [sliderPlaying]);
@@ -107,11 +121,16 @@ function Globe() {
   }
 
   const totalCases = dateData.total_cases
-  const percentVaccinated = (dateData.people_fully_vaccinated / dateData.world_population * 100).toFixed(0)
+  const percentVaccinated = (dateData.people_fully_vaccinated / dateData.population * 100).toFixed(0)
     return (
       (
         <>
-        <NavBar updateGlobe={navBarLayerSelect}/>
+        <NavBar 
+          updateGlobe={navBarLayerSelect} 
+          setLayerOne={setLayerOne}
+          setLayerTwo={setLayerTwo}
+          setActiveRegions={setActiveRegions}
+        />
         <InfoBar countries={activeCountries}/>
         <div className="Wrapper">
           <div className="Globe">
@@ -121,11 +140,14 @@ function Globe() {
               dateData={dateData}
               activeCountries={activeCountries}
               setActiveCountries={setActiveCountries}
+              layerOne={layerOne} 
+              layerTwo={layerTwo}
+              regions={regions}
             />
           </div>
           <p className="statsOverview">{getWord('total_cases', language)}: {totalCases} &emsp;&emsp; {getWord('pop_vacced', language)}: {percentVaccinated}%</p>
           <SliderComponent currentIndex={currentIndex} dates={date} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={date.length - 1} handleChange={handleChange}/>
-          <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/>
+          {/* <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/> */}
           <LanguageToggle setLanguage={setLanguage} language={language}/>
         </div>
         </>

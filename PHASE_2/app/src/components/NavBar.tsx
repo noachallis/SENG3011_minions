@@ -12,6 +12,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 interface props {
   updateGlobe: (finalState:finalState) => void
+  setLayerOne: (layer : string) => void
+  setLayerTwo: (layer : string) => void
+  setActiveRegions : (regions : Array<string>) => void
 }
 export type finalState = {
   base: string,
@@ -20,59 +23,56 @@ export type finalState = {
   hasError: boolean
 };
 
-export const NavBar: React.FC<props> = ({updateGlobe}) => {
-
-  // styling
-  const color = "white";
-  const useStyles = makeStyles({
-    text: {
-      color : "white"
+const useStyles = makeStyles({
+  text: {
+    color : "white"
+  },
+  customOutline: {
+    "& .MuiOutlinedInput-notchedOutline": {
+      borderColor: "white"
     },
-    customOutline: {
-      "& .MuiOutlinedInput-notchedOutline": {
-        borderColor: "white"
-      },
-      "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-        borderColor: "white"
-      },
-      "& .MuiOutlinedInput-input": {
-        color: "white"
-      },
-      "& .MuiInputLabel-root": {
-        color: "white"
-      },
-      "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-        borderColor: "white"
-      },
-      "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input": {
-        color: "white"
-      },
-      "& .MuiInputLabel-root.Mui-focused": {
-        color: "white"
-      },
-      "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
-        borderColor: "white"
-      },
-      "& .MuiSelect-icon": {
-        fill: "white"
-      }
+    "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: "white"
     },
-    paper: {
-      "& .MuiDrawer-paperAnchorLeft": {
-        background: 'black'
-      }
+    "& .MuiOutlinedInput-input": {
+      color: "white"
+    },
+    "& .MuiInputLabel-root": {
+      color: "white"
+    },
+    "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: "white"
+    },
+    "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input": {
+      color: "white"
+    },
+    "& .MuiInputLabel-root.Mui-focused": {
+      color: "white"
+    },
+    "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+      borderColor: "white"
+    },
+    "& .MuiSelect-icon": {
+      fill: "white"
     }
-  });
+  },
+  paper: {
+    "& .MuiDrawer-paperAnchorLeft": {
+      background: 'black'
+    }
+  }
+});
+
+export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, setActiveRegions}) => {
 
   const classes = useStyles();
-
 
   // select dropdown options / can customise or change these
   const allSelectOptions = ["None", "COVID-19 Cases", "Vaccination Rates", "Hospitalisations", "Deaths"]
   const defaultBaseSelectOptions = ["COVID-19 Cases", "Vaccination Rates", "Hospitalisations", "Deaths"]
   
   const whoRegionSelectOptions = ["None", "Africa (AFR)", "Americas (AMR)", "South-East Asia (SEAR)", "Europe (EUR)", "Eastern Mediterranean (EMR)", "Western Pacific (WPR)"]
-  const continentSelectOptions = ["None", "North and Central America", "South America", "Europe", "Africa", "Asia", "Oceania"]
+  const continentSelectOptions = ["None", "North America", "South America", "Europe", "Africa", "Asia", "Oceania"]
 
   // nav bar outside settings
   const [open, setOpen] = React.useState(false);
@@ -101,6 +101,7 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
       // don't update finalselect values but update with error
       setFinalStateSelect({...finalStateSelect, hasError:true})
     } else {
+
       // update both with new value and no error
       setBaseLayerSelect({value: newValue, error: false});
       setFinalStateSelect({base: newValue, upper: upperLayerSelect["value"], region: regionSelect, hasError: false})
@@ -134,7 +135,15 @@ export const NavBar: React.FC<props> = ({updateGlobe}) => {
       console.log("Cannot have two of the same datasets in two layers")
     } else {
       console.log("Successful save will now show updated globe")
+      console.log(finalStateSelect)
       updateGlobe(finalStateSelect)
+      setLayerOne(finalStateSelect.base)
+      setLayerTwo(finalStateSelect.upper)
+      if (finalStateSelect.region != "None") {
+        setActiveRegions([finalStateSelect.region])
+      } else {
+        setActiveRegions([])
+      }
     }
   };
   // function to alter selection array
