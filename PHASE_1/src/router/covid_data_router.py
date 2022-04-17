@@ -50,7 +50,7 @@ async def covid_date(
         response.status_code = status.HTTP_404_NOT_FOUND
         return error_handler.get_error(404, "Not Found")
             
-    return getMap(data)
+    return getMap(data, date)
 
 @router.get(
     "/v1/covid/dates",
@@ -103,22 +103,42 @@ async def covid_update_data(
 
     return {"Data Update Successful"}
 
-def getMap(covid_data: dict):
+def getGDP(year: str):
+    __location__ = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    pathname = os.path.join(__location__, 'gdpgrowth.json')
+    with open(pathname, 'r') as gdp_data:
+        data = json.load(gdp_data)
+    return data[year]["countryGDPGrowthRates"]
+
+def getUnemployment(year_month: str):
+    __location__ = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+    pathname = os.path.join(__location__, 'unemploymentRate.json')
+    with open(pathname, 'r') as unemployment_data:
+        data = json.load(unemployment_data)
+    return data[year_month]["countryUnemploymentRates"]
+    
+def getMap(covid_data: dict, date: str):
     dateData = {}
-    dateData['total_cases'] = 0
-    total_cases = 0
-    dateData['people_fully_vaccinated'] = 0
-    people_fully_vaccinated = 0
-    dateData['world_population'] = 0
-    world_population = 0
-    dateData['world_population'] = 0
-    total_deaths = 0
-    dateData['total_deaths'] = 0
     country_stats = []
+    world_data_collected = False
+
+    # Get GDP Growth
+    year = date[0:4]
+    GDPGrowthRates = getGDP(year)
+
+    # Get Unemployment Rates
+    year_month = date[0:7]
+    unemploymentRates = getUnemployment(year_month)
+
     for d in covid_data:
         country = {}
         country['iso_code'] = d['iso_code']
         properties = {}
+
+        if d['iso_code'] == "OWID_WRL":
+            world_data_collected = True
 
         ## Total Cases
         try :
@@ -126,7 +146,6 @@ def getMap(covid_data: dict):
                 properties['total_cases'] = 0
             else:
                 properties['total_cases'] = float(d['total_cases'])
-                total_cases = total_cases + float(d['total_cases'])
         except Exception:
             properties['total_cases'] = 0
         
@@ -136,7 +155,6 @@ def getMap(covid_data: dict):
                 properties['people_fully_vaccinated'] = 0
             else:
                 properties['people_fully_vaccinated'] = float(d['people_fully_vaccinated'])
-                people_fully_vaccinated = people_fully_vaccinated + float(d['people_fully_vaccinated'])
         except Exception:
             properties['people_fully_vaccinated'] = 0
                 
@@ -146,7 +164,6 @@ def getMap(covid_data: dict):
                 properties['population'] = 0
             else:
                 properties['population'] = float(d['population'])
-                world_population = world_population + float(d['population'])
         except Exception:
             properties['population'] = 0
 
@@ -156,36 +173,39 @@ def getMap(covid_data: dict):
                 properties['total_deaths'] = 0
             else:
                 properties['total_deaths'] = float(d['total_deaths'])
-                total_deaths = total_deaths + float(d['total_deaths'])
         except Exception:
             properties['total_deaths'] = 0
         
-       
-
-        # Fortnight Cases
-
-
-        # Fortnight Vaccinated
-
-        
-        # Fortnight Deaths
-
-        
-        # Fortnight Hospitilisations
+        # GDP
         try :
-            if (is_nan(d['hosp_patients_per_million'])):
-                properties['hosp_patients_per_million'] = 0
-            else:
-                properties['hosp_patients_per_million'] = float(d['hosp_patients_per_million'])
+            countryGDP = next(item for item in GDPGrowthRates if item["iso_code"] == d['iso_code'])
+            properties['gdp_growth_rate'] = countryGDP["rate"]
         except Exception:
-            properties['hosp_patients_per_million'] = 0
+            properties['gdp_growth_rate'] = 0
+
+        # Unemployment 
+        if unemploymentRates != []:
+            try :
+                countryUnemployment = next(item for item in unemploymentRates if item["iso_code"] == d['iso_code'])
+                properties['unemployment_rate'] = countryUnemployment["rate"]
+            except Exception:
+                properties['unemployment_rate'] = 0
+        else:
+            properties['unemployment_rate'] = 0
 
         country['properties'] = properties   
         country_stats.append(country)
 
+    if not world_data_collected:
+        country = {}
+        country['iso_code'] = "OWID_WRL"
+        properties = {}
+        properties['total_cases'] = 0
+        properties['people_fully_vaccinated'] = 0
+        properties['population'] = 0
+        properties['total_deaths'] = 0
+        country['properties'] = properties   
+        country_stats.append(country)
+
     dateData['country_stats'] = country_stats                    
-    dateData['total_cases'] = total_cases
-    dateData['people_fully_vaccinated'] = people_fully_vaccinated
-    dateData['world_population'] = world_population
-    dateData['total_deaths'] = total_deaths
     return dateData
