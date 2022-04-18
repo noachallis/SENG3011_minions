@@ -116,7 +116,7 @@ div .scene-tooltip {
   top: 15%;
   right: 5%;
   display: flex;
-  background-color: #050505;
+  /* background-color: #050505; */
   border-radius: 10px;
 }
 

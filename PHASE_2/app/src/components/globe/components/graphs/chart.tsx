@@ -3,10 +3,15 @@ import { useChartConfig } from "./config";
 import React from "react";
 import { AxisOptions, Chart } from "react-charts";
 
-export const DarkMode : React.FC = () => {
+interface props {
+  countries : Array<string>
+}
+
+export const DarkMode : React.FC<props> = ({countries}) => {
   const { data, randomizeData } = useChartConfig({
     series: 10,
     dataType: "time",
+    countries : countries
   });
 
   const primaryAxis = React.useMemo<
@@ -31,9 +36,6 @@ export const DarkMode : React.FC = () => {
 
   return (
     <>
-      {/* <button onClick={randomizeData}>Randomize Data</button> */}
-      <br />
-      <br />
       <ResizableBox
         style={{
           background: "rgba(0, 27, 45, 0.9)",

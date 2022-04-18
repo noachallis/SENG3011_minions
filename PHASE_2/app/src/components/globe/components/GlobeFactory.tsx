@@ -86,8 +86,10 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
     );
 
     const elevateCountries = (polygon : any ) => {
+      console.log(polygon)
       const country = polygon.properties.NAME
-
+      const iso = polygon.properties.ADM0_A3
+      console.log(iso)
       if (!country){
         return
       }
