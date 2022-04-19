@@ -28,7 +28,8 @@ function Globe() {
         population: 0,
         total_deaths : 0,
         gdp_growth_rate : 0,
-        unemployment_rate : 0
+        unemployment_rate : 0,
+        stringency_index : 0,
       }
     }]
   });
