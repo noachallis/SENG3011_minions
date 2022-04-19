@@ -125,13 +125,13 @@ function Globe() {
     return (
       (
         <>
-
         <div className="Wrapper">
         <NavBar 
           updateGlobe={navBarLayerSelect} 
           setLayerOne={setLayerOne}
           setLayerTwo={setLayerTwo}
           setActiveRegions={setActiveRegions}
+          setLanguage={setLanguage}
           language={language}
         />
         <Legend language={language}/>
@@ -152,7 +152,7 @@ function Globe() {
           <p className="statsOverview">{getWord('total_cases', language)}: {totalCases} &emsp;&emsp; {getWord('pop_vacced', language)}: {percentVaccinated}%</p>
           <SliderComponent currentIndex={currentIndex} dates={date} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={date.length - 1} handleChange={handleChange}/>
           {/* <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/> */}
-          <LanguageToggle setLanguage={setLanguage} language={language}/>
+          {/* <LanguageToggle setLanguage={setLanguage} language={language}/> */}
         </div>
         </>
       

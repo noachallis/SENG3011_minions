@@ -10,12 +10,14 @@ import { ChevronLeft } from '@mui/icons-material';
 import { FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectChangeEvent} from '@mui/material';
 import { makeStyles } from '@material-ui/core/styles';
 import { getWord } from "./toggles/languages/translator"
+import {LanguageToggle} from "./toggles/languages/languages"
 
 interface props {
   updateGlobe: (finalState:finalState) => void
   setLayerOne: (layer : string) => void
   setLayerTwo: (layer : string) => void
   setActiveRegions : (regions : Array<string>) => void
+  setLanguage : (language : string) => void
   language: string
 }
 
@@ -66,7 +68,7 @@ const useStyles = makeStyles({
   }
 });
 
-export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, setActiveRegions, language}) => {
+export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, setActiveRegions, setLanguage, language}) => {
 
   const classes = useStyles();
 
@@ -241,6 +243,9 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
         </ListItem>
         <ListItem>
           {createRegionSelect()}
+        </ListItem>
+        <ListItem>
+          <LanguageToggle setLanguage={setLanguage} language={language}/>
         </ListItem>
       </List>
     </Box>

@@ -9,12 +9,14 @@ interface props {
 }
 
 export const InfoBar : React.FC<props> = ({countries}) => {
-
     if (countries.length > 0 ){
         return (
             <div>
-                <Box className="infoBarRight" sx={{ flexGrow: 1}}>
+                <Box className="infoBarRight" sx={{ flexGrow: 1, background: 'rgba(0,0,0,0.8)'}}>
                     <Grid container spacing={2}>
+                        <Grid item xs={12} sx = {{color: "white", fontSize: 14, textAlign: "center"}}>
+                            Country Comparison Insights
+                        </Grid>
                         <Grid item xs={12} className="graphBox">
                             <DarkMode countries={countries} rahul={"COVID-19 Cases"} title={"COVID-19 Cases vs. Time"}/>
                         </Grid>
