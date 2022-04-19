@@ -68,15 +68,39 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
           case "Vaccination Rates":
             return country.properties.people_fully_vaccinated / Math.max(1, country.properties.population)
           case "Stringency Index":
-            return country.properties.stringency_index
+            console.log(country.properties.stringency_index)
+            return country.properties.stringency_index * 100000
           case "Deaths":
             const population = Math.max(1, country.properties.population)
             const scaled = population / 100
             return country.properties.total_deaths / scaled
           case "GDP Growth Rate":
-            return country.properties.gdp_growth_rate
+            let n = country.properties.gdp_growth_rate
+            if (n <= -20.0)
+              return n * 800000 * -1
+            else if ( n <= -10.0)
+              return n * 400000 * -1
+            else if ( n <= 0)
+              return n * 200000 * -1
+            else if ( n <= 5.0)
+              return n * 25000
+            else if ( n <= 10.0)
+              return n * 12500
+            else if ( n <= 15.0)
+              return n * 6750
+            return n * 3500
           case "Unemployment Rate":
-            return country.properties.unemployment_rate
+            let t = country.properties.unemployment_rate
+            console.log("unemployment")
+            if (t <= 2.0)
+              return t * 500
+            else if ( t <= 5.0)
+              return t * 1000
+            else if ( t <= 7.0)
+              return t * 200000 
+            else if ( t <= 10.0)
+              return t * 400000
+            return t * 800000
           default: 
             return 0
         }
@@ -113,7 +137,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
 
     const maxVal = useMemo(
       () => Math.max(...countries.features.map(setBase)),
-      [countries]
+      [countries, layerOne, layerTwo]
     );
 
     const elevateCountries = (polygon : any ) => {
