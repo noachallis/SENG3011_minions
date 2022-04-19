@@ -16,7 +16,9 @@ interface props {
   setLayerOne: (layer : string) => void
   setLayerTwo: (layer : string) => void
   setActiveRegions : (regions : Array<string>) => void
+  language: string
 }
+
 export type finalState = {
   base: string,
   upper: string,
@@ -64,13 +66,13 @@ const useStyles = makeStyles({
   }
 });
 
-export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, setActiveRegions}) => {
+export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, setActiveRegions, language}) => {
 
   const classes = useStyles();
 
   // select dropdown options / can customise or change these
-  const allSelectOptions = ["None", "COVID-19 Cases", "Vaccination Rates", "Hospitalisations", "Deaths"]
-  const defaultBaseSelectOptions = ["COVID-19 Cases", "Vaccination Rates", "Hospitalisations", "Deaths"]
+  const allSelectOptions = ["None", "COVID-19 Cases", "Vaccination Rates", "Stringency Index", "Deaths", "GDP Growth Rate","Unemployment Rate"]
+  const defaultBaseSelectOptions = ["COVID-19 Cases", "Vaccination Rates", "Stringency Index", "Deaths", "GDP Growth Rate","Unemployment Rate"]
   
   const whoRegionSelectOptions = ["None", "Africa (AFR)", "Americas (AMR)", "South-East Asia (SEAR)", "Europe (EUR)", "Eastern Mediterranean (EMR)", "Western Pacific (WPR)"]
   const continentSelectOptions = ["None", "North America", "South America", "Europe", "Africa", "Asia", "Oceania"]
@@ -159,7 +161,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
   const createBaseLayerSelect = () => {
     return (
       <FormControl fullWidth error={baseLayerSelect["error"]} classes={{ root: classes.customOutline }}>
-      <InputLabel id="BaseLayer">Base Layer</InputLabel>
+      <InputLabel id="BaseLayer">{getWord('base_layer', language)}</InputLabel>
       <Select
         id="BaseLayerSelect"
         value={baseLayerSelect["value"]}
@@ -180,7 +182,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
   const createUpperLayerSelect = () => {
     return (
       <FormControl fullWidth error={upperLayerSelect["error"]} classes={{ root: classes.customOutline }}>
-      <InputLabel id="upperLayer">Upper Layer</InputLabel>
+      <InputLabel id="upperLayer">{getWord('upper_layer', language)}</InputLabel>
       <Select
         id="UpperLayerSelect"
         value={upperLayerSelect["value"]}
@@ -201,7 +203,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
   const createRegionSelect = () => {
     return (
       <FormControl fullWidth classes={{ root: classes.customOutline }}>
-      <InputLabel id="region">Region Select</InputLabel>
+      <InputLabel id="region">{getWord('region_select', language)}</InputLabel>
       <Select
         id="RegionSelect"
         value={regionSelect}
@@ -270,7 +272,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
         
         {list()}
         <Box className="saveButton" >
-          <Button sx={{width: 200}} color="error" variant="contained" onClick={handleSaveClick}>Save Changes</Button>
+          <Button sx={{width: 200}} color="error" variant="contained" onClick={handleSaveClick}>{getWord('save_changes', language)}</Button>
         </Box>
       </Drawer>
     </div>

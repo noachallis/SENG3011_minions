@@ -133,6 +133,7 @@ function Globe() {
           setLayerOne={setLayerOne}
           setLayerTwo={setLayerTwo}
           setActiveRegions={setActiveRegions}
+          language={language}
         />
         <InfoBar countries={activeCountries}/>
           <div className="Globe">
@@ -145,6 +146,7 @@ function Globe() {
               layerOne={layerOne} 
               layerTwo={layerTwo}
               regions={regions}
+              language={language}
             />
           </div>
           <p className="statsOverview">{getWord('total_cases', language)}: {totalCases} &emsp;&emsp; {getWord('pop_vacced', language)}: {percentVaccinated}%</p>
