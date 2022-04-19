@@ -124,3 +124,25 @@ div .scene-tooltip {
   width: 100px;
   height: 50px
 }
+
+.legend {
+  left: 1%;
+  bottom: 1%;
+  display: flex;
+  position: fixed;
+  z-index: 5;
+  width: 300px;
+}
+
+.legendItem {
+  color: white;
+}
+.legendButton {
+  left: 5%;
+  bottom: 5%;
+}
+.legendHeader {
+  color: white;
+  font-family: "Verdana", sans-serif;
+
+}

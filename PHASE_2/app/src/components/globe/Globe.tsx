@@ -7,7 +7,8 @@ import { SliderComponent } from "../toggles/slider/slider";
 import { GlobeFactory } from "./components/GlobeFactory"
 import { Toggle } from "../toggles/vaccineToggle/toggle"
 import {NavBar, finalState} from "../NavBar";
-import { InfoBar } from "./components/InfoBar"
+import { InfoBar } from "./components/InfoBar";
+import {Legend} from "../Legend";
 
 
 function Globe() {
@@ -52,7 +53,6 @@ function Globe() {
     .catch((e) => console.error(e));
   }, []);
 
-
   useEffect(() => {
     // load data
     const first_date = "2022-04-15"
@@ -64,7 +64,6 @@ function Globe() {
     // .catch((e) => console.error(e));
   }, []);
   
-
   const getDateData = (newDate : string) => {
     const type = typeof allData
     console.log(type)
@@ -131,6 +130,7 @@ function Globe() {
           setLayerTwo={setLayerTwo}
           setActiveRegions={setActiveRegions}
         />
+        <Legend/>
         <InfoBar countries={activeCountries}/>
         <div className="Wrapper">
           <div className="Globe">
