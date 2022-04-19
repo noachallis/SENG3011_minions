@@ -103,6 +103,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
       setBaseLayerSelect({value: newValue, error: true})
       // don't update finalselect values but update with error
       setFinalStateSelect({...finalStateSelect, hasError:true})
+      setLayerOne(newValue)
     } else {
 
       // update both with new value and no error
@@ -110,6 +111,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
       setFinalStateSelect({base: newValue, upper: upperLayerSelect["value"], region: regionSelect, hasError: false})
       // update upper select options
       setUpperSelectOptions(remove_element_from_array(newValue, allSelectOptions))
+      setLayerOne(newValue)
     }
   };
 
@@ -119,10 +121,12 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
     if (newValue == baseLayerSelect["value"]) {
       setUpperLayerSelect({value: newValue, error: true})
       setFinalStateSelect({...finalStateSelect, hasError:true})
+      setLayerTwo(newValue || "None")
     } else {
       setUpperLayerSelect({value: newValue, error: false});
       setFinalStateSelect({base: baseLayerSelect["value"], upper: newValue, region: regionSelect, hasError: false})
       setBaseSelectOptions(remove_element_from_array(newValue, defaultBaseSelectOptions))
+      setLayerTwo(newValue || "None")
     }
   };
 
@@ -271,9 +275,9 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
         </Box>
         
         {list()}
-        <Box className="saveButton" >
+        {/* <Box className="saveButton" >
           <Button sx={{width: 200}} color="error" variant="contained" onClick={handleSaveClick}>{getWord('save_changes', language)}</Button>
-        </Box>
+        </Box> */}
       </Drawer>
     </div>
   );
