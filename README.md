@@ -18,3 +18,14 @@ yarn start - if in working dir
 yarn dev - if in app dir
 
 Running in linux VM with node v14.18.1
+
+
+Running production read app for demos / deployment
+
+in PHASE_2/app folder run the following
+
+yarn build
+
+yarn global add serve
+
+serve -s build

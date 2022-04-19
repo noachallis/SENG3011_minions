@@ -14,6 +14,11 @@ interface props {
     regions: Array<string>
 }
 
+/**
+ * 
+ * TODO: fix vaccine data
+ */
+
 export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateData, 
   activeCountries, setActiveCountries, layerOne, layerTwo, regions}) => {
     let colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateBlues);
@@ -21,17 +26,26 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
     const [hoverD, setHoverD] = useState();
     // let [colorScale, setColor] = useState<d3.ScaleSequential<string, never>>();
     if (layerOne == "Deaths") {
-      console.log("here")
+      colorScale = d3.scaleSequentialSqrt(d3.interpolateBlues)
+    } else if (layerOne == "COVID-19 Cases") {
+      colorScale = d3.scaleSequentialSqrt(d3.interpolateReds)
+    } else if (layerOne == "Vaccination Rates") {
       colorScale = d3.scaleSequentialSqrt(d3.interpolateGreens)
+    } else if (layerOne == "Hospitalisations") {
+      colorScale = d3.scaleSequentialSqrt(d3.interpolateOranges)
     }
-    // useEffect(() => {
-    //   if (layerOne == "Deaths") {
-    //     setColor(d3.scaleSequentialSqrt(d3.interpolateGreens))
-    //   }
-    // }, [layerOne])
-    if (layerOne == "Deaths") {
-      colorScale = d3.scaleSequentialSqrt(d3.interpolateGreens)
+
+    if (layerTwo == "Deaths") {
+      colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateBlues)
+    } else if (layerTwo == "COVID-19 Cases") {
+      colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateReds)
+    } else if (layerTwo == "Vaccination Rates") {
+      colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateGreens)
+    } else if (layerTwo == "Hospitalisations") {
+      colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateOranges)
     }
+
+
     const setLayers = (layer : any, country : any) => {
 
 
@@ -60,7 +74,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
 
     const elevate = (feat : any, base: boolean) => {
       // console.log(feat.properties) 
-      const name = feat.properties.SOVEREIGNT
+      const name = feat.properties.ADM0_A3
       const region = feat.properties.CONTINENT
       if (activeCountries.includes(name) || regions.includes(region)){
         return base ? 0.6 : 0.64
@@ -86,8 +100,8 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
     );
 
     const elevateCountries = (polygon : any ) => {
-      const country = polygon.properties.NAME
-
+      const country = polygon.properties.ADM0_A3
+      console.log(country)
       if (!country){
         return
       }
@@ -105,8 +119,9 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
     if (maxVal > 0) {
         colorScale.domain([0, maxVal]);
     }
+    console.log(layerTwo)
     if (activeCountries.length > 0 || regions.length > 0) {
-      if (layerTwo) {
+      if (layerTwo != "None") {
         return (
         <ReactGlobe
             globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
@@ -154,7 +169,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
         )
       }
     }
-    else if (layerTwo) {
+    else if (layerTwo != "None") {
         return (
         <ReactGlobe
             globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"

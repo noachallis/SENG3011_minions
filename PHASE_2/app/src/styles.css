@@ -26,7 +26,7 @@
 
 .Globe {
   z-index: 1;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .Slider {
@@ -85,7 +85,7 @@ div .scene-tooltip {
   position: fixed;
   top: 3%;
   right: 1%;
-  z-index: 1;
+  z-index: 4;
 }
 
 .navBarChevron {
@@ -108,16 +108,42 @@ div .scene-tooltip {
   justify-content: center;
 }
 
-.infoBar {
-  width:25%;
-  height: 70%;
+.infoBarRight {
+  width:30%;
+  height: 85%;
   position: fixed;
   z-index: 3;
-  top: 15%;
   right: 5%;
+  top: 10%;
+  bottom: 10%;
   display: flex;
-  background-color: #050505;
   border-radius: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.infoBarLeft {
+  width:30%;
+  height: 85%;
+  position: fixed;
+  z-index: 3;
+  left: 2%;
+  top: 10%;
+  bottom: 10%;
+  display: flex;
+  border-radius: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+.infoBarRight::-webkit-scrollbar {
+  display: none;
+}
+
+.infoBarLeft::-webkit-scrollbar {
+  display: none;
 }
 
 .graph {

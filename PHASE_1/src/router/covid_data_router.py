@@ -19,7 +19,6 @@ def is_nan(value):
 """
 router = APIRouter()
 
-
 """
     GLOBAL CLASSES and Variables. Used as "Services to the API"
 """
@@ -28,7 +27,6 @@ total = db.covidReports.count()
 string_total = str(total)
 error_handler = validator.Validator()
 current_date = datetime.datetime.now().strftime("%Y-%m-%d")
-
 
 @router.get(
     "/v1/covid/date",
@@ -106,44 +104,18 @@ async def covid_update_data(
 def getGDP(year: str):
     __location__ = os.path.realpath(
     os.path.join(os.getcwd(), os.path.dirname(__file__)))
-    pathname = os.path.join(__location__, 'gdpgrowth.json')
+    pathname = os.path.join(__location__, 'gdpGrowthIMF-WEO.json')
     with open(pathname, 'r') as gdp_data:
         data = json.load(gdp_data)
     return data[year]["countryGDPGrowthRates"]
 
-def getUnemployment(year_month: str):
+def getUnemployment(year: str):
     __location__ = os.path.realpath(
     os.path.join(os.getcwd(), os.path.dirname(__file__)))
-    pathname = os.path.join(__location__, 'unemploymentRate.json')
+    pathname = os.path.join(__location__, 'unemploymentILOAnnual.json')
     with open(pathname, 'r') as unemployment_data:
         data = json.load(unemployment_data)
-    return data[year_month]["countryUnemploymentRates"]
-
-# def getHospitilisations(date: str, d : dict, iso_code: str):
-#     hospRate = 0
-#     try :
-#         if (not is_nan(d['weekly_hosp_admissions'])):
-#             hospRate = float(d['weekly_hosp_admissions'])
-#             print("*")
-#             print(hospRate)
-#     except Exception:
-#         pass
-
-#     # get previous forntight date
-#     back_date = fortnight_back_dates[date]
-#     back_data = db.covidReports.find({ "date" : back_date}, {'_id': 0})
-#     if back_data:
-#         for country in back_data:
-#             if country['iso_code'] == iso_code:
-#                 try :
-#                     if (not is_nan(country['weekly_hosp_admissions'])):
-#                         hospRate = hospRate + float(back_data['weekly_hosp_admissions'])
-#                         print("ME")
-#                         print(hospRate)
-#                 except Exception:
-#                     pass
-
-    return hospRate
+    return data[year]["countryUnemploymentRates"]
 
 def getMap(covid_data: dict, date: str):
     dateData = {}
@@ -155,15 +127,21 @@ def getMap(covid_data: dict, date: str):
     GDPGrowthRates = getGDP(year)
 
     # Get Unemployment Rates
-    year_month = date[0:7]
-    unemploymentRates = getUnemployment(year_month)
+    year = date[0:4]
+    unemploymentRates = getUnemployment(year)
 
     world_data = {}
+
+    iso_codes = full_countries_list.copy()
 
     for d in covid_data:
         country = {}
         country['iso_code'] = d['iso_code']
         properties = {}
+
+        # include all countries economic data
+        if d['iso_code'] in iso_codes:
+            iso_codes.remove(d['iso_code'])
 
         ## Total Cases
         try :
@@ -210,15 +188,15 @@ def getMap(covid_data: dict, date: str):
         except Exception:
             properties['stringency_index'] = 0
 
-        ##  Total Hospitilsations
-        # properties['forntightly_hosp_admissions'] = getHospitilisations(date, d, d['iso_code'])
-
         if d['iso_code'] != "OWID_WRL":
             # GDP
             try:
                 countryGDP = next(item for item in GDPGrowthRates if item["iso_code"] == d['iso_code'])
                 if countryGDP['rate']:
-                    properties['gdp_growth_rate'] = countryGDP['rate']
+                    if countryGDP['rate'] == "no data":
+                        properties['gdp_growth_rate'] = 0
+                    else:
+                        properties['gdp_growth_rate'] = countryGDP['rate']
                 else:
                     properties['gdp_growth_rate'] = 0
             except Exception:
@@ -238,8 +216,43 @@ def getMap(covid_data: dict, date: str):
             world_data_collected = True
             world_data = properties
         else:
-            country['properties'] = properties   
+            country['properties'] = override_properties(properties,d['iso_code'],date)   
             country_stats.append(country)
+    
+    # Add missing country economic data
+    for missing_iso_code in iso_codes:
+        country = {}
+        country['iso_code'] = missing_iso_code
+        properties = {}
+        properties['total_cases'] = 0
+        properties['people_fully_vaccinated'] = 0
+        properties['population'] = 0
+        properties['total_deaths'] = 0
+        properties['stringency_index'] = 0
+        try:
+            countryGDP = next(item for item in GDPGrowthRates if item["iso_code"] == missing_iso_code)
+            if countryGDP['rate']:
+                if countryGDP['rate'] == "no data":
+                    properties['gdp_growth_rate'] = 0
+                else:
+                    properties['gdp_growth_rate'] = countryGDP['rate']
+            else:
+                properties['gdp_growth_rate'] = 0
+        except Exception:
+            properties['gdp_growth_rate'] = 0
+
+        # Unemployment 
+        if unemploymentRates != []:
+            try :
+                countryUnemployment = next(item for item in unemploymentRates if item["iso_code"] == missing_iso_code)
+                properties['unemployment_rate'] = float(countryUnemployment["rate"])
+            except Exception:
+                properties['unemployment_rate'] = 0
+        else:
+            properties['unemployment_rate'] = 0
+        country['properties'] = properties   
+        country_stats.append(country)
+
 
     if not world_data_collected:
         dateData['total_cases'] = 0
@@ -248,68 +261,267 @@ def getMap(covid_data: dict, date: str):
         dateData['total_deaths'] = 0
     else: 
         dateData['total_cases'] = world_data['total_cases']
-        dateData['people_fully_vaccinated'] = world_data['people_fully_vaccinated']
         dateData['population'] = world_data['population']
         dateData['total_deaths'] = world_data['total_deaths']
+        # missing data for 2022-04-15
+        if date == "2022-04-15":
+            dateData['people_fully_vaccinated'] = 4621794758.0
+        else:
+            dateData['people_fully_vaccinated'] = world_data['people_fully_vaccinated']
 
-    dateData['country_stats'] = country_stats                    
+    dateData['country_stats'] = country_stats
     return dateData
 
-fortnight_back_dates = {
-    "2020-01-01" : "2020-01-01",
-    "2020-01-15" : "2020-01-01",
-    "2020-02-01" : "2020-01-15",
-    "2020-02-15" : "2020-02-01",
-    "2020-03-01" : "2020-02-15",
-    "2020-03-15" : "2020-03-01",
-    "2020-04-01" : "2020-03-15",
-    "2020-04-15" : "2020-04-01",
-    "2020-05-01" : "2020-04-15",
-    "2020-05-15" : "2020-05-01",
-    "2020-06-01" : "2020-05-15",
-    "2020-06-15" : "2020-06-01",
-    "2020-07-01" : "2020-06-15",
-    "2020-07-15" : "2020-07-01",
-    "2020-08-01" : "2020-07-15",
-    "2020-08-15" : "2020-08-01",
-    "2020-09-01" : "2020-08-15",
-    "2020-09-15" : "2020-09-01",
-    "2020-10-01" : "2020-09-15",
-    "2020-10-15" : "2020-10-01",
-    "2020-11-01" : "2020-10-15",
-    "2020-11-15" : "2020-11-01",
-    "2020-12-01" : "2020-11-15",
-    "2020-12-15" : "2020-12-01",
-    "2021-01-01" : "2020-12-15",
-    "2021-01-15" : "2021-01-01",
-    "2021-02-01" : "2021-01-15",
-    "2021-02-15" : "2021-02-01",
-    "2021-03-01" : "2021-02-15",
-    "2021-03-15" : "2021-03-01",
-    "2021-04-01" : "2021-03-15",
-    "2021-04-15" : "2021-04-01",
-    "2021-05-01" : "2021-04-15",
-    "2021-05-15" : "2021-05-01",
-    "2021-06-01" : "2021-05-15",
-    "2021-06-15" : "2021-06-01",
-    "2021-07-01" : "2021-06-15",
-    "2021-07-15" : "2021-07-01",
-    "2021-08-01" : "2021-07-15",
-    "2021-08-15" : "2021-08-01",
-    "2021-09-01" : "2021-08-15",
-    "2021-09-15" : "2021-09-01",
-    "2021-10-01" : "2021-09-15",
-    "2021-10-15" : "2021-10-01",
-    "2021-11-01" : "2021-10-15",
-    "2021-11-15" : "2021-11-01",
-    "2021-12-01" : "2021-11-15",
-    "2021-12-15" : "2022-12-01",
-    "2022-01-01" : "2022-12-15",
-    "2022-01-15" : "2022-01-01",
-    "2022-02-01" : "2022-01-15",
-    "2022-02-15" : "2022-02-01",
-    "2022-03-01" : "2022-02-15",
-    "2022-03-15" : "2022-03-01",
-    "2022-04-01" : "2022-03-15",    
-    "2022-04-15" : "2022-04-01"
-}
+def override_properties(properties: dict, iso_code: str, date: str):
+    if (iso_code == "NZL" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 4070621
+    if (iso_code == "AUS" and date == "2022-01-01"):
+        properties['people_fully_vaccinated'] = 20003463
+
+    return properties
+
+
+full_countries_list = [
+  "AFG",
+  "OWID_AFR",
+  "ALB",
+  "DZA",
+  "AND",
+  "AGO",
+  "AIA",
+  "ATG",
+  "ARG",
+  "ARM",
+  "ABW",
+  "OWID_ASI",
+  "AUS",
+  "AUT",
+  "AZE",
+  "BHS",
+  "BHR",
+  "BGD",
+  "BRB",
+  "BLR",
+  "BEL",
+  "BLZ",
+  "BEN",
+  "BMU",
+  "BTN",
+  "BOL",
+  "BES",
+  "BIH",
+  "BWA",
+  "BRA",
+  "VGB",
+  "BRN",
+  "BGR",
+  "BFA",
+  "BDI",
+  "KHM",
+  "CMR",
+  "CAN",
+  "CPV",
+  "CYM",
+  "CAF",
+  "TCD",
+  "CHL",
+  "CHN",
+  "COL",
+  "COM",
+  "COG",
+  "COK",
+  "CRI",
+  "CIV",
+  "HRV",
+  "CUB",
+  "CUW",
+  "CYP",
+  "CZE",
+  "COD",
+  "DNK",
+  "DJI",
+  "DMA",
+  "DOM",
+  "ECU",
+  "EGY",
+  "SLV",
+  "GNQ",
+  "ERI",
+  "EST",
+  "SWZ",
+  "ETH",
+  "OWID_EUR",
+  "OWID_EUN",
+  "FRO",
+  "FLK",
+  "FJI",
+  "FIN",
+  "FRA",
+  "PYF",
+  "GAB",
+  "GMB",
+  "GEO",
+  "DEU",
+  "GHA",
+  "GIB",
+  "GRC",
+  "GRL",
+  "GRD",
+  "GUM",
+  "GTM",
+  "GGY",
+  "GIN",
+  "GNB",
+  "GUY",
+  "HTI",
+  "OWID_HIC",
+  "HND",
+  "HKG",
+  "HUN",
+  "ISL",
+  "IND",
+  "IDN",
+  "OWID_INT",
+  "IRN",
+  "IRQ",
+  "IRL",
+  "IMN",
+  "ISR",
+  "ITA",
+  "JAM",
+  "JPN",
+  "JEY",
+  "JOR",
+  "KAZ",
+  "KEN",
+  "KIR",
+  "OWID_KOS",
+  "KWT",
+  "KGZ",
+  "LAO",
+  "LVA",
+  "LBN",
+  "LSO",
+  "LBR",
+  "LBY",
+  "LIE",
+  "LTU",
+  "OWID_LIC",
+  "OWID_LMC",
+  "LUX",
+  "MAC",
+  "MDG",
+  "MWI",
+  "MYS",
+  "MDV",
+  "MLI",
+  "MLT",
+  "MHL",
+  "MRT",
+  "MUS",
+  "MEX",
+  "FSM",
+  "MDA",
+  "MCO",
+  "MNG",
+  "MNE",
+  "MSR",
+  "MAR",
+  "MOZ",
+  "MMR",
+  "NAM",
+  "NRU",
+  "NPL",
+  "NLD",
+  "NCL",
+  "NZL",
+  "NIC",
+  "NER",
+  "NGA",
+  "NIU",
+  "OWID_NAM",
+  "MKD",
+  "OWID_CYN",
+  "MNP",
+  "NOR",
+  "OWID_OCE",
+  "OMN",
+  "PAK",
+  "PLW",
+  "PSE",
+  "PAN",
+  "PNG",
+  "PRY",
+  "PER",
+  "PHL",
+  "PCN",
+  "POL",
+  "PRT",
+  "PRI",
+  "QAT",
+  "ROU",
+  "RUS",
+  "RWA",
+  "SHN",
+  "KNA",
+  "LCA",
+  "SPM",
+  "VCT",
+  "WSM",
+  "SMR",
+  "STP",
+  "SAU",
+  "SEN",
+  "SRB",
+  "SYC",
+  "SLE",
+  "SGP",
+  "SXM",
+  "SVK",
+  "SVN",
+  "SLB",
+  "SOM",
+  "ZAF",
+  "OWID_SAM",
+  "KOR",
+  "SSD",
+  "ESP",
+  "LKA",
+  "SDN",
+  "SUR",
+  "SWE",
+  "CHE",
+  "SYR",
+  "TWN",
+  "TJK",
+  "TZA",
+  "THA",
+  "TLS",
+  "TGO",
+  "TKL",
+  "TON",
+  "TTO",
+  "TUN",
+  "TUR",
+  "TKM",
+  "TCA",
+  "TUV",
+  "UGA",
+  "UKR",
+  "ARE",
+  "GBR",
+  "USA",
+  "VIR",
+  "OWID_UMC",
+  "URY",
+  "UZB",
+  "VUT",
+  "VAT",
+  "VEN",
+  "VNM",
+  "WLF",
+  "OWID_WRL",
+  "YEM",
+  "ZMB",
+  "ZWE"
+]

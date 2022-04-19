@@ -29,7 +29,8 @@ function Globe() {
         population: 0,
         total_deaths : 0,
         gdp_growth_rate : 0,
-        unemployment_rate : 0
+        unemployment_rate : 0,
+        stringency_index : 0,
       }
     }]
   });
@@ -43,7 +44,7 @@ function Globe() {
   const [regions, setActiveRegions] = useState<Array<string>>([]);
   const [allData, setAllData] = useState<any>(AllData)
   const [layerOne, setLayerOne] = useState<string>("COVID-19 Cases")
-  const [layerTwo, setLayerTwo] = useState<string>("")
+  const [layerTwo, setLayerTwo] = useState<string>("None")
 
   useEffect(() => {
     // load map
@@ -124,6 +125,8 @@ function Globe() {
     return (
       (
         <>
+
+        <div className="Wrapper">
         <NavBar 
           updateGlobe={navBarLayerSelect} 
           setLayerOne={setLayerOne}
@@ -132,7 +135,6 @@ function Globe() {
         />
         <Legend/>
         <InfoBar countries={activeCountries}/>
-        <div className="Wrapper">
           <div className="Globe">
             <GlobeFactory 
               vaccineEnabled={vaccineEnabled} 

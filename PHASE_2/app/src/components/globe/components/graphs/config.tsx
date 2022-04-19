@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { AllData } from "../../data"
 
 //
 
@@ -55,6 +56,47 @@ type TooltipGroupingMode = typeof options["tooltipGroupingMode"][number];
 
 const optionKeys = Object.keys(options) as (keyof typeof options)[];
 
+type god = Array<{
+  label: string,
+  data: Array<{
+      primary: Date,
+      secondary: number | null,
+      radius: undefined,
+  }>
+}>
+
+type jesus = Array<{
+    primary: Date,
+    secondary: number | null,
+    radius: undefined,
+}>
+
+interface props {
+  series: number
+  datums?: number
+  useR?: boolean
+  show?: (keyof typeof options)[]
+  count?: number
+  resizable?: boolean
+  canRandomize?: boolean
+  dataType?: DataType
+  elementType?: ElementType
+  primaryAxisType?: PrimaryAxisType
+  secondaryAxisType?: SecondaryAxisType
+  primaryAxisPosition?: PrimaryAxisPosition
+  secondaryAxisPosition?: SecondaryAxisPosition
+  primaryAxisStack?: boolean
+  secondaryAxisStack?: boolean
+  primaryAxisShow?: boolean
+  secondaryAxisShow?: boolean
+  tooltipAnchor?: TooltipAnchor
+  tooltipAlign?: TooltipAlign
+  interactionMode?: InteractionMode
+  tooltipGroupingMode?: TooltipGroupingMode
+  snapCursor?: boolean
+  countries : Array<string>
+}
+
 export function useChartConfig({
   series,
   datums = 10,
@@ -78,6 +120,9 @@ export function useChartConfig({
   interactionMode = "primary",
   tooltipGroupingMode = "primary",
   snapCursor = true,
+  countries = [],
+  rahul
+  // setData,
 }: {
   series: number;
   datums?: number;
@@ -101,7 +146,12 @@ export function useChartConfig({
   interactionMode?: InteractionMode;
   tooltipGroupingMode?: TooltipGroupingMode;
   snapCursor?: boolean;
+  countries : Array<string>,
+  rahul : string
 }) {
+
+  console.log(countries)
+
   const [state, setState] = React.useState({
     count,
     resizable,
@@ -122,20 +172,61 @@ export function useChartConfig({
     tooltipGroupingMode,
     snapCursor,
     datums,
-    data: makeDataFrom(dataType, series, datums, useR),
+    data: makeDataFrom(dataType, series, datums, countries, useR),
   });
-
+  const [allData, setAllData] = useState<any>(AllData)
+  function makeDataFrom(
+    dataType: DataType,
+    series: number,
+    datums: number,
+    countries : Array<string>,
+    useR?: boolean, 
+  ) {
+    console.log(countries)
+    let pleaseWork : god = []
+    for (let country of countries) {
+      let test : jesus = [{primary : new Date("2020-02-01"), secondary : 0, radius : undefined}]
+      let first = { label : country + " " + rahul, data : test}
+      for (let date in allData) {
+        let mini = { primary : new Date(date as string), secondary : 0, radius : undefined}
+        // const current_date = 
+        for (let y of allData[date].country_stats) {
+          if (y.iso_code == country) {
+            if (rahul == "covid"){
+              mini.secondary = y.properties.total_cases
+            } else if (rahul == "vaccine") {
+              mini.secondary = y.properties.people_fully_vaccinated
+            } else if (rahul == "population") {
+              mini.secondary = y.properties.population
+            } else if (rahul == "deaths") {
+              mini.secondary = y.properties.total_deaths
+            } else if (rahul == "gdp") {
+              mini.secondary = y.properties.gdp_growth_rate
+            } else if (rahul == "unemployment") {
+              mini.secondary = y.properties.unemployment_rate
+            }
+          }
+        }
+        test.push(mini)
+      }
+      pleaseWork.push(first)
+    }
+    // let rahul = { label : "Covid Australia", data : [] as any}
+    // setData(pleaseWork)
+    return pleaseWork
+  }
+  
   React.useEffect(() => {
     setState((old) => ({
       ...old,
-      data: makeDataFrom(dataType, series, datums, useR),
+      data: makeDataFrom(dataType, series, datums, countries, useR),
     }));
-  }, [count, dataType, datums, series, useR]);
+  }, [count, dataType, datums, series, countries, rahul, useR]);
 
   const randomizeData = () =>
     setState((old) => ({
       ...old,
-      data: makeDataFrom(dataType, series, datums, useR),
+      data: makeDataFrom(dataType, series, datums, countries, useR),
     }));
 
   const Options = optionKeys
@@ -172,74 +263,4 @@ export function useChartConfig({
   };
 }
 
-function makeDataFrom(
-  dataType: DataType,
-  series: number,
-  datums: number,
-  useR?: boolean
-) {
-  return [
-    ...new Array(5 || Math.max(Math.round(Math.random() * 5), 1)),
-  ].map((d, i) => makeSeries(i, dataType, datums, useR));
-}
 
-function makeSeries(
-  i: number,
-  dataType: DataType,
-  datums: number,
-  useR?: boolean
-) {
-  const start = 0;
-  const startDate = new Date();
-  startDate.setUTCHours(0);
-  startDate.setUTCMinutes(0);
-  startDate.setUTCSeconds(0);
-  startDate.setUTCMilliseconds(0);
-  // const length = 5 + Math.round(Math.random() * 15)
-  const length = datums;
-  const min = 0;
-  const max = 100;
-  const rMin = 2;
-  const rMax = 20;
-  const nullChance = 0;
-  return {
-    label: `Series ${i + 1}`,
-    data: [...new Array(length)].map((_, i) => {
-      let x;
-
-      if (dataType === "ordinal") {
-        x = `Ordinal Group ${start + i}`;
-      } else if (dataType === "time") {
-        x = new Date(startDate.getTime() + 60 * 1000 * 60 * 24 * i);
-      } else if (dataType === "linear") {
-        x =
-          Math.random() < nullChance
-            ? null
-            : min + Math.round(Math.random() * (max - min));
-      } else {
-        x = start + i;
-      }
-
-      const distribution = 1.1;
-
-      const y =
-        Math.random() < nullChance
-          ? null
-          : min + Math.round(Math.random() * (max - min));
-
-      const r = !useR
-        ? undefined
-        : rMax -
-          Math.floor(
-            Math.log(Math.random() * (distribution ** rMax - rMin) + rMin) /
-              Math.log(distribution)
-          );
-
-      return {
-        primary: x,
-        secondary: y,
-        radius: r,
-      };
-    }),
-  };
-}
