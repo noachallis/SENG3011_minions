@@ -152,6 +152,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
         setActiveRegions([])
       }
     }
+    setOpen(false)
   };
   // function to alter selection array
   function remove_element_from_array(element:string, array : Array<string>) {

@@ -2725,9 +2725,9 @@
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
 abab@^2.0.3, abab@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.5.tgz#c0b678fb32d60fc1219c784d6a826fe385aeb79a"
-  integrity sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.6.tgz#41b80f2c871d19686216b82309231cfd3cb3d291"
+  integrity sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==
 
 accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.8:
   version "1.3.8"
@@ -4079,6 +4079,17 @@ d3-chord@3:
   dependencies:
     d3-path "1 - 3"
 
+d3-color-legend@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/d3-color-legend/-/d3-color-legend-1.3.2.tgz#76bb06c570b71f8fc8867fc2f6efb41b623890e7"
+  integrity sha512-xsXWkAcW10ZS8VGSCVLgbktFGfBx7nXPA4Xgr2iSQp2e+9lP+lDSTMuv+eWEa8uDKeypYFZB51n3N5GTDUkxnw==
+  dependencies:
+    d3-selection "^2.0.0"
+    kapsule "^1.13.4"
+    svg-text-fit "^1.1.7"
+    svg-utils "^1.2.8"
+    tinycolor2 "^1.4.2"
+
 "d3-color@1 - 2":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/d3-color/-/d3-color-2.0.0.tgz#8d625cab42ed9b8f601a1760a389f7ea9189d62e"
@@ -4258,6 +4269,11 @@ d3-scale@^3.3.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/d3-selection/-/d3-selection-3.0.0.tgz#c25338207efa72cc5b9bd1458a1a41901f1e1b31"
   integrity sha512-fmTRWbNMmsmWq6xJV8D19U/gw/bwrHfNXxrIN+HfZgnzqTHp9jOmKMhsTUjXOJnZOdZY9Q28y4yebKzqDKlxlQ==
+
+d3-selection@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-selection/-/d3-selection-2.0.0.tgz#94a11638ea2141b7565f883780dabc7ef6a61066"
+  integrity sha512-XoGGqhLUN/W14NmaqcO/bb1nqjDAw5WtSYb2X8wiuQWvSZUsUVYsOSkOybUrNvcBjaywBdYPy03eXHMXjk9nZA==
 
 d3-shape@3:
   version "3.1.0"
@@ -7002,7 +7018,7 @@ jss@10.9.0, jss@^10.5.1:
     array-includes "^3.1.4"
     object.assign "^4.1.2"
 
-kapsule@^1.13:
+kapsule@^1.13, kapsule@^1.13.4:
   version "1.13.7"
   resolved "https://registry.yarnpkg.com/kapsule/-/kapsule-1.13.7.tgz#63d7e48ef7cf7232374dce53a3650a30d28610ee"
   integrity sha512-CKhyHyKyz5bYehAzz95U0ji5T9f4P0RXXPqQ2tGKjuTz3bJnHIUj8vCzGjnhFZ4XYtVT2wMvIq8D8Awb5rawcQ==
@@ -7372,9 +7388,9 @@ multicast-dns@^7.2.4:
     thunky "^1.0.2"
 
 nanoid@^3.3.1:
-  version "3.3.2"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.2.tgz#c89622fafb4381cd221421c69ec58547a1eec557"
-  integrity sha512-CuHBogktKwpm5g2sRgv83jEy2ijFzBwMoYA60orPDR7ynsLijJDqgsi4RDGj3OJpy3Ieb+LYwiRmIOGyytgITA==
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.3.3.tgz#fd8e8b7aa761fe807dba2d1b98fb7241bb724a25"
+  integrity sha512-p1sjXuopFs0xg+fPASzQ28agW1oHD7xDsd9Xkf3T15H3c/cifrFHVwrh74PdoklAPi+i7MdRsE47vm2r6JoB+w==
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -9558,6 +9574,23 @@ svg-parser@^2.0.2:
   resolved "https://registry.yarnpkg.com/svg-parser/-/svg-parser-2.0.4.tgz#fdc2e29e13951736140b76cb122c8ee6630eb6b5"
   integrity sha512-e4hG1hRwoOdRb37cIMSgzNsxyzKfayW6VOflrwvR+/bzrkyxY/31WkbgnQpgtrNp1SdpJvpUAGTa/ZoiPNDuRQ==
 
+svg-text-fit@^1.1.7:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/svg-text-fit/-/svg-text-fit-1.1.8.tgz#ee0b4b53df28feb3139b76a7467bbc34ee961fb0"
+  integrity sha512-uKYGn2FIr0wgXJAgfUxpFvreRQxp23wDJZ//RJTLUOzfURB9vohUgl/Tlb2Kqc8Zgea37TaB67u+ssX4QS6OMg==
+  dependencies:
+    kapsule "^1.13.4"
+
+svg-utils@^1.2.8:
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/svg-utils/-/svg-utils-1.2.9.tgz#2dd2998935ab389f69a80997bab8bd2a9ab006e1"
+  integrity sha512-OxbrZzueXPGdW7eniZW6o4WoYIXuSlLvr02f+RGItEwyZw/+0vwQZvHOK0hlRkiniW45oh5u7KvYIivKkpQ2CQ==
+  dependencies:
+    d3-array "^2.12.1"
+    d3-scale "^3.3.0"
+    d3-selection "^2.0.0"
+    kapsule "^1.13.4"
+
 svgo@^1.2.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-1.3.2.tgz#b6dc511c063346c9e415b81e43401145b96d4167"
@@ -9787,7 +9820,7 @@ tiny-warning@^1.0.0, tiny-warning@^1.0.2, tiny-warning@^1.0.3:
   resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
   integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
 
-tinycolor2@^1.4:
+tinycolor2@^1.4, tinycolor2@^1.4.2:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
   integrity sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==
