@@ -119,6 +119,8 @@ div .scene-tooltip {
   display: flex;
   border-radius: 10px;
   overflow-y: scroll;
+  font-family: "Verdana", sans-serif;
+  font-size: 12px;
   scrollbar-width: none;  /* Firefox */
 }
 

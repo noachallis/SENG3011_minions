@@ -134,7 +134,7 @@ function Globe() {
           setActiveRegions={setActiveRegions}
           language={language}
         />
-        <Legend/>
+        <Legend language={language}/>
         <InfoBar countries={activeCountries}/>
           <div className="Globe">
             <GlobeFactory 
