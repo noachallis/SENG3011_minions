@@ -125,6 +125,8 @@ function Globe() {
     return (
       (
         <>
+
+        <div className="Wrapper">
         <NavBar 
           updateGlobe={navBarLayerSelect} 
           setLayerOne={setLayerOne}
@@ -132,7 +134,6 @@ function Globe() {
           setActiveRegions={setActiveRegions}
         />
         <InfoBar countries={activeCountries}/>
-        <div className="Wrapper">
           <div className="Globe">
             <GlobeFactory 
               vaccineEnabled={vaccineEnabled} 

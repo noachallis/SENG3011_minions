@@ -5,6 +5,7 @@ import { AxisOptions, Chart } from "react-charts";
 
 interface props {
   countries : Array<string>
+  rahul: string
 }
 
 
@@ -18,14 +19,13 @@ type god = Array<{
 }>
 
 
-export const DarkMode : React.FC<props> = ({countries}) => {
-  let val = useChartConfig({
+export const DarkMode : React.FC<props> = ({countries, rahul}) => {
+  const {data, randomizeData} = useChartConfig({
     series: 10,
     dataType: "time",
     countries : countries,
-    type : "covid"
+    rahul : rahul
   });
-  let data = val.data
 
   const primaryAxis = React.useMemo<
     AxisOptions<typeof data[number]["data"][number]>
@@ -47,17 +47,9 @@ export const DarkMode : React.FC<props> = ({countries}) => {
     []
   );
  
-  
-  if (val.data.length > 0 ) {
+  console.log("The length of data ", data.length)
     return (
       <>
-        <ResizableBox
-          style={{
-            background: "rgba(0, 27, 45, 0.9)",
-            padding: ".5rem",
-            borderRadius: "5px",
-          }}
-        >
           <div style={{ width: "100%", height: "100%" }}>
             <Chart
               options={{
@@ -68,9 +60,6 @@ export const DarkMode : React.FC<props> = ({countries}) => {
               }}
             />
           </div>
-        </ResizableBox>
       </>
     );
-  }
-  return <></>
 }

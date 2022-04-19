@@ -121,7 +121,7 @@ export function useChartConfig({
   tooltipGroupingMode = "primary",
   snapCursor = true,
   countries = [],
-  type
+  rahul
   // setData,
 }: {
   series: number;
@@ -147,7 +147,7 @@ export function useChartConfig({
   tooltipGroupingMode?: TooltipGroupingMode;
   snapCursor?: boolean;
   countries : Array<string>,
-  type : string
+  rahul : string
 }) {
 
   console.log(countries)
@@ -185,16 +185,26 @@ export function useChartConfig({
     console.log(countries)
     let pleaseWork : god = []
     for (let country of countries) {
-      let test : jesus = [{primary : new Date("2020-02-01"), secondary : 5, radius : undefined}]
-      let first = { label : country + " covid", data : test}
+      let test : jesus = [{primary : new Date("2020-02-01"), secondary : 0, radius : undefined}]
+      let first = { label : country + " " + rahul, data : test}
       for (let date in allData) {
         let mini = { primary : new Date(date as string), secondary : 0, radius : undefined}
         // const current_date = 
         for (let y of allData[date].country_stats) {
           if (y.iso_code == country) {
-            if (type == "covid"){
+            if (rahul == "covid"){
               mini.secondary = y.properties.total_cases
-            } 
+            } else if (rahul == "vaccine") {
+              mini.secondary = y.properties.people_fully_vaccinated
+            } else if (rahul == "population") {
+              mini.secondary = y.properties.population
+            } else if (rahul == "deaths") {
+              mini.secondary = y.properties.total_deaths
+            } else if (rahul == "gdp") {
+              mini.secondary = y.properties.gdp_growth_rate
+            } else if (rahul == "unemployment") {
+              mini.secondary = y.properties.unemployment_rate
+            }
           }
         }
         test.push(mini)
@@ -211,7 +221,7 @@ export function useChartConfig({
       ...old,
       data: makeDataFrom(dataType, series, datums, countries, useR),
     }));
-  }, [count, dataType, datums, series, countries, useR]);
+  }, [count, dataType, datums, series, countries, rahul, useR]);
 
   const randomizeData = () =>
     setState((old) => ({
