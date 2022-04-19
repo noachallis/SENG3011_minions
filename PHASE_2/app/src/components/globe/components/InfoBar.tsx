@@ -13,22 +13,22 @@ export const InfoBar : React.FC<props> = ({countries}) => {
     if (countries.length > 0 ){
         return (
             <div>
-                <Box className="infoBarRight" sx={{ flexGrow: 1 }}>
+                <Box className="infoBarRight" sx={{ flexGrow: 1}}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} className="graphBox">
-                            <DarkMode countries={countries} rahul={"covid"}/>
+                            <DarkMode countries={countries} rahul={"COVID-19 Cases"} title={"COVID-19 Cases vs. Time"}/>
                         </Grid>
                         <Grid item xs={12} className="graphBox">
-                            <DarkMode countries={countries} rahul={"vaccine"}/>
+                            <DarkMode countries={countries} rahul={"Fully Vaccinated Persons"} title={"Fully Vaccinated Persons vs. Time"}/>
                         </Grid>
                         <Grid item xs={12} className="graphBox">
-                            <DarkMode countries={countries} rahul={"gdp"}/>
+                            <DarkMode countries={countries} rahul={"Real GDP Growth Rate"} title={"Real GDP Growth Rate vs. Time"}/>
                         </Grid>
                         <Grid item xs={12} className="graphBox">
-                            <DarkMode countries={countries} rahul={"unemployment"}/>
+                            <DarkMode countries={countries} rahul={"Unemployment Rate"} title={"Unemployment Rate vs. Time"}/>
                         </Grid>
                         <Grid item xs={12} className="graphBox">
-                            <DarkMode countries={countries} rahul={"deaths"}/>
+                            <DarkMode countries={countries} rahul={"Deaths"} title={"Deaths vs. Time"}/>
                         </Grid>
                     </Grid>
                     {/* <DarkMode countries={countries}/> */}

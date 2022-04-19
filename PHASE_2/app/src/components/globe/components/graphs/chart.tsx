@@ -2,10 +2,12 @@ import {ResizableBox} from "./Box";
 import { useChartConfig } from "./config";
 import React, {useState, useEffect} from "react";
 import { AxisOptions, Chart } from "react-charts";
+import { Box } from "@mui/material";
 
 interface props {
   countries : Array<string>
   rahul: string
+  title: string
 }
 
 
@@ -19,7 +21,7 @@ type god = Array<{
 }>
 
 
-export const DarkMode : React.FC<props> = ({countries, rahul}) => {
+export const DarkMode : React.FC<props> = ({countries, rahul, title}) => {
   const {data, randomizeData} = useChartConfig({
     series: 10,
     dataType: "time",
@@ -46,10 +48,11 @@ export const DarkMode : React.FC<props> = ({countries, rahul}) => {
     ],
     []
   );
- 
+
   console.log("The length of data ", data.length)
     return (
       <>
+          <Box sx={{color: "white", marginBottom: 1}}>{title}</Box>
           <div style={{ width: "100%", height: "100%" }}>
             <Chart
               options={{
