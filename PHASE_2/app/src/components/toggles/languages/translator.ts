@@ -10,6 +10,10 @@ const translator = [
         'region_select': 'Region Select',
         'save_changes': 'Save Changes',
         'legend': 'legend',
+        'stringency_index': 'Stringency Index',
+        'total_deaths': 'Total Deaths',
+        'gdp_growth_rate': 'GDP Growth Rate',
+        'unemployment_rate': 'Unemployment Rate',
       }
     }, 
     {
@@ -23,6 +27,10 @@ const translator = [
         'region_select': '地区选择',
         'save_changes': '保存更改',
         'legend': '傳奇',
+        'stringency_index': '嚴格指數',
+        'total_deaths': '總死亡人數',
+        'gdp_growth_rate': '國內生產總值增長率',
+        'unemployment_rate': '失業率',
       }
     },
     {
@@ -36,6 +44,10 @@ const translator = [
         'region_select': 'Selección de región',
         'save_changes': 'Guardar cambios',
         'legend': 'leyenda',
+        'stringency_index': 'Índice de rigurosidad',
+        'total_deaths': 'Muertes Totales',
+        'gdp_growth_rate': 'Tasa de crecimiento del PIB',
+        'unemployment_rate': 'Tasa de desempleo',
       }
     },
     {
@@ -49,6 +61,10 @@ const translator = [
         'region_select': 'Sélection de la région',
         'save_changes': 'Sauvegarder les modifications',
         'legend': 'Légende',
+        'stringency_index': 'Indice de stringence',
+        'total_deaths': 'Décès totaux',
+        'gdp_growth_rate': 'Taux de croissance du PIB',
+        'unemployment_rate': 'Taux de chômage',
       }
     },
     {
@@ -62,6 +78,10 @@ const translator = [
         'region_select': 'Regio selecteren',
         'save_changes': 'Wijzigingen opslaan',
         'legend': 'Legende',
+        'stringency_index': 'Stringenzindex',
+        'total_deaths': 'Totale Todesfälle',
+        'gdp_growth_rate': 'BIP-Wachstumsrate',
+        'unemployment_rate': 'Arbeitslosenrate',
       }
     },
     { 
@@ -75,6 +95,10 @@ const translator = [
         'region_select': '지역 선택',
         'save_changes': '변경 사항을 저장하다',
         'legend': '전설',
+        'stringency_index': '엄격성 지수',
+        'total_deaths': '총 사망자 수',
+        'gdp_growth_rate': 'GDP 성장률',
+        'unemployment_rate': '실업률',
       }
     }, 
     {
@@ -88,6 +112,10 @@ const translator = [
         'region_select': '地域選択',
         'save_changes': '変更内容を保存',
         'legend': '전설',
+        'stringency_index': 'ストリンジェンシーインデックス',
+        'total_deaths': '総死亡数',
+        'gdp_growth_rate': 'GDP成長率',
+        'unemployment_rate': '失業率',
       }
     },
     {
@@ -101,6 +129,10 @@ const translator = [
         'region_select': 'क्षेत्र चयन',
         'save_changes': 'परिवर्तनों को सुरक्षित करें',
         'legend': 'विख्यातव्यक्ति',
+        'stringency_index': 'कठोरता सूचकांक',
+        'total_deaths': 'कुल मौतें',
+        'gdp_growth_rate': 'जीडीपी विकास दर',
+        'unemployment_rate': 'बेरोजगारी की दर',
       }
     }
 ]
@@ -124,5 +156,13 @@ export const getWord = (word : string, language : string) => {
       return phrases?.save_changes
     case 'legend':
       return phrases?.legend
+    case 'stringency_index':
+      return phrases?.stringency_index
+    case 'total_deaths':
+      return phrases?.total_deaths
+    case 'gdp_growth_rate':
+      return phrases?.gdp_growth_rate
+    case 'unemployment_rate':
+      return phrases?.unemployment_rate
   }
 };
