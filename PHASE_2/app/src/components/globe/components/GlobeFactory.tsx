@@ -12,6 +12,7 @@ interface props {
     layerOne: string
     layerTwo: string
     regions: Array<string>
+    language: string
 }
 
 /**
@@ -20,7 +21,7 @@ interface props {
  */
 
 export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateData, 
-  activeCountries, setActiveCountries, layerOne, layerTwo, regions}) => {
+  activeCountries, setActiveCountries, layerOne, layerTwo, regions, language}) => {
     let colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateBlues);
     let colorScale = d3.scaleSequentialSqrt(d3.interpolateReds)
     const [hoverD, setHoverD] = useState();
@@ -139,7 +140,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
             polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(setBase(d))}
             polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
             polygonStrokeColor={() => '#111'}
-            polygonLabel={({ properties: d } : any) => getPolygonLabel(d, dateData)}
+            polygonLabel={({ properties: d } : any) => getPolygonLabel(d, dateData, language)}
             polygonsTransitionDuration={300}
             onPolygonRightClick={(polygon: any, _event: MouseEvent) => {elevateCountries(polygon)}}
           />
@@ -162,7 +163,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
               polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(setBase(d))}
               polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
               polygonStrokeColor={() => '#111'}
-              polygonLabel={({ properties: d } : any) => getPolygonLabel(d, dateData)}
+              polygonLabel={({ properties: d } : any) => getPolygonLabel(d, dateData,language)}
               polygonsTransitionDuration={300}
               onPolygonRightClick={(polygon: any, _event: MouseEvent) => {elevateCountries(polygon)}}
             />
@@ -187,7 +188,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
             polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(setBase(d))}
             polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
             polygonStrokeColor={() => '#111'}
-            polygonLabel={({ properties: d } : any) => getPolygonLabel(d, dateData)}
+            polygonLabel={({ properties: d } : any) => getPolygonLabel(d, dateData, language)}
             polygonsTransitionDuration={300}
             onPolygonRightClick={(polygon: any, _event: MouseEvent) => {elevateCountries(polygon)}}
           />
@@ -210,7 +211,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
                 polygonCapColor={d => d === hoverD ? 'steelblue' : colorScale(setBase(d))}
                 polygonSideColor={() => 'rgba(200, 100, 100, 0.15)'}
                 polygonStrokeColor={() => '#111'}
-                polygonLabel={({ properties: d } : any) => getPolygonLabel(d, dateData)}    
+                polygonLabel={({ properties: d } : any) => getPolygonLabel(d, dateData, language)}    
                 polygonsTransitionDuration={300}
                 onPolygonRightClick={(polygon: object, _event: MouseEvent) => {elevateCountries(polygon)}}
             />
