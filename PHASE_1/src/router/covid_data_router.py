@@ -216,7 +216,7 @@ def getMap(covid_data: dict, date: str):
             world_data_collected = True
             world_data = properties
         else:
-            country['properties'] = properties
+            country['properties'] = override_properties(properties,d['iso_code'],date)   
             country_stats.append(country)
     
     # Add missing country economic data
@@ -271,6 +271,15 @@ def getMap(covid_data: dict, date: str):
 
     dateData['country_stats'] = country_stats
     return dateData
+
+def override_properties(properties: dict, iso_code: str, date: str):
+    if (iso_code == "NZL" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 4070621
+    if (iso_code == "AUS" and date == "2022-01-01"):
+        properties['people_fully_vaccinated'] = 20003463
+
+    return properties
+
 
 full_countries_list = [
   "AFG",
