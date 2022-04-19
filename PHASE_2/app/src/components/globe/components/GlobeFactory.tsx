@@ -122,7 +122,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
     }
     console.log(layerTwo)
     if (activeCountries.length > 0 || regions.length > 0) {
-      if (layerTwo) {
+      if (layerTwo != "None") {
         return (
         <ReactGlobe
             globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
@@ -170,7 +170,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
         )
       }
     }
-    else if (layerTwo) {
+    else if (layerTwo != "None") {
         return (
         <ReactGlobe
             globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"

@@ -43,7 +43,7 @@ function Globe() {
   const [regions, setActiveRegions] = useState<Array<string>>([]);
   const [allData, setAllData] = useState<any>(AllData)
   const [layerOne, setLayerOne] = useState<string>("COVID-19 Cases")
-  const [layerTwo, setLayerTwo] = useState<string>("")
+  const [layerTwo, setLayerTwo] = useState<string>("None")
 
   useEffect(() => {
     // load map
