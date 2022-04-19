@@ -10,7 +10,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import {ReactComponent as Vaccination} from './legendImages/vaccinationRates.svg';
 import {ReactComponent as COVIDCases} from './legendImages/covid-19.svg';
 import {ReactComponent as Deaths} from './legendImages/deaths1.svg';
-import {ReactComponent as Hospitalisations} from './legendImages/hospitalisationRates.svg';
+import {ReactComponent as Stringency} from './legendImages/stringency.svg';
+import {ReactComponent as EconomicGrowth} from './legendImages/economicGrowth.svg';
+import {ReactComponent as Unemployment} from './legendImages/unemployment.svg';
+
 
 
 export const useStyles = makeStyles({
@@ -106,7 +109,13 @@ export const Legend = () => {
             <Deaths className='legendItem'/>
           </ListItem>
           <ListItem>
-            <Hospitalisations className='legendItem'/>
+            <Stringency className='legendItem'/>
+          </ListItem>
+          <ListItem>
+            <EconomicGrowth className='legendItem'/>
+          </ListItem>
+          <ListItem>
+            <Unemployment className='legendItem'/>
           </ListItem>
         </List>
       </Drawer>
