@@ -71,6 +71,32 @@ type jesus = Array<{
     radius: undefined,
 }>
 
+interface props {
+  series: number
+  datums?: number
+  useR?: boolean
+  show?: (keyof typeof options)[]
+  count?: number
+  resizable?: boolean
+  canRandomize?: boolean
+  dataType?: DataType
+  elementType?: ElementType
+  primaryAxisType?: PrimaryAxisType
+  secondaryAxisType?: SecondaryAxisType
+  primaryAxisPosition?: PrimaryAxisPosition
+  secondaryAxisPosition?: SecondaryAxisPosition
+  primaryAxisStack?: boolean
+  secondaryAxisStack?: boolean
+  primaryAxisShow?: boolean
+  secondaryAxisShow?: boolean
+  tooltipAnchor?: TooltipAnchor
+  tooltipAlign?: TooltipAlign
+  interactionMode?: InteractionMode
+  tooltipGroupingMode?: TooltipGroupingMode
+  snapCursor?: boolean
+  countries : Array<string>
+}
+
 export function useChartConfig({
   series,
   datums = 10,
@@ -95,6 +121,8 @@ export function useChartConfig({
   tooltipGroupingMode = "primary",
   snapCursor = true,
   countries = [],
+  type
+  // setData,
 }: {
   series: number;
   datums?: number;
@@ -119,6 +147,7 @@ export function useChartConfig({
   tooltipGroupingMode?: TooltipGroupingMode;
   snapCursor?: boolean;
   countries : Array<string>,
+  type : string
 }) {
 
   console.log(countries)
@@ -153,11 +182,8 @@ export function useChartConfig({
     countries : Array<string>,
     useR?: boolean, 
   ) {
-    countries = ["AUS", "USA"]
-
+    console.log(countries)
     let pleaseWork : god = []
-
-
     for (let country of countries) {
       let test : jesus = [{primary : new Date("2020-02-01"), secondary : 5, radius : undefined}]
       let first = { label : country + " covid", data : test}
@@ -166,7 +192,9 @@ export function useChartConfig({
         // const current_date = 
         for (let y of allData[date].country_stats) {
           if (y.iso_code == country) {
-            mini.secondary = y.properties.total_cases
+            if (type == "covid"){
+              mini.secondary = y.properties.total_cases
+            } 
           }
         }
         test.push(mini)
@@ -174,7 +202,7 @@ export function useChartConfig({
       pleaseWork.push(first)
     }
     // let rahul = { label : "Covid Australia", data : [] as any}
-
+    // setData(pleaseWork)
     return pleaseWork
   }
   
@@ -183,7 +211,7 @@ export function useChartConfig({
       ...old,
       data: makeDataFrom(dataType, series, datums, countries, useR),
     }));
-  }, [count, dataType, datums, series, useR]);
+  }, [count, dataType, datums, series, countries, useR]);
 
   const randomizeData = () =>
     setState((old) => ({

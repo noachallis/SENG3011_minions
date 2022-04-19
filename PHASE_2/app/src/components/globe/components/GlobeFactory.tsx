@@ -60,7 +60,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
 
     const elevate = (feat : any, base: boolean) => {
       // console.log(feat.properties) 
-      const name = feat.properties.SOVEREIGNT
+      const name = feat.properties.ADM0_A3
       const region = feat.properties.CONTINENT
       if (activeCountries.includes(name) || regions.includes(region)){
         return base ? 0.6 : 0.64
@@ -87,9 +87,8 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
 
     const elevateCountries = (polygon : any ) => {
       console.log(polygon)
-      const country = polygon.properties.NAME
-      const iso = polygon.properties.ADM0_A3
-      console.log(iso)
+      const country = polygon.properties.ADM0_A3
+      console.log(country)
       if (!country){
         return
       }

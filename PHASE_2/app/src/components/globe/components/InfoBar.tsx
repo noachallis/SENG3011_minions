@@ -14,6 +14,7 @@ export const InfoBar : React.FC<props> = ({countries}) => {
             <div>
                 <Box className="infoBar" >
                     <DarkMode countries={countries}/>
+                    {/* <DarkMode countries={countries}/> */}
                 </Box>
             </div>
         )
