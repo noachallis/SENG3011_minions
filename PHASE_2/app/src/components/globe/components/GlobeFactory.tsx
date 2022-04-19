@@ -24,6 +24,8 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
     let colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateBlues);
     let colorScale = d3.scaleSequentialSqrt(d3.interpolateReds)
     const [hoverD, setHoverD] = useState();
+    const [r, setR] = useState<Array<string>>();
+
     // let [colorScale, setColor] = useState<d3.ScaleSequential<string, never>>();
     if (layerOne == "Deaths") {
       colorScale = d3.scaleSequentialSqrt(d3.interpolateBlues)
@@ -76,7 +78,12 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
       // console.log(feat.properties) 
       const name = feat.properties.ADM0_A3
       const region = feat.properties.CONTINENT
-      if (activeCountries.includes(name) || regions.includes(region)){
+      if (activeCountries.includes(name)){
+        return base ? 0.6 : 0.64
+      } else if (regions.includes(region)) {
+        // let d = activeCountries
+        // d.push(name)
+        // setR([...d])
         return base ? 0.6 : 0.64
       }
       return base ? 0.1 : 0.14

@@ -15,27 +15,27 @@ export const InfoBar : React.FC<props> = ({countries}) => {
             <div>
                 <Box className="infoBarRight" sx={{ flexGrow: 1 }}>
                     <Grid container spacing={2}>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} className="graphBox">
                             <DarkMode countries={countries} rahul={"covid"}/>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} className="graphBox">
                             <DarkMode countries={countries} rahul={"vaccine"}/>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} className="graphBox">
                             <DarkMode countries={countries} rahul={"gdp"}/>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} className="graphBox">
                             <DarkMode countries={countries} rahul={"unemployment"}/>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} className="graphBox">
                             <DarkMode countries={countries} rahul={"deaths"}/>
                         </Grid>
                     </Grid>
                     {/* <DarkMode countries={countries}/> */}
                 </Box>
 
-                <Box className="infoBarLeft" sx={{ flexGrow: 1 }}>
-                    {/* <Grid container spacing={2}>
+                {/* <Box className="infoBarLeft" sx={{ flexGrow: 1 }}>
+                    <Grid container spacing={2}>
                         <Grid item xs={12}>
                         </Grid>
                         <Grid item xs={12}>
@@ -44,9 +44,8 @@ export const InfoBar : React.FC<props> = ({countries}) => {
                         <Grid item xs={12}>
                             <DarkMode countries={countries} rahul={"unemployment"}/>
                         </Grid>
-                    </Grid> */}
-                    {/* <DarkMode countries={countries}/> */}
-                </Box>
+                    </Grid>
+                </Box> */}
             </div>
         )
     }

@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { ChevronLeft } from '@mui/icons-material';
 import { FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectChangeEvent} from '@mui/material';
 import { makeStyles } from '@material-ui/core/styles';
+import { getWord } from "./toggles/languages/translator"
 
 interface props {
   updateGlobe: (finalState:finalState) => void
@@ -138,7 +139,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
       console.log(finalStateSelect)
       updateGlobe(finalStateSelect)
       setLayerOne(finalStateSelect.base)
-      setLayerTwo(finalStateSelect.upper)
+      setLayerTwo(finalStateSelect.upper || "None")
       if (finalStateSelect.region != "None") {
         setActiveRegions([finalStateSelect.region])
       } else {
