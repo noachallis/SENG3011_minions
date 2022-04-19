@@ -19,7 +19,6 @@ def is_nan(value):
 """
 router = APIRouter()
 
-
 """
     GLOBAL CLASSES and Variables. Used as "Services to the API"
 """
@@ -28,7 +27,6 @@ total = db.covidReports.count()
 string_total = str(total)
 error_handler = validator.Validator()
 current_date = datetime.datetime.now().strftime("%Y-%m-%d")
-
 
 @router.get(
     "/v1/covid/date",
@@ -119,32 +117,6 @@ def getUnemployment(year: str):
         data = json.load(unemployment_data)
     return data[year]["countryUnemploymentRates"]
 
-# def getHospitilisations(date: str, d : dict, iso_code: str):
-#     hospRate = 0
-#     try :
-#         if (not is_nan(d['weekly_hosp_admissions'])):
-#             hospRate = float(d['weekly_hosp_admissions'])
-#             print("*")
-#             print(hospRate)
-#     except Exception:
-#         pass
-
-#     # get previous forntight date
-#     back_date = fortnight_back_dates[date]
-#     back_data = db.covidReports.find({ "date" : back_date}, {'_id': 0})
-#     if back_data:
-#         for country in back_data:
-#             if country['iso_code'] == iso_code:
-#                 try :
-#                     if (not is_nan(country['weekly_hosp_admissions'])):
-#                         hospRate = hospRate + float(back_data['weekly_hosp_admissions'])
-#                         print("ME")
-#                         print(hospRate)
-#                 except Exception:
-#                     pass
-
-    return hospRate
-
 def getMap(covid_data: dict, date: str):
     dateData = {}
     country_stats = []
@@ -174,11 +146,11 @@ def getMap(covid_data: dict, date: str):
         ## Total Cases
         try :
             if (is_nan(d['total_cases'])):
-                properties['total_cases'] = -999
+                properties['total_cases'] = 0
             else:
                 properties['total_cases'] = float(d['total_cases'])
         except Exception:
-            properties['total_cases'] = -999
+            properties['total_cases'] = 0
         
         ## Total People Fully Vaccinated
         try :
@@ -192,43 +164,43 @@ def getMap(covid_data: dict, date: str):
         ## Population
         try :
             if (is_nan(d['population'])):
-                properties['population'] = -999
+                properties['population'] = 0
             else:
                 properties['population'] = float(d['population'])
         except Exception:
-            properties['population'] = -999
+            properties['population'] = 0
 
         ##  Total Deaths
         try :
             if (is_nan(d['total_deaths'])):
-                properties['total_deaths'] = -999
+                properties['total_deaths'] = 0
             else:
                 properties['total_deaths'] = float(d['total_deaths'])
         except Exception:
-            properties['total_deaths'] = -999
+            properties['total_deaths'] = 0
 
         # Stringency index
         try :
             if (is_nan(d['stringency_index'])):
-                properties['stringency_index'] = -999
+                properties['stringency_index'] = 0
             else:
                 properties['stringency_index'] = float(d['stringency_index'])
         except Exception:
-            properties['stringency_index'] = -999
-
-        ##  Total Hospitilsations
-        # properties['forntightly_hosp_admissions'] = getHospitilisations(date, d, d['iso_code'])
+            properties['stringency_index'] = 0
 
         if d['iso_code'] != "OWID_WRL":
             # GDP
             try:
                 countryGDP = next(item for item in GDPGrowthRates if item["iso_code"] == d['iso_code'])
                 if countryGDP['rate']:
-                    properties['gdp_growth_rate'] = countryGDP['rate']
+                    if countryGDP['rate'] == "no data":
+                        properties['gdp_growth_rate'] = 0
+                    else:
+                        properties['gdp_growth_rate'] = countryGDP['rate']
                 else:
-                    properties['gdp_growth_rate'] = -999
+                    properties['gdp_growth_rate'] = 0
             except Exception:
-                properties['gdp_growth_rate'] = -999
+                properties['gdp_growth_rate'] = 0
 
             # Unemployment 
             if unemploymentRates != []:
@@ -236,30 +208,38 @@ def getMap(covid_data: dict, date: str):
                     countryUnemployment = next(item for item in unemploymentRates if item["iso_code"] == d['iso_code'])
                     properties['unemployment_rate'] = float(countryUnemployment["rate"])
                 except Exception:
-                    properties['unemployment_rate'] = -999
+                    properties['unemployment_rate'] = 0
             else:
-                properties['unemployment_rate'] = -999
+                properties['unemployment_rate'] = 0
 
         if d['iso_code'] == "OWID_WRL":
             world_data_collected = True
             world_data = properties
         else:
-            country['properties'] = properties   
+            country['properties'] = properties
             country_stats.append(country)
-
+    
     # Add missing country economic data
     for missing_iso_code in iso_codes:
         country = {}
         country['iso_code'] = missing_iso_code
         properties = {}
+        properties['total_cases'] = 0
+        properties['people_fully_vaccinated'] = 0
+        properties['population'] = 0
+        properties['total_deaths'] = 0
+        properties['stringency_index'] = 0
         try:
             countryGDP = next(item for item in GDPGrowthRates if item["iso_code"] == missing_iso_code)
             if countryGDP['rate']:
-                properties['gdp_growth_rate'] = countryGDP['rate']
+                if countryGDP['rate'] == "no data":
+                    properties['gdp_growth_rate'] = 0
+                else:
+                    properties['gdp_growth_rate'] = countryGDP['rate']
             else:
-                properties['gdp_growth_rate'] = -999
+                properties['gdp_growth_rate'] = 0
         except Exception:
-            properties['gdp_growth_rate'] = -999
+            properties['gdp_growth_rate'] = 0
 
         # Unemployment 
         if unemploymentRates != []:
@@ -267,9 +247,9 @@ def getMap(covid_data: dict, date: str):
                 countryUnemployment = next(item for item in unemploymentRates if item["iso_code"] == missing_iso_code)
                 properties['unemployment_rate'] = float(countryUnemployment["rate"])
             except Exception:
-                properties['unemployment_rate'] = -999
+                properties['unemployment_rate'] = 0
         else:
-            properties['unemployment_rate'] = -999
+            properties['unemployment_rate'] = 0
         country['properties'] = properties   
         country_stats.append(country)
 
@@ -291,65 +271,6 @@ def getMap(covid_data: dict, date: str):
 
     dateData['country_stats'] = country_stats
     return dateData
-
-fortnight_back_dates = {
-    "2020-01-01" : "2020-01-01",
-    "2020-01-15" : "2020-01-01",
-    "2020-02-01" : "2020-01-15",
-    "2020-02-15" : "2020-02-01",
-    "2020-03-01" : "2020-02-15",
-    "2020-03-15" : "2020-03-01",
-    "2020-04-01" : "2020-03-15",
-    "2020-04-15" : "2020-04-01",
-    "2020-05-01" : "2020-04-15",
-    "2020-05-15" : "2020-05-01",
-    "2020-06-01" : "2020-05-15",
-    "2020-06-15" : "2020-06-01",
-    "2020-07-01" : "2020-06-15",
-    "2020-07-15" : "2020-07-01",
-    "2020-08-01" : "2020-07-15",
-    "2020-08-15" : "2020-08-01",
-    "2020-09-01" : "2020-08-15",
-    "2020-09-15" : "2020-09-01",
-    "2020-10-01" : "2020-09-15",
-    "2020-10-15" : "2020-10-01",
-    "2020-11-01" : "2020-10-15",
-    "2020-11-15" : "2020-11-01",
-    "2020-12-01" : "2020-11-15",
-    "2020-12-15" : "2020-12-01",
-    "2021-01-01" : "2020-12-15",
-    "2021-01-15" : "2021-01-01",
-    "2021-02-01" : "2021-01-15",
-    "2021-02-15" : "2021-02-01",
-    "2021-03-01" : "2021-02-15",
-    "2021-03-15" : "2021-03-01",
-    "2021-04-01" : "2021-03-15",
-    "2021-04-15" : "2021-04-01",
-    "2021-05-01" : "2021-04-15",
-    "2021-05-15" : "2021-05-01",
-    "2021-06-01" : "2021-05-15",
-    "2021-06-15" : "2021-06-01",
-    "2021-07-01" : "2021-06-15",
-    "2021-07-15" : "2021-07-01",
-    "2021-08-01" : "2021-07-15",
-    "2021-08-15" : "2021-08-01",
-    "2021-09-01" : "2021-08-15",
-    "2021-09-15" : "2021-09-01",
-    "2021-10-01" : "2021-09-15",
-    "2021-10-15" : "2021-10-01",
-    "2021-11-01" : "2021-10-15",
-    "2021-11-15" : "2021-11-01",
-    "2021-12-01" : "2021-11-15",
-    "2021-12-15" : "2022-12-01",
-    "2022-01-01" : "2022-12-15",
-    "2022-01-15" : "2022-01-01",
-    "2022-02-01" : "2022-01-15",
-    "2022-02-15" : "2022-02-01",
-    "2022-03-01" : "2022-02-15",
-    "2022-03-15" : "2022-03-01",
-    "2022-04-01" : "2022-03-15",    
-    "2022-04-15" : "2022-04-01"
-}
 
 full_countries_list = [
   "AFG",
