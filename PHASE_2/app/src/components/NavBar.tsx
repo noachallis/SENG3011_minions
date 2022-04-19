@@ -241,9 +241,10 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
         <ListItem>
           {createUpperLayerSelect()}
         </ListItem>
-        <ListItem>
+        {/* <ListItem>
           {createRegionSelect()}
-        </ListItem>
+          </ListItem>
+        */}
         <ListItem>
           <LanguageToggle setLanguage={setLanguage} language={language}/>
         </ListItem>

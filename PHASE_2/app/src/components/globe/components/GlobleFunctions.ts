@@ -7,6 +7,10 @@ export const getPolygonLabel = (d : any, dateData : any, language : string) => {
         return (`
         <b>${d.ADMIN} (${d.ISO_A3}):</b> <br />
         ${getWord('total_cases', language)}: <i>${country.properties.total_cases}</i><br/>
+        ${getWord('gdp_growth_rate', language)}: <i>${country.properties.gdp_growth_rate || "Not Available"}</i><br/>
+        ${getWord('stringency_index', language)}: <i>${country.properties.stringency_index || "Not Available"}</i><br/>
+        ${getWord('total_deaths', language)}: <i>${country.properties.total_deaths || "Not Available"}</i><br/>
+        ${getWord('unemployment_rate', language)}: <i>${country.properties.unemployment_rate || "Not Available"}</i><br/>
         ${getWord('total_vacced', language)}: <i>${(country.properties.people_fully_vaccinated/country.properties.population * 100).toFixed(0)}%</i>
         `)
     } else {
