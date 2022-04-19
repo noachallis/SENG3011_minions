@@ -13,8 +13,7 @@ import {ReactComponent as Deaths} from './legendImages/deaths1.svg';
 import {ReactComponent as Stringency} from './legendImages/stringency.svg';
 import {ReactComponent as EconomicGrowth} from './legendImages/economicGrowth.svg';
 import {ReactComponent as Unemployment} from './legendImages/unemployment.svg';
-
-
+import { getWord } from "./toggles/languages/translator"
 
 export const useStyles = makeStyles({
   text: {
@@ -58,7 +57,11 @@ export const useStyles = makeStyles({
   }
 });
 
-export const Legend = () => {
+interface props {
+  language: string
+}
+
+export const Legend: React.FC<props> = ({language}) => {
   const classes = useStyles();
 
   const [open, setOpen] = React.useState(false);
@@ -75,7 +78,7 @@ export const Legend = () => {
   return (
     <div className='legend'>
       <Box className="legendButton" >
-        {!open && <Button sx={{width: 100}} color="error" variant="contained" onClick={toggleDrawerOpen}>Legend</Button>}
+        {!open && <Button sx={{width: 100}} color="error" variant="contained" onClick={toggleDrawerOpen}>{getWord('legend', language)}</Button>}
       </Box>
       <Drawer
         classes={{ root: classes.paper }}
@@ -88,7 +91,7 @@ export const Legend = () => {
       >
         <List>
           <ListItem className='legendHeader' >
-            <Button sx={{width: 100}} color="error" variant="contained" onClick={toggleDrawerClose}>Legend</Button>
+            <Button sx={{width: 100}} color="error" variant="contained" onClick={toggleDrawerClose}>{getWord('legend', language)}</Button>
             <IconButton
               color="primary"
               style={ {color: 'white'}}

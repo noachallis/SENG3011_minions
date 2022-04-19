@@ -9,6 +9,7 @@ const translator = [
         'upper_layer': 'Upper Layer',
         'region_select': 'Region Select',
         'save_changes': 'Save Changes',
+        'legend': 'legend',
       }
     }, 
     {
@@ -21,6 +22,7 @@ const translator = [
         'upper_layer': '上面那层',
         'region_select': '地区选择',
         'save_changes': '保存更改',
+        'legend': '傳奇',
       }
     },
     {
@@ -33,6 +35,7 @@ const translator = [
         'upper_layer': 'Capa superior',
         'region_select': 'Selección de región',
         'save_changes': 'Guardar cambios',
+        'legend': 'leyenda',
       }
     },
     {
@@ -45,6 +48,7 @@ const translator = [
         'upper_layer': 'Couche supérieure',
         'region_select': 'Sélection de la région',
         'save_changes': 'Sauvegarder les modifications',
+        'legend': 'Légende',
       }
     },
     {
@@ -57,6 +61,7 @@ const translator = [
         'upper_layer': 'Bovenste laag',
         'region_select': 'Regio selecteren',
         'save_changes': 'Wijzigingen opslaan',
+        'legend': 'Legende',
       }
     },
     { 
@@ -69,6 +74,7 @@ const translator = [
         'upper_layer': '상층',
         'region_select': '지역 선택',
         'save_changes': '변경 사항을 저장하다',
+        'legend': '전설',
       }
     }, 
     {
@@ -81,6 +87,7 @@ const translator = [
         'upper_layer': '上層',
         'region_select': '地域選択',
         'save_changes': '変更内容を保存',
+        'legend': '전설',
       }
     },
     {
@@ -93,6 +100,7 @@ const translator = [
         'upper_layer': 'ऊपरी परत',
         'region_select': 'क्षेत्र चयन',
         'save_changes': 'परिवर्तनों को सुरक्षित करें',
+        'legend': 'विख्यातव्यक्ति',
       }
     }
 ]
@@ -114,5 +122,7 @@ export const getWord = (word : string, language : string) => {
       return phrases?.region_select
     case 'save_changes':
       return phrases?.save_changes
+    case 'legend':
+      return phrases?.legend
   }
 };
