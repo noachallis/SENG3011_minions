@@ -71,8 +71,8 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
   const classes = useStyles();
 
   // select dropdown options / can customise or change these
-  const allSelectOptions = ["None", "COVID-19 Cases", "Vaccination Rates", "Hospitalisations", "Deaths"]
-  const defaultBaseSelectOptions = ["COVID-19 Cases", "Vaccination Rates", "Hospitalisations", "Deaths"]
+  const allSelectOptions = ["None", "COVID-19 Cases", "Vaccination Rates", "Stringency Index", "Deaths", "GDP Growth Rate","Unemployment Rate"]
+  const defaultBaseSelectOptions = ["COVID-19 Cases", "Vaccination Rates", "Stringency Index", "Deaths", "GDP Growth Rate","Unemployment Rate"]
   
   const whoRegionSelectOptions = ["None", "Africa (AFR)", "Americas (AMR)", "South-East Asia (SEAR)", "Europe (EUR)", "Eastern Mediterranean (EMR)", "Western Pacific (WPR)"]
   const continentSelectOptions = ["None", "North America", "South America", "Europe", "Africa", "Asia", "Oceania"]

@@ -32,8 +32,12 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
       colorScale = d3.scaleSequentialSqrt(d3.interpolateReds)
     } else if (layerOne == "Vaccination Rates") {
       colorScale = d3.scaleSequentialSqrt(d3.interpolateGreens)
-    } else if (layerOne == "Hospitalisations") {
+    } else if (layerOne == "Stringency Index") {
       colorScale = d3.scaleSequentialSqrt(d3.interpolateOranges)
+    } else if (layerOne == "GDP Growth Rate") {
+      colorScale = d3.scaleSequentialSqrt(d3.interpolatePurples)
+    } else if (layerOne == "Unemployment Rate") {
+      colorScale = d3.scaleSequentialSqrt(d3.interpolateGreys)
     }
 
     if (layerTwo == "Deaths") {
@@ -42,13 +46,16 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
       colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateReds)
     } else if (layerTwo == "Vaccination Rates") {
       colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateGreens)
-    } else if (layerTwo == "Hospitalisations") {
+    } else if (layerTwo == "Stringency Index") {
       colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateOranges)
+    } else if (layerTwo == "GDP Growth Rate") {
+      colorScale = d3.scaleSequentialSqrt(d3.interpolatePurples)
+    } else if (layerTwo == "Unemployment Rate") {
+      colorScale = d3.scaleSequentialSqrt(d3.interpolateGreys)
     }
 
 
     const setLayers = (layer : any, country : any) => {
-
 
       if (country){
         switch (layer) {
@@ -58,14 +65,16 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
             return country.properties.total_cases / Math.max(1, country.properties.population)
           case "Vaccination Rates":
             return country.properties.people_fully_vaccinated / Math.max(1, country.properties.population)
-          case "Hospitalisations":
-            return 0
+          case "Stringency Index":
+            return country.properties.stringency_index
           case "Deaths":
             const population = Math.max(1, country.properties.population)
             const scaled = population / 100
             return country.properties.total_deaths / scaled
-          case "gdp_growth_rate":
+          case "GDP Growth Rate":
             return country.properties.gdp_growth_rate
+          case "Unemployment Rate":
+            return country.properties.unemployment_rate
           default: 
             return 0
         }
@@ -120,6 +129,7 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
     if (maxVal > 0) {
         colorScale.domain([0, maxVal]);
     }
+    
     console.log(layerTwo)
     if (activeCountries.length > 0 || regions.length > 0) {
       if (layerTwo != "None") {
