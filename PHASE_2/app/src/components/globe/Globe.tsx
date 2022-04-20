@@ -7,7 +7,8 @@ import { SliderComponent } from "../toggles/slider/slider";
 import { GlobeFactory } from "./components/GlobeFactory"
 import { Toggle } from "../toggles/vaccineToggle/toggle"
 import {NavBar, finalState} from "../NavBar";
-import { InfoBar } from "./components/InfoBar"
+import { InfoBar } from "./components/InfoBar";
+import {Legend} from "../Legend";
 
 
 function Globe() {
@@ -53,7 +54,6 @@ function Globe() {
     .catch((e) => console.error(e));
   }, []);
 
-
   useEffect(() => {
     // load data
     const first_date = "2022-04-15"
@@ -65,7 +65,6 @@ function Globe() {
     // .catch((e) => console.error(e));
   }, []);
   
-
   const getDateData = (newDate : string) => {
     const type = typeof allData
     console.log(type)
@@ -126,15 +125,16 @@ function Globe() {
     return (
       (
         <>
-
         <div className="Wrapper">
         <NavBar 
           updateGlobe={navBarLayerSelect} 
           setLayerOne={setLayerOne}
           setLayerTwo={setLayerTwo}
           setActiveRegions={setActiveRegions}
+          setLanguage={setLanguage}
           language={language}
         />
+        <Legend language={language}/>
         <InfoBar countries={activeCountries}/>
           <div className="Globe">
             <GlobeFactory 
@@ -152,7 +152,7 @@ function Globe() {
           <p className="statsOverview">{getWord('total_cases', language)}: {totalCases} &emsp;&emsp; {getWord('pop_vacced', language)}: {percentVaccinated}%</p>
           <SliderComponent currentIndex={currentIndex} dates={date} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={date.length - 1} handleChange={handleChange}/>
           {/* <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/> */}
-          <LanguageToggle setLanguage={setLanguage} language={language}/>
+          {/* <LanguageToggle setLanguage={setLanguage} language={language}/> */}
         </div>
         </>
       

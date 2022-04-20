@@ -10,12 +10,14 @@ import { ChevronLeft } from '@mui/icons-material';
 import { FormControl, FormHelperText, InputLabel, MenuItem, Select, SelectChangeEvent} from '@mui/material';
 import { makeStyles } from '@material-ui/core/styles';
 import { getWord } from "./toggles/languages/translator"
+import {LanguageToggle} from "./toggles/languages/languages"
 
 interface props {
   updateGlobe: (finalState:finalState) => void
   setLayerOne: (layer : string) => void
   setLayerTwo: (layer : string) => void
   setActiveRegions : (regions : Array<string>) => void
+  setLanguage : (language : string) => void
   language: string
 }
 
@@ -66,7 +68,7 @@ const useStyles = makeStyles({
   }
 });
 
-export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, setActiveRegions, language}) => {
+export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, setActiveRegions, setLanguage, language}) => {
 
   const classes = useStyles();
 
@@ -103,6 +105,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
       setBaseLayerSelect({value: newValue, error: true})
       // don't update finalselect values but update with error
       setFinalStateSelect({...finalStateSelect, hasError:true})
+      setLayerOne(newValue)
     } else {
 
       // update both with new value and no error
@@ -110,6 +113,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
       setFinalStateSelect({base: newValue, upper: upperLayerSelect["value"], region: regionSelect, hasError: false})
       // update upper select options
       setUpperSelectOptions(remove_element_from_array(newValue, allSelectOptions))
+      setLayerOne(newValue)
     }
   };
 
@@ -119,10 +123,12 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
     if (newValue == baseLayerSelect["value"]) {
       setUpperLayerSelect({value: newValue, error: true})
       setFinalStateSelect({...finalStateSelect, hasError:true})
+      setLayerTwo(newValue || "None")
     } else {
       setUpperLayerSelect({value: newValue, error: false});
       setFinalStateSelect({base: baseLayerSelect["value"], upper: newValue, region: regionSelect, hasError: false})
       setBaseSelectOptions(remove_element_from_array(newValue, defaultBaseSelectOptions))
+      setLayerTwo(newValue || "None")
     }
   };
 
@@ -141,13 +147,14 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
       console.log(finalStateSelect)
       updateGlobe(finalStateSelect)
       setLayerOne(finalStateSelect.base)
-      setLayerTwo(finalStateSelect.upper)
+      setLayerTwo(finalStateSelect.upper || "None")
       if (finalStateSelect.region != "None") {
         setActiveRegions([finalStateSelect.region])
       } else {
         setActiveRegions([])
       }
     }
+    setOpen(false)
   };
   // function to alter selection array
   function remove_element_from_array(element:string, array : Array<string>) {
@@ -234,8 +241,12 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
         <ListItem>
           {createUpperLayerSelect()}
         </ListItem>
-        <ListItem>
+        {/* <ListItem>
           {createRegionSelect()}
+          </ListItem>
+        */}
+        <ListItem>
+          <LanguageToggle setLanguage={setLanguage} language={language}/>
         </ListItem>
       </List>
     </Box>
@@ -271,9 +282,9 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
         </Box>
         
         {list()}
-        <Box className="saveButton" >
+        {/* <Box className="saveButton" >
           <Button sx={{width: 200}} color="error" variant="contained" onClick={handleSaveClick}>{getWord('save_changes', language)}</Button>
-        </Box>
+        </Box> */}
       </Drawer>
     </div>
   );

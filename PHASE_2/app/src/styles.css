@@ -2,6 +2,10 @@
   font-family: sans-serif;
   text-align: center;
 }
+html {
+  background-color: black;
+  margin: -8px;
+}
 * {
   box-sizing: border-box;
 }
@@ -81,8 +85,9 @@ div .scene-tooltip {
 }
 
 .languageControl {
-  width: 120px;
-  position: fixed;
+  /* width: 120px; */
+  width:100%;
+  /* position: fixed; */
   top: 3%;
   right: 1%;
   z-index: 4;
@@ -113,13 +118,21 @@ div .scene-tooltip {
   height: 85%;
   position: fixed;
   z-index: 3;
-  right: 5%;
+  right: 1%;
   top: 10%;
   bottom: 10%;
   display: flex;
   border-radius: 10px;
+  padding: 5px;
   overflow-y: scroll;
+  font-family: "Verdana", sans-serif;
+  font-size: 12px;
   scrollbar-width: none;  /* Firefox */
+}
+
+.graphBox {
+  width : 100%;
+  height: 33%
 }
 
 
@@ -138,15 +151,37 @@ div .scene-tooltip {
 }
 
 
-.infoBarRight::-webkit-scrollbar {
+/* .infoBarRight::-webkit-scrollbar {
   display: none;
 }
 
 .infoBarLeft::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .graph {
   width: 100px;
   height: 50px
+}
+
+.legend {
+  left: 1%;
+  bottom: 1%;
+  display: flex;
+  position: fixed;
+  z-index: 5;
+  width: 300px;
+}
+
+.legendItem {
+  color: white;
+}
+.legendButton {
+  left: 5%;
+  bottom: 5%;
+}
+.legendHeader {
+  color: white;
+  font-family: "Verdana", sans-serif;
+
 }

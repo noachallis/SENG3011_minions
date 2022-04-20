@@ -185,24 +185,24 @@ export function useChartConfig({
     console.log(countries)
     let pleaseWork : god = []
     for (let country of countries) {
-      let test : jesus = [{primary : new Date("2020-02-01"), secondary : 0, radius : undefined}]
+      let test : jesus = [{primary : new Date("2019-31-12"), secondary : 0, radius : undefined}]
       let first = { label : country + " " + rahul, data : test}
       for (let date in allData) {
         let mini = { primary : new Date(date as string), secondary : 0, radius : undefined}
         // const current_date = 
         for (let y of allData[date].country_stats) {
           if (y.iso_code == country) {
-            if (rahul == "covid"){
+            if (rahul == "COVID-19 Cases"){
               mini.secondary = y.properties.total_cases
-            } else if (rahul == "vaccine") {
+            } else if (rahul == "Fully Vaccinated Persons") {
               mini.secondary = y.properties.people_fully_vaccinated
             } else if (rahul == "population") {
               mini.secondary = y.properties.population
-            } else if (rahul == "deaths") {
+            } else if (rahul == "Deaths") {
               mini.secondary = y.properties.total_deaths
-            } else if (rahul == "gdp") {
-              mini.secondary = y.properties.gdp_growth_rate
-            } else if (rahul == "unemployment") {
+            } else if (rahul == "Real GDP Growth Rate") {
+              mini.secondary = parseInt(y.properties.gdp_growth_rate)
+            } else if (rahul == "Unemployment Rate") {
               mini.secondary = y.properties.unemployment_rate
             }
           }
