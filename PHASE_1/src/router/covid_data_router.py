@@ -277,6 +277,156 @@ def override_properties(properties: dict, iso_code: str, date: str):
         properties['people_fully_vaccinated'] = 4070621
     if (iso_code == "AUS" and date == "2022-01-01"):
         properties['people_fully_vaccinated'] = 20003463
+    if (iso_code == "ALB" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 1239791
+    if (iso_code == "ALB" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 1250791
+    if (iso_code == "AGO" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 6327137
+    if (iso_code == "ABW" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 80928
+    if (iso_code == "ABW" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 81228
+    if (iso_code == "AZE" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 4815594
+    if (iso_code == "AZE" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 4825594
+    if (iso_code == "BGD" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 95412284
+    if (iso_code == "BGD" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 99412284
+    if (iso_code == "BMU" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 49015
+    if (iso_code == "BOL" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 5987165
+    if (iso_code == "BRA" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 177992526
+    if (iso_code == "BRA" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 197992526
+    if (iso_code == "BRN" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 435286
+    if (iso_code == "CAN" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 35192379
+    if (iso_code == "HRV" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 2534923
+    if (iso_code == "HRV" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 2734923
+    if (iso_code == "DNK" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 4999044
+    if (iso_code == "ECU" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 15791474
+    if (iso_code == "EGY" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 33254429
+    if (iso_code == "EGY" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 35254429
+    if (iso_code == "SLV" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 4587364
+    if (iso_code == "GEO" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 1452295
+    if (iso_code == "GEO" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 1652295
+    if (iso_code == "HUN" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 6480406
+    if (iso_code == "HUN" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 6880406
+    if (iso_code == "IRQ" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 7347956
+    if (iso_code == "IRQ" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 7647956
+    if (iso_code == "JAM" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 683867
+    if (iso_code == "JAM" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 713867
+    if (iso_code == "JPN" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 110456182
+    if (iso_code == "JPN" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 120456182
+    if (iso_code == "OWID_KOS" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 858758
+    if (iso_code == "OWIS_KOS" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 878758
+    if (iso_code == "KGZ" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 1308307
+    if (iso_code == "KGZ" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 1508307
+    if (iso_code == "LBY" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 1312795
+    if (iso_code == "LBY" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 1512795
+    if (iso_code == "MAC" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 533652
+    if (iso_code == "MEX" and date == "2022-04-01"):
+        properties['people_fully_vaccinated'] = 81411249
+    if (iso_code == "MEX" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 84411249
+    if (iso_code == "MDA" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 1249578
+    if (iso_code == "MAR" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 29182509
+    if (iso_code == "MOZ" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 15244461
+    if (iso_code == "MMR" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 27501523
+    if (iso_code == "NPL" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 22547345
+    if (iso_code == "NLD" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 19295654
+    if (iso_code == "NIC" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 4598945
+    if (iso_code == "MKD" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 885916
+    if (iso_code == "PAK" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 110049978
+    if (iso_code == "PER" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 28143397
+    if (iso_code == "PHL" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 67660228
+    if (iso_code == "POL" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 25293936
+    if (iso_code == "PRT" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 9706152
+    if (iso_code == "SAU" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 29720161
+    if (iso_code == "SEN" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 1439257
+    if (iso_code == "SRB" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 3863979
+    if (iso_code == "SLE" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 1414047
+    if (iso_code == "SDN" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 2833416
+    if (iso_code == "CHE" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 6192211
+    if (iso_code == "SYR" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 1615550
+    if (iso_code == "TWN" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 19284317
+    if (iso_code == "TLS" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 597299
+    if (iso_code == "TUN" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 7293533
+    if (iso_code == "TUR" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 59821088
+    if (iso_code == "UKR" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 19035563
+    if (iso_code == "ARE" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 12085085
+    if (iso_code == "GBR" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 52452290
+    if (iso_code == "URY" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 3148047
+    if (iso_code == "VNM" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 81637834
+    if (iso_code == "ZMB" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 2117408
+    if (iso_code == "FIN" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 4922852
+    if (iso_code == "IRN" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 61529712
+    if (iso_code == "JOR" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 5116650
+    if (iso_code == "LBN" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 2859931
 
     return properties
 
