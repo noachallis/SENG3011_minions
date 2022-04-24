@@ -66,6 +66,7 @@ export const LanguageToggle : React.FC<props> = ({setLanguage, language}) => {
           value={language}
           label="Language"
           onChange={handleChange}
+          data-cy="language-selection"
         >
           <MenuItem value={"en"}>English</MenuItem>
           <MenuItem value={"de"}>Deutsch</MenuItem>

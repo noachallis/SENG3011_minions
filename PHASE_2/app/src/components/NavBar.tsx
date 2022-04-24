@@ -259,6 +259,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
         style={ {color: 'white'}}
         aria-label="open drawer"
         onClick={toggleDrawer(true)}
+        data-cy="menu-button"
       >
         <MenuIcon 
           fontSize='large'
@@ -276,6 +277,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
           color="inherit"
           aria-label="open drawer"
           onClick={toggleDrawer(false)}
+          data-cy="menu-close-button"
           >
             <ChevronLeft />
           </IconButton>

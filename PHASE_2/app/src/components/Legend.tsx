@@ -78,7 +78,7 @@ export const Legend: React.FC<props> = ({language}) => {
   return (
     <div className='legend'>
       <Box className="legendButton" >
-        {!open && <Button sx={{width: 100}} color="error" variant="contained" onClick={toggleDrawerOpen}>{getWord('legend', language)}</Button>}
+        {!open && <Button sx={{width: 100}} data-cy="legend-button" color="error" variant="contained" onClick={toggleDrawerOpen}>{getWord('legend', language)}</Button>}
       </Box>
       <Drawer
         classes={{ root: classes.paper }}
@@ -91,9 +91,10 @@ export const Legend: React.FC<props> = ({language}) => {
       >
         <List>
           <ListItem className='legendHeader' >
-            <Button sx={{width: 100}} color="error" variant="contained" onClick={toggleDrawerClose}>{getWord('legend', language)}</Button>
+            <Button sx={{width: 100}} data-cy="legend-button-closed" color="error" variant="contained" onClick={toggleDrawerClose}>{getWord('legend', language)}</Button>
             <IconButton
               color="primary"
+              data-cy="legend-arrow" 
               style={ {color: 'white'}}
               aria-label="close drawer"
               onClick={toggleDrawerClose}
