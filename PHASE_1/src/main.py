@@ -10,17 +10,20 @@ from fastapi.middleware.cors import CORSMiddleware
     Core Application
 """
 app = FastAPI(openapi_tags=tags_metadata)
+
+"""
+    Rate Limiting Config
+"""
+limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter
+app.add_exception_handler(429, _rate_limit_exceeded_handler)
+
 """
     Include additional Routers
 """
 app.include_router(global_outbreak_router.router)
 app.include_router(covid_data_router.router)
-"""
-    Rate Limiting Config
-"""
-# limiter = Limiter(key_func=get_remote_address)
-# app.state.limiter = limiter
-# app.add_exception_handler(500, _rate_limit_exceeded_handler)
+
 origins = [
     "*",
     "http://localhost:3000"
