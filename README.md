@@ -1,6 +1,8 @@
 # SENG3011-minions
 Our SENG3011 project
 
+GlobeUs is an analytics platform that is visually compelling. It consists of an interactive globe in the centre of the screen, that displays data relating to COVID-19. Our analytics platform uses many data sources and external APIs, supplying COVID-19-cases, vaccination, death rates, and economic data by country. 
+
 # Installation of Deps
 pip3 install -r requirements.txt
 
