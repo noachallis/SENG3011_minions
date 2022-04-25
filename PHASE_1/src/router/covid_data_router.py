@@ -449,6 +449,12 @@ def override_properties(properties: dict, iso_code: str, date: str):
         properties['people_fully_vaccinated'] = 65327
     if (iso_code == "ARM" and date == "2022-04-15"):
         properties['people_fully_vaccinated'] = 95663
+    if (iso_code == "GRL" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 41361
+    if (iso_code == "ISL" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 309886
+    if (iso_code == "SWE" and date == "2022-04-15"):
+        properties['people_fully_vaccinated'] = 5209375
 
     return properties
 
