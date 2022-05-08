@@ -38,26 +38,27 @@ export const StatsOverview: React.FC<props> = ({currentLayerOne, currentLayerTwo
   const colour = get_data_from_layer(currentLayerOne).colour 
   
   return (
-    <p className="statsOverview" data-cy="stats-overview" >
-      {layerOneData != "" &&
+    <>
+    {layerOneData != "" &&
+      <p className="statsOverview" data-cy="stats-overview" >
         <>
           <span className="boldStats">
             {getWord(currentLayerOne, language)}
           </span>
           : {layerOneData}
         </>
-      }
-      {layerTwoData != "" &&
-        <>
-          &emsp;&emsp;
-          <span className="boldStats"> 
-            {getWord(currentLayerTwo, language)}
-          </span>
-            : {layerTwoData}
-        </>
-      }
-    </p>
-
+        {layerTwoData != "" &&
+          <>
+            &emsp;&emsp;
+            <span className="boldStats"> 
+              {getWord(currentLayerTwo, language)}
+            </span>
+              : {layerTwoData}
+          </>
+        }
+      </p>
+    }
+    </>
 
   );
 }
