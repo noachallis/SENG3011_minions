@@ -36,7 +36,7 @@ html {
 .Slider {
   position: fixed;
   z-index: 3;
-  bottom: 10%;
+  bottom: 6%;
   display: flex;
 }
 
@@ -51,6 +51,23 @@ html {
   margin-top: 3px;
 }
 
+.dateLabel {
+  position: fixed;
+  z-index: 1;
+  bottom: 0%;
+  font-size: 18px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.1);
+  /* background: padding-box; */
+  padding: 5px;
+  border-radius: 10px;
+  background-clip: border-box;
+  letter-spacing: 0.8px;
+}
+
 .toggle {
   bottom: 3%;
   position: fixed;
@@ -58,17 +75,30 @@ html {
   display: flex;
   justify-content: center;
   color: white;
-  font-family: "Verdana", sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
 }
 
 .statsOverview {
   position: fixed;
-  font-weight: 600;
   z-index: 1;
-  top: 5%;
-  font-size: 15px;
+  top: 2%;
+  font-size: 20px;
   color: white;
-  font-family: "Verdana", sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.1);
+  /* background: padding-box; */
+  padding: 10px;
+  border-radius: 10px;
+  background-clip: border-box;
+  letter-spacing: 0.8px;
+}
+
+.boldStats {
+  font-weight: bold;
+  text-align: center;
 }
 
 .Wrapper {
@@ -78,10 +108,30 @@ html {
 }
 
 div .scene-tooltip {
-  background: rgba(209, 13, 13, 0.8);
-  font-size: 15px;
   color: white;
-  font-family: "Verdana", sans-serif;
+  font-family: 'Raleway', sans-serif;
+  backdrop-filter: blur(5px);
+  border-radius: 3px;
+  background-clip: border-box;
+  letter-spacing: 0.4px;
+}
+
+.toolTip {
+  padding: 10px !important;
+  font-weight: 400;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.toolTip > i {
+  font-weight: 100 !important;
+}
+
+.toolTip > b {
+  font-weight: 600 ;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  font-size: 17px;
 }
 
 .languageControl {
@@ -115,19 +165,26 @@ div .scene-tooltip {
 
 .infoBarRight {
   width:30%;
-  height: 85%;
+  height: 86%;
   position: fixed;
   z-index: 3;
-  right: 1%;
-  top: 10%;
-  bottom: 10%;
+  right: 0.5%;
+  top: 6%;
   display: flex;
   border-radius: 10px;
   padding: 5px;
   overflow-y: scroll;
-  font-family: "Verdana", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 12px;
+  font-weight: 200;
   scrollbar-width: none;  /* Firefox */
+}
+
+div .MuiBox-root {
+  color: white;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  text-align: "center";
 }
 
 .graphBox {
@@ -165,8 +222,8 @@ div .scene-tooltip {
 }
 
 .legend {
-  left: 1%;
-  bottom: 1%;
+  left: 3%;
+  bottom: 6%;
   display: flex;
   position: fixed;
   z-index: 5;
@@ -177,11 +234,13 @@ div .scene-tooltip {
   color: white;
 }
 .legendButton {
-  left: 5%;
+  left: 10%;
   bottom: 5%;
 }
 .legendHeader {
   color: white;
-  font-family: "Verdana", sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
 
 }
+

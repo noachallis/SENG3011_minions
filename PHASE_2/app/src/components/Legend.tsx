@@ -50,9 +50,10 @@ export const useStyles = makeStyles({
   },
   paper: {
     "& .MuiDrawer-paperAnchorBottom": {
-      background: 'rgba(0,0,0,0.8)',
+      background: 'rgba(0,0,0,0.5)',
       width: '350px',
       borderRadius: '10px',
+      backdropFilter: 'blur(5px)'
     }
   }
 });
@@ -91,14 +92,14 @@ export const Legend: React.FC<props> = ({language}) => {
       >
         <List>
           <ListItem className='legendHeader' >
-            <Button sx={{width: 100}} data-cy="legend-button-closed" color="error" variant="contained" onClick={toggleDrawerClose}>{getWord('legend', language)}</Button>
+            {/* <Button sx={{width: 100}} data-cy="legend-button-closed" color="error" variant="contained" onClick={toggleDrawerClose}>{getWord('legend', language)}</Button> */}
             <IconButton
               color="primary"
               data-cy="legend-arrow" 
               style={ {color: 'white'}}
               aria-label="close drawer"
               onClick={toggleDrawerClose}
-              sx = {{paddingLeft: 25}}
+              sx = {{paddingLeft: 37}}
             >
               <ExpandMore/>
             </IconButton>
