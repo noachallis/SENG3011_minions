@@ -26,7 +26,8 @@ export const SliderComponent : React.FC<props> = ({sliderPlaying, setSlider, len
     }
     
     return (
-        <Box className="Slider" sx={{ width: 500 }}>
+      <>
+      <Box className="Slider" sx={{ width: 500 }}>
         <Box className="SliderLeft">
           <Slider
             aria-label="Time Selection Slider"
@@ -52,5 +53,13 @@ export const SliderComponent : React.FC<props> = ({sliderPlaying, setSlider, len
         }
         </Box>
       </Box>
+      <p className="dateLabel" data-cy="stats-overview" >
+          <span className="boldStats">
+            {/* {getWord(currentLayerOne, language)} */}
+            Date
+          </span>
+          : {valueLabelFormat(currentIndex)}
+      </p>
+      </>
     )
 }

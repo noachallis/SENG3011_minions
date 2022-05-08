@@ -30,7 +30,7 @@ export type finalState = {
 
 const useStyles = makeStyles({
   text: {
-    color : "white"
+    color : "white",
   },
   customOutline: {
     "& .MuiOutlinedInput-notchedOutline": {
@@ -43,7 +43,7 @@ const useStyles = makeStyles({
       color: "white"
     },
     "& .MuiInputLabel-root": {
-      color: "white"
+      color: "white",
     },
     "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
       borderColor: "white"
@@ -63,7 +63,8 @@ const useStyles = makeStyles({
   },
   paper: {
     "& .MuiDrawer-paperAnchorLeft": {
-      background: 'black'
+      background: 'rgba(0,0,0,0.6)',
+      backdropFilter: 'blur(8px)'
     }
   }
 });

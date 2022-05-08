@@ -9,7 +9,7 @@ import { Toggle } from "../toggles/vaccineToggle/toggle"
 import {NavBar, finalState} from "../NavBar";
 import { InfoBar } from "./components/InfoBar";
 import {Legend} from "../Legend";
-
+import {StatsOverview} from "../StatsOverview"
 
 function Globe() {
   
@@ -120,7 +120,8 @@ function Globe() {
     }
   }
 
-  const totalCases = dateData.total_cases
+  const totalCasesget = dateData.total_cases
+  const totalCases = totalCasesget.toLocaleString()
   const percentVaccinated = (dateData.people_fully_vaccinated / dateData.population * 100).toFixed(0)
     return (
       (
@@ -148,8 +149,10 @@ function Globe() {
               regions={regions}
               language={language}
             />
+            {console.log("layer1" + layerOne)}
+            {console.log("layer2" + layerTwo)}
           </div>
-          <p className="statsOverview" data-cy="stats-overview" >{getWord('total_cases', language)}: {totalCases} &emsp;&emsp; {getWord('pop_vacced', language)}: {percentVaccinated}%</p>
+          <StatsOverview currentLayerOne={layerOne} currentLayerTwo={layerTwo} dateData={dateData} language={language}/>
           <SliderComponent currentIndex={currentIndex} dates={date} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={date.length - 1} handleChange={handleChange}/>
           {/* <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/> */}
           {/* <LanguageToggle setLanguage={setLanguage} language={language}/> */}
@@ -161,4 +164,25 @@ function Globe() {
 }
 
 export default Globe;
+
+export type dateDataType = {
+  total_cases: number,
+  people_fully_vaccinated: number,
+  population: number,
+  total_deaths : number,
+  country_stats: Array<countryDataType>
+};
+
+export type countryDataType = {
+  iso_code: string,
+  properties: {
+    total_cases: number,
+    people_fully_vaccinated: number,
+    population: number,
+    total_deaths : number,
+    gdp_growth_rate : number,
+    unemployment_rate : number,
+    stringency_index : number,
+  }
+};
 

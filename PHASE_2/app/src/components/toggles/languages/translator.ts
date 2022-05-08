@@ -164,5 +164,17 @@ export const getWord = (word : string, language : string) => {
       return phrases?.gdp_growth_rate
     case 'unemployment_rate':
       return phrases?.unemployment_rate
+    case 'COVID-19 Cases':
+      return phrases?.total_cases
+    case 'Vaccination Rates':
+      return phrases?.pop_vacced
+    case 'Unemployment Rate':
+      return phrases?.unemployment_rate
+    case 'Deaths':
+      return phrases?.total_deaths
+    case 'Stringency Index': 
+      return phrases?.stringency_index
+    case 'GDP Growth Rate':
+      return phrases?.gdp_growth_rate
   }
 };
