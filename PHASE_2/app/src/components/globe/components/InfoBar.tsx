@@ -3,6 +3,10 @@ import Box from '@mui/material/Box';
 import { DarkMode } from "./graphs/chart"
 import { AllData } from "../data"
 import Grid from '@mui/material/Grid';
+import PieChartGlobe from "./graphs/pieChart"
+import StackedChart from "./graphs/stackedArea"
+import NegativeArea from "./graphs/NegativeArea"
+import BarChartGlobe from "./graphs/BarChart"
 
 interface props {
     countries : Array<string>
@@ -20,7 +24,19 @@ export const InfoBar : React.FC<props> = ({countries}) => {
                         <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
                             <DarkMode countries={countries} rahul={"COVID-19 Cases"} title={"COVID-19 Cases vs. Time"}/>
                         </Grid>
-                        <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}>
+                        <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
+                            <PieChartGlobe />
+                        </Grid>
+                        <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
+                            <StackedChart />
+                        </Grid>
+                        <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
+                            <NegativeArea />
+                        </Grid>
+                        <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
+                            <BarChartGlobe />
+                        </Grid>
+                        {/* <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}>
                             <DarkMode countries={countries} rahul={"Fully Vaccinated Persons"} title={"Fully Vaccinated Persons vs. Time"}/>
                         </Grid>
                         <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}>
@@ -31,7 +47,7 @@ export const InfoBar : React.FC<props> = ({countries}) => {
                         </Grid>
                         <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}>
                             <DarkMode countries={countries} rahul={"Deaths"} title={"Deaths vs. Time"}/>
-                        </Grid>
+                        </Grid> */}
                     </Grid>
                     {/* <DarkMode countries={countries}/> */}
                 </Box>

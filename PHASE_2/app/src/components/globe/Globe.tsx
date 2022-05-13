@@ -157,6 +157,7 @@ function Globe() {
           {/* <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/> */}
           {/* <LanguageToggle setLanguage={setLanguage} language={language}/> */}
         </div>
+        
         </>
       
       )

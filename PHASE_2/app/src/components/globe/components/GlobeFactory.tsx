@@ -2,6 +2,7 @@ import React, { useState, useMemo, useRef, useEffect } from "react";
 import ReactGlobe from "react-globe.gl";
 import { getPolygonLabel } from "./GlobleFunctions"
 import * as d3 from "d3"
+import {FlightGlobe} from "./FlightGlobe"
 
 interface props {
     vaccineEnabled : boolean
@@ -160,8 +161,13 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
     if (maxVal > 0) {
         colorScale.domain([0, maxVal]);
     }
+
+    if (false) {
+      return <>
+        <FlightGlobe />
+      </>
+    }
     
-    console.log(layerTwo)
     if (activeCountries.length > 0 || regions.length > 0) {
       if (layerTwo != "None") {
         return (
