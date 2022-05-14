@@ -27,10 +27,10 @@ export const InfoBar : React.FC<props> = ({countries}) => {
                         <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
                             <PieChartGlobe />
                         </Grid>
-                        <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
+                        <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
                             <StackedChart />
                         </Grid>
-                        <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
+                        <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
                             <NegativeArea />
                         </Grid>
                         <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
