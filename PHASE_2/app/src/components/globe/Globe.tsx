@@ -57,7 +57,7 @@ function Globe() {
 
   useEffect(() => {
     // load data
-    const first_date = "2022-04-15"
+    const first_date = "2022-05-15"
     const data = allData[first_date]
     setDateData(data)
     // fetch('datasets/2022-03-01_map.json')
