@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import { DarkMode } from "./graphs/chart"
 import { AllData } from "../data"
 import Grid from '@mui/material/Grid';
-import PieChartGlobe from "./graphs/pieChart"
+import {PieChartGlobe} from "./graphs/pieChart"
 import StackedChart from "./graphs/stackedArea"
 import NegativeArea from "./graphs/NegativeArea"
 import BarChartGlobe from "./graphs/BarChart"

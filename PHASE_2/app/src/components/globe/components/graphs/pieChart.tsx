@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, useState } from 'react';
 import { PieChart, Pie, Sector, ResponsiveContainer } from 'recharts';
 import { AllData } from "../../data"
 
@@ -52,12 +52,11 @@ interface props {
 
 }
 
-export default class Example extends PureComponent {
-  state = {
-    activeIndex: 0,
-  };
+export const PieChartGlobe : React.FC = () =>  {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  data = [
+
+  const data = [
     { name: 'Europe', value: 187819392.0 },
     { name: 'Oceania', value: 6449298.0 },
     { name: 'Asia', value: 145910842.0 },
@@ -67,30 +66,26 @@ export default class Example extends PureComponent {
 
   ];
 
-  onPieEnter = (_ : any, index : any) => {
-    this.setState({
-      activeIndex: index,
-    });
+  const onPieEnter = (_ : any, index : any) => {
+    setActiveIndex(index)
   };
 
-  render() {
     return (
       <ResponsiveContainer width="100%" height="100%">
         <PieChart width={400} height={400}>
           <Pie
-            activeIndex={this.state.activeIndex}
+            activeIndex={activeIndex}
             activeShape={renderActiveShape}
-            data={this.data}
+            data={data}
             cx="50%"
             cy="50%"
             innerRadius={60}
             outerRadius={80}
             fill="#c9901c"
             dataKey="value"
-            onMouseEnter={this.onPieEnter}
+            onMouseEnter={onPieEnter}
           />
         </PieChart>
       </ResponsiveContainer>
     );
-  }
 }
