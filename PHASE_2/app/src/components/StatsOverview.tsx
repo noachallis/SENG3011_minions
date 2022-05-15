@@ -21,14 +21,14 @@ export const StatsOverview: React.FC<props> = ({currentLayerOne, currentLayerTwo
       case 'Vaccination Rates':
         const percentVaccinated = (dateData.people_fully_vaccinated / dateData.population * 100).toFixed(0)
         return {data: percentVaccinated + "%", colour: "rgba(0,128,0,0.1)"}
-      case 'Unemployment Rate':
-        return {data: "0%", colour: "rgba(128,128,128,0.1)"}
+      // case 'Unemployment Rate':
+      //   // return {data: "0%", colour: "rgba(128,128,128,0.1)"}
       case 'Deaths':
         const getTotalDeaths = dateData.total_deaths
         const totalDeaths = getTotalDeaths.toLocaleString()
         return {data: totalDeaths, colour: "rgba(0,0,255,0.1)"}
-      case 'GDP Growth Rate':
-        return {data: "0%", colour: "rgba(128,0,128, 0.1)"}
+      // case 'GDP Growth Rate':
+      //   return {data: "0%", colour: "rgba(128,0,128, 0.1)"}
     }
     return {data: "", colour: "rgba(0,0,0,0.1)"}
   }

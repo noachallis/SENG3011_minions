@@ -10,6 +10,7 @@ import {NavBar, finalState} from "../NavBar";
 import { InfoBar } from "./components/InfoBar";
 import {Legend} from "../Legend";
 import {StatsOverview} from "../StatsOverview"
+import { red } from "@mui/material/colors";
 
 function Globe() {
   
@@ -56,7 +57,7 @@ function Globe() {
 
   useEffect(() => {
     // load data
-    const first_date = "2022-04-15"
+    const first_date = "2022-05-15"
     const data = allData[first_date]
     setDateData(data)
     // fetch('datasets/2022-03-01_map.json')
@@ -120,6 +121,7 @@ function Globe() {
     }
   }
 
+  const slideLeft = activeCountries.length > 0 ? '40%' : '0%'
   const totalCasesget = dateData.total_cases
   const totalCases = totalCasesget.toLocaleString()
   const percentVaccinated = (dateData.people_fully_vaccinated / dateData.population * 100).toFixed(0)
@@ -137,7 +139,10 @@ function Globe() {
         />
         <Legend language={language}/>
         <InfoBar countries={activeCountries}/>
-          <div className="Globe">
+        <div className="GlobeWrapper" 
+        style={{'width':'100%', 'marginRight': slideLeft, transition:'1s ease'}}
+        >
+          <div className="Globe" >
             <GlobeFactory 
               vaccineEnabled={vaccineEnabled} 
               countries={countries} 
@@ -152,11 +157,13 @@ function Globe() {
             {console.log("layer1" + layerOne)}
             {console.log("layer2" + layerTwo)}
           </div>
+          </div>  
           <StatsOverview currentLayerOne={layerOne} currentLayerTwo={layerTwo} dateData={dateData} language={language}/>
           <SliderComponent currentIndex={currentIndex} dates={date} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={date.length - 1} handleChange={handleChange}/>
           {/* <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/> */}
           {/* <LanguageToggle setLanguage={setLanguage} language={language}/> */}
-        </div>
+          </div>
+        
         
         </>
       
