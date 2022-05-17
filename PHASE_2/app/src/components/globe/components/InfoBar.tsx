@@ -10,13 +10,15 @@ import IconButton from '@mui/material/IconButton';
 import HomeIcon from '@mui/icons-material/Home';
 import PaidIcon from '@mui/icons-material/Paid';
 import PublicIcon from '@mui/icons-material/Public';
+import { getWord } from "../../toggles/languages/translator";
 
 interface props {
     countries : Array<string>
     data : any
+    language: string  
 }
 
-export const InfoBar : React.FC<props> = ({countries, data}) => {
+export const InfoBar : React.FC<props> = ({countries, data, language}) => {
     const [home, setHome] = useState(true)
     const [economy, setEconomy] = useState(false)
     const [regions, setRegions] = useState(false)
@@ -27,7 +29,7 @@ export const InfoBar : React.FC<props> = ({countries, data}) => {
                 <Box className="infoBarRight" sx={{ flexGrow: 1, background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(8px)'}}>
                     <Grid container spacing={2}>
                         <Grid item xs={12} sx = {{color: "white", fontWeight: "bold", fontSize: 16, textAlign: "center", padding: 1, letterSpacing:0.5}}>
-                            Country Comparison Insights
+                            {/* Country Comparison Insights */}
                         </Grid>
                     
                         <Grid item xs={4} sx = {{color: "white", fontWeight: "bold", fontSize: 16, textAlign: "center", padding: 1, letterSpacing:0.5}}>
@@ -50,19 +52,19 @@ export const InfoBar : React.FC<props> = ({countries, data}) => {
                             home ? (
                                 <>
                                     <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
-                                        <DarkMode countries={countries} rahul={"COVID-19 Cases"} title={"COVID-19 Cases vs. Time"}/>
+                                        <DarkMode countries={countries} rahul={"COVID-19 Cases"} title={getWord('covid_time', language) as string}/>
                                     </Grid>
                                     <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center", marginBottom: 5}}> 
-                                        <PieChartGlobe data={data} type={"cases"} countries={countries}  title={"COVID-19 Country Case Comparison"} size={[25,45]}/>
+                                        <PieChartGlobe data={data} type={"cases"} countries={countries}  title={getWord('case_comparison', language) as string} size={[25,45]}/>
                                     </Grid>
                                     <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center", marginBottom: 5}}> 
-                                        <PieChartGlobe data={data} type={"death"} countries={countries}  title={"COVID-19 Country Number of Deaths Comparison"} size={[25,45]} />
+                                        <PieChartGlobe data={data} type={"death"} countries={countries}  title={getWord('death_comparison', language) as string} size={[25,45]} />
                                     </Grid>
                                     <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}>
-                                        <DarkMode countries={countries} rahul={"Deaths"} title={"Deaths vs. Time"}/>
+                                        <DarkMode countries={countries} rahul={"Deaths"} title={getWord('death_vs_time', language) as string}/>
                                     </Grid>
                                     <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center", margin: [10, 0, 0, 0]}}>
-                                        <DarkMode countries={countries} rahul={"Fully Vaccinated Persons"} title={"Fully Vaccinated Persons vs. Time"}/>
+                                        <DarkMode countries={countries} rahul={"Fully Vaccinated Persons"} title={getWord('vaccinated_vs_time', language) as string}/>
                                     </Grid>
                                 </>
                             ) : <></>
@@ -73,13 +75,13 @@ export const InfoBar : React.FC<props> = ({countries, data}) => {
                             (
                                 <>
                                    <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}>
-                                        <DarkMode countries={countries} rahul={"Real GDP Growth Rate"} title={"Real GDP Growth Rate vs. Time"}/>
+                                        <DarkMode countries={countries} rahul={"Real GDP Growth Rate"} title={getWord('gdp_vs_time', language) as string}/>
                                     </Grid>
                                     <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}>
-                                        <DarkMode countries={countries} rahul={"Unemployment Rate"} title={"Unemployment Rate vs. Time"}/>
+                                        <DarkMode countries={countries} rahul={"Unemployment Rate"} title={getWord('unemployment_vs_time', language) as string}/>
                                     </Grid>
                                     <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}>
-                                        <DarkMode countries={countries} rahul={"stringency"} title={"Stringency Index vs. Time"}/>
+                                        <DarkMode countries={countries} rahul={"stringency"} title={getWord('stringency_time', language) as string}/>
                                     </Grid>
                                 </>
                             )
@@ -91,29 +93,29 @@ export const InfoBar : React.FC<props> = ({countries, data}) => {
                             (
                                 <>
                                     <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
-                                        <DarkMode countries={[...countries, "Globe", "OWID_AFR", "OWID_ASI", "OWID_NAM", "OWID_SAM", "OWID_OCE", "OWID_EUR"]} rahul={"COVID-19 Cases"} title={"Global Cases vs. Time"}/>
+                                        <DarkMode countries={[...countries, "Globe", "OWID_AFR", "OWID_ASI", "OWID_NAM", "OWID_SAM", "OWID_OCE", "OWID_EUR"]} rahul={"COVID-19 Cases"} title={getWord('global_cases_vs_time', language) as string}/>
                                     </Grid>
                                     <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center", marginBottom: 5}}> 
-                                        <PieChartGlobe data={data} type={"cases"} countries={[...countries, "Globe"]}  title={"COVID-19 Country Case Comparison"} size={[25,45]}/>
+                                        <PieChartGlobe data={data} type={"cases"} countries={[...countries, "Globe"]}  title={getWord('case_comparison', language) as string} size={[25,45]}/>
                                     </Grid>
                                     <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center", marginBottom: 5}}> 
-                                        <PieChartGlobe data={data} type={"death"} countries={[...countries, "Globe"]}  title={"COVID-19 Country Number of Deaths Comparison"} size={[25,45]} />
+                                        <PieChartGlobe data={data} type={"death"} countries={[...countries, "Globe"]}  title={getWord('death_comparison', language) as string} size={[25,45]} />
                                     </Grid>
                                     <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
-                                        <DarkMode countries={[...countries, "Globe", "OWID_AFR", "OWID_ASI", "OWID_NAM", "OWID_SAM", "OWID_OCE", "OWID_EUR"]} rahul={"Fully Vaccinated Persons"} title={"Global Vaccination vs. Time"}/>
+                                        <DarkMode countries={[...countries, "Globe", "OWID_AFR", "OWID_ASI", "OWID_NAM", "OWID_SAM", "OWID_OCE", "OWID_EUR"]} rahul={"Fully Vaccinated Persons"} title={getWord('global_vaccinated_vs_time', language) as string}/>
                                     </Grid>
                                     <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
-                                        <DarkMode countries={[...countries, "Globe", "OWID_AFR", "OWID_ASI", "OWID_NAM", "OWID_SAM", "OWID_OCE", "OWID_EUR"]} rahul={"Deaths"} title={"Global Deaths vs. Time"}/>
+                                        <DarkMode countries={[...countries, "Globe", "OWID_AFR", "OWID_ASI", "OWID_NAM", "OWID_SAM", "OWID_OCE", "OWID_EUR"]} rahul={"Deaths"} title={getWord('global_deaths_vs_time', language) as string}/>
                                     </Grid>
                                     <Grid item xs={12} sx = {{color: "white", fontWeight: "bold", fontSize: 16, textAlign: "center", padding: 1, letterSpacing:0.5}}>
-                                        Regional Comparisons
+                                        {getWord('regional_comparisons', language) as string}
                                     </Grid>
 
                                     <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center", marginBottom: 5}}> 
-                                        <PieChartGlobe data={data} type={"cases"} title={"Cases By Continents"} size={[30,50]}/>
+                                        <PieChartGlobe data={data} type={"cases"} title={getWord('cases_continents', language) as string} size={[30,50]}/>
                                     </Grid>
                                     <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center", marginBottom: 5}}> 
-                                         <PieChartGlobe data={data} type={"death"}  title={"Deaths BY Continents"} size={[30,50]}/>
+                                         <PieChartGlobe data={data} type={"death"}  title={getWord('deaths_continents', language) as string} size={[30,50]}/>
                                     </Grid>
                                     //<Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
                                     //    <StackedChart type={'globe-cases'}/>
