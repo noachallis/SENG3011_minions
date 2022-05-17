@@ -14,6 +14,7 @@ const translator = [
         'total_deaths': 'Total Deaths',
         'gdp_growth_rate': 'GDP Growth Rate',
         'unemployment_rate': 'Unemployment Rate',
+        'date': 'Date',
       }
     }, 
     {
@@ -31,6 +32,7 @@ const translator = [
         'total_deaths': '總死亡人數',
         'gdp_growth_rate': '國內生產總值增長率',
         'unemployment_rate': '失業率',
+        'date':'日期',
       }
     },
     {
@@ -48,6 +50,7 @@ const translator = [
         'total_deaths': 'Muertes Totales',
         'gdp_growth_rate': 'Tasa de crecimiento del PIB',
         'unemployment_rate': 'Tasa de desempleo',
+        'date': 'Fecha',
       }
     },
     {
@@ -65,6 +68,7 @@ const translator = [
         'total_deaths': 'Décès totaux',
         'gdp_growth_rate': 'Taux de croissance du PIB',
         'unemployment_rate': 'Taux de chômage',
+        'date': 'Date',
       }
     },
     {
@@ -82,6 +86,7 @@ const translator = [
         'total_deaths': 'Totale Todesfälle',
         'gdp_growth_rate': 'BIP-Wachstumsrate',
         'unemployment_rate': 'Arbeitslosenrate',
+        'date': 'Datum',
       }
     },
     { 
@@ -99,6 +104,7 @@ const translator = [
         'total_deaths': '총 사망자 수',
         'gdp_growth_rate': 'GDP 성장률',
         'unemployment_rate': '실업률',
+        'date': '날짜',
       }
     }, 
     {
@@ -116,6 +122,7 @@ const translator = [
         'total_deaths': '総死亡数',
         'gdp_growth_rate': 'GDP成長率',
         'unemployment_rate': '失業率',
+        'date': '日にち',
       }
     },
     {
@@ -133,6 +140,7 @@ const translator = [
         'total_deaths': 'कुल मौतें',
         'gdp_growth_rate': 'जीडीपी विकास दर',
         'unemployment_rate': 'बेरोजगारी की दर',
+        'date': 'दिनांक',
       }
     }
 ]
@@ -176,5 +184,7 @@ export const getWord = (word : string, language : string) => {
       return phrases?.stringency_index
     case 'GDP Growth Rate':
       return phrases?.gdp_growth_rate
+    case 'date':
+      return phrases?.date
   }
 };

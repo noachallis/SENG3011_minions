@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Box from '@mui/material/Box';
 import { FaPlay, FaPause } from 'react-icons/fa';
 import Slider from '@mui/material/Slider';
+import { getWord } from "../../toggles/languages/translator"
 
 interface props {
     sliderPlaying : boolean
@@ -10,10 +11,11 @@ interface props {
     currentIndex: number
     dates : Array<string>
     setSlider: (playing : boolean) => void
+    language: string  
 }
 
 
-export const SliderComponent : React.FC<props> = ({sliderPlaying, setSlider, length, handleChange, currentIndex, dates}) => {
+export const SliderComponent : React.FC<props> = ({sliderPlaying, setSlider, length, handleChange, currentIndex, dates, language}) => {
     const valuetext = (index: number) => {
         if (currentIndex == index) {
           return ""
@@ -55,8 +57,7 @@ export const SliderComponent : React.FC<props> = ({sliderPlaying, setSlider, len
       </Box>
       <p className="dateLabel" data-cy="stats-overview" >
           <span className="boldStats">
-            {/* {getWord(currentLayerOne, language)} */}
-            Date
+            {getWord('date', language)}
           </span>
           : {valueLabelFormat(currentIndex)}
       </p>

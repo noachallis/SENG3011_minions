@@ -159,7 +159,7 @@ function Globe() {
           </div>
           </div>  
           <StatsOverview currentLayerOne={layerOne} currentLayerTwo={layerTwo} dateData={dateData} language={language}/>
-          <SliderComponent currentIndex={currentIndex} dates={date} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={date.length - 1} handleChange={handleChange}/>
+          <SliderComponent currentIndex={currentIndex} dates={date} sliderPlaying={sliderPlaying} setSlider={setsliderPlaying} length={date.length - 1} handleChange={handleChange} language={language}/>
           {/* <Toggle setVaccine={setVaccine} vaccineEnabled={vaccineEnabled}/> */}
           {/* <LanguageToggle setLanguage={setLanguage} language={language}/> */}
           </div>
