@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import { DarkMode } from "./graphs/chart"
 import Grid from '@mui/material/Grid';
 import {PieChartGlobe} from "./graphs/pieChart"
-import StackedChart from "./graphs/stackedArea"
+import {StackedChart } from "./graphs/stackedArea"
 import {NegativeArea} from "./graphs/NegativeArea"
 import BarChartGlobe from "./graphs/BarChart"
 import IconButton from '@mui/material/IconButton';
@@ -15,6 +15,7 @@ interface props {
     countries : Array<string>
     data : any
 }
+
 export const InfoBar : React.FC<props> = ({countries, data}) => {
     const [home, setHome] = useState(true)
     const [economy, setEconomy] = useState(false)
@@ -78,7 +79,7 @@ export const InfoBar : React.FC<props> = ({countries, data}) => {
                                         <DarkMode countries={countries} rahul={"Unemployment Rate"} title={"Unemployment Rate vs. Time"}/>
                                     </Grid>
                                     <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}>
-                                        <DarkMode countries={countries} rahul={"stringency"} title={"Stringency vs Time"}/>
+                                        <DarkMode countries={countries} rahul={"stringency"} title={"Stringency Index vs. Time"}/>
                                     </Grid>
                                 </>
                             )
@@ -89,24 +90,40 @@ export const InfoBar : React.FC<props> = ({countries, data}) => {
                             regions ? 
                             (
                                 <>
-                                    <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center", height : 400}}> 
-                                        <PieChartGlobe data={data} type={"cases"} title={"cases"} size={[30,50]}/>
+                                    <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
+                                        <DarkMode countries={[...countries, "Globe", "OWID_AFR", "OWID_ASI", "OWID_NAM", "OWID_SAM", "OWID_OCE", "OWID_EUR"]} rahul={"COVID-19 Cases"} title={"Global Cases vs. Time"}/>
                                     </Grid>
-                                    <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center", height : 400}}> 
-                                         <PieChartGlobe data={data} type={"death"}  title={"cases"} size={[30,50]}/>
+                                    <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center", marginBottom: 5}}> 
+                                        <PieChartGlobe data={data} type={"cases"} countries={[...countries, "Globe"]}  title={"COVID-19 Country Case Comparison"} size={[25,45]}/>
+                                    </Grid>
+                                    <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center", marginBottom: 5}}> 
+                                        <PieChartGlobe data={data} type={"death"} countries={[...countries, "Globe"]}  title={"COVID-19 Country Number of Deaths Comparison"} size={[25,45]} />
                                     </Grid>
                                     <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
-                                        <PieChartGlobe data={data} type={"vaccine"}  title={"cases"} size={[30,50]}/>
+                                        <DarkMode countries={[...countries, "Globe", "OWID_AFR", "OWID_ASI", "OWID_NAM", "OWID_SAM", "OWID_OCE", "OWID_EUR"]} rahul={"Fully Vaccinated Persons"} title={"Global Vaccination vs. Time"}/>
                                     </Grid>
                                     <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
-                                        <StackedChart />
+                                        <DarkMode countries={[...countries, "Globe", "OWID_AFR", "OWID_ASI", "OWID_NAM", "OWID_SAM", "OWID_OCE", "OWID_EUR"]} rahul={"Deaths"} title={"Global Deaths vs. Time"}/>
                                     </Grid>
-                                    <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
+                                    <Grid item xs={12} sx = {{color: "white", fontWeight: "bold", fontSize: 16, textAlign: "center", padding: 1, letterSpacing:0.5}}>
+                                        Regional Comparisons
+                                    </Grid>
+
+                                    <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center", marginBottom: 5}}> 
+                                        <PieChartGlobe data={data} type={"cases"} title={"Cases By Continents"} size={[30,50]}/>
+                                    </Grid>
+                                    <Grid item xs={6} className="graphBox" sx = {{ p: 2, textAlign: "center", marginBottom: 5}}> 
+                                         <PieChartGlobe data={data} type={"death"}  title={"Deaths BY Continents"} size={[30,50]}/>
+                                    </Grid>
+                                    //<Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
+                                    //    <StackedChart type={'globe-cases'}/>
+                                    //</Grid> 
+                                    {/* <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
                                         <NegativeArea />
-                                    </Grid>
-                                    <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
+                                    </Grid> */}
+                                    {/* <Grid item xs={12} className="graphBox" sx = {{ p: 2, textAlign: "center"}}> 
                                         <BarChartGlobe />
-                                    </Grid>
+                                    </Grid> */}
                                 </>
                             )
                             : <></>

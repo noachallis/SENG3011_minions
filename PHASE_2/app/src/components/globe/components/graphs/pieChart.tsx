@@ -66,6 +66,26 @@ export const PieChartGlobe : React.FC<props> = ({data, type, countries, title, s
   // default values for graphs
   let graph_data = [];
   let test_fill = "#c9901c"
+
+  if (countries && countries.includes("Globe")){
+    let insert = 0
+    switch (type) {
+      case 'cases' : {
+        insert = data.total_cases
+        break
+      }
+      case 'death' : {
+        insert = data.total_deaths
+        break
+      }
+      case 'vaccine' : {
+        insert = data.people_fully_vaccinated
+        break
+      }  
+    }
+    graph_data.push({name : "Globe", value :  insert})
+  }
+
   for (let x of data.country_stats) {
     let insert = 0
     switch (type) {
