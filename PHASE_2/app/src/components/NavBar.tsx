@@ -142,10 +142,7 @@ export const NavBar: React.FC<props> = ({updateGlobe, setLayerOne, setLayerTwo, 
   // handle click of save layer changes
   const handleSaveClick = () =>{
     if (finalStateSelect["hasError"]) {
-      console.log("Cannot have two of the same datasets in two layers")
     } else {
-      console.log("Successful save will now show updated globe")
-      console.log(finalStateSelect)
       updateGlobe(finalStateSelect)
       setLayerOne(finalStateSelect.base)
       setLayerTwo(finalStateSelect.upper || "None")

@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useEffect } from "react";
+import React, { useState, useMemo} from "react";
 import ReactGlobe from "react-globe.gl";
 import { getPolygonLabel } from "./GlobleFunctions"
 import * as d3 from "d3"
@@ -26,7 +26,6 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
     let colorScaleBlue = d3.scaleSequentialSqrt(d3.interpolateBlues);
     let colorScale = d3.scaleSequentialSqrt(d3.interpolateReds)
     const [hoverD, setHoverD] = useState();
-    const [r, setR] = useState<Array<string>>();
 
     // let [colorScale, setColor] = useState<d3.ScaleSequential<string, never>>();
     if (layerOne == "Deaths") {
@@ -69,7 +68,6 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
           case "Vaccination Rates":
             return country.properties.people_fully_vaccinated / Math.max(1, country.properties.population)
           case "Stringency Index":
-            console.log(country.properties.stringency_index)
             return country.properties.stringency_index * 100000
           case "Deaths":
             const population = Math.max(1, country.properties.population)
@@ -92,7 +90,6 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
             return n * 3500
           case "Unemployment Rate":
             let t = country.properties.unemployment_rate
-            console.log("unemployment")
             if (t <= 2.0)
               return t * 500
             else if ( t <= 5.0)
@@ -143,7 +140,6 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
 
     const elevateCountries = (polygon : any ) => {
       const country = polygon.properties.ADM0_A3
-      console.log(country)
       if (!country){
         return
       }
@@ -162,11 +158,6 @@ export const GlobeFactory : React.FC<props> = ({vaccineEnabled, countries, dateD
         colorScale.domain([0, maxVal]);
     }
 
-    if (false) {
-      return <>
-        <FlightGlobe />
-      </>
-    }
     
     if (activeCountries.length > 0 || regions.length > 0) {
       if (layerTwo != "None") {

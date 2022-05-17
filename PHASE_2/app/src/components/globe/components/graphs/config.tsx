@@ -150,7 +150,6 @@ export function useChartConfig({
   rahul : string
 }) {
 
-  console.log(countries)
 
   const [state, setState] = React.useState({
     count,
@@ -182,7 +181,6 @@ export function useChartConfig({
     countries : Array<string>,
     useR?: boolean, 
   ) {
-    console.log(countries)
     let pleaseWork : god = []
     for (let country of countries) {
       let test : jesus = [{primary : new Date("2019-31-12"), secondary : 0, radius : undefined}]
@@ -204,6 +202,8 @@ export function useChartConfig({
               mini.secondary = parseInt(y.properties.gdp_growth_rate)
             } else if (rahul == "Unemployment Rate") {
               mini.secondary = y.properties.unemployment_rate
+            } else if (rahul == "stringency") {
+              mini.secondary = y.properties.stringency_index
             }
           }
         }

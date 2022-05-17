@@ -11,14 +11,6 @@ interface props {
 }
 
 
-type god = Array<{
-  label: string,
-  data: Array<{
-      primary: Date,
-      secondary: number | null,
-      radius: undefined,
-  }>
-}>
 
 
 export const DarkMode : React.FC<props> = ({countries, rahul, title}) => {
@@ -48,9 +40,7 @@ export const DarkMode : React.FC<props> = ({countries, rahul, title}) => {
     ],
     []
   );
-
-  console.log("The length of data ", data.length)
-    return (
+      return (
       <>
           <Box sx={{color: "white", marginBottom: 1}}>{title}</Box>
           <div style={{ width: "100%", height: "100%" }}>

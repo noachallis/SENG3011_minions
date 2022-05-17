@@ -138,7 +138,7 @@ function Globe() {
           language={language}
         />
         <Legend language={language}/>
-        <InfoBar countries={activeCountries}/>
+        <InfoBar countries={activeCountries} data={dateData}/>
         <div className="GlobeWrapper" 
         style={{'width':'100%', 'marginRight': slideLeft, transition:'1s ease'}}
         >
